@@ -15,5 +15,5 @@ pylama
 # use unmerged pylama_pylint feature for p0c because current stable
 # does not support pylint 1.6.4
 # https://github.com/klen/pylama_pylint/pull/15/files
-https://github.com/diefans/pylama_pylint/archive/pylint_1.6.4.zip
+https://github.com/aequitas/pylama_pylint/archive/updates.zip
 pyflakes
