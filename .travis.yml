@@ -8,6 +8,8 @@ matrix:
       env: TOXENV=requirements
     - python: "3.4.2"
       env: TOXENV=lint
+    - python: "3.4.2"
+      env: TOXENV=lint_pylama
     - python: "3.5"
       env: TOXENV=typing
     - python: "3.5"
