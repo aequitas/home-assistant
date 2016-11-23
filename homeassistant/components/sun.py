@@ -4,19 +4,17 @@ Support for functionality to keep track of the sun.
 For more details about this component, please refer to the documentation at
 https://home-assistant.io/components/sun/
 """
-import logging
 from datetime import timedelta
-
-import voluptuous as vol
+import logging
 
 from homeassistant.const import CONF_ELEVATION
+import homeassistant.helpers.config_validation as cv
 from homeassistant.helpers.entity import Entity
 from homeassistant.helpers.event import (
     track_point_in_utc_time, track_utc_time_change)
-from homeassistant.util import dt as dt_util
-import homeassistant.helpers.config_validation as cv
 import homeassistant.util as util
-
+from homeassistant.util import dt as dt_util
+import voluptuous as vol
 
 REQUIREMENTS = ['astral==1.3.2']
 

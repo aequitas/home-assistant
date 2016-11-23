@@ -9,12 +9,12 @@ import logging
 import os
 
 import requests
-import voluptuous as vol
 
-from homeassistant.const import CONF_ACCESS_TOKEN, HTTP_BAD_REQUEST
-from homeassistant.config import load_yaml_config_file
-import homeassistant.helpers.config_validation as cv
 from homeassistant.components.http import HomeAssistantView
+from homeassistant.config import load_yaml_config_file
+from homeassistant.const import CONF_ACCESS_TOKEN, HTTP_BAD_REQUEST
+import homeassistant.helpers.config_validation as cv
+import voluptuous as vol
 
 _LOGGER = logging.getLogger(__name__)
 

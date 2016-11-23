@@ -4,10 +4,8 @@ from unittest import mock
 
 # Using third party package because of a bug reading binary data in Python 3.4
 # https://bugs.python.org/issue23004
-from mock_open import MockOpen
-
 from homeassistant.bootstrap import setup_component
-
+from mock_open import MockOpen
 from tests.common import assert_setup_component, mock_http_component
 
 

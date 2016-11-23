@@ -7,14 +7,14 @@ https://home-assistant.io/components/sensor.mfi/
 import logging
 
 import requests
-import voluptuous as vol
 
 from homeassistant.components.sensor import PLATFORM_SCHEMA
 from homeassistant.const import (
-    CONF_PASSWORD, CONF_USERNAME, TEMP_CELSIUS, STATE_ON, STATE_OFF, CONF_HOST,
-    CONF_SSL, CONF_VERIFY_SSL, CONF_PORT)
-from homeassistant.helpers.entity import Entity
+    CONF_HOST, CONF_PASSWORD, CONF_PORT, CONF_SSL, CONF_USERNAME,
+    CONF_VERIFY_SSL, STATE_OFF, STATE_ON, TEMP_CELSIUS)
 import homeassistant.helpers.config_validation as cv
+from homeassistant.helpers.entity import Entity
+import voluptuous as vol
 
 REQUIREMENTS = ['mficlient==0.3.0']
 

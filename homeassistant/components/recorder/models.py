@@ -1,16 +1,16 @@
 """Models for SQLAlchemy."""
 
-import json
 from datetime import datetime
+import json
 import logging
 
-from sqlalchemy import (Boolean, Column, DateTime, ForeignKey, Index, Integer,
-                        String, Text, distinct)
-from sqlalchemy.ext.declarative import declarative_base
-
-import homeassistant.util.dt as dt_util
 from homeassistant.core import Event, EventOrigin, State, split_entity_id
 from homeassistant.remote import JSONEncoder
+import homeassistant.util.dt as dt_util
+from sqlalchemy import (
+    Boolean, Column, DateTime, ForeignKey, Index, Integer, String, Text,
+    distinct)
+from sqlalchemy.ext.declarative import declarative_base
 
 # SQLAlchemy Schema
 # pylint: disable=invalid-name

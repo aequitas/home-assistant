@@ -1,18 +1,16 @@
 """Test event decorator helpers."""
 # pylint: disable=protected-access
-import unittest
 from datetime import datetime, timedelta
+import unittest
 
 from astral import Astral
-
+from homeassistant.components import sun
 import homeassistant.core as ha
-import homeassistant.util.dt as dt_util
 from homeassistant.helpers import event_decorators
 from homeassistant.helpers.event_decorators import (
-    track_time_change, track_utc_time_change, track_state_change,
-    track_sunrise, track_sunset)
-from homeassistant.components import sun
-
+    track_state_change, track_sunrise, track_sunset, track_time_change,
+    track_utc_time_change)
+import homeassistant.util.dt as dt_util
 from tests.common import get_test_home_assistant
 
 

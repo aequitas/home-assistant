@@ -6,14 +6,13 @@ https://home-assistant.io/components/influxdb/
 """
 import logging
 
-import voluptuous as vol
-
 from homeassistant.const import (
-    EVENT_STATE_CHANGED, STATE_UNAVAILABLE, STATE_UNKNOWN, CONF_HOST,
-    CONF_PORT, CONF_SSL, CONF_VERIFY_SSL, CONF_USERNAME, CONF_BLACKLIST,
-    CONF_PASSWORD, CONF_WHITELIST)
+    CONF_BLACKLIST, CONF_HOST, CONF_PASSWORD, CONF_PORT, CONF_SSL,
+    CONF_USERNAME, CONF_VERIFY_SSL, CONF_WHITELIST, EVENT_STATE_CHANGED,
+    STATE_UNAVAILABLE, STATE_UNKNOWN)
 from homeassistant.helpers import state as state_helper
 import homeassistant.helpers.config_validation as cv
+import voluptuous as vol
 
 REQUIREMENTS = ['influxdb==3.0.0']
 

@@ -5,18 +5,17 @@ For more details about this component, please refer to the documentation at
 https://home-assistant.io/components/persistent_notification/
 """
 import asyncio
-import os
 import logging
+import os
 
-import voluptuous as vol
-
+from homeassistant.config import load_yaml_config_file
 from homeassistant.core import callback
 from homeassistant.exceptions import TemplateError
 from homeassistant.helpers import config_validation as cv
 from homeassistant.helpers.entity import async_generate_entity_id
 from homeassistant.util import slugify
-from homeassistant.config import load_yaml_config_file
 from homeassistant.util.async import run_callback_threadsafe
+import voluptuous as vol
 
 DOMAIN = 'persistent_notification'
 ENTITY_ID_FORMAT = DOMAIN + '.{}'

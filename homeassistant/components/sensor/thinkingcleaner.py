@@ -4,11 +4,11 @@ Support for ThinkingCleaner.
 For more details about this platform, please refer to the documentation at
 https://home-assistant.io/components/sensor.thinkingcleaner/
 """
-import logging
 from datetime import timedelta
+import logging
 
-import homeassistant.util as util
 from homeassistant.helpers.entity import Entity
+import homeassistant.util as util
 
 _LOGGER = logging.getLogger(__name__)
 

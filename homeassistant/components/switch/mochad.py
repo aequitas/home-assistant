@@ -7,12 +7,11 @@ https://home.assistant.io/components/switch.mochad
 
 import logging
 
-import voluptuous as vol
-
 from homeassistant.components import mochad
 from homeassistant.components.switch import SwitchDevice
-from homeassistant.const import (CONF_NAME, CONF_PLATFORM)
+from homeassistant.const import CONF_NAME, CONF_PLATFORM
 from homeassistant.helpers import config_validation as cv
+import voluptuous as vol
 
 DEPENDENCIES = ['mochad']
 _LOGGER = logging.getLogger(__name__)

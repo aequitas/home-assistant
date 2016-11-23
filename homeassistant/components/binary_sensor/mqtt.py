@@ -6,17 +6,16 @@ https://home-assistant.io/components/binary_sensor.mqtt/
 """
 import logging
 
-import voluptuous as vol
-
-from homeassistant.core import callback
-import homeassistant.components.mqtt as mqtt
 from homeassistant.components.binary_sensor import (
-    BinarySensorDevice, SENSOR_CLASSES)
+    SENSOR_CLASSES, BinarySensorDevice)
+import homeassistant.components.mqtt as mqtt
+from homeassistant.components.mqtt import CONF_QOS, CONF_STATE_TOPIC
 from homeassistant.const import (
-    CONF_NAME, CONF_VALUE_TEMPLATE, CONF_PAYLOAD_ON, CONF_PAYLOAD_OFF,
-    CONF_SENSOR_CLASS)
-from homeassistant.components.mqtt import (CONF_STATE_TOPIC, CONF_QOS)
+    CONF_NAME, CONF_PAYLOAD_OFF, CONF_PAYLOAD_ON, CONF_SENSOR_CLASS,
+    CONF_VALUE_TEMPLATE)
+from homeassistant.core import callback
 import homeassistant.helpers.config_validation as cv
+import voluptuous as vol
 
 _LOGGER = logging.getLogger(__name__)
 

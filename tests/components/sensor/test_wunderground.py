@@ -3,7 +3,6 @@ import unittest
 
 from homeassistant.components.sensor import wunderground
 from homeassistant.const import TEMP_CELSIUS
-
 from tests.common import get_test_home_assistant
 
 VALID_CONFIG_PWS = {

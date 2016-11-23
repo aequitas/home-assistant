@@ -4,21 +4,18 @@ from datetime import timedelta
 import unittest
 from unittest.mock import patch
 
-import homeassistant.core as ha
 import homeassistant.components as core_components
-from homeassistant.const import (SERVICE_TURN_ON, SERVICE_TURN_OFF)
-from homeassistant.util.async import run_coroutine_threadsafe
-from homeassistant.util import dt as dt_util
-from homeassistant.helpers import state
-from homeassistant.const import (
-    STATE_OPEN, STATE_CLOSED,
-    STATE_LOCKED, STATE_UNLOCKED,
-    STATE_ON, STATE_OFF)
 from homeassistant.components.media_player import (
-    SERVICE_PLAY_MEDIA, SERVICE_MEDIA_PLAY, SERVICE_MEDIA_PAUSE)
-from homeassistant.components.sun import (STATE_ABOVE_HORIZON,
-                                          STATE_BELOW_HORIZON)
-
+    SERVICE_MEDIA_PAUSE, SERVICE_MEDIA_PLAY, SERVICE_PLAY_MEDIA)
+from homeassistant.components.sun import (
+    STATE_ABOVE_HORIZON, STATE_BELOW_HORIZON)
+from homeassistant.const import (
+    SERVICE_TURN_OFF, SERVICE_TURN_ON, STATE_CLOSED, STATE_LOCKED, STATE_OFF,
+    STATE_ON, STATE_OPEN, STATE_UNLOCKED)
+import homeassistant.core as ha
+from homeassistant.helpers import state
+from homeassistant.util import dt as dt_util
+from homeassistant.util.async import run_coroutine_threadsafe
 from tests.common import get_test_home_assistant, mock_service
 
 

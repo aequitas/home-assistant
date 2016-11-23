@@ -6,15 +6,13 @@ https://home-assistant.io/components/lock.mqtt/
 """
 import logging
 
-import voluptuous as vol
-
 from homeassistant.components.lock import LockDevice
-from homeassistant.components.mqtt import (
-    CONF_STATE_TOPIC, CONF_COMMAND_TOPIC, CONF_QOS, CONF_RETAIN)
-from homeassistant.const import (
-    CONF_NAME, CONF_OPTIMISTIC, CONF_VALUE_TEMPLATE)
 import homeassistant.components.mqtt as mqtt
+from homeassistant.components.mqtt import (
+    CONF_COMMAND_TOPIC, CONF_QOS, CONF_RETAIN, CONF_STATE_TOPIC)
+from homeassistant.const import CONF_NAME, CONF_OPTIMISTIC, CONF_VALUE_TEMPLATE
 import homeassistant.helpers.config_validation as cv
+import voluptuous as vol
 
 _LOGGER = logging.getLogger(__name__)
 

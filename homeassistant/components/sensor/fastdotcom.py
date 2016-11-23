@@ -5,14 +5,14 @@ For more details about this platform, please refer to the documentation at
 https://home-assistant.io/components/sensor.fastdotcom/
 """
 import logging
-import voluptuous as vol
 
-import homeassistant.util.dt as dt_util
-import homeassistant.helpers.config_validation as cv
 from homeassistant.components import recorder
-from homeassistant.components.sensor import (DOMAIN, PLATFORM_SCHEMA)
+from homeassistant.components.sensor import DOMAIN, PLATFORM_SCHEMA
+import homeassistant.helpers.config_validation as cv
 from homeassistant.helpers.entity import Entity
 from homeassistant.helpers.event import track_time_change
+import homeassistant.util.dt as dt_util
+import voluptuous as vol
 
 REQUIREMENTS = ['fastdotcom==0.0.1']
 

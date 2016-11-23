@@ -4,19 +4,19 @@ Support for Dark Sky weather service.
 For more details about this platform, please refer to the documentation at
 https://home-assistant.io/components/sensor.darksky/
 """
-import logging
 from datetime import timedelta
+import logging
 
-import voluptuous as vol
-from requests.exceptions import ConnectionError as ConnectError, \
-    HTTPError, Timeout
+from requests.exceptions import ConnectionError as ConnectError
+from requests.exceptions import HTTPError, Timeout
 
 from homeassistant.components.sensor import PLATFORM_SCHEMA
 from homeassistant.const import (
-    CONF_API_KEY, CONF_NAME, CONF_MONITORED_CONDITIONS, ATTR_ATTRIBUTION)
+    ATTR_ATTRIBUTION, CONF_API_KEY, CONF_MONITORED_CONDITIONS, CONF_NAME)
+import homeassistant.helpers.config_validation as cv
 from homeassistant.helpers.entity import Entity
 from homeassistant.util import Throttle
-import homeassistant.helpers.config_validation as cv
+import voluptuous as vol
 
 REQUIREMENTS = ['python-forecastio==1.3.5']
 

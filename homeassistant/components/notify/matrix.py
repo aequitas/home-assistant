@@ -4,16 +4,15 @@ Matrix notification service.
 For more details about this platform, please refer to the documentation at
 https://home-assistant.io/components/notify.matrix/
 """
-import logging
 import json
+import logging
 import os
 
-import voluptuous as vol
-
-import homeassistant.helpers.config_validation as cv
 from homeassistant.components.notify import (
     ATTR_TARGET, PLATFORM_SCHEMA, BaseNotificationService)
-from homeassistant.const import CONF_USERNAME, CONF_PASSWORD, CONF_VERIFY_SSL
+from homeassistant.const import CONF_PASSWORD, CONF_USERNAME, CONF_VERIFY_SSL
+import homeassistant.helpers.config_validation as cv
+import voluptuous as vol
 
 REQUIREMENTS = ['matrix-client==0.0.5']
 

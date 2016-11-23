@@ -3,11 +3,9 @@ import unittest
 
 from homeassistant.bootstrap import setup_component
 import homeassistant.components.sensor as sensor
-from homeassistant.components.sensor.mold_indicator import (ATTR_DEWPOINT,
-                                                            ATTR_CRITICAL_TEMP)
-from homeassistant.const import (ATTR_UNIT_OF_MEASUREMENT,
-                                 TEMP_CELSIUS)
-
+from homeassistant.components.sensor.mold_indicator import (
+    ATTR_CRITICAL_TEMP, ATTR_DEWPOINT)
+from homeassistant.const import ATTR_UNIT_OF_MEASUREMENT, TEMP_CELSIUS
 from tests.common import get_test_home_assistant
 
 

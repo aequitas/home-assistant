@@ -4,20 +4,19 @@ Mail (SMTP) notification service.
 For more details about this platform, please refer to the documentation at
 https://home-assistant.io/components/notify.smtp/
 """
-import logging
-import smtplib
+from email.mime.image import MIMEImage
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
-from email.mime.image import MIMEImage
-
-import voluptuous as vol
+import logging
+import smtplib
 
 from homeassistant.components.notify import (
-    ATTR_TITLE, ATTR_TITLE_DEFAULT, ATTR_DATA, PLATFORM_SCHEMA,
+    ATTR_DATA, ATTR_TITLE, ATTR_TITLE_DEFAULT, PLATFORM_SCHEMA,
     BaseNotificationService)
 from homeassistant.const import (
-    CONF_USERNAME, CONF_PASSWORD, CONF_PORT, CONF_SENDER, CONF_RECIPIENT)
+    CONF_PASSWORD, CONF_PORT, CONF_RECIPIENT, CONF_SENDER, CONF_USERNAME)
 import homeassistant.helpers.config_validation as cv
+import voluptuous as vol
 
 _LOGGER = logging.getLogger(__name__)
 

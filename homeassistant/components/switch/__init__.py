@@ -9,17 +9,16 @@ from datetime import timedelta
 import logging
 import os
 
-import voluptuous as vol
-
-from homeassistant.config import load_yaml_config_file
-from homeassistant.helpers.entity_component import EntityComponent
-from homeassistant.helpers.entity import ToggleEntity
-from homeassistant.helpers.config_validation import PLATFORM_SCHEMA  # noqa
-import homeassistant.helpers.config_validation as cv
-from homeassistant.const import (
-    STATE_ON, SERVICE_TURN_ON, SERVICE_TURN_OFF, SERVICE_TOGGLE,
-    ATTR_ENTITY_ID)
 from homeassistant.components import group
+from homeassistant.config import load_yaml_config_file
+from homeassistant.const import (
+    ATTR_ENTITY_ID, SERVICE_TOGGLE, SERVICE_TURN_OFF, SERVICE_TURN_ON,
+    STATE_ON)
+import homeassistant.helpers.config_validation as cv
+from homeassistant.helpers.config_validation import PLATFORM_SCHEMA  # noqa
+from homeassistant.helpers.entity import ToggleEntity
+from homeassistant.helpers.entity_component import EntityComponent
+import voluptuous as vol
 
 DOMAIN = 'switch'
 SCAN_INTERVAL = 30

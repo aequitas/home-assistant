@@ -4,19 +4,19 @@ Support for monitoring NZBGet NZB client.
 For more details about this platform, please refer to the documentation at
 https://home-assistant.io/components/sensor.nzbget/
 """
-import logging
 from datetime import timedelta
+import logging
 
 import requests
-import voluptuous as vol
 
 from homeassistant.components.sensor import PLATFORM_SCHEMA
 from homeassistant.const import (
-    CONF_HOST, CONF_PASSWORD, CONF_USERNAME, CONF_NAME, CONF_PORT,
-    CONTENT_TYPE_JSON, CONF_MONITORED_VARIABLES)
+    CONF_HOST, CONF_MONITORED_VARIABLES, CONF_NAME, CONF_PASSWORD, CONF_PORT,
+    CONF_USERNAME, CONTENT_TYPE_JSON)
+import homeassistant.helpers.config_validation as cv
 from homeassistant.helpers.entity import Entity
 from homeassistant.util import Throttle
-import homeassistant.helpers.config_validation as cv
+import voluptuous as vol
 
 _LOGGER = logging.getLogger(__name__)
 

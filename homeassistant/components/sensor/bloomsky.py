@@ -6,13 +6,12 @@ https://home-assistant.io/components/sensor.bloomsky/
 """
 import logging
 
-import voluptuous as vol
-
 from homeassistant.components.sensor import PLATFORM_SCHEMA
-from homeassistant.const import (TEMP_FAHRENHEIT, CONF_MONITORED_CONDITIONS)
+from homeassistant.const import CONF_MONITORED_CONDITIONS, TEMP_FAHRENHEIT
+import homeassistant.helpers.config_validation as cv
 from homeassistant.helpers.entity import Entity
 from homeassistant.loader import get_component
-import homeassistant.helpers.config_validation as cv
+import voluptuous as vol
 
 _LOGGER = logging.getLogger(__name__)
 

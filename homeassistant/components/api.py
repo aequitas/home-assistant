@@ -10,22 +10,20 @@ import logging
 
 from aiohttp import web
 import async_timeout
-
-import homeassistant.core as ha
-import homeassistant.remote as rem
 from homeassistant.bootstrap import ERROR_LOG_FILENAME
+from homeassistant.components.http import HomeAssistantView
 from homeassistant.const import (
-    EVENT_HOMEASSISTANT_STOP, EVENT_TIME_CHANGED,
-    HTTP_BAD_REQUEST, HTTP_CREATED, HTTP_NOT_FOUND,
-    HTTP_UNPROCESSABLE_ENTITY, MATCH_ALL, URL_API, URL_API_COMPONENTS,
-    URL_API_CONFIG, URL_API_DISCOVERY_INFO, URL_API_ERROR_LOG,
-    URL_API_EVENT_FORWARD, URL_API_EVENTS, URL_API_SERVICES,
+    EVENT_HOMEASSISTANT_STOP, EVENT_TIME_CHANGED, HTTP_BAD_REQUEST,
+    HTTP_CREATED, HTTP_NOT_FOUND, HTTP_UNPROCESSABLE_ENTITY, MATCH_ALL,
+    URL_API, URL_API_COMPONENTS, URL_API_CONFIG, URL_API_DISCOVERY_INFO,
+    URL_API_ERROR_LOG, URL_API_EVENT_FORWARD, URL_API_EVENTS, URL_API_SERVICES,
     URL_API_STATES, URL_API_STATES_ENTITY, URL_API_STREAM, URL_API_TEMPLATE,
     __version__)
+import homeassistant.core as ha
 from homeassistant.exceptions import TemplateError
-from homeassistant.helpers.state import AsyncTrackStates
 from homeassistant.helpers import template
-from homeassistant.components.http import HomeAssistantView
+from homeassistant.helpers.state import AsyncTrackStates
+import homeassistant.remote as rem
 
 DOMAIN = 'api'
 DEPENDENCIES = ['http']

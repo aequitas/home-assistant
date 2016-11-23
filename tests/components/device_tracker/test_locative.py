@@ -8,7 +8,6 @@ from homeassistant import bootstrap, const
 import homeassistant.components.device_tracker as device_tracker
 import homeassistant.components.http as http
 from homeassistant.const import CONF_PLATFORM
-
 from tests.common import get_test_home_assistant, get_test_instance_port
 
 SERVER_PORT = get_test_instance_port()

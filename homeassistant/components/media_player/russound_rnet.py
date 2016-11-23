@@ -6,14 +6,13 @@ https://home-assistant.io/components/media_player.russound_rnet/
 """
 import logging
 
-import voluptuous as vol
-
 from homeassistant.components.media_player import (
-    SUPPORT_TURN_OFF, SUPPORT_VOLUME_MUTE, SUPPORT_VOLUME_SET,
-    SUPPORT_SELECT_SOURCE, MediaPlayerDevice, PLATFORM_SCHEMA)
+    PLATFORM_SCHEMA, SUPPORT_SELECT_SOURCE, SUPPORT_TURN_OFF,
+    SUPPORT_VOLUME_MUTE, SUPPORT_VOLUME_SET, MediaPlayerDevice)
 from homeassistant.const import (
-    CONF_HOST, CONF_PORT, STATE_OFF, STATE_ON, CONF_NAME)
+    CONF_HOST, CONF_NAME, CONF_PORT, STATE_OFF, STATE_ON)
 import homeassistant.helpers.config_validation as cv
+import voluptuous as vol
 
 REQUIREMENTS = [
     'https://github.com/laf/russound/archive/0.1.6.zip'

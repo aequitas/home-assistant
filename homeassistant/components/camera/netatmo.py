@@ -7,12 +7,12 @@ https://home-assistant.io/components/camera.netatmo/
 import logging
 
 import requests
-import voluptuous as vol
 
+from homeassistant.components.camera import PLATFORM_SCHEMA, Camera
 from homeassistant.components.netatmo import WelcomeData
-from homeassistant.components.camera import (Camera, PLATFORM_SCHEMA)
-from homeassistant.loader import get_component
 from homeassistant.helpers import config_validation as cv
+from homeassistant.loader import get_component
+import voluptuous as vol
 
 DEPENDENCIES = ['netatmo']
 

@@ -7,9 +7,8 @@ https://home-assistant.io/components/zeroconf/
 import logging
 import socket
 
+from homeassistant.const import EVENT_HOMEASSISTANT_STOP, __version__
 import voluptuous as vol
-
-from homeassistant.const import (EVENT_HOMEASSISTANT_STOP, __version__)
 
 _LOGGER = logging.getLogger(__name__)
 

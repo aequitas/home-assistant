@@ -7,9 +7,7 @@ from unittest import mock
 
 from homeassistant.bootstrap import setup_component
 import homeassistant.components.cover as cover
-from homeassistant.components.cover import (
-    command_line as cmd_rs)
-
+from homeassistant.components.cover import command_line as cmd_rs
 from tests.common import get_test_home_assistant
 
 

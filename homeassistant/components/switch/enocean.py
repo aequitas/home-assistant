@@ -6,13 +6,12 @@ https://home-assistant.io/components/switch.enocean/
 """
 import logging
 
-import voluptuous as vol
-
-from homeassistant.components.switch import PLATFORM_SCHEMA
-from homeassistant.const import (CONF_NAME, CONF_ID)
 from homeassistant.components import enocean
-from homeassistant.helpers.entity import ToggleEntity
+from homeassistant.components.switch import PLATFORM_SCHEMA
+from homeassistant.const import CONF_ID, CONF_NAME
 import homeassistant.helpers.config_validation as cv
+from homeassistant.helpers.entity import ToggleEntity
+import voluptuous as vol
 
 _LOGGER = logging.getLogger(__name__)
 

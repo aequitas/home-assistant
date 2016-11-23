@@ -8,17 +8,16 @@ from datetime import timedelta
 import logging
 import os
 
-import voluptuous as vol
-
-from homeassistant.config import load_yaml_config_file
-from homeassistant.helpers.entity_component import EntityComponent
-from homeassistant.helpers.entity import Entity
-from homeassistant.helpers.config_validation import PLATFORM_SCHEMA  # noqa
-import homeassistant.helpers.config_validation as cv
-from homeassistant.const import (
-    ATTR_CODE, ATTR_CODE_FORMAT, ATTR_ENTITY_ID, STATE_LOCKED, STATE_UNLOCKED,
-    STATE_UNKNOWN, SERVICE_LOCK, SERVICE_UNLOCK)
 from homeassistant.components import group
+from homeassistant.config import load_yaml_config_file
+from homeassistant.const import (
+    ATTR_CODE, ATTR_CODE_FORMAT, ATTR_ENTITY_ID, SERVICE_LOCK, SERVICE_UNLOCK,
+    STATE_LOCKED, STATE_UNKNOWN, STATE_UNLOCKED)
+import homeassistant.helpers.config_validation as cv
+from homeassistant.helpers.config_validation import PLATFORM_SCHEMA  # noqa
+from homeassistant.helpers.entity import Entity
+from homeassistant.helpers.entity_component import EntityComponent
+import voluptuous as vol
 
 DOMAIN = 'lock'
 SCAN_INTERVAL = 30

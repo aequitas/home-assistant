@@ -7,12 +7,10 @@ https://home-assistant.io/components/mochad/
 
 import logging
 
-import voluptuous as vol
-
 from homeassistant.const import (
-    EVENT_HOMEASSISTANT_START, EVENT_HOMEASSISTANT_STOP)
-from homeassistant.const import (CONF_HOST, CONF_PORT)
+    CONF_HOST, CONF_PORT, EVENT_HOMEASSISTANT_START, EVENT_HOMEASSISTANT_STOP)
 from homeassistant.helpers import config_validation as cv
+import voluptuous as vol
 
 REQUIREMENTS = ['pymochad==0.1.1']
 

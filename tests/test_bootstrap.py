@@ -1,18 +1,16 @@
 """Test the bootstrapping."""
 # pylint: disable=protected-access
-from unittest import mock
-import threading
 import logging
-
-import voluptuous as vol
+import threading
+from unittest import mock
 
 from homeassistant import bootstrap, loader
-import homeassistant.util.dt as dt_util
 from homeassistant.helpers.config_validation import PLATFORM_SCHEMA
-
-from tests.common import \
-    get_test_home_assistant, MockModule, MockPlatform, \
-    assert_setup_component, patch_yaml_files
+import homeassistant.util.dt as dt_util
+from tests.common import (
+    MockModule, MockPlatform, assert_setup_component, get_test_home_assistant,
+    patch_yaml_files)
+import voluptuous as vol
 
 ORIG_TIMEZONE = dt_util.DEFAULT_TIME_ZONE
 

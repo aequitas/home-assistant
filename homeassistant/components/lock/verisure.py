@@ -6,9 +6,9 @@ https://home-assistant.io/components/verisure/
 """
 import logging
 
-from homeassistant.components.verisure import HUB as hub
-from homeassistant.components.verisure import (CONF_LOCKS, CONF_CODE_DIGITS)
 from homeassistant.components.lock import LockDevice
+from homeassistant.components.verisure import CONF_CODE_DIGITS, CONF_LOCKS
+from homeassistant.components.verisure import HUB as hub
 from homeassistant.const import (
     ATTR_CODE, STATE_LOCKED, STATE_UNKNOWN, STATE_UNLOCKED)
 

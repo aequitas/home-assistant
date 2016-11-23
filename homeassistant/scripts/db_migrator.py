@@ -1,17 +1,17 @@
 """Script to convert an old-format home-assistant.db to a new format one."""
 
 import argparse
+from datetime import datetime
 import os.path
 import sqlite3
 import sys
 
-from datetime import datetime
-from typing import Optional, List
+from typing import List, Optional
 
-import homeassistant.config as config_util
-import homeassistant.util.dt as dt_util
 # pylint: disable=unused-import
 from homeassistant.components.recorder import REQUIREMENTS  # NOQA
+import homeassistant.config as config_util
+import homeassistant.util.dt as dt_util
 
 
 def ts_to_dt(timestamp: Optional[float]) -> Optional[datetime]:

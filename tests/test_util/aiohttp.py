@@ -4,7 +4,7 @@ from contextlib import contextmanager
 import functools
 import json as _json
 from unittest import mock
-from urllib.parse import urlparse, parse_qs
+from urllib.parse import parse_qs, urlparse
 
 
 class AiohttpClientMocker:

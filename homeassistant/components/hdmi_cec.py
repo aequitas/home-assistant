@@ -6,10 +6,9 @@ https://home-assistant.io/components/hdmi_cec/
 """
 import logging
 
-import voluptuous as vol
-
-from homeassistant.const import (EVENT_HOMEASSISTANT_START, CONF_DEVICES)
+from homeassistant.const import CONF_DEVICES, EVENT_HOMEASSISTANT_START
 import homeassistant.helpers.config_validation as cv
+import voluptuous as vol
 
 _CEC = None
 _LOGGER = logging.getLogger(__name__)

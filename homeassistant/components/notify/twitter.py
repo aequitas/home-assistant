@@ -6,12 +6,11 @@ https://home-assistant.io/components/notify.twitter/
 """
 import logging
 
-import voluptuous as vol
-
-import homeassistant.helpers.config_validation as cv
 from homeassistant.components.notify import (
     PLATFORM_SCHEMA, BaseNotificationService)
 from homeassistant.const import CONF_ACCESS_TOKEN
+import homeassistant.helpers.config_validation as cv
+import voluptuous as vol
 
 REQUIREMENTS = ['TwitterAPI==2.4.2']
 

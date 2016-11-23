@@ -4,14 +4,13 @@ Support for ThinkingCleaner.
 For more details about this platform, please refer to the documentation at
 https://home-assistant.io/components/switch.thinkingcleaner/
 """
-import time
-import logging
 from datetime import timedelta
+import logging
+import time
 
-import homeassistant.util as util
-
-from homeassistant.const import (STATE_ON, STATE_OFF)
+from homeassistant.const import STATE_OFF, STATE_ON
 from homeassistant.helpers.entity import ToggleEntity
+import homeassistant.util as util
 
 _LOGGER = logging.getLogger(__name__)
 

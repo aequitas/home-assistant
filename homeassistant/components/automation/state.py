@@ -4,14 +4,13 @@ Offer state listening automation rules.
 For more details about this automation rule, please refer to the documentation
 at https://home-assistant.io/components/automation/#state-trigger
 """
-import voluptuous as vol
-
+from homeassistant.const import CONF_PLATFORM, MATCH_ALL
 from homeassistant.core import callback
-import homeassistant.util.dt as dt_util
-from homeassistant.const import MATCH_ALL, CONF_PLATFORM
-from homeassistant.helpers.event import (
-    async_track_state_change, async_track_point_in_utc_time)
 import homeassistant.helpers.config_validation as cv
+from homeassistant.helpers.event import (
+    async_track_point_in_utc_time, async_track_state_change)
+import homeassistant.util.dt as dt_util
+import voluptuous as vol
 
 CONF_ENTITY_ID = "entity_id"
 CONF_FROM = "from"

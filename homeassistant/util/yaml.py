@@ -1,18 +1,20 @@
 """YAML utility functions."""
+from collections import OrderedDict
+import fnmatch
 import logging
 import os
 import sys
-import fnmatch
-from collections import OrderedDict
-from typing import Union, List, Dict
 
+from typing import Dict, List, Union
+
+from homeassistant.exceptions import HomeAssistantError
 import yaml
+
 try:
     import keyring
 except ImportError:
     keyring = None
 
-from homeassistant.exceptions import HomeAssistantError
 
 _LOGGER = logging.getLogger(__name__)
 _SECRET_NAMESPACE = 'homeassistant'

@@ -5,19 +5,18 @@ For more details about this platform, please refer to the documentation at
 https://home-assistant.io/components/sensor.tcp/
 """
 import logging
-import socket
 import select
-
-import voluptuous as vol
+import socket
 
 from homeassistant.components.sensor import PLATFORM_SCHEMA
 from homeassistant.const import (
-    CONF_NAME, CONF_HOST, CONF_PORT, CONF_PAYLOAD, CONF_TIMEOUT,
+    CONF_HOST, CONF_NAME, CONF_PAYLOAD, CONF_PORT, CONF_TIMEOUT,
     CONF_UNIT_OF_MEASUREMENT, CONF_VALUE_TEMPLATE)
 from homeassistant.exceptions import TemplateError
+import homeassistant.helpers.config_validation as cv
 from homeassistant.helpers.entity import Entity
 from homeassistant.helpers.template import Template
-import homeassistant.helpers.config_validation as cv
+import voluptuous as vol
 
 _LOGGER = logging.getLogger(__name__)
 

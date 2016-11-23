@@ -8,8 +8,8 @@ the user has submitted configuration information.
 """
 import logging
 
-from homeassistant.const import EVENT_TIME_CHANGED, ATTR_FRIENDLY_NAME, \
-    ATTR_ENTITY_PICTURE
+from homeassistant.const import (
+    ATTR_ENTITY_PICTURE, ATTR_FRIENDLY_NAME, EVENT_TIME_CHANGED)
 from homeassistant.helpers.entity import generate_entity_id
 
 _INSTANCES = {}

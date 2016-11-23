@@ -1,10 +1,9 @@
 """The tests for the Proximity component."""
 import unittest
 
+from homeassistant.bootstrap import setup_component
 from homeassistant.components import proximity
 from homeassistant.components.proximity import DOMAIN
-
-from homeassistant.bootstrap import setup_component
 from tests.common import get_test_home_assistant
 
 

@@ -4,12 +4,13 @@ Support for the World Air Quality Index service.
 For more details about this platform, please refer to the documentation at
 https://home-assistant.io/components/sensor.waqi/
 """
-import logging
 from datetime import timedelta
+import logging
+
+from homeassistant.helpers import config_validation as cv
+from homeassistant.helpers.config_validation import PLATFORM_SCHEMA
 from homeassistant.helpers.entity import Entity
 from homeassistant.util import Throttle
-from homeassistant.helpers.config_validation import PLATFORM_SCHEMA
-from homeassistant.helpers import config_validation as cv
 import voluptuous as vol
 
 REQUIREMENTS = ["pwaqi==1.2"]

@@ -9,14 +9,9 @@ from homeassistant.const import EVENT_STATE_CHANGED
 from homeassistant.core import State, callback
 from homeassistant.remote import JSONEncoder
 import homeassistant.util.dt as dt_util
-
 from tests.common import (
-    get_test_home_assistant,
-    mock_mqtt_component,
-    fire_mqtt_message,
-    mock_state_change_event,
-    fire_time_changed
-)
+    fire_mqtt_message, fire_time_changed, get_test_home_assistant,
+    mock_mqtt_component, mock_state_change_event)
 
 
 class TestMqttEventStream(unittest.TestCase):

@@ -5,7 +5,7 @@ For more details about this platform, please refer to the documentation at
 https://home-assistant.io/components/binary_sensor.knx/
 """
 from homeassistant.components.binary_sensor import BinarySensorDevice
-from homeassistant.components.knx import (KNXConfig, KNXGroupAddress)
+from homeassistant.components.knx import KNXConfig, KNXGroupAddress
 
 DEPENDENCIES = ['knx']
 

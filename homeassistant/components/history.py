@@ -8,15 +8,14 @@ import asyncio
 from collections import defaultdict
 from datetime import timedelta
 from itertools import groupby
-import voluptuous as vol
 
-from homeassistant.const import HTTP_BAD_REQUEST
-import homeassistant.helpers.config_validation as cv
-import homeassistant.util.dt as dt_util
 from homeassistant.components import recorder, script
 from homeassistant.components.frontend import register_built_in_panel
 from homeassistant.components.http import HomeAssistantView
-from homeassistant.const import ATTR_HIDDEN
+from homeassistant.const import ATTR_HIDDEN, HTTP_BAD_REQUEST
+import homeassistant.helpers.config_validation as cv
+import homeassistant.util.dt as dt_util
+import voluptuous as vol
 
 DOMAIN = 'history'
 DEPENDENCIES = ['recorder', 'http']

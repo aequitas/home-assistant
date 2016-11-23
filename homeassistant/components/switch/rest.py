@@ -7,12 +7,12 @@ https://home-assistant.io/components/switch.rest/
 import logging
 
 import requests
-import voluptuous as vol
 
-from homeassistant.components.switch import (SwitchDevice, PLATFORM_SCHEMA)
-from homeassistant.const import (CONF_NAME, CONF_RESOURCE, CONF_TIMEOUT)
+from homeassistant.components.switch import PLATFORM_SCHEMA, SwitchDevice
+from homeassistant.const import CONF_NAME, CONF_RESOURCE, CONF_TIMEOUT
 import homeassistant.helpers.config_validation as cv
 from homeassistant.helpers.template import Template
+import voluptuous as vol
 
 CONF_BODY_OFF = 'body_off'
 CONF_BODY_ON = 'body_on'

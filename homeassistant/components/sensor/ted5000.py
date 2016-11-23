@@ -4,17 +4,17 @@ Support gahtering ted500 information.
 For more details about this platform, please refer to the documentation at
 https://home-assistant.io/components/sensor.ted5000/
 """
-import logging
 from datetime import timedelta
+import logging
 
 import requests
-import voluptuous as vol
 
 from homeassistant.components.sensor import PLATFORM_SCHEMA
-from homeassistant.const import (CONF_HOST, CONF_NAME, CONF_PORT)
+from homeassistant.const import CONF_HOST, CONF_NAME, CONF_PORT
 from homeassistant.helpers import config_validation as cv
 from homeassistant.helpers.entity import Entity
 from homeassistant.util import Throttle
+import voluptuous as vol
 
 REQUIREMENTS = ['xmltodict==0.10.2']
 

@@ -6,18 +6,18 @@ https://home-assistant.io/components/alexa/
 """
 import asyncio
 import copy
+from datetime import datetime
 import enum
 import logging
 import uuid
-from datetime import datetime
 
-import voluptuous as vol
-
-from homeassistant.core import callback
-from homeassistant.const import HTTP_BAD_REQUEST
-from homeassistant.helpers import template, script, config_validation as cv
 from homeassistant.components.http import HomeAssistantView
+from homeassistant.const import HTTP_BAD_REQUEST
+from homeassistant.core import callback
+from homeassistant.helpers import config_validation as cv
+from homeassistant.helpers import script, template
 import homeassistant.util.dt as dt_util
+import voluptuous as vol
 
 _LOGGER = logging.getLogger(__name__)
 

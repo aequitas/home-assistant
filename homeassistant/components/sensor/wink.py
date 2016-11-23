@@ -6,9 +6,9 @@ at https://home-assistant.io/components/sensor.wink/
 """
 import logging
 
+from homeassistant.components.wink import WinkDevice
 from homeassistant.const import TEMP_CELSIUS
 from homeassistant.helpers.entity import Entity
-from homeassistant.components.wink import WinkDevice
 from homeassistant.loader import get_component
 
 DEPENDENCIES = ['wink']

@@ -6,13 +6,12 @@ https://home-assistant.io/components/climate.eq3btsmart/
 """
 import logging
 
-import voluptuous as vol
-
-from homeassistant.components.climate import ClimateDevice, PLATFORM_SCHEMA
+from homeassistant.components.climate import PLATFORM_SCHEMA, ClimateDevice
 from homeassistant.const import (
-    CONF_MAC, TEMP_CELSIUS, CONF_DEVICES, ATTR_TEMPERATURE)
-from homeassistant.util.temperature import convert
+    ATTR_TEMPERATURE, CONF_DEVICES, CONF_MAC, TEMP_CELSIUS)
 import homeassistant.helpers.config_validation as cv
+from homeassistant.util.temperature import convert
+import voluptuous as vol
 
 REQUIREMENTS = ['bluepy_devices==0.2.0']
 

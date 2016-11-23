@@ -4,16 +4,15 @@ Bitcoin information service that uses blockchain.info.
 For more details about this platform, please refer to the documentation at
 https://home-assistant.io/components/sensor.bitcoin/
 """
-import logging
 from datetime import timedelta
-
-import voluptuous as vol
+import logging
 
 from homeassistant.components.sensor import PLATFORM_SCHEMA
-from homeassistant.const import (CONF_DISPLAY_OPTIONS, ATTR_ATTRIBUTION)
+from homeassistant.const import ATTR_ATTRIBUTION, CONF_DISPLAY_OPTIONS
 import homeassistant.helpers.config_validation as cv
 from homeassistant.helpers.entity import Entity
 from homeassistant.util import Throttle
+import voluptuous as vol
 
 REQUIREMENTS = ['blockchain==1.3.3']
 

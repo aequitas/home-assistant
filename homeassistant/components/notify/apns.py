@@ -6,14 +6,14 @@ https://home-assistant.io/components/notify.apns/
 """
 import logging
 import os
-import voluptuous as vol
 
-from homeassistant.helpers.event import track_state_change
-from homeassistant.config import load_yaml_config_file
 from homeassistant.components.notify import (
-    ATTR_TARGET, ATTR_DATA, BaseNotificationService)
-import homeassistant.helpers.config_validation as cv
+    ATTR_DATA, ATTR_TARGET, BaseNotificationService)
+from homeassistant.config import load_yaml_config_file
 from homeassistant.helpers import template as template_helper
+import homeassistant.helpers.config_validation as cv
+from homeassistant.helpers.event import track_state_change
+import voluptuous as vol
 
 DOMAIN = "apns"
 APNS_DEVICES = "apns.yaml"

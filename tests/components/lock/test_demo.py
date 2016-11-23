@@ -3,9 +3,7 @@ import unittest
 
 from homeassistant.bootstrap import setup_component
 from homeassistant.components import lock
-
 from tests.common import get_test_home_assistant
-
 
 FRONT = 'lock.front_door'
 KITCHEN = 'lock.kitchen_door'

@@ -1,10 +1,9 @@
 """The tests for the weblink component."""
 import unittest
 
+from homeassistant import bootstrap
 from homeassistant.bootstrap import setup_component
 from homeassistant.components import weblink
-from homeassistant import bootstrap
-
 from tests.common import get_test_home_assistant
 
 

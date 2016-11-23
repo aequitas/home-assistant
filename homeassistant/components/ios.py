@@ -5,23 +5,17 @@ For more details about this platform, please refer to the documentation at
 https://home-assistant.io/ecosystem/ios/
 """
 import asyncio
-import os
 import json
 import logging
-
-import voluptuous as vol
-from voluptuous.humanize import humanize_error
-
-from homeassistant.helpers import config_validation as cv
-
-from homeassistant.helpers import discovery
-
-from homeassistant.core import callback
+import os
 
 from homeassistant.components.http import HomeAssistantView
-
-from homeassistant.const import (HTTP_INTERNAL_SERVER_ERROR,
-                                 HTTP_BAD_REQUEST)
+from homeassistant.const import HTTP_BAD_REQUEST, HTTP_INTERNAL_SERVER_ERROR
+from homeassistant.core import callback
+from homeassistant.helpers import config_validation as cv
+from homeassistant.helpers import discovery
+import voluptuous as vol
+from voluptuous.humanize import humanize_error
 
 _LOGGER = logging.getLogger(__name__)
 

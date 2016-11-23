@@ -10,17 +10,15 @@ https://home-assistant.io/components/script/
 import asyncio
 import logging
 
-import voluptuous as vol
-
 from homeassistant.const import (
-    ATTR_ENTITY_ID, SERVICE_TURN_OFF, SERVICE_TURN_ON,
-    SERVICE_TOGGLE, STATE_ON, CONF_ALIAS)
+    ATTR_ENTITY_ID, CONF_ALIAS, SERVICE_TOGGLE, SERVICE_TURN_OFF,
+    SERVICE_TURN_ON, STATE_ON)
 from homeassistant.core import split_entity_id
+import homeassistant.helpers.config_validation as cv
 from homeassistant.helpers.entity import ToggleEntity
 from homeassistant.helpers.entity_component import EntityComponent
-import homeassistant.helpers.config_validation as cv
-
 from homeassistant.helpers.script import Script
+import voluptuous as vol
 
 DOMAIN = "script"
 ENTITY_ID_FORMAT = DOMAIN + '.{}'

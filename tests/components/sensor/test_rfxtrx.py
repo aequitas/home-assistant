@@ -1,12 +1,10 @@
 """The tests for the Rfxtrx sensor platform."""
 import unittest
 
-import pytest
-
 from homeassistant.bootstrap import setup_component
 from homeassistant.components import rfxtrx as rfxtrx_core
 from homeassistant.const import TEMP_CELSIUS
-
+import pytest
 from tests.common import get_test_home_assistant
 
 

@@ -10,10 +10,10 @@ import re
 import threading
 
 import requests
-import voluptuous as vol
 
 import homeassistant.helpers.config_validation as cv
 from homeassistant.util import sanitize_filename
+import voluptuous as vol
 
 _LOGGER = logging.getLogger(__name__)
 

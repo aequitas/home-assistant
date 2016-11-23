@@ -6,6 +6,7 @@ https://home-assistant.io/components/http/
 """
 import asyncio
 import hmac
+from ipaddress import ip_address, ip_network
 import json
 import logging
 import mimetypes
@@ -13,24 +14,22 @@ import os
 from pathlib import Path
 import re
 import ssl
-from ipaddress import ip_address, ip_network
 
-import voluptuous as vol
-from aiohttp import web, hdrs
+from aiohttp import hdrs, web
 from aiohttp.file_sender import FileSender
 from aiohttp.web_exceptions import (
-    HTTPUnauthorized, HTTPMovedPermanently, HTTPNotModified)
+    HTTPMovedPermanently, HTTPNotModified, HTTPUnauthorized)
 from aiohttp.web_urldispatcher import StaticRoute
-
-from homeassistant.core import is_callback
-import homeassistant.remote as rem
 from homeassistant import util
-from homeassistant.const import (
-    SERVER_PORT, HTTP_HEADER_HA_AUTH,  # HTTP_HEADER_CACHE_CONTROL,
-    CONTENT_TYPE_JSON, ALLOWED_CORS_HEADERS, EVENT_HOMEASSISTANT_STOP,
-    EVENT_HOMEASSISTANT_START, HTTP_HEADER_X_FORWARDED_FOR)
-import homeassistant.helpers.config_validation as cv
 from homeassistant.components import persistent_notification
+from homeassistant.const import (  # HTTP_HEADER_CACHE_CONTROL,
+    ALLOWED_CORS_HEADERS, CONTENT_TYPE_JSON, EVENT_HOMEASSISTANT_START,
+    EVENT_HOMEASSISTANT_STOP, HTTP_HEADER_HA_AUTH, HTTP_HEADER_X_FORWARDED_FOR,
+    SERVER_PORT)
+from homeassistant.core import is_callback
+import homeassistant.helpers.config_validation as cv
+import homeassistant.remote as rem
+import voluptuous as vol
 
 DOMAIN = 'http'
 REQUIREMENTS = ('aiohttp_cors==0.4.0',)

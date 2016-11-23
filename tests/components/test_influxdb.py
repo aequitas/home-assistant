@@ -2,12 +2,10 @@
 import unittest
 from unittest import mock
 
-import influxdb as influx_client
-
 from homeassistant.bootstrap import setup_component
 import homeassistant.components.influxdb as influxdb
 from homeassistant.const import EVENT_STATE_CHANGED, STATE_OFF, STATE_ON
-
+import influxdb as influx_client
 from tests.common import get_test_home_assistant
 
 

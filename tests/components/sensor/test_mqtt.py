@@ -3,9 +3,8 @@ import unittest
 
 from homeassistant.bootstrap import setup_component
 import homeassistant.components.sensor as sensor
-from tests.common import mock_mqtt_component, fire_mqtt_message
-
-from tests.common import get_test_home_assistant
+from tests.common import (
+    fire_mqtt_message, get_test_home_assistant, mock_mqtt_component)
 
 
 class TestSensorMQTT(unittest.TestCase):

@@ -4,17 +4,16 @@ Support for ZigBee devices.
 For more details about this component, please refer to the documentation at
 https://home-assistant.io/components/zigbee/
 """
+from base64 import b64decode, b64encode
+from binascii import hexlify, unhexlify
 import logging
 import pickle
-from binascii import hexlify, unhexlify
-from base64 import b64encode, b64decode
-
-import voluptuous as vol
 
 from homeassistant.const import (
-    EVENT_HOMEASSISTANT_STOP, CONF_DEVICE, CONF_NAME, CONF_PIN)
-from homeassistant.helpers.entity import Entity
+    CONF_DEVICE, CONF_NAME, CONF_PIN, EVENT_HOMEASSISTANT_STOP)
 from homeassistant.helpers import config_validation as cv
+from homeassistant.helpers.entity import Entity
+import voluptuous as vol
 
 REQUIREMENTS = ['xbee-helper==0.0.7']
 

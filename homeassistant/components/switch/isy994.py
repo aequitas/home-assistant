@@ -5,11 +5,12 @@ For more details about this platform, please refer to the documentation at
 https://home-assistant.io/components/switch.isy994/
 """
 import logging
+
 from typing import Callable  # noqa
 
-from homeassistant.components.switch import SwitchDevice, DOMAIN
 import homeassistant.components.isy994 as isy
-from homeassistant.const import STATE_ON, STATE_OFF, STATE_UNKNOWN
+from homeassistant.components.switch import DOMAIN, SwitchDevice
+from homeassistant.const import STATE_OFF, STATE_ON, STATE_UNKNOWN
 from homeassistant.helpers.typing import ConfigType  # noqa
 
 _LOGGER = logging.getLogger(__name__)

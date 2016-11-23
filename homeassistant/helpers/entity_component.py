@@ -3,17 +3,17 @@ import asyncio
 
 from homeassistant import config as conf_util
 from homeassistant.bootstrap import (
-    async_prepare_setup_platform, async_prepare_setup_component)
+    async_prepare_setup_component, async_prepare_setup_platform)
 from homeassistant.const import (
-    ATTR_ENTITY_ID, CONF_SCAN_INTERVAL, CONF_ENTITY_NAMESPACE,
+    ATTR_ENTITY_ID, CONF_ENTITY_NAMESPACE, CONF_SCAN_INTERVAL,
     DEVICE_DEFAULT_NAME)
 from homeassistant.core import callback, valid_entity_id
 from homeassistant.exceptions import HomeAssistantError
-from homeassistant.loader import get_component
 from homeassistant.helpers import config_per_platform, discovery
 from homeassistant.helpers.entity import async_generate_entity_id
 from homeassistant.helpers.event import async_track_utc_time_change
 from homeassistant.helpers.service import extract_entity_ids
+from homeassistant.loader import get_component
 from homeassistant.util.async import (
     run_callback_threadsafe, run_coroutine_threadsafe)
 

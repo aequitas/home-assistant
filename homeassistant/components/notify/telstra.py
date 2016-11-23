@@ -7,12 +7,12 @@ https://home-assistant.io/components/notify.telstra/
 import logging
 
 import requests
-import voluptuous as vol
 
 from homeassistant.components.notify import (
-    BaseNotificationService, ATTR_TITLE, PLATFORM_SCHEMA)
+    ATTR_TITLE, PLATFORM_SCHEMA, BaseNotificationService)
 from homeassistant.const import CONTENT_TYPE_JSON
 import homeassistant.helpers.config_validation as cv
+import voluptuous as vol
 
 _LOGGER = logging.getLogger(__name__)
 

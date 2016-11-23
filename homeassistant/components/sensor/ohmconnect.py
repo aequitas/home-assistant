@@ -4,18 +4,18 @@ Support for OhmConnect.
 For more details about this platform, please refer to the documentation
 https://home-assistant.io/components/sensor.ohmconnect/
 """
-import logging
 from datetime import timedelta
+import logging
 import xml.etree.ElementTree as ET
 
 import requests
-import voluptuous as vol
 
 from homeassistant.components.sensor import PLATFORM_SCHEMA
 from homeassistant.const import CONF_NAME
 import homeassistant.helpers.config_validation as cv
-from homeassistant.util import Throttle
 from homeassistant.helpers.entity import Entity
+from homeassistant.util import Throttle
+import voluptuous as vol
 
 _LOGGER = logging.getLogger(__name__)
 

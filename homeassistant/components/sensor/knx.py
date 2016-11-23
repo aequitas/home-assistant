@@ -4,11 +4,10 @@ Sensors of a KNX Device.
 For more details about this platform, please refer to the documentation at
 https://home-assistant.io/components/knx/
 """
-from homeassistant.const import (TEMP_CELSIUS, TEMPERATURE, CONF_TYPE,
-                                 ILLUMINANCE, SPEED_MS, CONF_MINIMUM,
-                                 CONF_MAXIMUM)
-from homeassistant.components.knx import (KNXConfig, KNXGroupAddress)
-
+from homeassistant.components.knx import KNXConfig, KNXGroupAddress
+from homeassistant.const import (
+    CONF_MAXIMUM, CONF_MINIMUM, CONF_TYPE, ILLUMINANCE, SPEED_MS, TEMP_CELSIUS,
+    TEMPERATURE)
 
 DEPENDENCIES = ["knx"]
 

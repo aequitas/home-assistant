@@ -8,17 +8,17 @@ from datetime import timedelta
 import logging
 
 from requests import RequestException
-import voluptuous as vol
 
-import homeassistant.helpers.config_validation as cv
 from homeassistant.components.media_player import (
-    SUPPORT_NEXT_TRACK, SUPPORT_PAUSE, SUPPORT_PREVIOUS_TRACK, PLATFORM_SCHEMA,
-    SUPPORT_TURN_OFF, SUPPORT_VOLUME_MUTE, SUPPORT_VOLUME_STEP,
-    SUPPORT_SELECT_SOURCE, MEDIA_TYPE_CHANNEL, MediaPlayerDevice)
+    MEDIA_TYPE_CHANNEL, PLATFORM_SCHEMA, SUPPORT_NEXT_TRACK, SUPPORT_PAUSE,
+    SUPPORT_PREVIOUS_TRACK, SUPPORT_SELECT_SOURCE, SUPPORT_TURN_OFF,
+    SUPPORT_VOLUME_MUTE, SUPPORT_VOLUME_STEP, MediaPlayerDevice)
 from homeassistant.const import (
-    CONF_HOST, CONF_NAME, CONF_ACCESS_TOKEN,
-    STATE_OFF, STATE_PLAYING, STATE_PAUSED, STATE_UNKNOWN)
+    CONF_ACCESS_TOKEN, CONF_HOST, CONF_NAME, STATE_OFF, STATE_PAUSED,
+    STATE_PLAYING, STATE_UNKNOWN)
+import homeassistant.helpers.config_validation as cv
 import homeassistant.util as util
+import voluptuous as vol
 
 REQUIREMENTS = ['https://github.com/wokar/pylgnetcast/archive/'
                 'v0.2.0.zip#pylgnetcast==0.2.0']

@@ -1,20 +1,18 @@
 """The tests for the MQTT component."""
 from collections import namedtuple
+import socket
 import unittest
 from unittest import mock
-import socket
 
-import voluptuous as vol
-
-from homeassistant.core import callback
 from homeassistant.bootstrap import setup_component
 import homeassistant.components.mqtt as mqtt
 from homeassistant.const import (
-    EVENT_CALL_SERVICE, ATTR_DOMAIN, ATTR_SERVICE, EVENT_HOMEASSISTANT_START,
+    ATTR_DOMAIN, ATTR_SERVICE, EVENT_CALL_SERVICE, EVENT_HOMEASSISTANT_START,
     EVENT_HOMEASSISTANT_STOP)
-
+from homeassistant.core import callback
 from tests.common import (
-    get_test_home_assistant, mock_mqtt_component, fire_mqtt_message)
+    fire_mqtt_message, get_test_home_assistant, mock_mqtt_component)
+import voluptuous as vol
 
 
 class TestMQTT(unittest.TestCase):

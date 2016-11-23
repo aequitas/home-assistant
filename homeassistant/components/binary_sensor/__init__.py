@@ -7,12 +7,11 @@ https://home-assistant.io/components/binary_sensor/
 import asyncio
 import logging
 
-import voluptuous as vol
-
-from homeassistant.helpers.entity_component import EntityComponent
-from homeassistant.helpers.entity import Entity
-from homeassistant.const import (STATE_ON, STATE_OFF)
+from homeassistant.const import STATE_OFF, STATE_ON
 from homeassistant.helpers.config_validation import PLATFORM_SCHEMA  # noqa
+from homeassistant.helpers.entity import Entity
+from homeassistant.helpers.entity_component import EntityComponent
+import voluptuous as vol
 
 DOMAIN = 'binary_sensor'
 SCAN_INTERVAL = 30

@@ -4,22 +4,22 @@ Support to interface with the Plex API.
 For more details about this platform, please refer to the documentation at
 https://home-assistant.io/components/media_player.plex/
 """
+from datetime import timedelta
 import json
 import logging
 import os
-from datetime import timedelta
 from urllib.parse import urlparse
 
-import homeassistant.util as util
 from homeassistant.components.media_player import (
-    MEDIA_TYPE_TVSHOW, MEDIA_TYPE_VIDEO, MEDIA_TYPE_MUSIC, SUPPORT_NEXT_TRACK,
-    SUPPORT_PREVIOUS_TRACK, SUPPORT_PAUSE, SUPPORT_STOP, SUPPORT_VOLUME_SET,
+    MEDIA_TYPE_MUSIC, MEDIA_TYPE_TVSHOW, MEDIA_TYPE_VIDEO, SUPPORT_NEXT_TRACK,
+    SUPPORT_PAUSE, SUPPORT_PREVIOUS_TRACK, SUPPORT_STOP, SUPPORT_VOLUME_SET,
     MediaPlayerDevice)
 from homeassistant.const import (
     DEVICE_DEFAULT_NAME, STATE_IDLE, STATE_OFF, STATE_PAUSED, STATE_PLAYING,
     STATE_UNKNOWN)
+from homeassistant.helpers.event import track_utc_time_change
 from homeassistant.loader import get_component
-from homeassistant.helpers.event import (track_utc_time_change)
+import homeassistant.util as util
 
 REQUIREMENTS = ['plexapi==2.0.2']
 MIN_TIME_BETWEEN_SCANS = timedelta(seconds=10)

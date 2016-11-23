@@ -5,25 +5,24 @@ For more details about this platform, please refer to the documentation at
 https://home-assistant.io/components/notify.html5/
 """
 import asyncio
-import os
-import logging
-import json
-import time
 import datetime
+import json
+import logging
+import os
+import time
 import uuid
 
+from homeassistant.components.frontend import add_manifest_json_key
+from homeassistant.components.http import HomeAssistantView
+from homeassistant.components.notify import (
+    ATTR_DATA, ATTR_TARGET, ATTR_TITLE, ATTR_TITLE_DEFAULT, PLATFORM_SCHEMA,
+    BaseNotificationService)
+from homeassistant.const import (
+    HTTP_BAD_REQUEST, HTTP_INTERNAL_SERVER_ERROR, HTTP_UNAUTHORIZED, URL_ROOT)
+from homeassistant.helpers import config_validation as cv
+from homeassistant.util import ensure_unique_string
 import voluptuous as vol
 from voluptuous.humanize import humanize_error
-
-from homeassistant.const import (HTTP_BAD_REQUEST, HTTP_INTERNAL_SERVER_ERROR,
-                                 HTTP_UNAUTHORIZED, URL_ROOT)
-from homeassistant.util import ensure_unique_string
-from homeassistant.components.notify import (
-    ATTR_TARGET, ATTR_TITLE, ATTR_TITLE_DEFAULT, ATTR_DATA,
-    BaseNotificationService, PLATFORM_SCHEMA)
-from homeassistant.components.http import HomeAssistantView
-from homeassistant.components.frontend import add_manifest_json_key
-from homeassistant.helpers import config_validation as cv
 
 REQUIREMENTS = ['pywebpush==0.6.1', 'PyJWT==1.4.2']
 

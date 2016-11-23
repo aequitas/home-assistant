@@ -7,13 +7,12 @@ https://home-assistant.io/components/climate.honeywell/
 import logging
 import socket
 
-import voluptuous as vol
-
-from homeassistant.components.climate import (ClimateDevice, PLATFORM_SCHEMA)
+from homeassistant.components.climate import PLATFORM_SCHEMA, ClimateDevice
 from homeassistant.const import (
-    CONF_PASSWORD, CONF_USERNAME, TEMP_CELSIUS, TEMP_FAHRENHEIT,
-    ATTR_TEMPERATURE)
+    ATTR_TEMPERATURE, CONF_PASSWORD, CONF_USERNAME, TEMP_CELSIUS,
+    TEMP_FAHRENHEIT)
 import homeassistant.helpers.config_validation as cv
+import voluptuous as vol
 
 REQUIREMENTS = ['evohomeclient==0.2.5',
                 'somecomfort==0.3.2']

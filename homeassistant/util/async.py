@@ -1,9 +1,9 @@
 """Asyncio backports for Python 3.4.3 compatibility."""
-import concurrent.futures
-import threading
-import logging
 from asyncio import coroutines
 from asyncio.futures import Future
+import concurrent.futures
+import logging
+import threading
 
 try:
     # pylint: disable=ungrouped-imports

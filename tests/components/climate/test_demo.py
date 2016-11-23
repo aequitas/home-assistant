@@ -1,14 +1,10 @@
 """The tests for the demo climate component."""
 import unittest
 
-from homeassistant.util.unit_system import (
-    METRIC_SYSTEM
-)
 from homeassistant.bootstrap import setup_component
 from homeassistant.components import climate
-
+from homeassistant.util.unit_system import METRIC_SYSTEM
 from tests.common import get_test_home_assistant
-
 
 ENTITY_CLIMATE = 'climate.hvac'
 ENTITY_ECOBEE = 'climate.ecobee'

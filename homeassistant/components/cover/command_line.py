@@ -7,13 +7,12 @@ https://home-assistant.io/components/cover.command_line/
 import logging
 import subprocess
 
-import voluptuous as vol
-
-from homeassistant.components.cover import (CoverDevice, PLATFORM_SCHEMA)
+from homeassistant.components.cover import PLATFORM_SCHEMA, CoverDevice
 from homeassistant.const import (
     CONF_COMMAND_CLOSE, CONF_COMMAND_OPEN, CONF_COMMAND_STATE,
-    CONF_COMMAND_STOP, CONF_COVERS, CONF_VALUE_TEMPLATE, CONF_FRIENDLY_NAME)
+    CONF_COMMAND_STOP, CONF_COVERS, CONF_FRIENDLY_NAME, CONF_VALUE_TEMPLATE)
 import homeassistant.helpers.config_validation as cv
+import voluptuous as vol
 
 _LOGGER = logging.getLogger(__name__)
 

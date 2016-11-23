@@ -5,24 +5,22 @@ For more details about this component, please refer to the documentation at
 https://home-assistant.io/components/logbook/
 """
 import asyncio
-import logging
 from datetime import timedelta
 from itertools import groupby
+import logging
 
-import voluptuous as vol
-
-from homeassistant.core import callback
-import homeassistant.helpers.config_validation as cv
-import homeassistant.util.dt as dt_util
 from homeassistant.components import recorder, sun
 from homeassistant.components.frontend import register_built_in_panel
 from homeassistant.components.http import HomeAssistantView
-from homeassistant.const import (EVENT_HOMEASSISTANT_START,
-                                 EVENT_HOMEASSISTANT_STOP, EVENT_STATE_CHANGED,
-                                 STATE_NOT_HOME, STATE_OFF, STATE_ON,
-                                 ATTR_HIDDEN, HTTP_BAD_REQUEST)
-from homeassistant.core import State, split_entity_id, DOMAIN as HA_DOMAIN
+from homeassistant.const import (
+    ATTR_HIDDEN, EVENT_HOMEASSISTANT_START, EVENT_HOMEASSISTANT_STOP,
+    EVENT_STATE_CHANGED, HTTP_BAD_REQUEST, STATE_NOT_HOME, STATE_OFF, STATE_ON)
+from homeassistant.core import DOMAIN as HA_DOMAIN
+from homeassistant.core import State, callback, split_entity_id
+import homeassistant.helpers.config_validation as cv
 from homeassistant.util.async import run_callback_threadsafe
+import homeassistant.util.dt as dt_util
+import voluptuous as vol
 
 DOMAIN = "logbook"
 DEPENDENCIES = ['recorder', 'frontend']

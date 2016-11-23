@@ -2,13 +2,12 @@
 from copy import copy
 import unittest
 
-from homeassistant.const import (
-    STATE_OFF, STATE_ON, STATE_UNKNOWN, STATE_PLAYING, STATE_PAUSED)
-import homeassistant.components.switch as switch
 import homeassistant.components.media_player as media_player
 import homeassistant.components.media_player.universal as universal
-
-from tests.common import mock_service, get_test_home_assistant
+import homeassistant.components.switch as switch
+from homeassistant.const import (
+    STATE_OFF, STATE_ON, STATE_PAUSED, STATE_PLAYING, STATE_UNKNOWN)
+from tests.common import get_test_home_assistant, mock_service
 
 
 class MockMediaPlayer(media_player.MediaPlayerDevice):

@@ -3,24 +3,23 @@ from collections import OrderedDict
 from datetime import timedelta
 import os
 import re
-from urllib.parse import urlparse
 from socket import _GLOBAL_DEFAULT_TIMEOUT
+from urllib.parse import urlparse
 
-from typing import Any, Union, TypeVar, Callable, Sequence, Dict
+from typing import Any, Callable, Dict, Sequence, TypeVar, Union
 
-import voluptuous as vol
-
-from homeassistant.loader import get_platform
 from homeassistant.const import (
-    CONF_PLATFORM, CONF_SCAN_INTERVAL, TEMP_CELSIUS, TEMP_FAHRENHEIT,
-    CONF_ALIAS, CONF_ENTITY_ID, CONF_VALUE_TEMPLATE, WEEKDAYS,
-    CONF_CONDITION, CONF_BELOW, CONF_ABOVE, SUN_EVENT_SUNSET,
-    SUN_EVENT_SUNRISE, CONF_UNIT_SYSTEM_IMPERIAL, CONF_UNIT_SYSTEM_METRIC)
+    CONF_ABOVE, CONF_ALIAS, CONF_BELOW, CONF_CONDITION, CONF_ENTITY_ID,
+    CONF_PLATFORM, CONF_SCAN_INTERVAL, CONF_UNIT_SYSTEM_IMPERIAL,
+    CONF_UNIT_SYSTEM_METRIC, CONF_VALUE_TEMPLATE, SUN_EVENT_SUNRISE,
+    SUN_EVENT_SUNSET, TEMP_CELSIUS, TEMP_FAHRENHEIT, WEEKDAYS)
 from homeassistant.core import valid_entity_id
 from homeassistant.exceptions import TemplateError
-import homeassistant.util.dt as dt_util
-from homeassistant.util import slugify as util_slugify
 from homeassistant.helpers import template as template_helper
+from homeassistant.loader import get_platform
+from homeassistant.util import slugify as util_slugify
+import homeassistant.util.dt as dt_util
+import voluptuous as vol
 
 # pylint: disable=invalid-name
 

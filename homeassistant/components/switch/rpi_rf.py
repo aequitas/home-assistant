@@ -6,11 +6,10 @@ https://home-assistant.io/components/switch.rpi_rf/
 """
 import logging
 
-import voluptuous as vol
-
-from homeassistant.components.switch import (SwitchDevice, PLATFORM_SCHEMA)
-from homeassistant.const import (CONF_NAME, CONF_SWITCHES)
+from homeassistant.components.switch import PLATFORM_SCHEMA, SwitchDevice
+from homeassistant.const import CONF_NAME, CONF_SWITCHES
 import homeassistant.helpers.config_validation as cv
+import voluptuous as vol
 
 REQUIREMENTS = ['rpi-rf==0.9.5']
 

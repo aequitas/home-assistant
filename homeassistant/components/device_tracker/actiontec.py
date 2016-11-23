@@ -4,19 +4,19 @@ Support for Actiontec MI424WR (Verizon FIOS) routers.
 For more details about this platform, please refer to the documentation at
 https://home-assistant.io/components/device_tracker.actiontec/
 """
+from collections import namedtuple
+from datetime import timedelta
 import logging
 import re
 import telnetlib
 import threading
-from collections import namedtuple
-from datetime import timedelta
-import voluptuous as vol
 
-import homeassistant.helpers.config_validation as cv
-import homeassistant.util.dt as dt_util
-from homeassistant.components.device_tracker import (DOMAIN, PLATFORM_SCHEMA)
+from homeassistant.components.device_tracker import DOMAIN, PLATFORM_SCHEMA
 from homeassistant.const import CONF_HOST, CONF_PASSWORD, CONF_USERNAME
+import homeassistant.helpers.config_validation as cv
 from homeassistant.util import Throttle
+import homeassistant.util.dt as dt_util
+import voluptuous as vol
 
 # Return cached results if last scan was less then this time ago.
 MIN_TIME_BETWEEN_SCANS = timedelta(seconds=5)

@@ -1,15 +1,14 @@
 """The tests for the Updater component."""
 from datetime import datetime, timedelta
+import os
 import unittest
 from unittest.mock import patch
-import os
 
 import requests
-import requests_mock
 
 from homeassistant.bootstrap import setup_component
 from homeassistant.components import updater
-
+import requests_mock
 from tests.common import (
     assert_setup_component, fire_time_changed, get_test_home_assistant)
 

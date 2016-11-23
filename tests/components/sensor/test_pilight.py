@@ -2,10 +2,9 @@
 import logging
 
 from homeassistant.bootstrap import setup_component
-import homeassistant.components.sensor as sensor
 from homeassistant.components import pilight
-
-from tests.common import get_test_home_assistant, assert_setup_component
+import homeassistant.components.sensor as sensor
+from tests.common import assert_setup_component, get_test_home_assistant
 
 HASS = None
 

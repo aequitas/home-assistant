@@ -8,20 +8,20 @@ import asyncio
 import logging
 import os
 
-import voluptuous as vol
-
-from homeassistant import config as conf_util, core as ha
+from homeassistant import config as conf_util
+from homeassistant import core as ha
 from homeassistant.const import (
-    ATTR_ENTITY_ID, CONF_ICON, CONF_NAME, STATE_CLOSED, STATE_HOME,
-    STATE_NOT_HOME, STATE_OFF, STATE_ON, STATE_OPEN, STATE_LOCKED,
-    STATE_UNLOCKED, STATE_UNKNOWN, ATTR_ASSUMED_STATE)
+    ATTR_ASSUMED_STATE, ATTR_ENTITY_ID, CONF_ICON, CONF_NAME, STATE_CLOSED,
+    STATE_HOME, STATE_LOCKED, STATE_NOT_HOME, STATE_OFF, STATE_ON, STATE_OPEN,
+    STATE_UNKNOWN, STATE_UNLOCKED)
 from homeassistant.core import callback
+import homeassistant.helpers.config_validation as cv
 from homeassistant.helpers.entity import Entity, async_generate_entity_id
 from homeassistant.helpers.entity_component import EntityComponent
 from homeassistant.helpers.event import async_track_state_change
-import homeassistant.helpers.config_validation as cv
 from homeassistant.util.async import (
     run_callback_threadsafe, run_coroutine_threadsafe)
+import voluptuous as vol
 
 DOMAIN = 'group'
 

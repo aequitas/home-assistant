@@ -3,7 +3,6 @@ from unittest.mock import patch
 
 from homeassistant.helpers import condition
 from homeassistant.util import dt
-
 from tests.common import get_test_home_assistant
 
 

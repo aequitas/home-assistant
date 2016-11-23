@@ -6,9 +6,10 @@ documentation at https://home-assistant.io/components/sensor.arwn/
 """
 import json
 import logging
-from homeassistant.helpers.entity import Entity
+
 import homeassistant.components.mqtt as mqtt
-from homeassistant.const import (TEMP_FAHRENHEIT, TEMP_CELSIUS)
+from homeassistant.const import TEMP_CELSIUS, TEMP_FAHRENHEIT
+from homeassistant.helpers.entity import Entity
 from homeassistant.util import slugify
 
 DEPENDENCIES = ['mqtt']

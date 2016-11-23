@@ -4,15 +4,12 @@ Support for Wink thermostats.
 For more details about this platform, please refer to the documentation at
 https://home-assistant.io/components/climate.wink/
 """
-from homeassistant.components.wink import WinkDevice
 from homeassistant.components.climate import (
-    STATE_AUTO, STATE_COOL, STATE_HEAT, ClimateDevice,
-    ATTR_TARGET_TEMP_HIGH, ATTR_TARGET_TEMP_LOW,
-    ATTR_TEMPERATURE,
-    ATTR_CURRENT_HUMIDITY)
+    ATTR_CURRENT_HUMIDITY, ATTR_TARGET_TEMP_HIGH, ATTR_TARGET_TEMP_LOW,
+    ATTR_TEMPERATURE, STATE_AUTO, STATE_COOL, STATE_HEAT, ClimateDevice)
+from homeassistant.components.wink import WinkDevice
 from homeassistant.const import (
-    TEMP_CELSIUS, STATE_ON,
-    STATE_OFF, STATE_UNKNOWN)
+    STATE_OFF, STATE_ON, STATE_UNKNOWN, TEMP_CELSIUS)
 from homeassistant.loader import get_component
 
 DEPENDENCIES = ['wink']

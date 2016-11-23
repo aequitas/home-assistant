@@ -7,10 +7,10 @@ https://home-assistant.io/components/cover.zwave/
 # Because we do not compile openzwave on CI
 # pylint: disable=import-error
 import logging
-from homeassistant.components.cover import DOMAIN
-from homeassistant.components.zwave import ZWaveDeviceEntity
+
 from homeassistant.components import zwave
-from homeassistant.components.cover import CoverDevice
+from homeassistant.components.cover import DOMAIN, CoverDevice
+from homeassistant.components.zwave import ZWaveDeviceEntity
 
 SOMFY = 0x47
 SOMFY_ZRTSI = 0x5a52

@@ -9,10 +9,9 @@ loaded before the EVENT_PLATFORM_DISCOVERED is fired.
 import logging
 import threading
 
-import voluptuous as vol
-
 from homeassistant.const import EVENT_HOMEASSISTANT_START
-from homeassistant.helpers.discovery import load_platform, discover
+from homeassistant.helpers.discovery import discover, load_platform
+import voluptuous as vol
 
 REQUIREMENTS = ['netdisco==0.7.7']
 

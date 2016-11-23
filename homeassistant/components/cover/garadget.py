@@ -6,16 +6,15 @@ https://home-assistant.io/components/garadget/
 """
 import logging
 
-import voluptuous as vol
-
 import requests
 
-from homeassistant.components.cover import CoverDevice, PLATFORM_SCHEMA
-from homeassistant.helpers.event import track_utc_time_change
-from homeassistant.const import CONF_DEVICE, CONF_USERNAME, CONF_PASSWORD,\
-    CONF_ACCESS_TOKEN, CONF_NAME, STATE_UNKNOWN, STATE_CLOSED, STATE_OPEN,\
-    CONF_COVERS
+from homeassistant.components.cover import PLATFORM_SCHEMA, CoverDevice
+from homeassistant.const import (
+    CONF_ACCESS_TOKEN, CONF_COVERS, CONF_DEVICE, CONF_NAME, CONF_PASSWORD,
+    CONF_USERNAME, STATE_CLOSED, STATE_OPEN, STATE_UNKNOWN)
 import homeassistant.helpers.config_validation as cv
+from homeassistant.helpers.event import track_utc_time_change
+import voluptuous as vol
 
 DEFAULT_NAME = 'Garadget'
 

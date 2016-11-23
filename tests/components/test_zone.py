@@ -3,7 +3,6 @@ import unittest
 
 from homeassistant import bootstrap
 from homeassistant.components import zone
-
 from tests.common import get_test_home_assistant
 
 

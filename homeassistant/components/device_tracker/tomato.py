@@ -4,19 +4,19 @@ Support for Tomato routers.
 For more details about this platform, please refer to the documentation at
 https://home-assistant.io/components/device_tracker.tomato/
 """
+from datetime import timedelta
 import json
 import logging
 import re
 import threading
-from datetime import timedelta
 
 import requests
-import voluptuous as vol
 
-import homeassistant.helpers.config_validation as cv
 from homeassistant.components.device_tracker import DOMAIN, PLATFORM_SCHEMA
 from homeassistant.const import CONF_HOST, CONF_PASSWORD, CONF_USERNAME
+import homeassistant.helpers.config_validation as cv
 from homeassistant.util import Throttle
+import voluptuous as vol
 
 # Return cached results if last scan was less then this time ago.
 MIN_TIME_BETWEEN_SCANS = timedelta(seconds=5)

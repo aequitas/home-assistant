@@ -6,14 +6,13 @@ https://home-assistant.io/components/sensor.pilight/
 """
 import logging
 
-import voluptuous as vol
-
-from homeassistant.const import (
-    CONF_NAME, STATE_UNKNOWN, CONF_UNIT_OF_MEASUREMENT, CONF_PAYLOAD)
-from homeassistant.components.sensor import PLATFORM_SCHEMA
-from homeassistant.helpers.entity import Entity
 import homeassistant.components.pilight as pilight
+from homeassistant.components.sensor import PLATFORM_SCHEMA
+from homeassistant.const import (
+    CONF_NAME, CONF_PAYLOAD, CONF_UNIT_OF_MEASUREMENT, STATE_UNKNOWN)
 import homeassistant.helpers.config_validation as cv
+from homeassistant.helpers.entity import Entity
+import voluptuous as vol
 
 _LOGGER = logging.getLogger(__name__)
 

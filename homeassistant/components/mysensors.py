@@ -7,15 +7,14 @@ https://home-assistant.io/components/sensor.mysensors/
 import logging
 import socket
 
-import voluptuous as vol
-
 from homeassistant.bootstrap import setup_component
-import homeassistant.helpers.config_validation as cv
-from homeassistant.const import (ATTR_BATTERY_LEVEL, CONF_OPTIMISTIC,
-                                 EVENT_HOMEASSISTANT_START,
-                                 EVENT_HOMEASSISTANT_STOP, STATE_OFF, STATE_ON)
+from homeassistant.const import (
+    ATTR_BATTERY_LEVEL, CONF_OPTIMISTIC, EVENT_HOMEASSISTANT_START,
+    EVENT_HOMEASSISTANT_STOP, STATE_OFF, STATE_ON)
 from homeassistant.helpers import discovery
+import homeassistant.helpers.config_validation as cv
 from homeassistant.loader import get_component
+import voluptuous as vol
 
 _LOGGER = logging.getLogger(__name__)
 

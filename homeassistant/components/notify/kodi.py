@@ -5,14 +5,14 @@ For more details about this platform, please refer to the documentation at
 https://home-assistant.io/components/notify.kodi/
 """
 import logging
-import voluptuous as vol
 
-from homeassistant.const import (ATTR_ICON, CONF_HOST, CONF_PORT,
-                                 CONF_USERNAME, CONF_PASSWORD)
-from homeassistant.components.notify import (ATTR_TITLE, ATTR_TITLE_DEFAULT,
-                                             ATTR_DATA, PLATFORM_SCHEMA,
-                                             BaseNotificationService)
+from homeassistant.components.notify import (
+    ATTR_DATA, ATTR_TITLE, ATTR_TITLE_DEFAULT, PLATFORM_SCHEMA,
+    BaseNotificationService)
+from homeassistant.const import (
+    ATTR_ICON, CONF_HOST, CONF_PASSWORD, CONF_PORT, CONF_USERNAME)
 import homeassistant.helpers.config_validation as cv
+import voluptuous as vol
 
 _LOGGER = logging.getLogger(__name__)
 REQUIREMENTS = ['jsonrpc-requests==0.3']

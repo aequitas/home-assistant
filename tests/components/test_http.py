@@ -1,15 +1,14 @@
 """The tests for the Home Assistant HTTP component."""
 # pylint: disable=protected-access
-import logging
 from ipaddress import ip_network
+import logging
 from unittest.mock import patch
 
 import requests
 
 from homeassistant import bootstrap, const
 import homeassistant.components.http as http
-
-from tests.common import get_test_instance_port, get_test_home_assistant
+from tests.common import get_test_home_assistant, get_test_instance_port
 
 API_PASSWORD = 'test1234'
 SERVER_PORT = get_test_instance_port()

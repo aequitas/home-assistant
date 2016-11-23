@@ -7,15 +7,14 @@ https://home-assistant.io/components/sensor.min_max/
 import asyncio
 import logging
 
-import voluptuous as vol
-
-import homeassistant.helpers.config_validation as cv
 from homeassistant.components.sensor import PLATFORM_SCHEMA
 from homeassistant.const import (
-    CONF_NAME, STATE_UNKNOWN, CONF_TYPE, ATTR_UNIT_OF_MEASUREMENT)
+    ATTR_UNIT_OF_MEASUREMENT, CONF_NAME, CONF_TYPE, STATE_UNKNOWN)
 from homeassistant.core import callback
+import homeassistant.helpers.config_validation as cv
 from homeassistant.helpers.entity import Entity
 from homeassistant.helpers.event import async_track_state_change
+import voluptuous as vol
 
 _LOGGER = logging.getLogger(__name__)
 

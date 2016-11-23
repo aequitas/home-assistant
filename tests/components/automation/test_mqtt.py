@@ -1,11 +1,11 @@
 """The tests for the MQTT automation."""
 import unittest
 
-from homeassistant.core import callback
 from homeassistant.bootstrap import setup_component
 import homeassistant.components.automation as automation
+from homeassistant.core import callback
 from tests.common import (
-    mock_mqtt_component, fire_mqtt_message, get_test_home_assistant)
+    fire_mqtt_message, get_test_home_assistant, mock_mqtt_component)
 
 
 class TestAutomationMQTT(unittest.TestCase):

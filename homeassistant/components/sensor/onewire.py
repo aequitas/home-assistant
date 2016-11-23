@@ -4,15 +4,16 @@ Support for 1-Wire temperature sensors.
 For more details about this platform, please refer to the documentation at
 https://home-assistant.io/components/sensor.onewire/
 """
+from glob import glob
+import logging
 import os
 import time
-import logging
-from glob import glob
-import voluptuous as vol
-from homeassistant.helpers.entity import Entity
-import homeassistant.helpers.config_validation as cv
-from homeassistant.const import STATE_UNKNOWN, TEMP_CELSIUS
+
 from homeassistant.components.sensor import PLATFORM_SCHEMA
+from homeassistant.const import STATE_UNKNOWN, TEMP_CELSIUS
+import homeassistant.helpers.config_validation as cv
+from homeassistant.helpers.entity import Entity
+import voluptuous as vol
 
 CONF_MOUNT_DIR = 'mount_dir'
 CONF_NAMES = 'names'

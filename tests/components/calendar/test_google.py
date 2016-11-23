@@ -4,13 +4,12 @@ import logging
 import unittest
 from unittest.mock import patch
 
-import pytest
-
 import homeassistant.components.calendar as calendar_base
 import homeassistant.components.calendar.google as calendar
-import homeassistant.util.dt as dt_util
 from homeassistant.const import CONF_PLATFORM, STATE_OFF, STATE_ON
 from homeassistant.helpers.template import DATE_STR_FORMAT
+import homeassistant.util.dt as dt_util
+import pytest
 from tests.common import get_test_home_assistant
 
 TEST_PLATFORM = {calendar_base.DOMAIN: {CONF_PLATFORM: 'test'}}

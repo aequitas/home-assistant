@@ -6,11 +6,9 @@ https://home-assistant.io/components/notify.syslog/
 """
 import logging
 
-import voluptuous as vol
-
 from homeassistant.components.notify import (
     ATTR_TITLE, ATTR_TITLE_DEFAULT, PLATFORM_SCHEMA, BaseNotificationService)
-
+import voluptuous as vol
 
 CONF_FACILITY = 'facility'
 CONF_OPTION = 'option'

@@ -1,10 +1,9 @@
 """The tests for numeric state automation."""
 import unittest
 
-from homeassistant.core import callback
 from homeassistant.bootstrap import setup_component
 import homeassistant.components.automation as automation
-
+from homeassistant.core import callback
 from tests.common import get_test_home_assistant
 
 

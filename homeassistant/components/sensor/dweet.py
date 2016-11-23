@@ -4,18 +4,17 @@ Support for showing values from Dweet.io.
 For more details about this platform, please refer to the documentation at
 https://home-assistant.io/components/sensor.dweet/
 """
+from datetime import timedelta
 import json
 import logging
-from datetime import timedelta
-
-import voluptuous as vol
 
 from homeassistant.components.sensor import PLATFORM_SCHEMA
 from homeassistant.const import (
-    CONF_NAME, CONF_VALUE_TEMPLATE, STATE_UNKNOWN, CONF_UNIT_OF_MEASUREMENT)
+    CONF_NAME, CONF_UNIT_OF_MEASUREMENT, CONF_VALUE_TEMPLATE, STATE_UNKNOWN)
 import homeassistant.helpers.config_validation as cv
 from homeassistant.helpers.entity import Entity
 from homeassistant.util import Throttle
+import voluptuous as vol
 
 REQUIREMENTS = ['dweepy==0.2.0']
 

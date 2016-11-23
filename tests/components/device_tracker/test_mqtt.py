@@ -1,15 +1,14 @@
 """The tests for the MQTT device tracker platform."""
-import unittest
-from unittest.mock import patch
 import logging
 import os
+import unittest
+from unittest.mock import patch
 
 from homeassistant.bootstrap import setup_component
 from homeassistant.components import device_tracker
 from homeassistant.const import CONF_PLATFORM
-
 from tests.common import (
-    get_test_home_assistant, mock_mqtt_component, fire_mqtt_message)
+    fire_mqtt_message, get_test_home_assistant, mock_mqtt_component)
 
 _LOGGER = logging.getLogger(__name__)
 

@@ -6,9 +6,9 @@ https://home-assistant.io/components/light.rfxtrx/
 """
 import logging
 
+from homeassistant.components.light import (
+    ATTR_BRIGHTNESS, SUPPORT_BRIGHTNESS, Light)
 import homeassistant.components.rfxtrx as rfxtrx
-from homeassistant.components.light import (ATTR_BRIGHTNESS,
-                                            SUPPORT_BRIGHTNESS, Light)
 
 DEPENDENCIES = ['rfxtrx']
 

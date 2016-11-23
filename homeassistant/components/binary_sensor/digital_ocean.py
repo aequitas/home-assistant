@@ -6,16 +6,15 @@ https://home-assistant.io/components/binary_sensor.digital_ocean/
 """
 import logging
 
-import voluptuous as vol
-
 from homeassistant.components.binary_sensor import (
-    BinarySensorDevice, PLATFORM_SCHEMA)
+    PLATFORM_SCHEMA, BinarySensorDevice)
 from homeassistant.components.digital_ocean import (
-    CONF_DROPLETS, ATTR_CREATED_AT, ATTR_DROPLET_ID, ATTR_DROPLET_NAME,
-    ATTR_FEATURES, ATTR_IPV4_ADDRESS, ATTR_IPV6_ADDRESS, ATTR_MEMORY,
-    ATTR_REGION, ATTR_VCPUS)
-from homeassistant.loader import get_component
+    ATTR_CREATED_AT, ATTR_DROPLET_ID, ATTR_DROPLET_NAME, ATTR_FEATURES,
+    ATTR_IPV4_ADDRESS, ATTR_IPV6_ADDRESS, ATTR_MEMORY, ATTR_REGION, ATTR_VCPUS,
+    CONF_DROPLETS)
 import homeassistant.helpers.config_validation as cv
+from homeassistant.loader import get_component
+import voluptuous as vol
 
 _LOGGER = logging.getLogger(__name__)
 

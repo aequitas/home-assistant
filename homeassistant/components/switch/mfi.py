@@ -7,13 +7,13 @@ https://home-assistant.io/components/switch.mfi/
 import logging
 
 import requests
-import voluptuous as vol
 
-from homeassistant.components.switch import (SwitchDevice, PLATFORM_SCHEMA)
+from homeassistant.components.switch import PLATFORM_SCHEMA, SwitchDevice
 from homeassistant.const import (
-    CONF_HOST, CONF_PORT, CONF_PASSWORD, CONF_USERNAME, CONF_SSL,
+    CONF_HOST, CONF_PASSWORD, CONF_PORT, CONF_SSL, CONF_USERNAME,
     CONF_VERIFY_SSL)
 import homeassistant.helpers.config_validation as cv
+import voluptuous as vol
 
 REQUIREMENTS = ['mficlient==0.3.0']
 

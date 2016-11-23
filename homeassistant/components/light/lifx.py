@@ -7,14 +7,13 @@ https://home-assistant.io/components/light.lifx/
 import colorsys
 import logging
 
-import voluptuous as vol
-
 from homeassistant.components.light import (
     ATTR_BRIGHTNESS, ATTR_COLOR_TEMP, ATTR_RGB_COLOR, ATTR_TRANSITION,
-    SUPPORT_BRIGHTNESS, SUPPORT_COLOR_TEMP, SUPPORT_RGB_COLOR,
-    SUPPORT_TRANSITION, Light, PLATFORM_SCHEMA)
-from homeassistant.helpers.event import track_time_change
+    PLATFORM_SCHEMA, SUPPORT_BRIGHTNESS, SUPPORT_COLOR_TEMP, SUPPORT_RGB_COLOR,
+    SUPPORT_TRANSITION, Light)
 import homeassistant.helpers.config_validation as cv
+from homeassistant.helpers.event import track_time_change
+import voluptuous as vol
 
 _LOGGER = logging.getLogger(__name__)
 

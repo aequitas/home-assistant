@@ -2,13 +2,12 @@
 from collections import OrderedDict
 from unittest.mock import patch
 
-from homeassistant import loader, bootstrap
+from homeassistant import bootstrap, loader
 from homeassistant.core import callback
 from homeassistant.helpers import discovery
 from homeassistant.util.async import run_coroutine_threadsafe
-
 from tests.common import (
-    get_test_home_assistant, MockModule, MockPlatform, mock_coro)
+    MockModule, MockPlatform, get_test_home_assistant, mock_coro)
 
 
 class TestHelpersDiscovery:

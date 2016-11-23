@@ -5,13 +5,13 @@ For more details about this platform, please refer to the documentation at
 https://home-assistant.io/components/cover.isy994/
 """
 import logging
+
 from typing import Callable  # noqa
 
-from homeassistant.components.cover import CoverDevice, DOMAIN
+from homeassistant.components.cover import DOMAIN, CoverDevice
 import homeassistant.components.isy994 as isy
-from homeassistant.const import STATE_OPEN, STATE_CLOSED, STATE_UNKNOWN
+from homeassistant.const import STATE_CLOSED, STATE_OPEN, STATE_UNKNOWN
 from homeassistant.helpers.typing import ConfigType
-
 
 _LOGGER = logging.getLogger(__name__)
 

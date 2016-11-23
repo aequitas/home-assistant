@@ -4,17 +4,17 @@ Notifications for Android TV notification service.
 For more details about this platform, please refer to the documentation at
 https://home-assistant.io/components/notify.nfandroidtv/
 """
-import os
 import logging
+import os
 
 import requests
-import voluptuous as vol
 
 from homeassistant.components.notify import (
-    ATTR_TITLE, ATTR_TITLE_DEFAULT, ATTR_DATA, BaseNotificationService,
-    PLATFORM_SCHEMA)
+    ATTR_DATA, ATTR_TITLE, ATTR_TITLE_DEFAULT, PLATFORM_SCHEMA,
+    BaseNotificationService)
 from homeassistant.const import CONF_TIMEOUT
 import homeassistant.helpers.config_validation as cv
+import voluptuous as vol
 
 _LOGGER = logging.getLogger(__name__)
 

@@ -7,8 +7,7 @@ https://home-assistant.io/components/scene/
 from collections import namedtuple
 
 from homeassistant.components.scene import Scene
-from homeassistant.const import (
-    ATTR_ENTITY_ID, STATE_OFF, STATE_ON)
+from homeassistant.const import ATTR_ENTITY_ID, STATE_OFF, STATE_ON
 from homeassistant.core import State
 from homeassistant.helpers.state import reproduce_state
 

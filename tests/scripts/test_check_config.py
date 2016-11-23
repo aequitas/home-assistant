@@ -5,7 +5,7 @@ import os
 import unittest
 
 import homeassistant.scripts.check_config as check_config
-from tests.common import patch_yaml_files, get_test_config_dir
+from tests.common import get_test_config_dir, patch_yaml_files
 
 _LOGGER = logging.getLogger(__name__)
 

@@ -6,13 +6,11 @@ https://home-assistant.io/components/wemo/
 """
 import logging
 
-import voluptuous as vol
-
 from homeassistant.components.discovery import SERVICE_WEMO
-from homeassistant.helpers import discovery
-from homeassistant.helpers import config_validation as cv
-
 from homeassistant.const import EVENT_HOMEASSISTANT_STOP
+from homeassistant.helpers import config_validation as cv
+from homeassistant.helpers import discovery
+import voluptuous as vol
 
 REQUIREMENTS = ['pywemo==0.4.7']
 

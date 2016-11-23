@@ -4,18 +4,17 @@ Support for Adafruit DHT temperature and humidity sensor.
 For more details about this platform, please refer to the documentation at
 https://home-assistant.io/components/sensor.dht/
 """
-import logging
 from datetime import timedelta
-
-import voluptuous as vol
+import logging
 
 from homeassistant.components.sensor import PLATFORM_SCHEMA
-import homeassistant.helpers.config_validation as cv
 from homeassistant.const import (
-    TEMP_FAHRENHEIT, CONF_NAME, CONF_MONITORED_CONDITIONS)
+    CONF_MONITORED_CONDITIONS, CONF_NAME, TEMP_FAHRENHEIT)
+import homeassistant.helpers.config_validation as cv
 from homeassistant.helpers.entity import Entity
 from homeassistant.util import Throttle
 from homeassistant.util.temperature import celsius_to_fahrenheit
+import voluptuous as vol
 
 # Update this requirement to upstream as soon as it supports Python 3.
 REQUIREMENTS = ['http://github.com/adafruit/Adafruit_Python_DHT/archive/'

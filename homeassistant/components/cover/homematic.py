@@ -9,10 +9,10 @@ properly configured.
 """
 
 import logging
-from homeassistant.const import STATE_UNKNOWN
-from homeassistant.components.cover import CoverDevice,\
-    ATTR_POSITION
+
+from homeassistant.components.cover import ATTR_POSITION, CoverDevice
 import homeassistant.components.homematic as homematic
+from homeassistant.const import STATE_UNKNOWN
 
 _LOGGER = logging.getLogger(__name__)
 

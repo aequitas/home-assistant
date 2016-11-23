@@ -4,8 +4,7 @@ from unittest.mock import MagicMock, patch
 
 from homeassistant.bootstrap import setup_component
 import homeassistant.components.notify as notify
-from homeassistant.components.notify import group, demo
-
+from homeassistant.components.notify import demo, group
 from tests.common import assert_setup_component, get_test_home_assistant
 
 

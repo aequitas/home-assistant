@@ -9,9 +9,9 @@ import logging
 import os
 
 from homeassistant.components.camera import Camera
-from homeassistant.const import EVENT_HOMEASSISTANT_STOP
-from homeassistant.components.verisure import HUB as hub
 from homeassistant.components.verisure import CONF_SMARTCAM
+from homeassistant.components.verisure import HUB as hub
+from homeassistant.const import EVENT_HOMEASSISTANT_STOP
 
 _LOGGER = logging.getLogger(__name__)
 

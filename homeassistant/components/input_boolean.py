@@ -7,14 +7,13 @@ at https://home-assistant.io/components/input_boolean/
 import asyncio
 import logging
 
-import voluptuous as vol
-
 from homeassistant.const import (
-    ATTR_ENTITY_ID, CONF_ICON, CONF_NAME, SERVICE_TURN_OFF, SERVICE_TURN_ON,
-    SERVICE_TOGGLE, STATE_ON)
+    ATTR_ENTITY_ID, CONF_ICON, CONF_NAME, SERVICE_TOGGLE, SERVICE_TURN_OFF,
+    SERVICE_TURN_ON, STATE_ON)
 import homeassistant.helpers.config_validation as cv
 from homeassistant.helpers.entity import ToggleEntity
 from homeassistant.helpers.entity_component import EntityComponent
+import voluptuous as vol
 
 DOMAIN = 'input_boolean'
 

@@ -2,10 +2,9 @@
 # pylint: disable=protected-access
 import unittest
 
-import homeassistant.loader as loader
 import homeassistant.components.http as http
-
-from tests.common import get_test_home_assistant, MockModule
+import homeassistant.loader as loader
+from tests.common import MockModule, get_test_home_assistant
 
 
 class TestLoader(unittest.TestCase):

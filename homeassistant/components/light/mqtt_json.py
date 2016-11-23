@@ -5,20 +5,20 @@ For more details about this platform, please refer to the documentation at
 https://home-assistant.io/components/light.mqtt_json/
 """
 
-import logging
 import json
-import voluptuous as vol
+import logging
 
-import homeassistant.components.mqtt as mqtt
 from homeassistant.components.light import (
-    ATTR_BRIGHTNESS, ATTR_RGB_COLOR, ATTR_TRANSITION, PLATFORM_SCHEMA,
-    ATTR_FLASH, FLASH_LONG, FLASH_SHORT, SUPPORT_BRIGHTNESS, SUPPORT_FLASH,
+    ATTR_BRIGHTNESS, ATTR_FLASH, ATTR_RGB_COLOR, ATTR_TRANSITION, FLASH_LONG,
+    FLASH_SHORT, PLATFORM_SCHEMA, SUPPORT_BRIGHTNESS, SUPPORT_FLASH,
     SUPPORT_RGB_COLOR, SUPPORT_TRANSITION, Light)
-from homeassistant.const import (
-    CONF_NAME, CONF_OPTIMISTIC, CONF_BRIGHTNESS, CONF_RGB)
+import homeassistant.components.mqtt as mqtt
 from homeassistant.components.mqtt import (
-    CONF_STATE_TOPIC, CONF_COMMAND_TOPIC, CONF_QOS, CONF_RETAIN)
+    CONF_COMMAND_TOPIC, CONF_QOS, CONF_RETAIN, CONF_STATE_TOPIC)
+from homeassistant.const import (
+    CONF_BRIGHTNESS, CONF_NAME, CONF_OPTIMISTIC, CONF_RGB)
 import homeassistant.helpers.config_validation as cv
+import voluptuous as vol
 
 _LOGGER = logging.getLogger(__name__)
 

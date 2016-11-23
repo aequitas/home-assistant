@@ -6,13 +6,12 @@ https://home-assistant.io/components/device_tracker.mqtt/
 """
 import logging
 
-import voluptuous as vol
-
-import homeassistant.components.mqtt as mqtt
-from homeassistant.const import CONF_DEVICES
-from homeassistant.components.mqtt import CONF_QOS
 from homeassistant.components.device_tracker import PLATFORM_SCHEMA
+import homeassistant.components.mqtt as mqtt
+from homeassistant.components.mqtt import CONF_QOS
+from homeassistant.const import CONF_DEVICES
 import homeassistant.helpers.config_validation as cv
+import voluptuous as vol
 
 DEPENDENCIES = ['mqtt']
 

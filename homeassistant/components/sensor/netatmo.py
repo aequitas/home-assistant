@@ -4,17 +4,16 @@ Support for the NetAtmo Weather Service.
 For more details about this platform, please refer to the documentation at
 https://home-assistant.io/components/sensor.netatmo/
 """
-import logging
 from datetime import timedelta
-
-import voluptuous as vol
+import logging
 
 from homeassistant.components.sensor import PLATFORM_SCHEMA
 from homeassistant.const import TEMP_CELSIUS
-from homeassistant.helpers.entity import Entity
-from homeassistant.util import Throttle
-from homeassistant.loader import get_component
 import homeassistant.helpers.config_validation as cv
+from homeassistant.helpers.entity import Entity
+from homeassistant.loader import get_component
+from homeassistant.util import Throttle
+import voluptuous as vol
 
 _LOGGER = logging.getLogger(__name__)
 

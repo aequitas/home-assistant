@@ -1,9 +1,9 @@
 """Script to ensure a configuration file exists."""
 import argparse
-import logging
-import os
 from collections import OrderedDict
 from glob import glob
+import logging
+import os
 from platform import system
 from unittest.mock import patch
 
@@ -11,9 +11,9 @@ from typing import Dict, List, Sequence
 
 import homeassistant.bootstrap as bootstrap
 import homeassistant.config as config_util
+from homeassistant.exceptions import HomeAssistantError
 import homeassistant.loader as loader
 import homeassistant.util.yaml as yaml
-from homeassistant.exceptions import HomeAssistantError
 
 REQUIREMENTS = ('colorlog>2.1,<3',)
 if system() == 'Windows':  # Ensure colorama installed for colorlog on Windows

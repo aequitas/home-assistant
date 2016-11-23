@@ -1,13 +1,13 @@
 """Test the automatic device tracker platform."""
 
 import logging
-import requests
 import unittest
 from unittest.mock import patch
 
-from homeassistant.components.device_tracker.automatic import (
-    URL_AUTHORIZE, URL_VEHICLES, URL_TRIPS, setup_scanner)
+import requests
 
+from homeassistant.components.device_tracker.automatic import (
+    URL_AUTHORIZE, URL_TRIPS, URL_VEHICLES, setup_scanner)
 from tests.common import get_test_home_assistant
 
 _LOGGER = logging.getLogger(__name__)

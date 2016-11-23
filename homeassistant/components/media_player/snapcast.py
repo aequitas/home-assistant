@@ -7,14 +7,13 @@ https://home-assistant.io/components/media_player.snapcast/
 import logging
 import socket
 
-import voluptuous as vol
-
 from homeassistant.components.media_player import (
-    SUPPORT_VOLUME_MUTE, SUPPORT_VOLUME_SET, SUPPORT_SELECT_SOURCE,
-    PLATFORM_SCHEMA, MediaPlayerDevice)
+    PLATFORM_SCHEMA, SUPPORT_SELECT_SOURCE, SUPPORT_VOLUME_MUTE,
+    SUPPORT_VOLUME_SET, MediaPlayerDevice)
 from homeassistant.const import (
-    STATE_OFF, STATE_IDLE, STATE_PLAYING, STATE_UNKNOWN, CONF_HOST, CONF_PORT)
+    CONF_HOST, CONF_PORT, STATE_IDLE, STATE_OFF, STATE_PLAYING, STATE_UNKNOWN)
 import homeassistant.helpers.config_validation as cv
+import voluptuous as vol
 
 REQUIREMENTS = ['snapcast==1.2.2']
 

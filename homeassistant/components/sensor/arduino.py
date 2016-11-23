@@ -8,14 +8,12 @@ https://home-assistant.io/components/sensor.arduino/
 """
 import logging
 
-import voluptuous as vol
-
-from homeassistant.components.sensor import PLATFORM_SCHEMA
 import homeassistant.components.arduino as arduino
+from homeassistant.components.sensor import PLATFORM_SCHEMA
 from homeassistant.const import CONF_NAME
-from homeassistant.helpers.entity import Entity
 import homeassistant.helpers.config_validation as cv
-
+from homeassistant.helpers.entity import Entity
+import voluptuous as vol
 
 _LOGGER = logging.getLogger(__name__)
 

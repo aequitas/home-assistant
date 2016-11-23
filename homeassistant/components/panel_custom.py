@@ -7,10 +7,9 @@ https://home-assistant.io/components/panel_custom/
 import logging
 import os
 
-import voluptuous as vol
-
-import homeassistant.helpers.config_validation as cv
 from homeassistant.components.frontend import register_panel
+import homeassistant.helpers.config_validation as cv
+import voluptuous as vol
 
 DOMAIN = 'panel_custom'
 DEPENDENCIES = ['frontend']

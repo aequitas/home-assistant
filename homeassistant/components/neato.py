@@ -4,16 +4,15 @@ Support for Neato botvac connected vacuum cleaners.
 For more details about this component, please refer to the documentation at
 https://home-assistant.io/components/neato/
 """
-import logging
 from datetime import timedelta
+import logging
 from urllib.error import HTTPError
-
-import voluptuous as vol
 
 from homeassistant.const import CONF_PASSWORD, CONF_USERNAME
 from homeassistant.helpers import discovery
-from homeassistant.util import Throttle
 import homeassistant.helpers.config_validation as cv
+from homeassistant.util import Throttle
+import voluptuous as vol
 
 _LOGGER = logging.getLogger(__name__)
 

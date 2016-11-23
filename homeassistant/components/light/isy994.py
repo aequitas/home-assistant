@@ -5,12 +5,13 @@ For more details about this platform, please refer to the documentation at
 https://home-assistant.io/components/light.isy994/
 """
 import logging
+
 from typing import Callable
 
-from homeassistant.components.light import (
-    Light, SUPPORT_BRIGHTNESS, ATTR_BRIGHTNESS)
 import homeassistant.components.isy994 as isy
-from homeassistant.const import STATE_ON, STATE_OFF, STATE_UNKNOWN
+from homeassistant.components.light import (
+    ATTR_BRIGHTNESS, SUPPORT_BRIGHTNESS, Light)
+from homeassistant.const import STATE_OFF, STATE_ON, STATE_UNKNOWN
 from homeassistant.helpers.typing import ConfigType
 
 _LOGGER = logging.getLogger(__name__)

@@ -6,12 +6,10 @@ https://home-assistant.io/components/knx/
 """
 import logging
 
-import voluptuous as vol
-
-from homeassistant.const import (
-    EVENT_HOMEASSISTANT_STOP, CONF_HOST, CONF_PORT)
-from homeassistant.helpers.entity import Entity
+from homeassistant.const import CONF_HOST, CONF_PORT, EVENT_HOMEASSISTANT_STOP
 import homeassistant.helpers.config_validation as cv
+from homeassistant.helpers.entity import Entity
+import voluptuous as vol
 
 REQUIREMENTS = ['knxip==0.3.3']
 

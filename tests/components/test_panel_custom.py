@@ -6,7 +6,6 @@ from unittest.mock import Mock, patch
 
 from homeassistant import bootstrap
 from homeassistant.components import panel_custom
-
 from tests.common import get_test_home_assistant
 
 

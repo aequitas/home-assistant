@@ -7,14 +7,13 @@ https://home-assistant.io/components/switch.command_line/
 import logging
 import subprocess
 
-import voluptuous as vol
-
-from homeassistant.components.switch import (SwitchDevice, PLATFORM_SCHEMA,
-                                             ENTITY_ID_FORMAT)
+from homeassistant.components.switch import (
+    ENTITY_ID_FORMAT, PLATFORM_SCHEMA, SwitchDevice)
 from homeassistant.const import (
-    CONF_FRIENDLY_NAME, CONF_SWITCHES, CONF_VALUE_TEMPLATE, CONF_COMMAND_OFF,
-    CONF_COMMAND_ON, CONF_COMMAND_STATE)
+    CONF_COMMAND_OFF, CONF_COMMAND_ON, CONF_COMMAND_STATE, CONF_FRIENDLY_NAME,
+    CONF_SWITCHES, CONF_VALUE_TEMPLATE)
 import homeassistant.helpers.config_validation as cv
+import voluptuous as vol
 
 _LOGGER = logging.getLogger(__name__)
 

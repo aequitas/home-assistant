@@ -6,16 +6,15 @@ https://home-assistant.io/components/mqtt_eventstream/
 """
 import json
 
-import voluptuous as vol
-
-import homeassistant.loader as loader
 from homeassistant.components.mqtt import (
     valid_publish_topic, valid_subscribe_topic)
 from homeassistant.const import (
     ATTR_SERVICE_DATA, EVENT_CALL_SERVICE, EVENT_SERVICE_EXECUTED,
     EVENT_STATE_CHANGED, EVENT_TIME_CHANGED, MATCH_ALL)
 from homeassistant.core import EventOrigin, State
+import homeassistant.loader as loader
 from homeassistant.remote import JSONEncoder
+import voluptuous as vol
 
 DOMAIN = "mqtt_eventstream"
 DEPENDENCIES = ['mqtt']

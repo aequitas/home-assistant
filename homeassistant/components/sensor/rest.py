@@ -6,18 +6,18 @@ https://home-assistant.io/components/sensor.rest/
 """
 import logging
 
-import voluptuous as vol
 import requests
 from requests.auth import HTTPBasicAuth, HTTPDigestAuth
 
 from homeassistant.components.sensor import PLATFORM_SCHEMA
 from homeassistant.const import (
-    CONF_PAYLOAD, CONF_NAME, CONF_VALUE_TEMPLATE, CONF_METHOD, CONF_RESOURCE,
-    CONF_UNIT_OF_MEASUREMENT, STATE_UNKNOWN, CONF_VERIFY_SSL, CONF_USERNAME,
-    CONF_PASSWORD, CONF_AUTHENTICATION, HTTP_BASIC_AUTHENTICATION,
-    HTTP_DIGEST_AUTHENTICATION, CONF_HEADERS)
-from homeassistant.helpers.entity import Entity
+    CONF_AUTHENTICATION, CONF_HEADERS, CONF_METHOD, CONF_NAME, CONF_PASSWORD,
+    CONF_PAYLOAD, CONF_RESOURCE, CONF_UNIT_OF_MEASUREMENT, CONF_USERNAME,
+    CONF_VALUE_TEMPLATE, CONF_VERIFY_SSL, HTTP_BASIC_AUTHENTICATION,
+    HTTP_DIGEST_AUTHENTICATION, STATE_UNKNOWN)
 import homeassistant.helpers.config_validation as cv
+from homeassistant.helpers.entity import Entity
+import voluptuous as vol
 
 _LOGGER = logging.getLogger(__name__)
 

@@ -4,21 +4,20 @@ Support for Vera devices.
 For more details about this component, please refer to the documentation at
 https://home-assistant.io/components/vera/
 """
-import logging
 from collections import defaultdict
-
-import voluptuous as vol
+import logging
 
 from requests.exceptions import RequestException
 
-from homeassistant.util.dt import utc_from_timestamp
-from homeassistant.util import convert
-from homeassistant.helpers import discovery
-from homeassistant.helpers import config_validation as cv
 from homeassistant.const import (
     ATTR_ARMED, ATTR_BATTERY_LEVEL, ATTR_LAST_TRIP_TIME, ATTR_TRIPPED,
     EVENT_HOMEASSISTANT_STOP)
+from homeassistant.helpers import config_validation as cv
+from homeassistant.helpers import discovery
 from homeassistant.helpers.entity import Entity
+from homeassistant.util import convert
+from homeassistant.util.dt import utc_from_timestamp
+import voluptuous as vol
 
 REQUIREMENTS = ['pyvera==0.2.21']
 

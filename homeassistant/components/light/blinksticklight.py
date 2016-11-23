@@ -6,12 +6,11 @@ https://home-assistant.io/components/light.blinksticklight/
 """
 import logging
 
-import voluptuous as vol
-
 from homeassistant.components.light import (
-    ATTR_RGB_COLOR, SUPPORT_RGB_COLOR, Light, PLATFORM_SCHEMA)
+    ATTR_RGB_COLOR, PLATFORM_SCHEMA, SUPPORT_RGB_COLOR, Light)
 from homeassistant.const import CONF_NAME
 import homeassistant.helpers.config_validation as cv
+import voluptuous as vol
 
 REQUIREMENTS = ['blinkstick==1.1.8']
 

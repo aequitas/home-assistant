@@ -6,12 +6,11 @@ https://home-assistant.io/components/climate.knx/
 """
 import logging
 
-import voluptuous as vol
-
-from homeassistant.components.climate import (ClimateDevice, PLATFORM_SCHEMA)
-from homeassistant.components.knx import (KNXConfig, KNXMultiAddressDevice)
-from homeassistant.const import (CONF_NAME, TEMP_CELSIUS, ATTR_TEMPERATURE)
+from homeassistant.components.climate import PLATFORM_SCHEMA, ClimateDevice
+from homeassistant.components.knx import KNXConfig, KNXMultiAddressDevice
+from homeassistant.const import ATTR_TEMPERATURE, CONF_NAME, TEMP_CELSIUS
 import homeassistant.helpers.config_validation as cv
+import voluptuous as vol
 
 _LOGGER = logging.getLogger(__name__)
 

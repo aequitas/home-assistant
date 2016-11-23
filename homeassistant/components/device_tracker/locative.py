@@ -8,13 +8,12 @@ import asyncio
 from functools import partial
 import logging
 
-from homeassistant.const import (ATTR_LATITUDE, ATTR_LONGITUDE,
-                                 STATE_NOT_HOME,
-                                 HTTP_UNPROCESSABLE_ENTITY)
-from homeassistant.components.http import HomeAssistantView
 # pylint: disable=unused-import
 from homeassistant.components.device_tracker import (  # NOQA
     DOMAIN, PLATFORM_SCHEMA)
+from homeassistant.components.http import HomeAssistantView
+from homeassistant.const import (
+    ATTR_LATITUDE, ATTR_LONGITUDE, HTTP_UNPROCESSABLE_ENTITY, STATE_NOT_HOME)
 
 _LOGGER = logging.getLogger(__name__)
 

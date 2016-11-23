@@ -4,20 +4,20 @@ Support for an exposed aREST RESTful API of a device.
 For more details about this platform, please refer to the documentation at
 https://home-assistant.io/components/sensor.arest/
 """
-import logging
 from datetime import timedelta
+import logging
 
 import requests
-import voluptuous as vol
 
 from homeassistant.components.sensor import PLATFORM_SCHEMA
 from homeassistant.const import (
-    CONF_UNIT_OF_MEASUREMENT, CONF_VALUE_TEMPLATE, CONF_RESOURCE,
-    CONF_MONITORED_VARIABLES, CONF_NAME, STATE_UNKNOWN)
+    CONF_MONITORED_VARIABLES, CONF_NAME, CONF_RESOURCE,
+    CONF_UNIT_OF_MEASUREMENT, CONF_VALUE_TEMPLATE, STATE_UNKNOWN)
 from homeassistant.exceptions import TemplateError
+import homeassistant.helpers.config_validation as cv
 from homeassistant.helpers.entity import Entity
 from homeassistant.util import Throttle
-import homeassistant.helpers.config_validation as cv
+import voluptuous as vol
 
 _LOGGER = logging.getLogger(__name__)
 

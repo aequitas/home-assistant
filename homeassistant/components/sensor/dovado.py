@@ -4,20 +4,18 @@ Support for Dovado router.
 For more details about this platform, please refer to the documentation at
 https://home-assistant.io/components/sensor.dovado/
 """
+from datetime import timedelta
 import logging
 import re
-from datetime import timedelta
 
-import voluptuous as vol
-
-from homeassistant.helpers.entity import Entity
-from homeassistant.util import Throttle
-from homeassistant.util import slugify
+from homeassistant.components.sensor import DOMAIN, PLATFORM_SCHEMA
+from homeassistant.const import (
+    CONF_HOST, CONF_PASSWORD, CONF_PORT, CONF_SENSORS, CONF_USERNAME,
+    STATE_UNKNOWN)
 import homeassistant.helpers.config_validation as cv
-from homeassistant.const import (CONF_USERNAME, CONF_PASSWORD,
-                                 CONF_HOST, CONF_PORT,
-                                 CONF_SENSORS, STATE_UNKNOWN)
-from homeassistant.components.sensor import (DOMAIN, PLATFORM_SCHEMA)
+from homeassistant.helpers.entity import Entity
+from homeassistant.util import Throttle, slugify
+import voluptuous as vol
 
 _LOGGER = logging.getLogger(__name__)
 

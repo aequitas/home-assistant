@@ -4,15 +4,14 @@ Support for FRITZ!Box routers.
 For more details about this platform, please refer to the documentation at
 https://home-assistant.io/components/device_tracker.fritz/
 """
-import logging
 from datetime import timedelta
+import logging
 
-import voluptuous as vol
-
-import homeassistant.helpers.config_validation as cv
 from homeassistant.components.device_tracker import DOMAIN, PLATFORM_SCHEMA
 from homeassistant.const import CONF_HOST, CONF_PASSWORD, CONF_USERNAME
+import homeassistant.helpers.config_validation as cv
 from homeassistant.util import Throttle
+import voluptuous as vol
 
 REQUIREMENTS = ['https://github.com/deisi/fritzconnection/archive/'
                 'b5c14515e1c8e2652b06b6316a7f3913df942841.zip'

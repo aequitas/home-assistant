@@ -6,9 +6,9 @@ https://home-assistant.io/components/switch.neato/
 """
 import logging
 
+from homeassistant.components.neato import NEATO_LOGIN, NEATO_ROBOTS
 from homeassistant.const import STATE_OFF, STATE_ON
 from homeassistant.helpers.entity import ToggleEntity
-from homeassistant.components.neato import NEATO_ROBOTS, NEATO_LOGIN
 
 _LOGGER = logging.getLogger(__name__)
 

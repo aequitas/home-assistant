@@ -4,11 +4,10 @@ Functionality to use a ZigBee device as a light.
 For more details about this platform, please refer to the documentation at
 https://home-assistant.io/components/light.zigbee/
 """
-import voluptuous as vol
-
 from homeassistant.components.light import Light
 from homeassistant.components.zigbee import (
-    ZigBeeDigitalOut, ZigBeeDigitalOutConfig, PLATFORM_SCHEMA)
+    PLATFORM_SCHEMA, ZigBeeDigitalOut, ZigBeeDigitalOutConfig)
+import voluptuous as vol
 
 CONF_ON_STATE = 'on_state'
 

@@ -4,14 +4,13 @@ Support for Nest Thermostat Binary Sensors.
 For more details about this platform, please refer to the documentation at
 https://home-assistant.io/components/binary_sensor.nest/
 """
-import voluptuous as vol
-
 from homeassistant.components.binary_sensor import (
-    BinarySensorDevice, PLATFORM_SCHEMA)
-from homeassistant.components.sensor.nest import NestSensor
-from homeassistant.const import (CONF_SCAN_INTERVAL, CONF_MONITORED_CONDITIONS)
+    PLATFORM_SCHEMA, BinarySensorDevice)
 from homeassistant.components.nest import DATA_NEST
+from homeassistant.components.sensor.nest import NestSensor
+from homeassistant.const import CONF_MONITORED_CONDITIONS, CONF_SCAN_INTERVAL
 import homeassistant.helpers.config_validation as cv
+import voluptuous as vol
 
 DEPENDENCIES = ['nest']
 BINARY_TYPES = ['fan',

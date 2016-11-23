@@ -4,18 +4,18 @@ Support for transport.opendata.ch.
 For more details about this platform, please refer to the documentation at
 https://home-assistant.io/components/sensor.swiss_public_transport/
 """
-import logging
 from datetime import timedelta
+import logging
 
 import requests
-import voluptuous as vol
 
 from homeassistant.components.sensor import PLATFORM_SCHEMA
-from homeassistant.const import CONF_NAME, ATTR_ATTRIBUTION
-import homeassistant.util.dt as dt_util
+from homeassistant.const import ATTR_ATTRIBUTION, CONF_NAME
+import homeassistant.helpers.config_validation as cv
 from homeassistant.helpers.entity import Entity
 from homeassistant.util import Throttle
-import homeassistant.helpers.config_validation as cv
+import homeassistant.util.dt as dt_util
+import voluptuous as vol
 
 _LOGGER = logging.getLogger(__name__)
 _RESOURCE = 'http://transport.opendata.ch/v1/'

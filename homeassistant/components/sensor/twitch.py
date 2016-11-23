@@ -6,11 +6,10 @@ https://home-assistant.io/components/sensor.twitch/
 """
 import logging
 
-import voluptuous as vol
-
 from homeassistant.components.sensor import PLATFORM_SCHEMA
-from homeassistant.helpers.entity import Entity
 import homeassistant.helpers.config_validation as cv
+from homeassistant.helpers.entity import Entity
+import voluptuous as vol
 
 REQUIREMENTS = ['python-twitch==1.3.0']
 

@@ -4,18 +4,18 @@ Support for Bbox Bouygues Modem Router.
 For more details about this platform, please refer to the documentation at
 https://home-assistant.io/components/sensor.bbox/
 """
-import logging
 from datetime import timedelta
+import logging
 
 import requests
-import voluptuous as vol
 
 from homeassistant.components.sensor import PLATFORM_SCHEMA
 from homeassistant.const import (
-    CONF_NAME, CONF_MONITORED_VARIABLES, ATTR_ATTRIBUTION)
+    ATTR_ATTRIBUTION, CONF_MONITORED_VARIABLES, CONF_NAME)
+import homeassistant.helpers.config_validation as cv
 from homeassistant.helpers.entity import Entity
 from homeassistant.util import Throttle
-import homeassistant.helpers.config_validation as cv
+import voluptuous as vol
 
 REQUIREMENTS = ['pybbox==0.0.5-alpha']
 

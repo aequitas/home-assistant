@@ -5,28 +5,23 @@ For more details about this component, please refer to the documentation at
 https://home-assistant.io/components/emulated_hue/
 """
 import asyncio
-import threading
-import socket
 import logging
 import os
 import select
+import socket
+import threading
 
 from aiohttp import web
-import voluptuous as vol
-
-from homeassistant import util, core
-from homeassistant.const import (
-    ATTR_ENTITY_ID, ATTR_FRIENDLY_NAME, SERVICE_TURN_OFF, SERVICE_TURN_ON,
-    EVENT_HOMEASSISTANT_START, EVENT_HOMEASSISTANT_STOP,
-    STATE_ON, STATE_OFF, HTTP_BAD_REQUEST, HTTP_NOT_FOUND,
-)
+from homeassistant import core, util
+from homeassistant.components.http import HomeAssistantView, HomeAssistantWSGI
 from homeassistant.components.light import (
-    ATTR_BRIGHTNESS, ATTR_SUPPORTED_FEATURES, SUPPORT_BRIGHTNESS
-)
-from homeassistant.components.http import (
-    HomeAssistantView, HomeAssistantWSGI
-)
+    ATTR_BRIGHTNESS, ATTR_SUPPORTED_FEATURES, SUPPORT_BRIGHTNESS)
+from homeassistant.const import (
+    ATTR_ENTITY_ID, ATTR_FRIENDLY_NAME, EVENT_HOMEASSISTANT_START,
+    EVENT_HOMEASSISTANT_STOP, HTTP_BAD_REQUEST, HTTP_NOT_FOUND,
+    SERVICE_TURN_OFF, SERVICE_TURN_ON, STATE_OFF, STATE_ON)
 import homeassistant.helpers.config_validation as cv
+import voluptuous as vol
 
 DOMAIN = 'emulated_hue'
 

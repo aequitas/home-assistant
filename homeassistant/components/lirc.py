@@ -5,14 +5,13 @@ For more details about this component, please refer to the documentation at
 https://home-assistant.io/components/lirc/
 """
 # pylint: disable=import-error
+import logging
 import threading
 import time
-import logging
-
-import voluptuous as vol
 
 from homeassistant.const import (
-    EVENT_HOMEASSISTANT_STOP, EVENT_HOMEASSISTANT_START)
+    EVENT_HOMEASSISTANT_START, EVENT_HOMEASSISTANT_STOP)
+import voluptuous as vol
 
 REQUIREMENTS = ['python-lirc==1.2.3']
 

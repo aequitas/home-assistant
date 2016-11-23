@@ -6,11 +6,12 @@ https://home-assistant.io/components/envisalink/
 """
 import logging
 import time
-import voluptuous as vol
-import homeassistant.helpers.config_validation as cv
-from homeassistant.const import EVENT_HOMEASSISTANT_STOP
-from homeassistant.helpers.entity import Entity
+
 from homeassistant.components.discovery import load_platform
+from homeassistant.const import EVENT_HOMEASSISTANT_STOP
+import homeassistant.helpers.config_validation as cv
+from homeassistant.helpers.entity import Entity
+import voluptuous as vol
 
 REQUIREMENTS = ['pyenvisalink==1.9', 'pydispatcher==2.0.5']
 

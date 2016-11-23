@@ -6,15 +6,14 @@ https://home-assistant.io/components/switch.digital_ocean/
 """
 import logging
 
-import voluptuous as vol
-
-from homeassistant.components.switch import (SwitchDevice, PLATFORM_SCHEMA)
 from homeassistant.components.digital_ocean import (
-    CONF_DROPLETS, ATTR_CREATED_AT, ATTR_DROPLET_ID, ATTR_DROPLET_NAME,
-    ATTR_FEATURES, ATTR_IPV4_ADDRESS, ATTR_IPV6_ADDRESS, ATTR_MEMORY,
-    ATTR_REGION, ATTR_VCPUS)
-from homeassistant.loader import get_component
+    ATTR_CREATED_AT, ATTR_DROPLET_ID, ATTR_DROPLET_NAME, ATTR_FEATURES,
+    ATTR_IPV4_ADDRESS, ATTR_IPV6_ADDRESS, ATTR_MEMORY, ATTR_REGION, ATTR_VCPUS,
+    CONF_DROPLETS)
+from homeassistant.components.switch import PLATFORM_SCHEMA, SwitchDevice
 import homeassistant.helpers.config_validation as cv
+from homeassistant.loader import get_component
+import voluptuous as vol
 
 _LOGGER = logging.getLogger(__name__)
 

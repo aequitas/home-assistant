@@ -4,17 +4,16 @@ Support for getting collected information from PVOutput.
 For more details about this platform, please refer to the documentation at
 https://home-assistant.io/components/sensor.pvoutput/
 """
-import logging
 from collections import namedtuple
+import logging
 
-import voluptuous as vol
-
-import homeassistant.helpers.config_validation as cv
-from homeassistant.helpers.entity import Entity
 from homeassistant.components.sensor import PLATFORM_SCHEMA
 from homeassistant.components.sensor.rest import RestData
 from homeassistant.const import (
     ATTR_TEMPERATURE, CONF_API_KEY, CONF_NAME, STATE_UNKNOWN)
+import homeassistant.helpers.config_validation as cv
+from homeassistant.helpers.entity import Entity
+import voluptuous as vol
 
 _LOGGER = logging.getLogger(__name__)
 _ENDPOINT = 'http://pvoutput.org/service/r2/getstatus.jsp'

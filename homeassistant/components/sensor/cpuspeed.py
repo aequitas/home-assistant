@@ -6,12 +6,11 @@ https://home-assistant.io/components/sensor.cpuspeed/
 """
 import logging
 
-import voluptuous as vol
-
 from homeassistant.components.sensor import PLATFORM_SCHEMA
 from homeassistant.const import CONF_NAME
 import homeassistant.helpers.config_validation as cv
 from homeassistant.helpers.entity import Entity
+import voluptuous as vol
 
 REQUIREMENTS = ['py-cpuinfo==0.2.3']
 

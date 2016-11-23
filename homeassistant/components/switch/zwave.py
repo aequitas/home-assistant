@@ -6,8 +6,8 @@ https://home-assistant.io/components/switch.zwave/
 """
 # Because we do not compile openzwave on CI
 # pylint: disable=import-error
-from homeassistant.components.switch import DOMAIN, SwitchDevice
 from homeassistant.components import zwave
+from homeassistant.components.switch import DOMAIN, SwitchDevice
 
 
 # pylint: disable=unused-argument

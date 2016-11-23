@@ -1,16 +1,17 @@
 """Support for Sonarr."""
+from datetime import datetime
 import logging
 import time
-from datetime import datetime
+
 import requests
+
+from homeassistant.components.sensor import PLATFORM_SCHEMA
+from homeassistant.const import (
+    CONF_API_KEY, CONF_MONITORED_CONDITIONS, CONF_SSL)
+import homeassistant.helpers.config_validation as cv
+from homeassistant.helpers.entity import Entity
 import voluptuous as vol
 
-import homeassistant.helpers.config_validation as cv
-from homeassistant.const import CONF_API_KEY
-from homeassistant.const import CONF_MONITORED_CONDITIONS
-from homeassistant.const import CONF_SSL
-from homeassistant.helpers.entity import Entity
-from homeassistant.components.sensor import PLATFORM_SCHEMA
 _LOGGER = logging.getLogger(__name__)
 
 CONF_HOST = 'host'

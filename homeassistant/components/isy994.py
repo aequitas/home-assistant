@@ -6,16 +6,15 @@ https://home-assistant.io/components/isy994/
 """
 import logging
 from urllib.parse import urlparse
-import voluptuous as vol
 
-from homeassistant.core import HomeAssistant  # noqa
 from homeassistant.const import (
-    CONF_HOST, CONF_PASSWORD, CONF_USERNAME,
-    EVENT_HOMEASSISTANT_STOP)
-from homeassistant.helpers import discovery, config_validation as cv
+    CONF_HOST, CONF_PASSWORD, CONF_USERNAME, EVENT_HOMEASSISTANT_STOP)
+from homeassistant.core import HomeAssistant  # noqa
+from homeassistant.helpers import config_validation as cv
+from homeassistant.helpers import discovery
 from homeassistant.helpers.entity import Entity
 from homeassistant.helpers.typing import ConfigType, Dict  # noqa
-
+import voluptuous as vol
 
 DOMAIN = "isy994"
 REQUIREMENTS = ['PyISY==1.0.7']

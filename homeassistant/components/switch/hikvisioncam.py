@@ -6,14 +6,13 @@ https://home-assistant.io/components/switch.hikvision/
 """
 import logging
 
-import voluptuous as vol
-
 from homeassistant.components.sensor import PLATFORM_SCHEMA
 from homeassistant.const import (
-    CONF_NAME, CONF_HOST, CONF_PASSWORD, CONF_USERNAME, CONF_PORT, STATE_OFF,
+    CONF_HOST, CONF_NAME, CONF_PASSWORD, CONF_PORT, CONF_USERNAME, STATE_OFF,
     STATE_ON)
-from homeassistant.helpers.entity import ToggleEntity
 import homeassistant.helpers.config_validation as cv
+from homeassistant.helpers.entity import ToggleEntity
+import voluptuous as vol
 
 REQUIREMENTS = ['hikvision==0.4']
 

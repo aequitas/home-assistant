@@ -4,17 +4,16 @@ Support for showing the date and the time.
 For more details about this platform, please refer to the documentation at
 https://home-assistant.io/components/sensor.time_date/
 """
-from datetime import timedelta
 import asyncio
+from datetime import timedelta
 import logging
-
-import voluptuous as vol
 
 from homeassistant.components.sensor import PLATFORM_SCHEMA
 from homeassistant.const import CONF_DISPLAY_OPTIONS
-from homeassistant.helpers.entity import Entity
 import homeassistant.helpers.config_validation as cv
+from homeassistant.helpers.entity import Entity
 import homeassistant.util.dt as dt_util
+import voluptuous as vol
 
 _LOGGER = logging.getLogger(__name__)
 

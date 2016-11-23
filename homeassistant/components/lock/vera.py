@@ -7,9 +7,9 @@ https://home-assistant.io/components/lock.vera/
 import logging
 
 from homeassistant.components.lock import LockDevice
-from homeassistant.const import (STATE_LOCKED, STATE_UNLOCKED)
 from homeassistant.components.vera import (
-    VeraDevice, VERA_DEVICES, VERA_CONTROLLER)
+    VERA_CONTROLLER, VERA_DEVICES, VeraDevice)
+from homeassistant.const import STATE_LOCKED, STATE_UNLOCKED
 
 _LOGGER = logging.getLogger(__name__)
 

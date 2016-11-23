@@ -5,9 +5,10 @@ For more details about this platform, please refer to the documentation at
 https://home-assistant.io/components/switch.homematic/
 """
 import logging
+
+import homeassistant.components.homematic as homematic
 from homeassistant.components.switch import SwitchDevice
 from homeassistant.const import STATE_UNKNOWN
-import homeassistant.components.homematic as homematic
 
 _LOGGER = logging.getLogger(__name__)
 

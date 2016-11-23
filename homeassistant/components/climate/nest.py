@@ -6,15 +6,13 @@ https://home-assistant.io/components/climate.nest/
 """
 import logging
 
-import voluptuous as vol
-
-from homeassistant.components.nest import DATA_NEST
 from homeassistant.components.climate import (
-    STATE_AUTO, STATE_COOL, STATE_HEAT, ClimateDevice,
-    PLATFORM_SCHEMA, ATTR_TARGET_TEMP_HIGH, ATTR_TARGET_TEMP_LOW,
-    ATTR_TEMPERATURE)
+    ATTR_TARGET_TEMP_HIGH, ATTR_TARGET_TEMP_LOW, ATTR_TEMPERATURE,
+    PLATFORM_SCHEMA, STATE_AUTO, STATE_COOL, STATE_HEAT, ClimateDevice)
+from homeassistant.components.nest import DATA_NEST
 from homeassistant.const import (
-    TEMP_CELSIUS, CONF_SCAN_INTERVAL, STATE_ON, STATE_OFF, STATE_UNKNOWN)
+    CONF_SCAN_INTERVAL, STATE_OFF, STATE_ON, STATE_UNKNOWN, TEMP_CELSIUS)
+import voluptuous as vol
 
 DEPENDENCIES = ['nest']
 _LOGGER = logging.getLogger(__name__)

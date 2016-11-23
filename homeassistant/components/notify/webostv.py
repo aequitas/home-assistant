@@ -6,12 +6,11 @@ https://home-assistant.io/components/notify.webostv/
 """
 import logging
 
-import voluptuous as vol
-
-import homeassistant.helpers.config_validation as cv
 from homeassistant.components.notify import (
-    BaseNotificationService, PLATFORM_SCHEMA)
+    PLATFORM_SCHEMA, BaseNotificationService)
 from homeassistant.const import CONF_HOST
+import homeassistant.helpers.config_validation as cv
+import voluptuous as vol
 
 REQUIREMENTS = ['https://github.com/TheRealLink/pylgtv/archive/v0.1.2.zip'
                 '#pylgtv==0.1.2']

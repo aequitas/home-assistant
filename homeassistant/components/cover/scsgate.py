@@ -6,12 +6,11 @@ https://home-assistant.io/components/cover.scsgate/
 """
 import logging
 
-import voluptuous as vol
-
+from homeassistant.components.cover import PLATFORM_SCHEMA, CoverDevice
 import homeassistant.components.scsgate as scsgate
-from homeassistant.components.cover import (CoverDevice, PLATFORM_SCHEMA)
-from homeassistant.const import (CONF_DEVICES, CONF_NAME)
+from homeassistant.const import CONF_DEVICES, CONF_NAME
 import homeassistant.helpers.config_validation as cv
+import voluptuous as vol
 
 _LOGGER = logging.getLogger(__name__)
 

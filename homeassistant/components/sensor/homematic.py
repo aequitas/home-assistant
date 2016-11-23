@@ -9,8 +9,9 @@ properly configured.
 """
 
 import logging
-from homeassistant.const import STATE_UNKNOWN
+
 import homeassistant.components.homematic as homematic
+from homeassistant.const import STATE_UNKNOWN
 
 _LOGGER = logging.getLogger(__name__)
 

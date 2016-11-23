@@ -5,8 +5,8 @@ For more details about this platform, please refer to the documentation at
 https://home-assistant.io/components/sensor.tellduslive/
 
 """
-import logging
 from datetime import datetime
+import logging
 
 from homeassistant.components import tellduslive
 from homeassistant.const import (

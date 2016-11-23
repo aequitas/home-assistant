@@ -6,12 +6,11 @@ https://home-assistant.io/components/sensor.serial_pm/
 """
 import logging
 
-import voluptuous as vol
-
-from homeassistant.const import CONF_NAME
-from homeassistant.helpers.entity import Entity
-import homeassistant.helpers.config_validation as cv
 from homeassistant.components.sensor import PLATFORM_SCHEMA
+from homeassistant.const import CONF_NAME
+import homeassistant.helpers.config_validation as cv
+from homeassistant.helpers.entity import Entity
+import voluptuous as vol
 
 REQUIREMENTS = ['pmsensor==0.3']
 

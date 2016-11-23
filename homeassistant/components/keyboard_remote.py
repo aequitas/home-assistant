@@ -30,17 +30,14 @@ Example:
 """
 
 # pylint: disable=import-error
-import threading
 import logging
 import os
+import threading
 
-import voluptuous as vol
-
-import homeassistant.helpers.config_validation as cv
 from homeassistant.const import (
-    EVENT_HOMEASSISTANT_START,
-    EVENT_HOMEASSISTANT_STOP
-)
+    EVENT_HOMEASSISTANT_START, EVENT_HOMEASSISTANT_STOP)
+import homeassistant.helpers.config_validation as cv
+import voluptuous as vol
 
 DOMAIN = "keyboard_remote"
 REQUIREMENTS = ['evdev==0.6.1']

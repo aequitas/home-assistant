@@ -4,13 +4,11 @@ Support for Tellstick switches.
 For more details about this platform, please refer to the documentation at
 https://home-assistant.io/components/switch.tellstick/
 """
-import voluptuous as vol
-
-from homeassistant.components.tellstick import (DEFAULT_SIGNAL_REPETITIONS,
-                                                ATTR_DISCOVER_DEVICES,
-                                                ATTR_DISCOVER_CONFIG,
-                                                DOMAIN, TellstickDevice)
+from homeassistant.components.tellstick import (
+    ATTR_DISCOVER_CONFIG, ATTR_DISCOVER_DEVICES, DEFAULT_SIGNAL_REPETITIONS,
+    DOMAIN, TellstickDevice)
 from homeassistant.helpers.entity import ToggleEntity
+import voluptuous as vol
 
 PLATFORM_SCHEMA = vol.Schema({vol.Required("platform"): DOMAIN})
 

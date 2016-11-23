@@ -4,15 +4,15 @@ Support for RFXtrx components.
 For more details about this component, please refer to the documentation at
 https://home-assistant.io/components/rfxtrx/
 """
-import logging
 from collections import OrderedDict
-import voluptuous as vol
+import logging
 
+from homeassistant.const import (
+    ATTR_ENTITY_ID, EVENT_HOMEASSISTANT_STOP, TEMP_CELSIUS)
 import homeassistant.helpers.config_validation as cv
-from homeassistant.util import slugify
-from homeassistant.const import EVENT_HOMEASSISTANT_STOP
 from homeassistant.helpers.entity import Entity
-from homeassistant.const import (ATTR_ENTITY_ID, TEMP_CELSIUS)
+from homeassistant.util import slugify
+import voluptuous as vol
 
 REQUIREMENTS = ['pyRFXtrx==0.13.0']
 

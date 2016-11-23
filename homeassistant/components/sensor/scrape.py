@@ -6,15 +6,14 @@ https://home-assistant.io/components/sensor.scrape/
 """
 import logging
 
-import voluptuous as vol
-
 from homeassistant.components.sensor import PLATFORM_SCHEMA
 from homeassistant.components.sensor.rest import RestData
 from homeassistant.const import (
-    CONF_NAME, CONF_RESOURCE, CONF_UNIT_OF_MEASUREMENT, STATE_UNKNOWN,
-    CONF_VALUE_TEMPLATE, CONF_VERIFY_SSL)
-from homeassistant.helpers.entity import Entity
+    CONF_NAME, CONF_RESOURCE, CONF_UNIT_OF_MEASUREMENT, CONF_VALUE_TEMPLATE,
+    CONF_VERIFY_SSL, STATE_UNKNOWN)
 import homeassistant.helpers.config_validation as cv
+from homeassistant.helpers.entity import Entity
+import voluptuous as vol
 
 REQUIREMENTS = ['beautifulsoup4==4.5.1']
 

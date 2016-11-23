@@ -4,17 +4,16 @@ Support for the Netatmo devices.
 For more details about this platform, please refer to the documentation at
 https://home-assistant.io/components/netatmo/
 """
-import logging
 from datetime import timedelta
+import logging
 from urllib.error import HTTPError
 
-import voluptuous as vol
-
 from homeassistant.const import (
-    CONF_API_KEY, CONF_PASSWORD, CONF_USERNAME, CONF_DISCOVERY)
+    CONF_API_KEY, CONF_DISCOVERY, CONF_PASSWORD, CONF_USERNAME)
 from homeassistant.helpers import discovery
 import homeassistant.helpers.config_validation as cv
 from homeassistant.util import Throttle
+import voluptuous as vol
 
 REQUIREMENTS = [
     'https://github.com/jabesq/netatmo-api-python/archive/'

@@ -4,12 +4,11 @@ Component that will help set the level of logging for components.
 For more details about this component, please refer to the documentation at
 https://home-assistant.io/components/logger/
 """
-import logging
 from collections import OrderedDict
-
-import voluptuous as vol
+import logging
 
 import homeassistant.helpers.config_validation as cv
+import voluptuous as vol
 
 DOMAIN = 'logger'
 

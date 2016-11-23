@@ -7,13 +7,13 @@ https://home-assistant.io/components/thingspeak/
 import logging
 
 from requests.exceptions import RequestException
-import voluptuous as vol
 
 from homeassistant.const import (
     CONF_API_KEY, CONF_ID, CONF_WHITELIST, STATE_UNAVAILABLE, STATE_UNKNOWN)
 from homeassistant.helpers import state as state_helper
 import homeassistant.helpers.config_validation as cv
 import homeassistant.helpers.event as event
+import voluptuous as vol
 
 REQUIREMENTS = ['thingspeak==0.4.0']
 

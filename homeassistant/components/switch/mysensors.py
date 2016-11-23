@@ -7,13 +7,12 @@ https://home-assistant.io/components/switch.mysensors/
 import logging
 import os
 
-import voluptuous as vol
-
-import homeassistant.helpers.config_validation as cv
 from homeassistant.components import mysensors
 from homeassistant.components.switch import DOMAIN, SwitchDevice
 from homeassistant.config import load_yaml_config_file
 from homeassistant.const import ATTR_ENTITY_ID, STATE_OFF, STATE_ON
+import homeassistant.helpers.config_validation as cv
+import voluptuous as vol
 
 _LOGGER = logging.getLogger(__name__)
 DEPENDENCIES = []

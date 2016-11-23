@@ -7,12 +7,11 @@ https://home-assistant.io/components/sensor.random/
 import asyncio
 import logging
 
-import voluptuous as vol
-
-import homeassistant.helpers.config_validation as cv
 from homeassistant.components.sensor import PLATFORM_SCHEMA
-from homeassistant.const import (CONF_NAME, CONF_MINIMUM, CONF_MAXIMUM)
+from homeassistant.const import CONF_MAXIMUM, CONF_MINIMUM, CONF_NAME
+import homeassistant.helpers.config_validation as cv
 from homeassistant.helpers.entity import Entity
+import voluptuous as vol
 
 _LOGGER = logging.getLogger(__name__)
 

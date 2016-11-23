@@ -1,17 +1,17 @@
 """The tests for the Owntracks device tracker."""
+from collections import defaultdict
 import json
 import os
 import unittest
-from collections import defaultdict
 from unittest.mock import patch
 
-from tests.common import (assert_setup_component, fire_mqtt_message,
-                          get_test_home_assistant, mock_mqtt_component)
-
-import homeassistant.components.device_tracker.owntracks as owntracks
 from homeassistant.bootstrap import setup_component
 from homeassistant.components import device_tracker
+import homeassistant.components.device_tracker.owntracks as owntracks
 from homeassistant.const import CONF_PLATFORM, STATE_NOT_HOME
+from tests.common import (
+    assert_setup_component, fire_mqtt_message, get_test_home_assistant,
+    mock_mqtt_component)
 
 USER = 'greg'
 DEVICE = 'phone'

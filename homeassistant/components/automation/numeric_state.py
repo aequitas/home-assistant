@@ -6,14 +6,13 @@ at https://home-assistant.io/components/automation/#numeric-state-trigger
 """
 import logging
 
-import voluptuous as vol
-
-from homeassistant.core import callback
 from homeassistant.const import (
-    CONF_VALUE_TEMPLATE, CONF_PLATFORM, CONF_ENTITY_ID,
-    CONF_BELOW, CONF_ABOVE)
+    CONF_ABOVE, CONF_BELOW, CONF_ENTITY_ID, CONF_PLATFORM, CONF_VALUE_TEMPLATE)
+from homeassistant.core import callback
+from homeassistant.helpers import condition
+from homeassistant.helpers import config_validation as cv
 from homeassistant.helpers.event import async_track_state_change
-from homeassistant.helpers import condition, config_validation as cv
+import voluptuous as vol
 
 TRIGGER_SCHEMA = vol.All(vol.Schema({
     vol.Required(CONF_PLATFORM): 'numeric_state',

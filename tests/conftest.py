@@ -2,11 +2,10 @@
 import functools
 import logging
 
-import pytest
-import requests_mock as _requests_mock
-
 from homeassistant import util
 from homeassistant.util import location
+import pytest
+import requests_mock as _requests_mock
 
 from .common import async_test_home_assistant
 from .test_util.aiohttp import mock_aiohttp_client

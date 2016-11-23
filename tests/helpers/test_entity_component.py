@@ -4,18 +4,17 @@ import asyncio
 from collections import OrderedDict
 import logging
 import unittest
-from unittest.mock import patch, Mock
+from unittest.mock import Mock, patch
 
-import homeassistant.core as ha
-import homeassistant.loader as loader
 from homeassistant.components import group
+import homeassistant.core as ha
+from homeassistant.helpers import discovery
 from homeassistant.helpers.entity import Entity, generate_entity_id
 from homeassistant.helpers.entity_component import EntityComponent
-from homeassistant.helpers import discovery
+import homeassistant.loader as loader
 import homeassistant.util.dt as dt_util
-
 from tests.common import (
-    get_test_home_assistant, MockPlatform, MockModule, fire_time_changed,
+    MockModule, MockPlatform, fire_time_changed, get_test_home_assistant,
     mock_coro)
 
 _LOGGER = logging.getLogger(__name__)

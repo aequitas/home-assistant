@@ -2,10 +2,10 @@
 import unittest
 
 from homeassistant.bootstrap import setup_component
-from homeassistant.const import STATE_ON, STATE_OFF, ATTR_ASSUMED_STATE
 import homeassistant.components.switch as switch
+from homeassistant.const import ATTR_ASSUMED_STATE, STATE_OFF, STATE_ON
 from tests.common import (
-    mock_mqtt_component, fire_mqtt_message, get_test_home_assistant)
+    fire_mqtt_message, get_test_home_assistant, mock_mqtt_component)
 
 
 class TestSensorMQTT(unittest.TestCase):

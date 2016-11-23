@@ -7,17 +7,16 @@ https://home-assistant.io/components/sensor.template/
 import asyncio
 import logging
 
-import voluptuous as vol
-
-from homeassistant.core import callback
 from homeassistant.components.sensor import ENTITY_ID_FORMAT, PLATFORM_SCHEMA
 from homeassistant.const import (
-    ATTR_FRIENDLY_NAME, ATTR_UNIT_OF_MEASUREMENT, CONF_VALUE_TEMPLATE,
-    ATTR_ENTITY_ID, CONF_SENSORS)
+    ATTR_ENTITY_ID, ATTR_FRIENDLY_NAME, ATTR_UNIT_OF_MEASUREMENT, CONF_SENSORS,
+    CONF_VALUE_TEMPLATE)
+from homeassistant.core import callback
 from homeassistant.exceptions import TemplateError
+import homeassistant.helpers.config_validation as cv
 from homeassistant.helpers.entity import Entity, async_generate_entity_id
 from homeassistant.helpers.event import async_track_state_change
-import homeassistant.helpers.config_validation as cv
+import voluptuous as vol
 
 _LOGGER = logging.getLogger(__name__)
 

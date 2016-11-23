@@ -6,11 +6,11 @@ import logging
 import os
 
 from aiohttp import web
-
-from homeassistant.core import callback
-from homeassistant.const import EVENT_HOMEASSISTANT_START, HTTP_NOT_FOUND
 from homeassistant.components import api, group
 from homeassistant.components.http import HomeAssistantView
+from homeassistant.const import EVENT_HOMEASSISTANT_START, HTTP_NOT_FOUND
+from homeassistant.core import callback
+
 from .version import FINGERPRINTS
 
 DOMAIN = 'frontend'

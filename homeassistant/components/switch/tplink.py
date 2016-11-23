@@ -5,14 +5,12 @@ For more details about this platform, please refer to the documentation at
 https://home-assistant.io/components/switch.tplink/
 """
 import logging
-
 import time
 
-import voluptuous as vol
-
-from homeassistant.components.switch import (SwitchDevice, PLATFORM_SCHEMA)
-from homeassistant.const import (CONF_HOST, CONF_NAME)
+from homeassistant.components.switch import PLATFORM_SCHEMA, SwitchDevice
+from homeassistant.const import CONF_HOST, CONF_NAME
 import homeassistant.helpers.config_validation as cv
+import voluptuous as vol
 
 REQUIREMENTS = ['https://github.com/GadgetReactor/pyHS100/archive/'
                 '1f771b7d8090a91c6a58931532e42730b021cbde.zip#pyHS100==0.2.0']

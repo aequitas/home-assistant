@@ -1,9 +1,9 @@
 """The test for the statistics sensor platform."""
-import unittest
 import statistics
+import unittest
 
 from homeassistant.bootstrap import setup_component
-from homeassistant.const import (ATTR_UNIT_OF_MEASUREMENT, TEMP_CELSIUS)
+from homeassistant.const import ATTR_UNIT_OF_MEASUREMENT, TEMP_CELSIUS
 from tests.common import get_test_home_assistant
 
 

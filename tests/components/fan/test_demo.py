@@ -6,7 +6,6 @@ from homeassistant.bootstrap import setup_component
 from homeassistant.components import fan
 from homeassistant.components.fan.demo import FAN_ENTITY_ID
 from homeassistant.const import STATE_OFF, STATE_ON
-
 from tests.common import get_test_home_assistant
 
 

@@ -11,22 +11,21 @@ import os
 
 from aiohttp import web
 import async_timeout
-import voluptuous as vol
-
+from homeassistant.components.http import HomeAssistantView
 from homeassistant.config import load_yaml_config_file
+from homeassistant.const import (
+    ATTR_ENTITY_ID, SERVICE_MEDIA_NEXT_TRACK, SERVICE_MEDIA_PAUSE,
+    SERVICE_MEDIA_PLAY, SERVICE_MEDIA_PLAY_PAUSE, SERVICE_MEDIA_PREVIOUS_TRACK,
+    SERVICE_MEDIA_SEEK, SERVICE_MEDIA_STOP, SERVICE_TOGGLE, SERVICE_TURN_OFF,
+    SERVICE_TURN_ON, SERVICE_VOLUME_DOWN, SERVICE_VOLUME_MUTE,
+    SERVICE_VOLUME_SET, SERVICE_VOLUME_UP, STATE_IDLE, STATE_OFF,
+    STATE_PLAYING, STATE_UNKNOWN)
+import homeassistant.helpers.config_validation as cv
+from homeassistant.helpers.config_validation import PLATFORM_SCHEMA  # noqa
 from homeassistant.helpers.entity import Entity
 from homeassistant.helpers.entity_component import EntityComponent
-from homeassistant.helpers.config_validation import PLATFORM_SCHEMA  # noqa
-from homeassistant.components.http import HomeAssistantView
-import homeassistant.helpers.config_validation as cv
 from homeassistant.util.async import run_coroutine_threadsafe
-from homeassistant.const import (
-    STATE_OFF, STATE_UNKNOWN, STATE_PLAYING, STATE_IDLE,
-    ATTR_ENTITY_ID, SERVICE_TURN_OFF, SERVICE_TURN_ON,
-    SERVICE_VOLUME_UP, SERVICE_VOLUME_DOWN, SERVICE_VOLUME_SET,
-    SERVICE_VOLUME_MUTE, SERVICE_TOGGLE, SERVICE_MEDIA_STOP,
-    SERVICE_MEDIA_PLAY_PAUSE, SERVICE_MEDIA_PLAY, SERVICE_MEDIA_PAUSE,
-    SERVICE_MEDIA_NEXT_TRACK, SERVICE_MEDIA_PREVIOUS_TRACK, SERVICE_MEDIA_SEEK)
+import voluptuous as vol
 
 _LOGGER = logging.getLogger(__name__)
 

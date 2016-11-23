@@ -6,13 +6,11 @@ https://home-assistant.io/components/sensor.nest/
 """
 from itertools import chain
 
-import voluptuous as vol
-
 from homeassistant.components.nest import DATA_NEST, DOMAIN
-from homeassistant.helpers.entity import Entity
 from homeassistant.const import (
-    TEMP_CELSIUS, CONF_PLATFORM, CONF_SCAN_INTERVAL, CONF_MONITORED_CONDITIONS
-)
+    CONF_MONITORED_CONDITIONS, CONF_PLATFORM, CONF_SCAN_INTERVAL, TEMP_CELSIUS)
+from homeassistant.helpers.entity import Entity
+import voluptuous as vol
 
 DEPENDENCIES = ['nest']
 SENSOR_TYPES = ['humidity',

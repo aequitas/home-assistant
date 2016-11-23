@@ -6,17 +6,17 @@ https://home-assistant.io/components/sensor.bom/
 """
 import datetime
 import logging
-import requests
 
-import voluptuous as vol
+import requests
 
 from homeassistant.components.sensor import PLATFORM_SCHEMA
 from homeassistant.const import (
-    CONF_MONITORED_CONDITIONS, TEMP_CELSIUS, STATE_UNKNOWN, CONF_NAME,
-    ATTR_ATTRIBUTION)
+    ATTR_ATTRIBUTION, CONF_MONITORED_CONDITIONS, CONF_NAME, STATE_UNKNOWN,
+    TEMP_CELSIUS)
+import homeassistant.helpers.config_validation as cv
 from homeassistant.helpers.entity import Entity
 from homeassistant.util import Throttle
-import homeassistant.helpers.config_validation as cv
+import voluptuous as vol
 
 _RESOURCE = 'http://www.bom.gov.au/fwo/{}/{}.{}.json'
 _LOGGER = logging.getLogger(__name__)

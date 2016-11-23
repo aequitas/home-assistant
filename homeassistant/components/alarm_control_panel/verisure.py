@@ -7,8 +7,8 @@ https://home-assistant.io/components/alarm_control_panel.verisure/
 import logging
 
 import homeassistant.components.alarm_control_panel as alarm
+from homeassistant.components.verisure import CONF_ALARM, CONF_CODE_DIGITS
 from homeassistant.components.verisure import HUB as hub
-from homeassistant.components.verisure import (CONF_ALARM, CONF_CODE_DIGITS)
 from homeassistant.const import (
     STATE_ALARM_ARMED_AWAY, STATE_ALARM_ARMED_HOME, STATE_ALARM_DISARMED,
     STATE_UNKNOWN)

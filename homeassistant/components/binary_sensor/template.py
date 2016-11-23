@@ -7,19 +7,18 @@ https://home-assistant.io/components/binary_sensor.template/
 import asyncio
 import logging
 
-import voluptuous as vol
-
-from homeassistant.core import callback
 from homeassistant.components.binary_sensor import (
-    BinarySensorDevice, ENTITY_ID_FORMAT, PLATFORM_SCHEMA,
-    SENSOR_CLASSES_SCHEMA)
+    ENTITY_ID_FORMAT, PLATFORM_SCHEMA, SENSOR_CLASSES_SCHEMA,
+    BinarySensorDevice)
 from homeassistant.const import (
-    ATTR_FRIENDLY_NAME, ATTR_ENTITY_ID, CONF_VALUE_TEMPLATE,
-    CONF_SENSOR_CLASS, CONF_SENSORS)
+    ATTR_ENTITY_ID, ATTR_FRIENDLY_NAME, CONF_SENSOR_CLASS, CONF_SENSORS,
+    CONF_VALUE_TEMPLATE)
+from homeassistant.core import callback
 from homeassistant.exceptions import TemplateError
+import homeassistant.helpers.config_validation as cv
 from homeassistant.helpers.entity import async_generate_entity_id
 from homeassistant.helpers.event import async_track_state_change
-import homeassistant.helpers.config_validation as cv
+import voluptuous as vol
 
 _LOGGER = logging.getLogger(__name__)
 

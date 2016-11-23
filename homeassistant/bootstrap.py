@@ -1,30 +1,29 @@
 """Provides methods to bootstrap a home assistant instance."""
 import asyncio
+from collections import OrderedDict
 import logging
 import logging.handlers
 import os
 import sys
-from collections import OrderedDict
-
 from types import ModuleType
-from typing import Any, Optional, Dict
 
-import voluptuous as vol
-from voluptuous.humanize import humanize_error
+from typing import Any, Dict, Optional
 
 import homeassistant.components as core_components
 from homeassistant.components import persistent_notification
 import homeassistant.config as conf_util
-import homeassistant.core as core
-import homeassistant.loader as loader
-import homeassistant.util.package as pkg_util
-from homeassistant.util.async import (
-    run_coroutine_threadsafe, run_callback_threadsafe)
-from homeassistant.util.yaml import clear_secret_cache
 from homeassistant.const import EVENT_COMPONENT_LOADED, PLATFORM_FORMAT
+import homeassistant.core as core
 from homeassistant.exceptions import HomeAssistantError
 from homeassistant.helpers import (
-    event_decorators, service, config_per_platform, extract_domain_configs)
+    config_per_platform, event_decorators, extract_domain_configs, service)
+import homeassistant.loader as loader
+from homeassistant.util.async import (
+    run_callback_threadsafe, run_coroutine_threadsafe)
+import homeassistant.util.package as pkg_util
+from homeassistant.util.yaml import clear_secret_cache
+import voluptuous as vol
+from voluptuous.humanize import humanize_error
 
 _LOGGER = logging.getLogger(__name__)
 

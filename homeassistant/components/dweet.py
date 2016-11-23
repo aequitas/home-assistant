@@ -4,16 +4,15 @@ A component which allows you to send data to Dweet.io.
 For more details about this component, please refer to the documentation at
 https://home-assistant.io/components/dweet/
 """
-import logging
 from datetime import timedelta
-
-import voluptuous as vol
+import logging
 
 from homeassistant.const import (
     CONF_NAME, CONF_WHITELIST, EVENT_STATE_CHANGED, STATE_UNKNOWN)
-import homeassistant.helpers.config_validation as cv
 from homeassistant.helpers import state as state_helper
+import homeassistant.helpers.config_validation as cv
 from homeassistant.util import Throttle
+import voluptuous as vol
 
 REQUIREMENTS = ['dweepy==0.2.0']
 

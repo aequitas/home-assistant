@@ -6,14 +6,13 @@ import json
 import unittest
 from unittest.mock import Mock, patch
 
-from aiohttp import web
 import requests
 
+from aiohttp import web
 from homeassistant import bootstrap, const
-import homeassistant.core as ha
 import homeassistant.components.http as http
-
-from tests.common import get_test_instance_port, get_test_home_assistant
+import homeassistant.core as ha
+from tests.common import get_test_home_assistant, get_test_instance_port
 
 API_PASSWORD = "test1234"
 SERVER_PORT = get_test_instance_port()

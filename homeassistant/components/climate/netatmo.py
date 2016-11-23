@@ -4,16 +4,16 @@ Support for Netatmo Smart Thermostat.
 For more details about this platform, please refer to the documentation at
 https://home-assistant.io/components/climate.netatmo/
 """
-import logging
 from datetime import timedelta
-import voluptuous as vol
+import logging
 
-from homeassistant.const import TEMP_CELSIUS, ATTR_TEMPERATURE
 from homeassistant.components.climate import (
-    STATE_HEAT, STATE_IDLE, ClimateDevice, PLATFORM_SCHEMA)
-from homeassistant.util import Throttle
-from homeassistant.loader import get_component
+    PLATFORM_SCHEMA, STATE_HEAT, STATE_IDLE, ClimateDevice)
+from homeassistant.const import ATTR_TEMPERATURE, TEMP_CELSIUS
 import homeassistant.helpers.config_validation as cv
+from homeassistant.loader import get_component
+from homeassistant.util import Throttle
+import voluptuous as vol
 
 DEPENDENCIES = ['netatmo']
 

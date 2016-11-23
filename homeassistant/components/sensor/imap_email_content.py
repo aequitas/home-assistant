@@ -4,16 +4,16 @@ EMail sensor support.
 For more details about this platform, please refer to the documentation at
 https://home-assistant.io/components/sensor.email/
 """
-import logging
+from collections import deque
 import datetime
 import email
+import logging
 
-from collections import deque
-from homeassistant.helpers.entity import Entity
 from homeassistant.components.sensor import PLATFORM_SCHEMA
 from homeassistant.const import (
-    CONF_NAME, CONF_PORT, CONF_USERNAME, CONF_PASSWORD, CONF_VALUE_TEMPLATE)
+    CONF_NAME, CONF_PASSWORD, CONF_PORT, CONF_USERNAME, CONF_VALUE_TEMPLATE)
 import homeassistant.helpers.config_validation as cv
+from homeassistant.helpers.entity import Entity
 import voluptuous as vol
 
 _LOGGER = logging.getLogger(__name__)

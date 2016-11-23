@@ -9,12 +9,12 @@ import threading
 import time
 
 import requests
-import voluptuous as vol
 
 from homeassistant.components.binary_sensor import (
-    SENSOR_CLASSES, BinarySensorDevice, PLATFORM_SCHEMA)
-from homeassistant.const import (CONF_HOST, CONF_PORT)
+    PLATFORM_SCHEMA, SENSOR_CLASSES, BinarySensorDevice)
+from homeassistant.const import CONF_HOST, CONF_PORT
 import homeassistant.helpers.config_validation as cv
+import voluptuous as vol
 
 REQUIREMENTS = ['pynx584==0.2']
 

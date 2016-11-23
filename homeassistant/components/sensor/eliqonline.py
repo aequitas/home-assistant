@@ -7,12 +7,11 @@ https://home-assistant.io/components/sensor.eliqonline/
 import logging
 from urllib.error import URLError
 
-import voluptuous as vol
-
 from homeassistant.components.sensor import PLATFORM_SCHEMA
-from homeassistant.const import (CONF_ACCESS_TOKEN, CONF_NAME, STATE_UNKNOWN)
-from homeassistant.helpers.entity import Entity
+from homeassistant.const import CONF_ACCESS_TOKEN, CONF_NAME, STATE_UNKNOWN
 import homeassistant.helpers.config_validation as cv
+from homeassistant.helpers.entity import Entity
+import voluptuous as vol
 
 REQUIREMENTS = ['eliqonline==1.0.12']
 

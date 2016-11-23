@@ -1,17 +1,16 @@
 """The tests for the Script component."""
 # pylint: disable=protected-access
 from datetime import timedelta
-from unittest import mock
 import unittest
+from unittest import mock
 
-from homeassistant.core import callback
 # Otherwise can't test just this file (import order issue)
 import homeassistant.components  # noqa
+from homeassistant.core import callback
+from homeassistant.helpers import config_validation as cv
+from homeassistant.helpers import script
 import homeassistant.util.dt as dt_util
-from homeassistant.helpers import script, config_validation as cv
-
 from tests.common import fire_time_changed, get_test_home_assistant
-
 
 ENTITY_ID = 'script.test'
 

@@ -9,13 +9,13 @@ import logging
 import urllib
 
 import requests
-import voluptuous as vol
 
-import homeassistant.helpers.config_validation as cv
 from homeassistant.components.notify import (
-    ATTR_TITLE, ATTR_DATA, PLATFORM_SCHEMA, BaseNotificationService)
+    ATTR_DATA, ATTR_TITLE, PLATFORM_SCHEMA, BaseNotificationService)
 from homeassistant.const import (
-    CONF_API_KEY, ATTR_LOCATION, ATTR_LATITUDE, ATTR_LONGITUDE)
+    ATTR_LATITUDE, ATTR_LOCATION, ATTR_LONGITUDE, CONF_API_KEY)
+import homeassistant.helpers.config_validation as cv
+import voluptuous as vol
 
 _LOGGER = logging.getLogger(__name__)
 

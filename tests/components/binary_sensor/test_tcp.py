@@ -1,11 +1,11 @@
 """The tests for the TCP binary sensor platform."""
 import unittest
-from unittest.mock import patch, Mock
+from unittest.mock import Mock, patch
 
 from homeassistant.bootstrap import setup_component
 from homeassistant.components.binary_sensor import tcp as bin_tcp
 from homeassistant.components.sensor import tcp
-from tests.common import (get_test_home_assistant, assert_setup_component)
+from tests.common import assert_setup_component, get_test_home_assistant
 from tests.components.sensor import test_tcp
 
 

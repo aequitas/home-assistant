@@ -6,9 +6,9 @@ https://home-assistant.io/components/sensor.zoneminder/
 """
 import logging
 
+import homeassistant.components.zoneminder as zoneminder
 from homeassistant.const import STATE_UNKNOWN
 from homeassistant.helpers.entity import Entity
-import homeassistant.components.zoneminder as zoneminder
 
 _LOGGER = logging.getLogger(__name__)
 

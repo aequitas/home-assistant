@@ -4,17 +4,16 @@ Support for Verisure components.
 For more details about this component, please refer to the documentation at
 https://home-assistant.io/components/verisure/
 """
+from datetime import timedelta
 import logging
 import threading
 import time
-from datetime import timedelta
-
-import voluptuous as vol
 
 from homeassistant.const import CONF_PASSWORD, CONF_USERNAME
 from homeassistant.helpers import discovery
-from homeassistant.util import Throttle
 import homeassistant.helpers.config_validation as cv
+from homeassistant.util import Throttle
+import voluptuous as vol
 
 REQUIREMENTS = ['vsure==0.11.1']
 

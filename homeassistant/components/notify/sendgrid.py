@@ -6,12 +6,11 @@ https://home-assistant.io/components/notify.sendgrid/
 """
 import logging
 
-import voluptuous as vol
-
 from homeassistant.components.notify import (
     ATTR_TITLE, ATTR_TITLE_DEFAULT, PLATFORM_SCHEMA, BaseNotificationService)
-from homeassistant.const import (CONF_API_KEY, CONF_SENDER, CONF_RECIPIENT)
+from homeassistant.const import CONF_API_KEY, CONF_RECIPIENT, CONF_SENDER
 import homeassistant.helpers.config_validation as cv
+import voluptuous as vol
 
 REQUIREMENTS = ['sendgrid==3.6.3']
 

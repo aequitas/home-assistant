@@ -7,12 +7,11 @@ https://home-assistant.io/components/sensor.linux_battery/
 import logging
 import os
 
-import voluptuous as vol
-
 from homeassistant.components.sensor import PLATFORM_SCHEMA
 from homeassistant.const import CONF_NAME
-from homeassistant.helpers.entity import Entity
 import homeassistant.helpers.config_validation as cv
+from homeassistant.helpers.entity import Entity
+import voluptuous as vol
 
 REQUIREMENTS = ['batinfo==0.4.2']
 

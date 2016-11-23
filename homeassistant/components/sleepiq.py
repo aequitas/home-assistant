@@ -5,17 +5,17 @@ For more details about this platform, please refer to the documentation at
 https://home-assistant.io/components/sleepiq/
 """
 
-import logging
 from datetime import timedelta
+import logging
 
-import voluptuous as vol
-
-import homeassistant.helpers.config_validation as cv
-from homeassistant.helpers import discovery
-from homeassistant.helpers.entity import Entity
-from homeassistant.const import CONF_USERNAME, CONF_PASSWORD
-from homeassistant.util import Throttle
 from requests.exceptions import HTTPError
+
+from homeassistant.const import CONF_PASSWORD, CONF_USERNAME
+from homeassistant.helpers import discovery
+import homeassistant.helpers.config_validation as cv
+from homeassistant.helpers.entity import Entity
+from homeassistant.util import Throttle
+import voluptuous as vol
 
 DOMAIN = 'sleepiq'
 

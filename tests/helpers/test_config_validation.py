@@ -4,14 +4,12 @@ from datetime import timedelta
 import enum
 import os
 from socket import _GLOBAL_DEFAULT_TIMEOUT
-
-import pytest
-import voluptuous as vol
 from unittest.mock import Mock, patch
 
 import homeassistant.helpers.config_validation as cv
-
+import pytest
 from tests.common import get_test_home_assistant
+import voluptuous as vol
 
 
 def test_boolean():

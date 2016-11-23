@@ -4,19 +4,19 @@ Support for Z-Wave lights.
 For more details about this platform, please refer to the documentation at
 https://home-assistant.io/components/light.zwave/
 """
-import logging
-
 # Because we do not compile openzwave on CI
 # pylint: disable=import-error
+import logging
 from threading import Timer
-from homeassistant.components.light import ATTR_BRIGHTNESS, ATTR_COLOR_TEMP, \
-    ATTR_RGB_COLOR, SUPPORT_BRIGHTNESS, SUPPORT_COLOR_TEMP, \
-    SUPPORT_RGB_COLOR, DOMAIN, Light
+
 from homeassistant.components import zwave
+from homeassistant.components.light import (
+    ATTR_BRIGHTNESS, ATTR_COLOR_TEMP, ATTR_RGB_COLOR, DOMAIN,
+    SUPPORT_BRIGHTNESS, SUPPORT_COLOR_TEMP, SUPPORT_RGB_COLOR, Light)
 from homeassistant.const import STATE_OFF, STATE_ON
-from homeassistant.util.color import HASS_COLOR_MAX, HASS_COLOR_MIN, \
-    color_temperature_mired_to_kelvin, color_temperature_to_rgb, \
-    color_rgb_to_rgbw, color_rgbw_to_rgb
+from homeassistant.util.color import (
+    HASS_COLOR_MAX, HASS_COLOR_MIN, color_rgb_to_rgbw, color_rgbw_to_rgb,
+    color_temperature_mired_to_kelvin, color_temperature_to_rgb)
 
 _LOGGER = logging.getLogger(__name__)
 

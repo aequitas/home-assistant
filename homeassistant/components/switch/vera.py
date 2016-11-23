@@ -6,11 +6,11 @@ https://home-assistant.io/components/switch.vera/
 """
 import logging
 
-from homeassistant.util import convert
 from homeassistant.components.switch import SwitchDevice
-from homeassistant.const import (STATE_OFF, STATE_ON)
 from homeassistant.components.vera import (
-    VeraDevice, VERA_DEVICES, VERA_CONTROLLER)
+    VERA_CONTROLLER, VERA_DEVICES, VeraDevice)
+from homeassistant.const import STATE_OFF, STATE_ON
+from homeassistant.util import convert
 
 DEPENDENCIES = ['vera']
 

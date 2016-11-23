@@ -5,13 +5,12 @@ For more details about this platform, please refer to the documentation at
 https://home-assistant.io/components/binary_sensor.google_calendar/
 """
 # pylint: disable=import-error
-import logging
 from datetime import timedelta
+import logging
 
 from homeassistant.components.calendar import CalendarEventDevice
-from homeassistant.components.google import (CONF_CAL_ID, CONF_ENTITIES,
-                                             CONF_TRACK, TOKEN_FILE,
-                                             GoogleCalendarService)
+from homeassistant.components.google import (
+    CONF_CAL_ID, CONF_ENTITIES, CONF_TRACK, TOKEN_FILE, GoogleCalendarService)
 from homeassistant.util import Throttle, dt
 
 DEFAULT_GOOGLE_SEARCH_PARAMS = {

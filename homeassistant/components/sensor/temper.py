@@ -5,11 +5,11 @@ For more details about this platform, please refer to the documentation at
 https://home-assistant.io/components/sensor.temper/
 """
 import logging
-import voluptuous as vol
 
 from homeassistant.components.sensor import PLATFORM_SCHEMA
 from homeassistant.const import CONF_NAME, DEVICE_DEFAULT_NAME, TEMP_FAHRENHEIT
 from homeassistant.helpers.entity import Entity
+import voluptuous as vol
 
 _LOGGER = logging.getLogger(__name__)
 

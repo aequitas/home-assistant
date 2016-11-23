@@ -2,14 +2,12 @@
 import unittest
 from unittest import mock
 
-import voluptuous as vol
-
 from homeassistant.bootstrap import setup_component
-import homeassistant.core as ha
 import homeassistant.components.statsd as statsd
-from homeassistant.const import (STATE_ON, STATE_OFF, EVENT_STATE_CHANGED)
-
+from homeassistant.const import EVENT_STATE_CHANGED, STATE_OFF, STATE_ON
+import homeassistant.core as ha
 from tests.common import get_test_home_assistant
+import voluptuous as vol
 
 
 class TestStatsd(unittest.TestCase):

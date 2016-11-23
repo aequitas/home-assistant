@@ -6,13 +6,12 @@ https://home-assistant.io/components/switch.dlink/
 """
 import logging
 
-import voluptuous as vol
-
-from homeassistant.components.switch import (SwitchDevice, PLATFORM_SCHEMA)
+from homeassistant.components.switch import PLATFORM_SCHEMA, SwitchDevice
 from homeassistant.const import (
-    CONF_HOST, CONF_NAME, CONF_PASSWORD, CONF_USERNAME)
+    CONF_HOST, CONF_NAME, CONF_PASSWORD, CONF_USERNAME, STATE_UNKNOWN,
+    TEMP_CELSIUS)
 import homeassistant.helpers.config_validation as cv
-from homeassistant.const import TEMP_CELSIUS, STATE_UNKNOWN
+import voluptuous as vol
 
 REQUIREMENTS = ['https://github.com/LinuxChristian/pyW215/archive/'
                 'v0.3.6.zip#pyW215==0.3.6']

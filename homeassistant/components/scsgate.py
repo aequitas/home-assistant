@@ -7,11 +7,10 @@ https://home-assistant.io/components/scsgate/
 import logging
 from threading import Lock
 
-import voluptuous as vol
-
-from homeassistant.const import (CONF_DEVICE, CONF_NAME)
+from homeassistant.const import CONF_DEVICE, CONF_NAME
 from homeassistant.core import EVENT_HOMEASSISTANT_STOP
 import homeassistant.helpers.config_validation as cv
+import voluptuous as vol
 
 REQUIREMENTS = ['scsgate==0.1.0']
 

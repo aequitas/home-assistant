@@ -1,27 +1,28 @@
 """Test the helper method for writing tests."""
 import asyncio
-import os
-import sys
+from contextlib import contextmanager
 from datetime import timedelta
-from unittest import mock
-from unittest.mock import patch
 from io import StringIO
 import logging
+import os
+import sys
 import threading
-from contextlib import contextmanager
+from unittest import mock
+from unittest.mock import patch
 
-from homeassistant import core as ha, loader
+from homeassistant import core as ha
+from homeassistant import loader
 from homeassistant.bootstrap import (
-    setup_component, async_prepare_setup_component)
-from homeassistant.helpers.entity import ToggleEntity
-from homeassistant.util.unit_system import METRIC_SYSTEM
-import homeassistant.util.dt as date_util
-import homeassistant.util.yaml as yaml
+    async_prepare_setup_component, setup_component)
+from homeassistant.components import mqtt, sun
 from homeassistant.const import (
-    STATE_ON, STATE_OFF, DEVICE_DEFAULT_NAME, EVENT_TIME_CHANGED,
-    EVENT_STATE_CHANGED, EVENT_PLATFORM_DISCOVERED, ATTR_SERVICE,
-    ATTR_DISCOVERED, SERVER_PORT)
-from homeassistant.components import sun, mqtt
+    ATTR_DISCOVERED, ATTR_SERVICE, DEVICE_DEFAULT_NAME,
+    EVENT_PLATFORM_DISCOVERED, EVENT_STATE_CHANGED, EVENT_TIME_CHANGED,
+    SERVER_PORT, STATE_OFF, STATE_ON)
+from homeassistant.helpers.entity import ToggleEntity
+import homeassistant.util.dt as date_util
+from homeassistant.util.unit_system import METRIC_SYSTEM
+import homeassistant.util.yaml as yaml
 
 _TEST_INSTANCE_PORT = SERVER_PORT
 _LOGGER = logging.getLogger(__name__)

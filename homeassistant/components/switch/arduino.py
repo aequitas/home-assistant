@@ -8,12 +8,11 @@ https://home-assistant.io/components/switch.arduino/
 """
 import logging
 
-import voluptuous as vol
-
 import homeassistant.components.arduino as arduino
-from homeassistant.components.switch import (SwitchDevice, PLATFORM_SCHEMA)
+from homeassistant.components.switch import PLATFORM_SCHEMA, SwitchDevice
 from homeassistant.const import CONF_NAME
 import homeassistant.helpers.config_validation as cv
+import voluptuous as vol
 
 DEPENDENCIES = ['arduino']
 

@@ -1,10 +1,9 @@
 """The tests for the location automation."""
 import unittest
 
-from homeassistant.core import callback
 from homeassistant.bootstrap import setup_component
 from homeassistant.components import automation, zone
-
+from homeassistant.core import callback
 from tests.common import get_test_home_assistant
 
 

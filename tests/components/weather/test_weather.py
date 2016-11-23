@@ -1,14 +1,13 @@
 """The tests for the Weather component."""
 import unittest
 
+from homeassistant.bootstrap import setup_component
 from homeassistant.components import weather
 from homeassistant.components.weather import (
     ATTR_WEATHER_ATTRIBUTION, ATTR_WEATHER_HUMIDITY, ATTR_WEATHER_OZONE,
     ATTR_WEATHER_PRESSURE, ATTR_WEATHER_TEMPERATURE, ATTR_WEATHER_WIND_BEARING,
     ATTR_WEATHER_WIND_SPEED)
 from homeassistant.util.unit_system import METRIC_SYSTEM
-from homeassistant.bootstrap import setup_component
-
 from tests.common import get_test_home_assistant
 
 

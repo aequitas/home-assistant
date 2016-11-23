@@ -2,20 +2,18 @@
 # pylint: disable=protected-access
 import asyncio
 import unittest
-from unittest.mock import patch, Mock
+from unittest.mock import Mock, patch
 
-import yaml
-
-import homeassistant.core as ha
 from homeassistant import config
-from homeassistant.const import (
-    STATE_ON, STATE_OFF, SERVICE_TURN_ON, SERVICE_TURN_OFF, SERVICE_TOGGLE)
 import homeassistant.components as comps
+from homeassistant.const import (
+    SERVICE_TOGGLE, SERVICE_TURN_OFF, SERVICE_TURN_ON, STATE_OFF, STATE_ON)
+import homeassistant.core as ha
 from homeassistant.helpers import entity
 from homeassistant.util.async import run_coroutine_threadsafe
-
 from tests.common import (
     get_test_home_assistant, mock_service, patch_yaml_files)
+import yaml
 
 
 class TestComponentsCore(unittest.TestCase):

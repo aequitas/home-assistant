@@ -5,13 +5,11 @@ For more details about this platform, please refer to the documentation at
 https://home-assistant.io/components/binary_sensor.envisalink/
 """
 import logging
+
 from homeassistant.components.binary_sensor import BinarySensorDevice
-from homeassistant.components.envisalink import (EVL_CONTROLLER,
-                                                 ZONE_SCHEMA,
-                                                 CONF_ZONENAME,
-                                                 CONF_ZONETYPE,
-                                                 EnvisalinkDevice,
-                                                 SIGNAL_ZONE_UPDATE)
+from homeassistant.components.envisalink import (
+    CONF_ZONENAME, CONF_ZONETYPE, EVL_CONTROLLER, SIGNAL_ZONE_UPDATE,
+    ZONE_SCHEMA, EnvisalinkDevice)
 from homeassistant.const import ATTR_LAST_TRIP_TIME
 
 DEPENDENCIES = ['envisalink']

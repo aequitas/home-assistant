@@ -4,18 +4,17 @@ Support for the Yahoo! Weather service.
 For more details about this platform, please refer to the documentation at
 https://home-assistant.io/components/sensor.yweather/
 """
-import logging
 from datetime import timedelta
-
-import voluptuous as vol
+import logging
 
 from homeassistant.components.sensor import PLATFORM_SCHEMA
 from homeassistant.const import (
-    TEMP_CELSIUS, CONF_MONITORED_CONDITIONS, CONF_NAME, STATE_UNKNOWN,
-    ATTR_ATTRIBUTION)
+    ATTR_ATTRIBUTION, CONF_MONITORED_CONDITIONS, CONF_NAME, STATE_UNKNOWN,
+    TEMP_CELSIUS)
 import homeassistant.helpers.config_validation as cv
 from homeassistant.helpers.entity import Entity
 from homeassistant.util import Throttle
+import voluptuous as vol
 
 REQUIREMENTS = ["yahooweather==0.8"]
 

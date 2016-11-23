@@ -5,13 +5,13 @@ For more details about this platform, please refer to the documentation at
 https://home-assistant.io/components/switch.modbus/
 """
 import logging
-import voluptuous as vol
 
 import homeassistant.components.modbus as modbus
-from homeassistant.const import CONF_NAME
-from homeassistant.helpers.entity import ToggleEntity
-from homeassistant.helpers import config_validation as cv
 from homeassistant.components.sensor import PLATFORM_SCHEMA
+from homeassistant.const import CONF_NAME
+from homeassistant.helpers import config_validation as cv
+from homeassistant.helpers.entity import ToggleEntity
+import voluptuous as vol
 
 _LOGGER = logging.getLogger(__name__)
 DEPENDENCIES = ['modbus']

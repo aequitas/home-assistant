@@ -1,16 +1,15 @@
 """The tests for the Alexa component."""
 # pylint: disable=protected-access
-import json
 import datetime
+import json
 import unittest
 
 import requests
 
-from homeassistant.core import callback
 from homeassistant import bootstrap, const
 from homeassistant.components import alexa, http
-
-from tests.common import get_test_instance_port, get_test_home_assistant
+from homeassistant.core import callback
+from tests.common import get_test_home_assistant, get_test_instance_port
 
 API_PASSWORD = "test1234"
 SERVER_PORT = get_test_instance_port()

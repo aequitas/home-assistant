@@ -8,8 +8,7 @@ import requests
 import homeassistant.bootstrap as bootstrap
 from homeassistant.components import frontend, http
 from homeassistant.const import HTTP_HEADER_HA_AUTH
-
-from tests.common import get_test_instance_port, get_test_home_assistant
+from tests.common import get_test_home_assistant, get_test_instance_port
 
 API_PASSWORD = "test1234"
 SERVER_PORT = get_test_instance_port()

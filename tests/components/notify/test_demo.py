@@ -1,12 +1,11 @@
 """The tests for the notify demo platform."""
 import unittest
 
-from homeassistant.core import callback
 from homeassistant.bootstrap import setup_component
 import homeassistant.components.notify as notify
 from homeassistant.components.notify import demo
+from homeassistant.core import callback
 from homeassistant.helpers import script
-
 from tests.common import get_test_home_assistant
 
 

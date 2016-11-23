@@ -6,12 +6,11 @@ https://home-assistant.io/components/switch.zoneminder/
 """
 import logging
 
-import voluptuous as vol
-
-from homeassistant.components.switch import (SwitchDevice, PLATFORM_SCHEMA)
-from homeassistant.const import (CONF_COMMAND_ON, CONF_COMMAND_OFF)
+from homeassistant.components.switch import PLATFORM_SCHEMA, SwitchDevice
 import homeassistant.components.zoneminder as zoneminder
+from homeassistant.const import CONF_COMMAND_OFF, CONF_COMMAND_ON
 import homeassistant.helpers.config_validation as cv
+import voluptuous as vol
 
 _LOGGER = logging.getLogger(__name__)
 

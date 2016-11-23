@@ -4,22 +4,20 @@ Support to interface with the Emby API.
 For more details about this platform, please refer to the documentation at
 https://home-assistant.io/components/media_player.emby/
 """
+from datetime import timedelta
 import logging
 
-from datetime import timedelta
-
-import voluptuous as vol
-
-import homeassistant.helpers.config_validation as cv
 from homeassistant.components.media_player import (
-    MEDIA_TYPE_TVSHOW, MEDIA_TYPE_VIDEO, SUPPORT_NEXT_TRACK, SUPPORT_PAUSE,
-    SUPPORT_SEEK, SUPPORT_STOP, SUPPORT_PREVIOUS_TRACK, MediaPlayerDevice,
-    PLATFORM_SCHEMA)
+    MEDIA_TYPE_TVSHOW, MEDIA_TYPE_VIDEO, PLATFORM_SCHEMA, SUPPORT_NEXT_TRACK,
+    SUPPORT_PAUSE, SUPPORT_PREVIOUS_TRACK, SUPPORT_SEEK, SUPPORT_STOP,
+    MediaPlayerDevice)
 from homeassistant.const import (
-    CONF_HOST, CONF_API_KEY, CONF_PORT, CONF_SSL, DEVICE_DEFAULT_NAME,
+    CONF_API_KEY, CONF_HOST, CONF_PORT, CONF_SSL, DEVICE_DEFAULT_NAME,
     STATE_IDLE, STATE_OFF, STATE_PAUSED, STATE_PLAYING, STATE_UNKNOWN)
-from homeassistant.helpers.event import (track_utc_time_change)
+import homeassistant.helpers.config_validation as cv
+from homeassistant.helpers.event import track_utc_time_change
 from homeassistant.util import Throttle
+import voluptuous as vol
 
 REQUIREMENTS = ['pyemby==0.1']
 

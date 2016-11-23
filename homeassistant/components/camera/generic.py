@@ -7,19 +7,19 @@ https://home-assistant.io/components/camera.generic/
 import asyncio
 import logging
 
-import aiohttp
-import async_timeout
 import requests
 from requests.auth import HTTPDigestAuth
-import voluptuous as vol
 
+import aiohttp
+import async_timeout
+from homeassistant.components.camera import PLATFORM_SCHEMA, Camera
 from homeassistant.const import (
-    CONF_NAME, CONF_USERNAME, CONF_PASSWORD, CONF_AUTHENTICATION,
+    CONF_AUTHENTICATION, CONF_NAME, CONF_PASSWORD, CONF_USERNAME,
     HTTP_BASIC_AUTHENTICATION, HTTP_DIGEST_AUTHENTICATION)
 from homeassistant.exceptions import TemplateError
-from homeassistant.components.camera import (PLATFORM_SCHEMA, Camera)
 from homeassistant.helpers import config_validation as cv
 from homeassistant.util.async import run_coroutine_threadsafe
+import voluptuous as vol
 
 _LOGGER = logging.getLogger(__name__)
 

@@ -1,18 +1,17 @@
 """The tests for the MQTT room presence sensor."""
-import json
 import datetime
+import json
 import unittest
 from unittest.mock import patch
 
 from homeassistant.bootstrap import setup_component
+from homeassistant.components.mqtt import (
+    CONF_QOS, CONF_STATE_TOPIC, DEFAULT_QOS)
 import homeassistant.components.sensor as sensor
-from homeassistant.components.mqtt import (CONF_STATE_TOPIC, CONF_QOS,
-                                           DEFAULT_QOS)
-from homeassistant.const import (CONF_NAME, CONF_PLATFORM)
+from homeassistant.const import CONF_NAME, CONF_PLATFORM
 from homeassistant.util import dt
-
 from tests.common import (
-    get_test_home_assistant, mock_mqtt_component, fire_mqtt_message)
+    fire_mqtt_message, get_test_home_assistant, mock_mqtt_component)
 
 DEVICE_ID = '123TESTMAC'
 NAME = 'test_device'

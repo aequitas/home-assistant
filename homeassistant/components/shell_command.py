@@ -5,14 +5,13 @@ For more details about this platform, please refer to the documentation at
 https://home-assistant.io/components/shell_command/
 """
 import logging
-import subprocess
 import shlex
+import subprocess
 
-import voluptuous as vol
-
-from homeassistant.helpers import template
 from homeassistant.exceptions import TemplateError
+from homeassistant.helpers import template
 import homeassistant.helpers.config_validation as cv
+import voluptuous as vol
 
 DOMAIN = 'shell_command'
 

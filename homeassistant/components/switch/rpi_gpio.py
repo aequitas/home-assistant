@@ -6,13 +6,12 @@ https://home-assistant.io/components/switch.rpi_gpio/
 """
 import logging
 
-import voluptuous as vol
-
-from homeassistant.components.switch import PLATFORM_SCHEMA
 import homeassistant.components.rpi_gpio as rpi_gpio
+from homeassistant.components.switch import PLATFORM_SCHEMA
 from homeassistant.const import DEVICE_DEFAULT_NAME
-from homeassistant.helpers.entity import ToggleEntity
 import homeassistant.helpers.config_validation as cv
+from homeassistant.helpers.entity import ToggleEntity
+import voluptuous as vol
 
 _LOGGER = logging.getLogger(__name__)
 

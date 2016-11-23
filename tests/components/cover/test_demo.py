@@ -1,11 +1,11 @@
 """The tests for the Demo cover platform."""
-import unittest
 from datetime import timedelta
-import homeassistant.util.dt as dt_util
+import unittest
 
 from homeassistant.bootstrap import setup_component
 from homeassistant.components import cover
-from tests.common import get_test_home_assistant, fire_time_changed
+import homeassistant.util.dt as dt_util
+from tests.common import fire_time_changed, get_test_home_assistant
 
 ENTITY_COVER = 'cover.living_room_window'
 

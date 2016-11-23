@@ -4,18 +4,17 @@ Details about crypto currencies from CoinMarketCap.
 For more details about this platform, please refer to the documentation at
 https://home-assistant.io/components/sensor.coinmarketcap/
 """
-import logging
 from datetime import timedelta
 import json
+import logging
 from urllib.error import HTTPError
-
-import voluptuous as vol
 
 from homeassistant.components.sensor import PLATFORM_SCHEMA
 from homeassistant.const import ATTR_ATTRIBUTION
+import homeassistant.helpers.config_validation as cv
 from homeassistant.helpers.entity import Entity
 from homeassistant.util import Throttle
-import homeassistant.helpers.config_validation as cv
+import voluptuous as vol
 
 REQUIREMENTS = ['coinmarketcap==2.0.1']
 

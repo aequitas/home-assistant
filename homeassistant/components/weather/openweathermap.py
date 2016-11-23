@@ -4,16 +4,15 @@ Support for the OpenWeatherMap (OWM) service.
 For more details about this platform, please refer to the documentation at
 https://home-assistant.io/components/weather.openweathermap/
 """
-import logging
 from datetime import timedelta
+import logging
 
-import voluptuous as vol
-
-from homeassistant.components.weather import WeatherEntity, PLATFORM_SCHEMA
+from homeassistant.components.weather import PLATFORM_SCHEMA, WeatherEntity
 from homeassistant.const import (
-    CONF_API_KEY, CONF_NAME, CONF_LATITUDE, CONF_LONGITUDE, STATE_UNKNOWN)
+    CONF_API_KEY, CONF_LATITUDE, CONF_LONGITUDE, CONF_NAME, STATE_UNKNOWN)
 import homeassistant.helpers.config_validation as cv
 from homeassistant.util import Throttle
+import voluptuous as vol
 
 REQUIREMENTS = ['pyowm==2.5.0']
 

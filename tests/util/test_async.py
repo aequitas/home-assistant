@@ -3,9 +3,8 @@ import asyncio
 from asyncio import test_utils
 from unittest.mock import MagicMock, patch
 
-import pytest
-
 from homeassistant.util import async as hasync
+import pytest
 
 
 @patch('asyncio.coroutines.iscoroutine', return_value=True)

@@ -7,15 +7,15 @@ https://home-assistant.io/components/media_player.firetv/
 import logging
 
 import requests
-import voluptuous as vol
 
 from homeassistant.components.media_player import (
-    SUPPORT_NEXT_TRACK, SUPPORT_PAUSE, SUPPORT_PREVIOUS_TRACK, PLATFORM_SCHEMA,
+    PLATFORM_SCHEMA, SUPPORT_NEXT_TRACK, SUPPORT_PAUSE, SUPPORT_PREVIOUS_TRACK,
     SUPPORT_TURN_OFF, SUPPORT_TURN_ON, SUPPORT_VOLUME_SET, MediaPlayerDevice)
 from homeassistant.const import (
-    STATE_IDLE, STATE_OFF, STATE_PAUSED, STATE_PLAYING, STATE_STANDBY,
-    STATE_UNKNOWN, CONF_HOST, CONF_PORT, CONF_NAME, CONF_DEVICE, CONF_DEVICES)
+    CONF_DEVICE, CONF_DEVICES, CONF_HOST, CONF_NAME, CONF_PORT, STATE_IDLE,
+    STATE_OFF, STATE_PAUSED, STATE_PLAYING, STATE_STANDBY, STATE_UNKNOWN)
 import homeassistant.helpers.config_validation as cv
+import voluptuous as vol
 
 _LOGGER = logging.getLogger(__name__)
 

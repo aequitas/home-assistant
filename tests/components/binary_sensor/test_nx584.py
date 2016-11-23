@@ -1,13 +1,12 @@
 """The tests for the nx584 sensor platform."""
-import requests
 import unittest
 from unittest import mock
 
-from nx584 import client as nx584_client
+import requests
 
-from homeassistant.components.binary_sensor import nx584
 from homeassistant.bootstrap import setup_component
-
+from homeassistant.components.binary_sensor import nx584
+from nx584 import client as nx584_client
 from tests.common import get_test_home_assistant
 
 

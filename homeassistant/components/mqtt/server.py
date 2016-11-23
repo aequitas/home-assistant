@@ -7,9 +7,9 @@ https://home-assistant.io/components/mqtt/#use-the-embedded-broker
 import logging
 import tempfile
 
-from homeassistant.core import callback
 from homeassistant.components.mqtt import PROTOCOL_311
 from homeassistant.const import EVENT_HOMEASSISTANT_STOP
+from homeassistant.core import callback
 from homeassistant.util.async import run_coroutine_threadsafe
 
 REQUIREMENTS = ['hbmqtt==0.7.1']

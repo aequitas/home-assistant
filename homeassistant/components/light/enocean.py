@@ -7,13 +7,12 @@ https://home-assistant.io/components/light.enocean/
 import logging
 import math
 
-import voluptuous as vol
-
-from homeassistant.components.light import (
-    Light, ATTR_BRIGHTNESS, SUPPORT_BRIGHTNESS, PLATFORM_SCHEMA)
-from homeassistant.const import (CONF_NAME, CONF_ID)
 from homeassistant.components import enocean
+from homeassistant.components.light import (
+    ATTR_BRIGHTNESS, PLATFORM_SCHEMA, SUPPORT_BRIGHTNESS, Light)
+from homeassistant.const import CONF_ID, CONF_NAME
 import homeassistant.helpers.config_validation as cv
+import voluptuous as vol
 
 _LOGGER = logging.getLogger(__name__)
 

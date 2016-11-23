@@ -8,12 +8,12 @@ import datetime
 import logging
 
 import requests
-import voluptuous as vol
 
 from homeassistant.components.binary_sensor import (
-    BinarySensorDevice, PLATFORM_SCHEMA, SENSOR_CLASSES)
-from homeassistant.const import (CONF_HOST, CONF_PORT)
+    PLATFORM_SCHEMA, SENSOR_CLASSES, BinarySensorDevice)
+from homeassistant.const import CONF_HOST, CONF_PORT
 import homeassistant.helpers.config_validation as cv
+import voluptuous as vol
 
 REQUIREMENTS = ['concord232==0.14']
 

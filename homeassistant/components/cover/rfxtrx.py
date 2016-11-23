@@ -5,8 +5,8 @@ For more details about this platform, please refer to the documentation
 https://home-assistant.io/components/cover.rfxtrx/
 """
 
-import homeassistant.components.rfxtrx as rfxtrx
 from homeassistant.components.cover import CoverDevice
+import homeassistant.components.rfxtrx as rfxtrx
 
 DEPENDENCIES = ['rfxtrx']
 

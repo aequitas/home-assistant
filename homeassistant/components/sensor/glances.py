@@ -4,18 +4,18 @@ Support gathering system information of hosts which are running glances.
 For more details about this platform, please refer to the documentation at
 https://home-assistant.io/components/sensor.glances/
 """
-import logging
 from datetime import timedelta
+import logging
 
 import requests
-import voluptuous as vol
 
 from homeassistant.components.sensor import PLATFORM_SCHEMA
 from homeassistant.const import (
-    CONF_HOST, CONF_PORT, STATE_UNKNOWN, CONF_NAME, CONF_RESOURCES)
+    CONF_HOST, CONF_NAME, CONF_PORT, CONF_RESOURCES, STATE_UNKNOWN)
+import homeassistant.helpers.config_validation as cv
 from homeassistant.helpers.entity import Entity
 from homeassistant.util import Throttle
-import homeassistant.helpers.config_validation as cv
+import voluptuous as vol
 
 _LOGGER = logging.getLogger(__name__)
 _RESOURCE = 'api/2/all'

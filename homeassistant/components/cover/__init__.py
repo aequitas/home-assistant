@@ -4,23 +4,21 @@ Support for Cover devices.
 For more details about this platform, please refer to the documentation at
 https://home-assistant.io/components/cover/
 """
-import os
 import logging
+import os
 
-import voluptuous as vol
-
-from homeassistant.config import load_yaml_config_file
-from homeassistant.helpers.entity_component import EntityComponent
-from homeassistant.helpers.entity import Entity
-from homeassistant.helpers.config_validation import PLATFORM_SCHEMA  # noqa
-import homeassistant.helpers.config_validation as cv
 from homeassistant.components import group
+from homeassistant.config import load_yaml_config_file
 from homeassistant.const import (
-    SERVICE_OPEN_COVER, SERVICE_CLOSE_COVER, SERVICE_SET_COVER_POSITION,
-    SERVICE_STOP_COVER, SERVICE_OPEN_COVER_TILT, SERVICE_CLOSE_COVER_TILT,
-    SERVICE_STOP_COVER_TILT, SERVICE_SET_COVER_TILT_POSITION, STATE_OPEN,
-    STATE_CLOSED, STATE_UNKNOWN, ATTR_ENTITY_ID)
-
+    ATTR_ENTITY_ID, SERVICE_CLOSE_COVER, SERVICE_CLOSE_COVER_TILT,
+    SERVICE_OPEN_COVER, SERVICE_OPEN_COVER_TILT, SERVICE_SET_COVER_POSITION,
+    SERVICE_SET_COVER_TILT_POSITION, SERVICE_STOP_COVER,
+    SERVICE_STOP_COVER_TILT, STATE_CLOSED, STATE_OPEN, STATE_UNKNOWN)
+import homeassistant.helpers.config_validation as cv
+from homeassistant.helpers.config_validation import PLATFORM_SCHEMA  # noqa
+from homeassistant.helpers.entity import Entity
+from homeassistant.helpers.entity_component import EntityComponent
+import voluptuous as vol
 
 DOMAIN = 'cover'
 SCAN_INTERVAL = 15

@@ -6,19 +6,19 @@ https://home-assistant.io/components/zwave/
 """
 import logging
 import os.path
-import time
 from pprint import pprint
+import time
 
-import voluptuous as vol
-
-from homeassistant.helpers import discovery
+import homeassistant.config as conf_util
 from homeassistant.const import (
-    ATTR_BATTERY_LEVEL, ATTR_LOCATION, ATTR_ENTITY_ID, CONF_CUSTOMIZE,
+    ATTR_BATTERY_LEVEL, ATTR_ENTITY_ID, ATTR_LOCATION, CONF_CUSTOMIZE,
     EVENT_HOMEASSISTANT_START, EVENT_HOMEASSISTANT_STOP)
+from homeassistant.helpers import discovery
+import homeassistant.helpers.config_validation as cv
 from homeassistant.helpers.event import track_time_change
 from homeassistant.util import convert, slugify
-import homeassistant.config as conf_util
-import homeassistant.helpers.config_validation as cv
+import voluptuous as vol
+
 from . import const
 
 REQUIREMENTS = ['pydispatcher==2.0.5']

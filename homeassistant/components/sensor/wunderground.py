@@ -8,15 +8,15 @@ from datetime import timedelta
 import logging
 
 import requests
-import voluptuous as vol
 
 from homeassistant.components.sensor import PLATFORM_SCHEMA
 from homeassistant.const import (
-    CONF_MONITORED_CONDITIONS, CONF_API_KEY, TEMP_FAHRENHEIT, TEMP_CELSIUS,
-    STATE_UNKNOWN, ATTR_ATTRIBUTION)
+    ATTR_ATTRIBUTION, CONF_API_KEY, CONF_MONITORED_CONDITIONS, STATE_UNKNOWN,
+    TEMP_CELSIUS, TEMP_FAHRENHEIT)
+import homeassistant.helpers.config_validation as cv
 from homeassistant.helpers.entity import Entity
 from homeassistant.util import Throttle
-import homeassistant.helpers.config_validation as cv
+import voluptuous as vol
 
 _RESOURCE = 'http://api.wunderground.com/api/{}/conditions/q/'
 _ALERTS = 'http://api.wunderground.com/api/{}/alerts/q/'

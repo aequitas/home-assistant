@@ -5,7 +5,7 @@ For more details about this platform, please refer to the documentation
 https://home-assistant.io/components/demo/
 """
 from homeassistant.components.weather import WeatherEntity
-from homeassistant.const import (TEMP_CELSIUS, TEMP_FAHRENHEIT)
+from homeassistant.const import TEMP_CELSIUS, TEMP_FAHRENHEIT
 
 CONDITION_CLASSES = {
     'cloudy': [],

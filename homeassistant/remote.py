@@ -13,8 +13,8 @@ from datetime import datetime
 import enum
 import json
 import logging
-import time
 import threading
+import time
 import urllib.parse
 
 from typing import Optional
@@ -22,12 +22,12 @@ from typing import Optional
 import requests
 
 import homeassistant.bootstrap as bootstrap
-import homeassistant.core as ha
 from homeassistant.const import (
-    HTTP_HEADER_HA_AUTH, SERVER_PORT, URL_API, URL_API_EVENT_FORWARD,
-    URL_API_EVENTS, URL_API_EVENTS_EVENT, URL_API_SERVICES, URL_API_CONFIG,
-    URL_API_SERVICES_SERVICE, URL_API_STATES, URL_API_STATES_ENTITY,
-    HTTP_HEADER_CONTENT_TYPE, CONTENT_TYPE_JSON)
+    CONTENT_TYPE_JSON, HTTP_HEADER_CONTENT_TYPE, HTTP_HEADER_HA_AUTH,
+    SERVER_PORT, URL_API, URL_API_CONFIG, URL_API_EVENT_FORWARD,
+    URL_API_EVENTS, URL_API_EVENTS_EVENT, URL_API_SERVICES,
+    URL_API_SERVICES_SERVICE, URL_API_STATES, URL_API_STATES_ENTITY)
+import homeassistant.core as ha
 from homeassistant.exceptions import HomeAssistantError
 
 METHOD_GET = "get"

@@ -5,6 +5,7 @@ For more details about this platform, please refer to the documentation at
 https://home-assistant.io/components/switch.qwikswitch/
 """
 import logging
+
 import homeassistant.components.qwikswitch as qwikswitch
 
 DEPENDENCIES = ['qwikswitch']

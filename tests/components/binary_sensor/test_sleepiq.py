@@ -2,13 +2,11 @@
 import unittest
 from unittest.mock import MagicMock
 
-import requests_mock
-
 from homeassistant.bootstrap import setup_component
 from homeassistant.components.binary_sensor import sleepiq
-
-from tests.components.test_sleepiq import mock_responses
+import requests_mock
 from tests.common import get_test_home_assistant
+from tests.components.test_sleepiq import mock_responses
 
 
 class TestSleepIQBinarySensorSetup(unittest.TestCase):

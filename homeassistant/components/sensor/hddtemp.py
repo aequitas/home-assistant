@@ -4,19 +4,18 @@ Support for getting the disk temperature of a host.
 For more details about this platform, please refer to the documentation at
 https://home-assistant.io/components/sensor.hddtemp/
 """
-import logging
 from datetime import timedelta
+import logging
 from telnetlib import Telnet
 
-import voluptuous as vol
-
-from homeassistant.helpers.entity import Entity
 from homeassistant.components.sensor import PLATFORM_SCHEMA
 from homeassistant.const import (
-    CONF_NAME, CONF_HOST, CONF_PORT, TEMP_CELSIUS, TEMP_FAHRENHEIT,
-    STATE_UNKNOWN)
+    CONF_HOST, CONF_NAME, CONF_PORT, STATE_UNKNOWN, TEMP_CELSIUS,
+    TEMP_FAHRENHEIT)
 import homeassistant.helpers.config_validation as cv
+from homeassistant.helpers.entity import Entity
 from homeassistant.util import Throttle
+import voluptuous as vol
 
 _LOGGER = logging.getLogger(__name__)
 

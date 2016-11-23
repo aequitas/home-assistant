@@ -6,14 +6,12 @@ at https://home-assistant.io/components/automation/#template-trigger
 """
 import logging
 
-import voluptuous as vol
-
+from homeassistant.const import CONF_PLATFORM, CONF_VALUE_TEMPLATE
 from homeassistant.core import callback
-from homeassistant.const import CONF_VALUE_TEMPLATE, CONF_PLATFORM
 from homeassistant.helpers import condition
-from homeassistant.helpers.event import async_track_state_change
 import homeassistant.helpers.config_validation as cv
-
+from homeassistant.helpers.event import async_track_state_change
+import voluptuous as vol
 
 _LOGGER = logging.getLogger(__name__)
 

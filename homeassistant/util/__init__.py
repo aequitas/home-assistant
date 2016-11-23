@@ -1,18 +1,18 @@
 """Helper methods for various modules."""
 from collections.abc import MutableSet
-from itertools import chain
-import threading
 from datetime import datetime
-import re
 import enum
-import socket
-import random
-import string
 from functools import wraps
+from itertools import chain
+import random
+import re
+import socket
+import string
+import threading
 from types import MappingProxyType
 from unicodedata import normalize
 
-from typing import Any, Optional, TypeVar, Callable, Sequence, KeysView, Union
+from typing import Any, Callable, KeysView, Optional, Sequence, TypeVar, Union
 
 from .dt import as_local, utcnow
 

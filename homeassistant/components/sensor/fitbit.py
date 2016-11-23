@@ -4,21 +4,20 @@ Support for the Fitbit API.
 For more details about this platform, please refer to the documentation at
 https://home-assistant.io/components/sensor.fitbit/
 """
-import os
+import datetime
 import json
 import logging
-import datetime
+import os
 import time
 
-import voluptuous as vol
-
-from homeassistant.core import callback
 from homeassistant.components.http import HomeAssistantView
 from homeassistant.components.sensor import PLATFORM_SCHEMA
+from homeassistant.core import callback
+import homeassistant.helpers.config_validation as cv
 from homeassistant.helpers.entity import Entity
 from homeassistant.loader import get_component
 from homeassistant.util import Throttle
-import homeassistant.helpers.config_validation as cv
+import voluptuous as vol
 
 REQUIREMENTS = ['fitbit==0.2.3']
 

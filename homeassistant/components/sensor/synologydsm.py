@@ -5,17 +5,16 @@ For more details about this platform, please refer to the documentation at
 https://home-assistant.io/components/sensor.synologydsm/
 """
 
-import logging
 from datetime import timedelta
+import logging
 
 from homeassistant.components.sensor import PLATFORM_SCHEMA
-from homeassistant.helpers.entity import Entity
 from homeassistant.const import (
-    CONF_HOST, CONF_USERNAME, CONF_PASSWORD, CONF_PORT,
-    CONF_MONITORED_CONDITIONS, TEMP_CELSIUS, EVENT_HOMEASSISTANT_START)
-from homeassistant.util import Throttle
+    CONF_HOST, CONF_MONITORED_CONDITIONS, CONF_PASSWORD, CONF_PORT,
+    CONF_USERNAME, EVENT_HOMEASSISTANT_START, TEMP_CELSIUS)
 import homeassistant.helpers.config_validation as cv
-
+from homeassistant.helpers.entity import Entity
+from homeassistant.util import Throttle
 import voluptuous as vol
 
 REQUIREMENTS = ['python-synology==0.1.0']

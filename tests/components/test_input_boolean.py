@@ -1,15 +1,14 @@
 """The tests for the input_boolean component."""
 # pylint: disable=protected-access
-import unittest
 import logging
-
-from tests.common import get_test_home_assistant
+import unittest
 
 from homeassistant.bootstrap import setup_component
 from homeassistant.components.input_boolean import (
     DOMAIN, is_on, toggle, turn_off, turn_on)
 from homeassistant.const import (
-    STATE_ON, STATE_OFF, ATTR_ICON, ATTR_FRIENDLY_NAME)
+    ATTR_FRIENDLY_NAME, ATTR_ICON, STATE_OFF, STATE_ON)
+from tests.common import get_test_home_assistant
 
 _LOGGER = logging.getLogger(__name__)
 

@@ -6,9 +6,9 @@ https://home-assistant.io/components/switch.verisure/
 """
 import logging
 
-from homeassistant.components.verisure import HUB as hub
-from homeassistant.components.verisure import CONF_SMARTPLUGS
 from homeassistant.components.switch import SwitchDevice
+from homeassistant.components.verisure import CONF_SMARTPLUGS
+from homeassistant.components.verisure import HUB as hub
 
 _LOGGER = logging.getLogger(__name__)
 

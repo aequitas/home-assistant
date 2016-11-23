@@ -7,14 +7,12 @@ https://home-assistant.io/components/sensor.miflora/
 from datetime import timedelta
 import logging
 
-import voluptuous as vol
-
 from homeassistant.components.sensor import PLATFORM_SCHEMA
-from homeassistant.helpers.entity import Entity
+from homeassistant.const import CONF_MAC, CONF_MONITORED_CONDITIONS, CONF_NAME
 import homeassistant.helpers.config_validation as cv
+from homeassistant.helpers.entity import Entity
 from homeassistant.util import Throttle
-from homeassistant.const import (
-    CONF_MONITORED_CONDITIONS, CONF_NAME, CONF_MAC)
+import voluptuous as vol
 
 REQUIREMENTS = ['miflora==0.1.13']
 

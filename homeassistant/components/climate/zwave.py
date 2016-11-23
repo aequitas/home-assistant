@@ -7,12 +7,11 @@ https://home-assistant.io/components/climate.zwave/
 # Because we do not compile openzwave on CI
 # pylint: disable=import-error
 import logging
-from homeassistant.components.climate import DOMAIN
-from homeassistant.components.climate import ClimateDevice
-from homeassistant.components.zwave import ZWaveDeviceEntity
+
 from homeassistant.components import zwave
-from homeassistant.const import (
-    TEMP_CELSIUS, TEMP_FAHRENHEIT, ATTR_TEMPERATURE)
+from homeassistant.components.climate import DOMAIN, ClimateDevice
+from homeassistant.components.zwave import ZWaveDeviceEntity
+from homeassistant.const import ATTR_TEMPERATURE, TEMP_CELSIUS, TEMP_FAHRENHEIT
 
 _LOGGER = logging.getLogger(__name__)
 

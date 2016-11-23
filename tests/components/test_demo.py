@@ -6,8 +6,7 @@ import unittest
 from homeassistant.bootstrap import setup_component
 from homeassistant.components import demo, device_tracker
 from homeassistant.remote import JSONEncoder
-
-from tests.common import mock_http_component, get_test_home_assistant
+from tests.common import get_test_home_assistant, mock_http_component
 
 
 class TestDemo(unittest.TestCase):

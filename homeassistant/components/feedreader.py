@@ -7,14 +7,13 @@ https://home-assistant.io/components/feedreader/
 from datetime import datetime
 from logging import getLogger
 from os.path import exists
-from threading import Lock
 import pickle
-
-import voluptuous as vol
+from threading import Lock
 
 from homeassistant.const import EVENT_HOMEASSISTANT_START
-from homeassistant.helpers.event import track_utc_time_change
 import homeassistant.helpers.config_validation as cv
+from homeassistant.helpers.event import track_utc_time_change
+import voluptuous as vol
 
 REQUIREMENTS = ['feedparser==5.2.1']
 

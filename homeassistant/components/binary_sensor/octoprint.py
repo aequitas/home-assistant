@@ -7,15 +7,14 @@ https://home-assistant.io/components/binary_sensor.octoprint/
 import logging
 
 import requests
-import voluptuous as vol
 
-from homeassistant.const import (
-    CONF_NAME, STATE_ON, STATE_OFF, CONF_MONITORED_CONDITIONS)
 from homeassistant.components.binary_sensor import (
-    BinarySensorDevice, PLATFORM_SCHEMA)
-from homeassistant.loader import get_component
+    PLATFORM_SCHEMA, BinarySensorDevice)
+from homeassistant.const import (
+    CONF_MONITORED_CONDITIONS, CONF_NAME, STATE_OFF, STATE_ON)
 import homeassistant.helpers.config_validation as cv
-
+from homeassistant.loader import get_component
+import voluptuous as vol
 
 _LOGGER = logging.getLogger(__name__)
 

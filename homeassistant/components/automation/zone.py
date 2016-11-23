@@ -4,14 +4,13 @@ Offer zone automation rules.
 For more details about this automation rule, please refer to the documentation
 at https://home-assistant.io/components/automation/#zone-trigger
 """
-import voluptuous as vol
-
-from homeassistant.core import callback
 from homeassistant.const import (
-    CONF_EVENT, CONF_ENTITY_ID, CONF_ZONE, MATCH_ALL, CONF_PLATFORM)
+    CONF_ENTITY_ID, CONF_EVENT, CONF_PLATFORM, CONF_ZONE, MATCH_ALL)
+from homeassistant.core import callback
+from homeassistant.helpers import condition, location
+from homeassistant.helpers import config_validation as cv
 from homeassistant.helpers.event import async_track_state_change
-from homeassistant.helpers import (
-    condition, config_validation as cv, location)
+import voluptuous as vol
 
 EVENT_ENTER = "enter"
 EVENT_LEAVE = "leave"

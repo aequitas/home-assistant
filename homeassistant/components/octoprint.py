@@ -8,10 +8,10 @@ import logging
 import time
 
 import requests
-import voluptuous as vol
 
 from homeassistant.const import CONF_API_KEY, CONF_HOST, CONTENT_TYPE_JSON
 import homeassistant.helpers.config_validation as cv
+import voluptuous as vol
 
 _LOGGER = logging.getLogger(__name__)
 

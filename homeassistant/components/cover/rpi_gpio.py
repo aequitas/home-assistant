@@ -10,12 +10,11 @@ https://home-assistant.io/components/cover.rpi_gpio/
 import logging
 from time import sleep
 
-import voluptuous as vol
-
-from homeassistant.components.cover import CoverDevice, PLATFORM_SCHEMA
-from homeassistant.const import CONF_NAME
+from homeassistant.components.cover import PLATFORM_SCHEMA, CoverDevice
 import homeassistant.components.rpi_gpio as rpi_gpio
+from homeassistant.const import CONF_NAME
 import homeassistant.helpers.config_validation as cv
+import voluptuous as vol
 
 _LOGGER = logging.getLogger(__name__)
 

@@ -1,11 +1,10 @@
 """The tests for the Template automation."""
 import unittest
 
-from homeassistant.core import callback
 from homeassistant.bootstrap import setup_component
 import homeassistant.components.automation as automation
-
-from tests.common import get_test_home_assistant, assert_setup_component
+from homeassistant.core import callback
+from tests.common import assert_setup_component, get_test_home_assistant
 
 
 class TestAutomationTemplate(unittest.TestCase):

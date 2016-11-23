@@ -14,14 +14,11 @@ import re
 import signal
 import sys
 import threading
-
 from types import MappingProxyType
-from typing import Optional, Any, Callable, List  # NOQA
+
+from typing import Any, Callable, List, Optional  # NOQA
 
 import aiohttp
-import voluptuous as vol
-from voluptuous.humanize import humanize_error
-
 from homeassistant.const import (
     ATTR_DOMAIN, ATTR_FRIENDLY_NAME, ATTR_NOW, ATTR_SERVICE,
     ATTR_SERVICE_CALL_ID, ATTR_SERVICE_DATA, EVENT_CALL_SERVICE,
@@ -31,12 +28,14 @@ from homeassistant.const import (
     SERVICE_HOMEASSISTANT_RESTART, SERVICE_HOMEASSISTANT_STOP, __version__)
 from homeassistant.exceptions import (
     HomeAssistantError, InvalidEntityFormatError, ShuttingDown)
-from homeassistant.util.async import (
-    run_coroutine_threadsafe, run_callback_threadsafe)
 import homeassistant.util as util
+from homeassistant.util.async import (
+    run_callback_threadsafe, run_coroutine_threadsafe)
 import homeassistant.util.dt as dt_util
 import homeassistant.util.location as location
-from homeassistant.util.unit_system import UnitSystem, METRIC_SYSTEM  # NOQA
+from homeassistant.util.unit_system import METRIC_SYSTEM, UnitSystem  # NOQA
+import voluptuous as vol
+from voluptuous.humanize import humanize_error
 
 try:
     import uvloop

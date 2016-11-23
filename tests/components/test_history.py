@@ -5,12 +5,11 @@ import unittest
 from unittest.mock import patch, sentinel
 
 from homeassistant.bootstrap import setup_component
+from homeassistant.components import history, recorder
 import homeassistant.core as ha
 import homeassistant.util.dt as dt_util
-from homeassistant.components import history, recorder
-
 from tests.common import (
-    mock_http_component, mock_state_change_event, get_test_home_assistant)
+    get_test_home_assistant, mock_http_component, mock_state_change_event)
 
 
 class TestComponentHistory(unittest.TestCase):

@@ -6,13 +6,11 @@ https://home-assistant.io/components/notify.slack/
 """
 import logging
 
-import voluptuous as vol
-
 from homeassistant.components.notify import (
     ATTR_TARGET, PLATFORM_SCHEMA, BaseNotificationService)
-from homeassistant.const import (
-    CONF_API_KEY, CONF_USERNAME, CONF_ICON)
+from homeassistant.const import CONF_API_KEY, CONF_ICON, CONF_USERNAME
 import homeassistant.helpers.config_validation as cv
+import voluptuous as vol
 
 REQUIREMENTS = ['slacker==0.9.30']
 

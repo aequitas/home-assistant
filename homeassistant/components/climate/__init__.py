@@ -5,20 +5,19 @@ For more details about this component, please refer to the documentation at
 https://home-assistant.io/components/climate/
 """
 import logging
-import os
 from numbers import Number
-import voluptuous as vol
-
-from homeassistant.helpers.entity_component import EntityComponent
+import os
 
 from homeassistant.config import load_yaml_config_file
-from homeassistant.util.temperature import convert as convert_temperature
-from homeassistant.helpers.entity import Entity
-from homeassistant.helpers.config_validation import PLATFORM_SCHEMA  # noqa
-import homeassistant.helpers.config_validation as cv
 from homeassistant.const import (
-    ATTR_ENTITY_ID, ATTR_TEMPERATURE, STATE_ON, STATE_OFF, STATE_UNKNOWN,
+    ATTR_ENTITY_ID, ATTR_TEMPERATURE, STATE_OFF, STATE_ON, STATE_UNKNOWN,
     TEMP_CELSIUS)
+import homeassistant.helpers.config_validation as cv
+from homeassistant.helpers.config_validation import PLATFORM_SCHEMA  # noqa
+from homeassistant.helpers.entity import Entity
+from homeassistant.helpers.entity_component import EntityComponent
+from homeassistant.util.temperature import convert as convert_temperature
+import voluptuous as vol
 
 DOMAIN = "climate"
 

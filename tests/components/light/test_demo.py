@@ -4,7 +4,6 @@ import unittest
 
 from homeassistant.bootstrap import setup_component
 import homeassistant.components.light as light
-
 from tests.common import get_test_home_assistant
 
 ENTITY_LIGHT = 'light.bed_light'

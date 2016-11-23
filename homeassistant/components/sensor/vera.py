@@ -6,11 +6,10 @@ https://home-assistant.io/components/sensor.vera/
 """
 import logging
 
-from homeassistant.const import (
-    TEMP_CELSIUS, TEMP_FAHRENHEIT)
-from homeassistant.helpers.entity import Entity
 from homeassistant.components.vera import (
-    VeraDevice, VERA_DEVICES, VERA_CONTROLLER)
+    VERA_CONTROLLER, VERA_DEVICES, VeraDevice)
+from homeassistant.const import TEMP_CELSIUS, TEMP_FAHRENHEIT
+from homeassistant.helpers.entity import Entity
 
 DEPENDENCIES = ['vera']
 

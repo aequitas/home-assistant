@@ -2,9 +2,8 @@
 import unittest
 from unittest import mock
 
-from homeassistant.components.media_player import cmus
 from homeassistant import const
-
+from homeassistant.components.media_player import cmus
 from tests.common import get_test_home_assistant
 
 entity_id = 'media_player.cmus'

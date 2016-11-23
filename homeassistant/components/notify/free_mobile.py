@@ -6,12 +6,11 @@ https://home-assistant.io/components/notify.free_mobile/
 """
 import logging
 
-import voluptuous as vol
-
 from homeassistant.components.notify import (
     PLATFORM_SCHEMA, BaseNotificationService)
 from homeassistant.const import CONF_ACCESS_TOKEN, CONF_USERNAME
 import homeassistant.helpers.config_validation as cv
+import voluptuous as vol
 
 _LOGGER = logging.getLogger(__name__)
 REQUIREMENTS = ['freesms==0.1.1']

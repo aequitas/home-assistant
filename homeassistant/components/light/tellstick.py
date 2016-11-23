@@ -4,14 +4,12 @@ Support for Tellstick lights.
 For more details about this platform, please refer to the documentation at
 https://home-assistant.io/components/light.tellstick/
 """
+from homeassistant.components.light import (
+    ATTR_BRIGHTNESS, SUPPORT_BRIGHTNESS, Light)
+from homeassistant.components.tellstick import (
+    ATTR_DISCOVER_CONFIG, ATTR_DISCOVER_DEVICES, DEFAULT_SIGNAL_REPETITIONS,
+    DOMAIN, TellstickDevice)
 import voluptuous as vol
-
-from homeassistant.components.light import (ATTR_BRIGHTNESS,
-                                            SUPPORT_BRIGHTNESS, Light)
-from homeassistant.components.tellstick import (DEFAULT_SIGNAL_REPETITIONS,
-                                                ATTR_DISCOVER_DEVICES,
-                                                ATTR_DISCOVER_CONFIG,
-                                                DOMAIN, TellstickDevice)
 
 PLATFORM_SCHEMA = vol.Schema({vol.Required("platform"): DOMAIN})
 

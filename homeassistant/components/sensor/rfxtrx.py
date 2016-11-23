@@ -5,16 +5,16 @@ For more details about this platform, please refer to the documentation at
 https://home-assistant.io/components/sensor.rfxtrx/
 """
 import logging
-import voluptuous as vol
 
 import homeassistant.components.rfxtrx as rfxtrx
-import homeassistant.helpers.config_validation as cv
+from homeassistant.components.rfxtrx import (
+    ATTR_AUTOMATIC_ADD, ATTR_DATA_TYPE, ATTR_ENTITY_ID, ATTR_FIREEVENT,
+    ATTR_NAME, CONF_DEVICES, DATA_TYPES)
 from homeassistant.const import CONF_PLATFORM
+import homeassistant.helpers.config_validation as cv
 from homeassistant.helpers.entity import Entity
 from homeassistant.util import slugify
-from homeassistant.components.rfxtrx import (
-    ATTR_AUTOMATIC_ADD, ATTR_NAME, ATTR_FIREEVENT,
-    CONF_DEVICES, ATTR_DATA_TYPE, DATA_TYPES, ATTR_ENTITY_ID)
+import voluptuous as vol
 
 DEPENDENCIES = ['rfxtrx']
 

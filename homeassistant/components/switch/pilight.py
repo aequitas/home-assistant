@@ -6,12 +6,11 @@ https://home-assistant.io/components/switch.pilight/
 """
 import logging
 
-import voluptuous as vol
-
-import homeassistant.helpers.config_validation as cv
 import homeassistant.components.pilight as pilight
-from homeassistant.components.switch import (SwitchDevice, PLATFORM_SCHEMA)
-from homeassistant.const import (CONF_NAME, CONF_ID, CONF_SWITCHES, CONF_STATE)
+from homeassistant.components.switch import PLATFORM_SCHEMA, SwitchDevice
+from homeassistant.const import CONF_ID, CONF_NAME, CONF_STATE, CONF_SWITCHES
+import homeassistant.helpers.config_validation as cv
+import voluptuous as vol
 
 _LOGGER = logging.getLogger(__name__)
 

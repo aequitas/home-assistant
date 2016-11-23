@@ -5,17 +5,16 @@ For more details about this platform, please refer to the documentation at
 https://home-assistant.io/components/light.flux_led/
 """
 import logging
-import socket
 import random
+import socket
 
-import voluptuous as vol
-
-from homeassistant.const import CONF_DEVICES, CONF_NAME
 from homeassistant.components.light import (
-    ATTR_BRIGHTNESS, ATTR_RGB_COLOR, ATTR_EFFECT, EFFECT_RANDOM,
-    SUPPORT_BRIGHTNESS, SUPPORT_EFFECT, SUPPORT_RGB_COLOR, Light,
-    PLATFORM_SCHEMA)
+    ATTR_BRIGHTNESS, ATTR_EFFECT, ATTR_RGB_COLOR, EFFECT_RANDOM,
+    PLATFORM_SCHEMA, SUPPORT_BRIGHTNESS, SUPPORT_EFFECT, SUPPORT_RGB_COLOR,
+    Light)
+from homeassistant.const import CONF_DEVICES, CONF_NAME
 import homeassistant.helpers.config_validation as cv
+import voluptuous as vol
 
 REQUIREMENTS = ['https://github.com/Danielhiversen/flux_led/archive/0.9.zip'
                 '#flux_led==0.9']

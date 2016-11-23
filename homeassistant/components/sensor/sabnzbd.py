@@ -4,18 +4,17 @@ Support for monitoring an SABnzbd NZB client.
 For more details about this platform, please refer to the documentation at
 https://home-assistant.io/components/sensor.sabnzbd/
 """
-import logging
 from datetime import timedelta
-
-import voluptuous as vol
+import logging
 
 from homeassistant.components.sensor import PLATFORM_SCHEMA
 from homeassistant.const import (
-    CONF_HOST, CONF_API_KEY, CONF_NAME, CONF_PORT, CONF_MONITORED_VARIABLES,
+    CONF_API_KEY, CONF_HOST, CONF_MONITORED_VARIABLES, CONF_NAME, CONF_PORT,
     CONF_SSL)
+import homeassistant.helpers.config_validation as cv
 from homeassistant.helpers.entity import Entity
 from homeassistant.util import Throttle
-import homeassistant.helpers.config_validation as cv
+import voluptuous as vol
 
 REQUIREMENTS = ['https://github.com/jamespcole/home-assistant-nzb-clients/'
                 'archive/616cad59154092599278661af17e2a9f2cf5e2a9.zip'

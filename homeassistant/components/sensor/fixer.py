@@ -4,16 +4,15 @@ Currency exchange rate support that comes from fixer.io.
 For more details about this platform, please refer to the documentation at
 https://home-assistant.io/components/sensor.fixer/
 """
-import logging
 from datetime import timedelta
-
-import voluptuous as vol
+import logging
 
 from homeassistant.components.sensor import PLATFORM_SCHEMA
-from homeassistant.const import (CONF_NAME, ATTR_ATTRIBUTION, CONF_BASE)
+from homeassistant.const import ATTR_ATTRIBUTION, CONF_BASE, CONF_NAME
+import homeassistant.helpers.config_validation as cv
 from homeassistant.helpers.entity import Entity
 from homeassistant.util import Throttle
-import homeassistant.helpers.config_validation as cv
+import voluptuous as vol
 
 REQUIREMENTS = ['fixerio==0.1.1']
 

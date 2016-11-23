@@ -5,10 +5,11 @@ For more details about this platform, please refer to the documentation at
 https://home-assistant.io/components/climate.homematic/
 """
 import logging
+
+from homeassistant.components.climate import STATE_AUTO, ClimateDevice
 import homeassistant.components.homematic as homematic
-from homeassistant.components.climate import ClimateDevice, STATE_AUTO
+from homeassistant.const import ATTR_TEMPERATURE, STATE_UNKNOWN, TEMP_CELSIUS
 from homeassistant.util.temperature import convert
-from homeassistant.const import TEMP_CELSIUS, STATE_UNKNOWN, ATTR_TEMPERATURE
 
 DEPENDENCIES = ['homematic']
 

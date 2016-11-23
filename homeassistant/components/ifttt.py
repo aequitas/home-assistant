@@ -7,9 +7,9 @@ https://home-assistant.io/components/ifttt/
 import logging
 
 import requests
-import voluptuous as vol
 
 import homeassistant.helpers.config_validation as cv
+import voluptuous as vol
 
 REQUIREMENTS = ['pyfttt==0.3']
 

@@ -4,17 +4,16 @@ Support for GTFS (Google/General Transport Format Schema).
 For more details about this platform, please refer to the documentation at
 https://home-assistant.io/components/sensor.gtfs/
 """
-import os
-import logging
 import datetime
+import logging
+import os
 import threading
-
-import voluptuous as vol
 
 from homeassistant.components.sensor import PLATFORM_SCHEMA
 from homeassistant.const import CONF_NAME
-from homeassistant.helpers.entity import Entity
 import homeassistant.helpers.config_validation as cv
+from homeassistant.helpers.entity import Entity
+import voluptuous as vol
 
 REQUIREMENTS = ["https://github.com/robbiet480/pygtfs/archive/"
                 "00546724e4bbcb3053110d844ca44e2246267dd8.zip#"

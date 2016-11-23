@@ -2,11 +2,10 @@
 # pylint: disable=protected-access
 import unittest
 
-from homeassistant.bootstrap import setup_component
 from homeassistant import loader
+from homeassistant.bootstrap import setup_component
 from homeassistant.components import switch
-from homeassistant.const import STATE_ON, STATE_OFF, CONF_PLATFORM
-
+from homeassistant.const import CONF_PLATFORM, STATE_OFF, STATE_ON
 from tests.common import get_test_home_assistant
 
 

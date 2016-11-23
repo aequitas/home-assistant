@@ -4,15 +4,14 @@ Support for the Uber API.
 For more details about this platform, please refer to the documentation at
 https://home-assistant.io/components/sensor.uber/
 """
-import logging
 from datetime import timedelta
-
-import voluptuous as vol
+import logging
 
 from homeassistant.components.sensor import PLATFORM_SCHEMA
+import homeassistant.helpers.config_validation as cv
 from homeassistant.helpers.entity import Entity
 from homeassistant.util import Throttle
-import homeassistant.helpers.config_validation as cv
+import voluptuous as vol
 
 REQUIREMENTS = ['uber_rides==0.2.7']
 

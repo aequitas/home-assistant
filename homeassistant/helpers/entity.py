@@ -1,21 +1,20 @@
 """An abstract class for entities."""
 import asyncio
-import logging
 import functools as ft
+import logging
 from timeit import default_timer as timer
 
-from typing import Any, Optional, List, Dict
+from typing import Any, Dict, List, Optional
 
 from homeassistant.const import (
-    ATTR_ASSUMED_STATE, ATTR_FRIENDLY_NAME, ATTR_HIDDEN, ATTR_ICON,
-    ATTR_UNIT_OF_MEASUREMENT, DEVICE_DEFAULT_NAME, STATE_OFF, STATE_ON,
-    STATE_UNAVAILABLE, STATE_UNKNOWN, TEMP_CELSIUS, TEMP_FAHRENHEIT,
-    ATTR_ENTITY_PICTURE)
+    ATTR_ASSUMED_STATE, ATTR_ENTITY_PICTURE, ATTR_FRIENDLY_NAME, ATTR_HIDDEN,
+    ATTR_ICON, ATTR_UNIT_OF_MEASUREMENT, DEVICE_DEFAULT_NAME, STATE_OFF,
+    STATE_ON, STATE_UNAVAILABLE, STATE_UNKNOWN, TEMP_CELSIUS, TEMP_FAHRENHEIT)
 from homeassistant.core import HomeAssistant
 from homeassistant.exceptions import NoEntitySpecifiedError
 from homeassistant.util import ensure_unique_string, slugify
 from homeassistant.util.async import (
-    run_coroutine_threadsafe, run_callback_threadsafe)
+    run_callback_threadsafe, run_coroutine_threadsafe)
 
 # Entity attributes that we will overwrite
 _OVERWRITE = {}  # type: Dict[str, Any]

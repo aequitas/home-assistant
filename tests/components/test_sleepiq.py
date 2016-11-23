@@ -1,11 +1,10 @@
 """The tests for the SleepIQ component."""
 import unittest
-import requests_mock
 
 from homeassistant import bootstrap
 import homeassistant.components.sleepiq as sleepiq
-
-from tests.common import load_fixture, get_test_home_assistant
+import requests_mock
+from tests.common import get_test_home_assistant, load_fixture
 
 
 def mock_responses(mock):

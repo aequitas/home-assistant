@@ -6,17 +6,15 @@ https://home-assistant.io/components/media_player.yamaha/
 """
 import logging
 
-import voluptuous as vol
-
 from homeassistant.components.media_player import (
-    SUPPORT_TURN_OFF, SUPPORT_TURN_ON, SUPPORT_VOLUME_MUTE, SUPPORT_VOLUME_SET,
-    SUPPORT_SELECT_SOURCE, SUPPORT_PLAY_MEDIA, SUPPORT_PAUSE, SUPPORT_STOP,
-    SUPPORT_NEXT_TRACK, SUPPORT_PREVIOUS_TRACK,
-    MEDIA_TYPE_MUSIC,
-    MediaPlayerDevice, PLATFORM_SCHEMA)
-from homeassistant.const import (CONF_NAME, CONF_HOST, STATE_OFF, STATE_ON,
-                                 STATE_PLAYING, STATE_IDLE)
+    MEDIA_TYPE_MUSIC, PLATFORM_SCHEMA, SUPPORT_NEXT_TRACK, SUPPORT_PAUSE,
+    SUPPORT_PLAY_MEDIA, SUPPORT_PREVIOUS_TRACK, SUPPORT_SELECT_SOURCE,
+    SUPPORT_STOP, SUPPORT_TURN_OFF, SUPPORT_TURN_ON, SUPPORT_VOLUME_MUTE,
+    SUPPORT_VOLUME_SET, MediaPlayerDevice)
+from homeassistant.const import (
+    CONF_HOST, CONF_NAME, STATE_IDLE, STATE_OFF, STATE_ON, STATE_PLAYING)
 import homeassistant.helpers.config_validation as cv
+import voluptuous as vol
 
 REQUIREMENTS = ['rxv==0.4.0']
 

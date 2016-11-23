@@ -4,18 +4,18 @@ Support for an exposed aREST RESTful API of a device.
 For more details about this platform, please refer to the documentation at
 https://home-assistant.io/components/binary_sensor.arest/
 """
-import logging
 from datetime import timedelta
+import logging
 
 import requests
-import voluptuous as vol
 
 from homeassistant.components.binary_sensor import (
-    BinarySensorDevice, PLATFORM_SCHEMA, SENSOR_CLASSES_SCHEMA)
+    PLATFORM_SCHEMA, SENSOR_CLASSES_SCHEMA, BinarySensorDevice)
 from homeassistant.const import (
-    CONF_RESOURCE, CONF_PIN, CONF_NAME, CONF_SENSOR_CLASS)
-from homeassistant.util import Throttle
+    CONF_NAME, CONF_PIN, CONF_RESOURCE, CONF_SENSOR_CLASS)
 import homeassistant.helpers.config_validation as cv
+from homeassistant.util import Throttle
+import voluptuous as vol
 
 _LOGGER = logging.getLogger(__name__)
 

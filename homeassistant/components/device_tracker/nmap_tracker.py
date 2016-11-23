@@ -4,19 +4,18 @@ Support for scanning a network with nmap.
 For more details about this platform, please refer to the documentation at
 https://home-assistant.io/components/device_tracker.nmap_tracker/
 """
+from collections import namedtuple
+from datetime import timedelta
 import logging
 import re
 import subprocess
-from collections import namedtuple
-from datetime import timedelta
 
-import voluptuous as vol
-
-import homeassistant.helpers.config_validation as cv
-import homeassistant.util.dt as dt_util
 from homeassistant.components.device_tracker import DOMAIN, PLATFORM_SCHEMA
 from homeassistant.const import CONF_HOSTS
+import homeassistant.helpers.config_validation as cv
 from homeassistant.util import Throttle
+import homeassistant.util.dt as dt_util
+import voluptuous as vol
 
 REQUIREMENTS = ['python-nmap==0.6.1']
 

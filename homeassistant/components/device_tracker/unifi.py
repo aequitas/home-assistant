@@ -6,11 +6,11 @@ https://home-assistant.io/components/device_tracker.unifi/
 """
 import logging
 import urllib
-import voluptuous as vol
 
-import homeassistant.helpers.config_validation as cv
 from homeassistant.components.device_tracker import DOMAIN, PLATFORM_SCHEMA
-from homeassistant.const import CONF_HOST, CONF_USERNAME, CONF_PASSWORD
+from homeassistant.const import CONF_HOST, CONF_PASSWORD, CONF_USERNAME
+import homeassistant.helpers.config_validation as cv
+import voluptuous as vol
 
 # Unifi package doesn't list urllib3 as a requirement
 REQUIREMENTS = ['urllib3', 'unifi==1.2.5']

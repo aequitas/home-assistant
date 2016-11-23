@@ -2,11 +2,10 @@
 # pylint: disable=protected-access
 import unittest
 
-import pytest
-
-from homeassistant.core import callback
 from homeassistant.bootstrap import setup_component
 from homeassistant.components import rfxtrx as rfxtrx
+from homeassistant.core import callback
+import pytest
 from tests.common import get_test_home_assistant
 
 

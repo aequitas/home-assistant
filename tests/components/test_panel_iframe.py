@@ -4,7 +4,6 @@ from unittest.mock import patch
 
 from homeassistant import bootstrap
 from homeassistant.components import frontend
-
 from tests.common import get_test_home_assistant
 
 

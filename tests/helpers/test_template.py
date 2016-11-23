@@ -4,18 +4,12 @@ import unittest
 from unittest.mock import patch
 
 from homeassistant.components import group
+from homeassistant.const import (
+    LENGTH_METERS, MASS_GRAMS, MATCH_ALL, TEMP_CELSIUS, VOLUME_LITERS)
 from homeassistant.exceptions import TemplateError
 from homeassistant.helpers import template
-from homeassistant.util.unit_system import UnitSystem
-from homeassistant.const import (
-    LENGTH_METERS,
-    TEMP_CELSIUS,
-    MASS_GRAMS,
-    VOLUME_LITERS,
-    MATCH_ALL,
-)
 import homeassistant.util.dt as dt_util
-
+from homeassistant.util.unit_system import UnitSystem
 from tests.common import get_test_home_assistant
 
 

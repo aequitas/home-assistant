@@ -1,7 +1,6 @@
 """The test for the Trend sensor platform."""
 import homeassistant.bootstrap as bootstrap
-
-from tests.common import get_test_home_assistant, assert_setup_component
+from tests.common import assert_setup_component, get_test_home_assistant
 
 
 class TestTrendBinarySensor:

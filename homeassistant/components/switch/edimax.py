@@ -6,12 +6,11 @@ https://home-assistant.io/components/switch.edimax/
 """
 import logging
 
-import voluptuous as vol
-
-from homeassistant.components.switch import (SwitchDevice, PLATFORM_SCHEMA)
+from homeassistant.components.switch import PLATFORM_SCHEMA, SwitchDevice
 from homeassistant.const import (
     CONF_HOST, CONF_NAME, CONF_PASSWORD, CONF_USERNAME)
 import homeassistant.helpers.config_validation as cv
+import voluptuous as vol
 
 REQUIREMENTS = ['https://github.com/rkabadi/pyedimax/archive/'
                 '365301ce3ff26129a7910c501ead09ea625f3700.zip#pyedimax==0.1']

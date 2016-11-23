@@ -9,20 +9,18 @@ from datetime import timedelta
 import logging
 from xml.parsers.expat import ExpatError
 
-import async_timeout
 import aiohttp
-import voluptuous as vol
-
-import homeassistant.helpers.config_validation as cv
+import async_timeout
 from homeassistant.components.sensor import PLATFORM_SCHEMA
 from homeassistant.const import (
-    CONF_LATITUDE, CONF_LONGITUDE, CONF_ELEVATION, CONF_MONITORED_CONDITIONS,
-    ATTR_ATTRIBUTION)
+    ATTR_ATTRIBUTION, CONF_ELEVATION, CONF_LATITUDE, CONF_LONGITUDE,
+    CONF_MONITORED_CONDITIONS)
+import homeassistant.helpers.config_validation as cv
 from homeassistant.helpers.entity import Entity
 from homeassistant.helpers.event import (
     async_track_point_in_utc_time, async_track_utc_time_change)
 from homeassistant.util import dt as dt_util
-
+import voluptuous as vol
 
 REQUIREMENTS = ['xmltodict==0.10.2']
 

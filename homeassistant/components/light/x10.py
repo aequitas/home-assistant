@@ -5,14 +5,13 @@ For more details about this platform, please refer to the documentation at
 https://home-assistant.io/components/light.x10/
 """
 import logging
-from subprocess import check_output, CalledProcessError, STDOUT
+from subprocess import STDOUT, CalledProcessError, check_output
 
-import voluptuous as vol
-
-from homeassistant.const import (CONF_NAME, CONF_ID, CONF_DEVICES)
 from homeassistant.components.light import (
-    ATTR_BRIGHTNESS, SUPPORT_BRIGHTNESS, Light, PLATFORM_SCHEMA)
+    ATTR_BRIGHTNESS, PLATFORM_SCHEMA, SUPPORT_BRIGHTNESS, Light)
+from homeassistant.const import CONF_DEVICES, CONF_ID, CONF_NAME
 import homeassistant.helpers.config_validation as cv
+import voluptuous as vol
 
 _LOGGER = logging.getLogger(__name__)
 

@@ -3,21 +3,14 @@ import datetime
 import unittest
 from unittest import mock
 
-from homeassistant.core import callback
 from homeassistant.bootstrap import setup_component
-from homeassistant.const import (
-    ATTR_UNIT_OF_MEASUREMENT,
-    SERVICE_TURN_OFF,
-    SERVICE_TURN_ON,
-    STATE_ON,
-    STATE_OFF,
-    TEMP_CELSIUS,
-)
-from homeassistant.util.unit_system import METRIC_SYSTEM
 from homeassistant.components import climate
-
+from homeassistant.const import (
+    ATTR_UNIT_OF_MEASUREMENT, SERVICE_TURN_OFF, SERVICE_TURN_ON, STATE_OFF,
+    STATE_ON, TEMP_CELSIUS)
+from homeassistant.core import callback
+from homeassistant.util.unit_system import METRIC_SYSTEM
 from tests.common import assert_setup_component, get_test_home_assistant
-
 
 ENTITY = 'climate.test'
 ENT_SENSOR = 'sensor.test'

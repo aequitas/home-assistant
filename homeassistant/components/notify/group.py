@@ -7,13 +7,12 @@ https://home-assistant.io/components/notify.group/
 import collections
 from copy import deepcopy
 import logging
-import voluptuous as vol
 
+from homeassistant.components.notify import (
+    ATTR_DATA, ATTR_MESSAGE, DOMAIN, PLATFORM_SCHEMA, BaseNotificationService)
 from homeassistant.const import ATTR_SERVICE
-from homeassistant.components.notify import (DOMAIN, ATTR_MESSAGE, ATTR_DATA,
-                                             PLATFORM_SCHEMA,
-                                             BaseNotificationService)
 import homeassistant.helpers.config_validation as cv
+import voluptuous as vol
 
 _LOGGER = logging.getLogger(__name__)
 

@@ -5,12 +5,10 @@ For more details about this platform, please refer to the documentation at
 https://home-assistant.io/components/sensor.envisalink/
 """
 import logging
-from homeassistant.components.envisalink import (EVL_CONTROLLER,
-                                                 PARTITION_SCHEMA,
-                                                 CONF_PARTITIONNAME,
-                                                 EnvisalinkDevice,
-                                                 SIGNAL_PARTITION_UPDATE,
-                                                 SIGNAL_KEYPAD_UPDATE)
+
+from homeassistant.components.envisalink import (
+    CONF_PARTITIONNAME, EVL_CONTROLLER, PARTITION_SCHEMA, SIGNAL_KEYPAD_UPDATE,
+    SIGNAL_PARTITION_UPDATE, EnvisalinkDevice)
 
 DEPENDENCIES = ['envisalink']
 _LOGGER = logging.getLogger(__name__)

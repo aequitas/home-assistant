@@ -1,8 +1,7 @@
 """Add an iframe panel to Home Assistant."""
-import voluptuous as vol
-
-import homeassistant.helpers.config_validation as cv
 from homeassistant.components.frontend import register_built_in_panel
+import homeassistant.helpers.config_validation as cv
+import voluptuous as vol
 
 DOMAIN = 'panel_iframe'
 DEPENDENCIES = ['frontend']

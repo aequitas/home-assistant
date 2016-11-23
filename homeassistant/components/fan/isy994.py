@@ -5,13 +5,13 @@ For more details about this platform, please refer to the documentation at
 https://home-assistant.io/components/fan.isy994/
 """
 import logging
+
 from typing import Callable
 
-from homeassistant.components.fan import (FanEntity, DOMAIN, SPEED_OFF,
-                                          SPEED_LOW, SPEED_MED,
-                                          SPEED_HIGH)
+from homeassistant.components.fan import (
+    DOMAIN, SPEED_HIGH, SPEED_LOW, SPEED_MED, SPEED_OFF, FanEntity)
 import homeassistant.components.isy994 as isy
-from homeassistant.const import STATE_UNKNOWN, STATE_ON, STATE_OFF
+from homeassistant.const import STATE_OFF, STATE_ON, STATE_UNKNOWN
 from homeassistant.helpers.typing import ConfigType
 
 _LOGGER = logging.getLogger(__name__)

@@ -4,8 +4,7 @@ from unittest import mock
 
 from homeassistant.bootstrap import setup_component
 import homeassistant.components.splunk as splunk
-from homeassistant.const import STATE_ON, STATE_OFF, EVENT_STATE_CHANGED
-
+from homeassistant.const import EVENT_STATE_CHANGED, STATE_OFF, STATE_ON
 from tests.common import get_test_home_assistant
 
 

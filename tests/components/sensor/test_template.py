@@ -1,7 +1,6 @@
 """The test for the Template sensor platform."""
 from homeassistant.bootstrap import setup_component
-
-from tests.common import get_test_home_assistant, assert_setup_component
+from tests.common import assert_setup_component, get_test_home_assistant
 
 
 class TestTemplateSensor:

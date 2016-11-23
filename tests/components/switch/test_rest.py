@@ -2,14 +2,14 @@
 import unittest
 from unittest.mock import patch
 
-import pytest
 import requests
 from requests.exceptions import Timeout
-import requests_mock
 
-import homeassistant.components.switch.rest as rest
 from homeassistant.bootstrap import setup_component
-from tests.common import get_test_home_assistant, assert_setup_component
+import homeassistant.components.switch.rest as rest
+import pytest
+import requests_mock
+from tests.common import assert_setup_component, get_test_home_assistant
 
 
 class TestRestSwitchSetup(unittest.TestCase):

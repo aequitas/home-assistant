@@ -7,16 +7,15 @@ https://home-assistant.io/components/binary_sensor.ffmpeg/
 import logging
 from os import path
 
-import voluptuous as vol
-
-import homeassistant.helpers.config_validation as cv
 from homeassistant.components.binary_sensor import (
-    BinarySensorDevice, PLATFORM_SCHEMA, DOMAIN)
+    DOMAIN, PLATFORM_SCHEMA, BinarySensorDevice)
 from homeassistant.components.ffmpeg import (
-    get_binary, run_test, CONF_INPUT, CONF_OUTPUT, CONF_EXTRA_ARGUMENTS)
+    CONF_EXTRA_ARGUMENTS, CONF_INPUT, CONF_OUTPUT, get_binary, run_test)
 from homeassistant.config import load_yaml_config_file
-from homeassistant.const import (EVENT_HOMEASSISTANT_STOP, CONF_NAME,
-                                 ATTR_ENTITY_ID)
+from homeassistant.const import (
+    ATTR_ENTITY_ID, CONF_NAME, EVENT_HOMEASSISTANT_STOP)
+import homeassistant.helpers.config_validation as cv
+import voluptuous as vol
 
 DEPENDENCIES = ['ffmpeg']
 

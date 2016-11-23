@@ -2,11 +2,10 @@
 import unittest
 
 from homeassistant.bootstrap import setup_component
-from homeassistant.const import STATE_OPEN, STATE_CLOSED, STATE_UNKNOWN
 import homeassistant.components.cover as cover
-from tests.common import mock_mqtt_component, fire_mqtt_message
-
-from tests.common import get_test_home_assistant
+from homeassistant.const import STATE_CLOSED, STATE_OPEN, STATE_UNKNOWN
+from tests.common import (
+    fire_mqtt_message, get_test_home_assistant, mock_mqtt_component)
 
 
 class TestCoverMQTT(unittest.TestCase):

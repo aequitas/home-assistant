@@ -1,15 +1,14 @@
 """The tests for the Recorder component."""
-import unittest
 from datetime import datetime
+import unittest
 
+from homeassistant.components.recorder.models import (
+    Base, Events, RecorderRuns, States)
+from homeassistant.const import EVENT_STATE_CHANGED
+import homeassistant.core as ha
+from homeassistant.util import dt
 from sqlalchemy import create_engine
 from sqlalchemy.orm import scoped_session, sessionmaker
-
-import homeassistant.core as ha
-from homeassistant.const import EVENT_STATE_CHANGED
-from homeassistant.util import dt
-from homeassistant.components.recorder.models import (
-    Base, Events, States, RecorderRuns)
 
 ENGINE = None
 SESSION = None

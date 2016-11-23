@@ -6,14 +6,13 @@ https://home-assistant.io/components/sensor.loop_energy/
 """
 import logging
 
-import voluptuous as vol
-import homeassistant.helpers.config_validation as cv
-
-from homeassistant.helpers.entity import Entity
-from homeassistant.const import (
-    CONF_UNIT_SYSTEM_METRIC, CONF_UNIT_SYSTEM_IMPERIAL)
 from homeassistant.components.sensor import PLATFORM_SCHEMA
-from homeassistant.const import EVENT_HOMEASSISTANT_STOP
+from homeassistant.const import (
+    CONF_UNIT_SYSTEM_IMPERIAL, CONF_UNIT_SYSTEM_METRIC,
+    EVENT_HOMEASSISTANT_STOP)
+import homeassistant.helpers.config_validation as cv
+from homeassistant.helpers.entity import Entity
+import voluptuous as vol
 
 _LOGGER = logging.getLogger(__name__)
 

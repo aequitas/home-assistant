@@ -4,12 +4,11 @@ import unittest
 from unittest.mock import patch
 
 from homeassistant.bootstrap import setup_component
-from homeassistant.const import (
-    STATE_ALARM_DISARMED, STATE_ALARM_ARMED_HOME, STATE_ALARM_ARMED_AWAY,
-    STATE_ALARM_PENDING, STATE_ALARM_TRIGGERED)
 from homeassistant.components import alarm_control_panel
+from homeassistant.const import (
+    STATE_ALARM_ARMED_AWAY, STATE_ALARM_ARMED_HOME, STATE_ALARM_DISARMED,
+    STATE_ALARM_PENDING, STATE_ALARM_TRIGGERED)
 import homeassistant.util.dt as dt_util
-
 from tests.common import fire_time_changed, get_test_home_assistant
 
 CODE = 'HELLO_CODE'

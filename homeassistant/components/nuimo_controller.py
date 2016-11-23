@@ -7,9 +7,10 @@ https://home-assistant.io/components/nuimo_controller/
 import logging
 import threading
 import time
-import voluptuous as vol
+
+from homeassistant.const import CONF_MAC, CONF_NAME, EVENT_HOMEASSISTANT_STOP
 import homeassistant.helpers.config_validation as cv
-from homeassistant.const import (CONF_MAC, CONF_NAME, EVENT_HOMEASSISTANT_STOP)
+import voluptuous as vol
 
 REQUIREMENTS = [
     '--only-binary=all '  # avoid compilation of gattlib

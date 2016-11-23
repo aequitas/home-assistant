@@ -4,16 +4,16 @@ Support for ZoneMinder.
 For more details about this component, please refer to the documentation at
 https://home-assistant.io/components/zoneminder/
 """
-import logging
 import json
+import logging
 from urllib.parse import urljoin
 
 import requests
-import voluptuous as vol
 
 from homeassistant.const import (
-    CONF_PATH, CONF_HOST, CONF_SSL, CONF_PASSWORD, CONF_USERNAME)
+    CONF_HOST, CONF_PASSWORD, CONF_PATH, CONF_SSL, CONF_USERNAME)
 import homeassistant.helpers.config_validation as cv
+import voluptuous as vol
 
 _LOGGER = logging.getLogger(__name__)
 

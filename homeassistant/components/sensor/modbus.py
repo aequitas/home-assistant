@@ -6,14 +6,13 @@ https://home-assistant.io/components/sensor.modbus/
 """
 import logging
 
-import voluptuous as vol
-
 import homeassistant.components.modbus as modbus
+from homeassistant.components.sensor import PLATFORM_SCHEMA
 from homeassistant.const import (
     CONF_NAME, CONF_OFFSET, CONF_UNIT_OF_MEASUREMENT)
-from homeassistant.helpers.entity import Entity
 from homeassistant.helpers import config_validation as cv
-from homeassistant.components.sensor import PLATFORM_SCHEMA
+from homeassistant.helpers.entity import Entity
+import voluptuous as vol
 
 _LOGGER = logging.getLogger(__name__)
 DEPENDENCIES = ['modbus']

@@ -1,23 +1,20 @@
 """The tests for the ASUSWRT device tracker platform."""
-import os
 from datetime import timedelta
+import os
 import unittest
 from unittest import mock
-
-import voluptuous as vol
 
 from homeassistant.bootstrap import setup_component
 from homeassistant.components import device_tracker
 from homeassistant.components.device_tracker import (
     CONF_CONSIDER_HOME, CONF_TRACK_NEW)
 from homeassistant.components.device_tracker.asuswrt import (
-    CONF_PROTOCOL, CONF_MODE, CONF_PUB_KEY, DOMAIN,
-    PLATFORM_SCHEMA)
-from homeassistant.const import (CONF_PLATFORM, CONF_PASSWORD, CONF_USERNAME,
-                                 CONF_HOST)
-
+    CONF_MODE, CONF_PROTOCOL, CONF_PUB_KEY, DOMAIN, PLATFORM_SCHEMA)
+from homeassistant.const import (
+    CONF_HOST, CONF_PASSWORD, CONF_PLATFORM, CONF_USERNAME)
 from tests.common import (
-    get_test_home_assistant, get_test_config_dir, assert_setup_component)
+    assert_setup_component, get_test_config_dir, get_test_home_assistant)
+import voluptuous as vol
 
 FAKEFILE = None
 

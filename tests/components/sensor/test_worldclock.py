@@ -2,8 +2,8 @@
 import unittest
 
 from homeassistant.bootstrap import setup_component
-from tests.common import get_test_home_assistant
 import homeassistant.util.dt as dt_util
+from tests.common import get_test_home_assistant
 
 
 class TestWorldClockSensor(unittest.TestCase):

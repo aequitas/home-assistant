@@ -2,14 +2,13 @@
 import unittest
 
 from homeassistant.bootstrap import setup_component
-from homeassistant.const import (
-    STATE_ALARM_DISARMED, STATE_ALARM_ARMED_HOME, STATE_ALARM_ARMED_AWAY,
-    STATE_ALARM_PENDING, STATE_ALARM_TRIGGERED, STATE_UNKNOWN)
 from homeassistant.components import alarm_control_panel
-
+from homeassistant.const import (
+    STATE_ALARM_ARMED_AWAY, STATE_ALARM_ARMED_HOME, STATE_ALARM_DISARMED,
+    STATE_ALARM_PENDING, STATE_ALARM_TRIGGERED, STATE_UNKNOWN)
 from tests.common import (
-    mock_mqtt_component, fire_mqtt_message, get_test_home_assistant,
-    assert_setup_component)
+    assert_setup_component, fire_mqtt_message, get_test_home_assistant,
+    mock_mqtt_component)
 
 CODE = 'HELLO_CODE'
 

@@ -8,12 +8,11 @@ import logging
 import platform
 import subprocess as sp
 
-import voluptuous as vol
-
-from homeassistant.components.switch import (SwitchDevice, PLATFORM_SCHEMA)
+from homeassistant.components.switch import PLATFORM_SCHEMA, SwitchDevice
+from homeassistant.const import CONF_HOST, CONF_NAME
 import homeassistant.helpers.config_validation as cv
 from homeassistant.helpers.script import Script
-from homeassistant.const import (CONF_HOST, CONF_NAME)
+import voluptuous as vol
 
 REQUIREMENTS = ['wakeonlan==0.2.2']
 

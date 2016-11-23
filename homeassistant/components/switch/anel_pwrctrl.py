@@ -4,16 +4,15 @@ Support for ANEL PwrCtrl switches.
 For more details about this platform, please refer to the documentation at
 https://home-assistant.io/components/switch.pwrctrl/
 """
+from datetime import timedelta
 import logging
 import socket
-from datetime import timedelta
 
-import voluptuous as vol
-
+from homeassistant.components.switch import PLATFORM_SCHEMA, SwitchDevice
+from homeassistant.const import CONF_HOST, CONF_PASSWORD, CONF_USERNAME
 import homeassistant.helpers.config_validation as cv
-from homeassistant.components.switch import (SwitchDevice, PLATFORM_SCHEMA)
-from homeassistant.const import (CONF_HOST, CONF_PASSWORD, CONF_USERNAME)
 from homeassistant.util import Throttle
+import voluptuous as vol
 
 REQUIREMENTS = ['https://github.com/mweinelt/anel-pwrctrl/archive/'
                 'ed26e8830e28a2bfa4260a9002db23ce3e7e63d7.zip'

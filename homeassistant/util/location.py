@@ -5,10 +5,10 @@ detect_location_info and elevation are mocked by default during tests.
 """
 import collections
 import math
-from typing import Any, Optional, Tuple, Dict
+
+from typing import Any, Dict, Optional, Tuple
 
 import requests
-
 
 ELEVATION_URL = 'http://maps.googleapis.com/maps/api/elevation/json'
 FREEGEO_API = 'https://freegeoip.io/json/'

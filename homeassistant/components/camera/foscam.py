@@ -7,12 +7,12 @@ https://home-assistant.io/components/camera.foscam/
 import logging
 
 import requests
-import voluptuous as vol
 
-from homeassistant.components.camera import (Camera, PLATFORM_SCHEMA)
+from homeassistant.components.camera import PLATFORM_SCHEMA, Camera
 from homeassistant.const import (
-    CONF_NAME, CONF_USERNAME, CONF_PASSWORD, CONF_PORT)
+    CONF_NAME, CONF_PASSWORD, CONF_PORT, CONF_USERNAME)
 from homeassistant.helpers import config_validation as cv
+import voluptuous as vol
 
 _LOGGER = logging.getLogger(__name__)
 

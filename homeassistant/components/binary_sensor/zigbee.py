@@ -4,11 +4,10 @@ Contains functionality to use a ZigBee device as a binary sensor.
 For more details about this platform, please refer to the documentation at
 https://home-assistant.io/components/binary_sensor.zigbee/
 """
-import voluptuous as vol
-
 from homeassistant.components.binary_sensor import BinarySensorDevice
 from homeassistant.components.zigbee import (
-    ZigBeeDigitalIn, ZigBeeDigitalInConfig, PLATFORM_SCHEMA)
+    PLATFORM_SCHEMA, ZigBeeDigitalIn, ZigBeeDigitalInConfig)
+import voluptuous as vol
 
 CONF_ON_STATE = 'on_state'
 

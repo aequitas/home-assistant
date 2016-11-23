@@ -1,6 +1,6 @@
 """Test Home Assistant date util methods."""
-import unittest
 from datetime import datetime, timedelta
+import unittest
 
 import homeassistant.util.dt as dt_util
 

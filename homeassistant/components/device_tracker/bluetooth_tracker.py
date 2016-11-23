@@ -1,15 +1,14 @@
 """Tracking for bluetooth devices."""
-import logging
 from datetime import timedelta
+import logging
 
-import voluptuous as vol
-
+from homeassistant.components.device_tracker import (
+    CONF_SCAN_INTERVAL, CONF_TRACK_NEW, DEFAULT_SCAN_INTERVAL,
+    DEFAULT_TRACK_NEW, PLATFORM_SCHEMA, YAML_DEVICES, load_config)
 import homeassistant.helpers.config_validation as cv
 from homeassistant.helpers.event import track_point_in_utc_time
-from homeassistant.components.device_tracker import (
-    YAML_DEVICES, CONF_TRACK_NEW, CONF_SCAN_INTERVAL, DEFAULT_SCAN_INTERVAL,
-    load_config, PLATFORM_SCHEMA, DEFAULT_TRACK_NEW)
 import homeassistant.util.dt as dt_util
+import voluptuous as vol
 
 _LOGGER = logging.getLogger(__name__)
 

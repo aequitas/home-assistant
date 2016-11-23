@@ -2,10 +2,9 @@
 # pylint: disable=protected-access
 import unittest
 
-from tests.common import get_test_home_assistant
-
 from homeassistant.bootstrap import setup_component
-from homeassistant.components.input_slider import (DOMAIN, select_value)
+from homeassistant.components.input_slider import DOMAIN, select_value
+from tests.common import get_test_home_assistant
 
 
 class TestInputSlider(unittest.TestCase):

@@ -3,13 +3,12 @@ from datetime import timedelta
 import unittest
 from unittest.mock import patch
 
-from homeassistant.core import callback
 from homeassistant.bootstrap import setup_component
-import homeassistant.util.dt as dt_util
 import homeassistant.components.automation as automation
-
+from homeassistant.core import callback
+import homeassistant.util.dt as dt_util
 from tests.common import (
-    fire_time_changed, get_test_home_assistant, assert_setup_component)
+    assert_setup_component, fire_time_changed, get_test_home_assistant)
 
 
 class TestAutomationTime(unittest.TestCase):

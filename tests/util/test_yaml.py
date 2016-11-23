@@ -4,9 +4,9 @@ import os
 import unittest
 from unittest.mock import patch
 
+from homeassistant.config import YAML_CONFIG_FILE, load_yaml_config_file
 from homeassistant.exceptions import HomeAssistantError
 from homeassistant.util import yaml
-from homeassistant.config import YAML_CONFIG_FILE, load_yaml_config_file
 from tests.common import get_test_config_dir, patch_yaml_files
 
 

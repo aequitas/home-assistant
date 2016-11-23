@@ -2,17 +2,17 @@
 import asyncio
 import functools
 import logging
+
 # pylint: disable=unused-import
 from typing import Optional  # NOQA
-
-import voluptuous as vol
 
 from homeassistant.const import ATTR_ENTITY_ID
 from homeassistant.core import HomeAssistant  # NOQA
 from homeassistant.exceptions import TemplateError
-from homeassistant.loader import get_component
 import homeassistant.helpers.config_validation as cv
+from homeassistant.loader import get_component
 from homeassistant.util.async import run_coroutine_threadsafe
+import voluptuous as vol
 
 HASS = None  # type: Optional[HomeAssistant]
 

@@ -7,16 +7,15 @@ https://home-assistant.io/components/climate.ecobee/
 import logging
 from os import path
 
-import voluptuous as vol
-
 from homeassistant.components import ecobee
 from homeassistant.components.climate import (
-    DOMAIN, STATE_COOL, STATE_HEAT, STATE_IDLE, ClimateDevice,
-    ATTR_TARGET_TEMP_LOW, ATTR_TARGET_TEMP_HIGH)
+    ATTR_TARGET_TEMP_HIGH, ATTR_TARGET_TEMP_LOW, DOMAIN, STATE_COOL,
+    STATE_HEAT, STATE_IDLE, ClimateDevice)
+from homeassistant.config import load_yaml_config_file
 from homeassistant.const import (
     ATTR_ENTITY_ID, STATE_OFF, STATE_ON, TEMP_FAHRENHEIT)
-from homeassistant.config import load_yaml_config_file
 import homeassistant.helpers.config_validation as cv
+import voluptuous as vol
 
 _CONFIGURING = {}
 _LOGGER = logging.getLogger(__name__)

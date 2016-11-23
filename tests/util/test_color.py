@@ -1,5 +1,6 @@
 """Test Home Assistant color util methods."""
 import unittest
+
 import homeassistant.util.color as color_util
 
 

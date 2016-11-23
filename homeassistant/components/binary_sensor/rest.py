@@ -6,18 +6,18 @@ https://home-assistant.io/components/binary_sensor.rest/
 """
 import logging
 
-import voluptuous as vol
 from requests.auth import HTTPBasicAuth, HTTPDigestAuth
 
 from homeassistant.components.binary_sensor import (
-    BinarySensorDevice, SENSOR_CLASSES_SCHEMA, PLATFORM_SCHEMA)
+    PLATFORM_SCHEMA, SENSOR_CLASSES_SCHEMA, BinarySensorDevice)
 from homeassistant.components.sensor.rest import RestData
 from homeassistant.const import (
-    CONF_PAYLOAD, CONF_NAME, CONF_VALUE_TEMPLATE, CONF_METHOD, CONF_RESOURCE,
-    CONF_SENSOR_CLASS, CONF_VERIFY_SSL, CONF_USERNAME, CONF_PASSWORD,
-    CONF_HEADERS, CONF_AUTHENTICATION, HTTP_BASIC_AUTHENTICATION,
+    CONF_AUTHENTICATION, CONF_HEADERS, CONF_METHOD, CONF_NAME, CONF_PASSWORD,
+    CONF_PAYLOAD, CONF_RESOURCE, CONF_SENSOR_CLASS, CONF_USERNAME,
+    CONF_VALUE_TEMPLATE, CONF_VERIFY_SSL, HTTP_BASIC_AUTHENTICATION,
     HTTP_DIGEST_AUTHENTICATION)
 import homeassistant.helpers.config_validation as cv
+import voluptuous as vol
 
 _LOGGER = logging.getLogger(__name__)
 

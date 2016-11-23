@@ -6,10 +6,9 @@ https://home-assistant.io/components/EnOcean/
 """
 import logging
 
-import voluptuous as vol
-
 from homeassistant.const import CONF_DEVICE
 import homeassistant.helpers.config_validation as cv
+import voluptuous as vol
 
 REQUIREMENTS = ['enocean==0.31']
 

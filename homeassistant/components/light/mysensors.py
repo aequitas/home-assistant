@@ -8,11 +8,9 @@ https://home-assistant.io/components/light.mysensors/
 import logging
 
 from homeassistant.components import mysensors
-from homeassistant.components.light import (ATTR_BRIGHTNESS, ATTR_RGB_COLOR,
-                                            ATTR_WHITE_VALUE,
-                                            SUPPORT_BRIGHTNESS,
-                                            SUPPORT_RGB_COLOR,
-                                            SUPPORT_WHITE_VALUE, Light)
+from homeassistant.components.light import (
+    ATTR_BRIGHTNESS, ATTR_RGB_COLOR, ATTR_WHITE_VALUE, SUPPORT_BRIGHTNESS,
+    SUPPORT_RGB_COLOR, SUPPORT_WHITE_VALUE, Light)
 from homeassistant.const import STATE_OFF, STATE_ON
 from homeassistant.util.color import rgb_hex_to_rgb_list
 

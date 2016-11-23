@@ -6,8 +6,8 @@ https://home-assistant.io/components/sensor/
 """
 import logging
 
-from homeassistant.helpers.entity_component import EntityComponent
 from homeassistant.helpers.config_validation import PLATFORM_SCHEMA  # noqa
+from homeassistant.helpers.entity_component import EntityComponent
 
 DOMAIN = 'sensor'
 SCAN_INTERVAL = 30

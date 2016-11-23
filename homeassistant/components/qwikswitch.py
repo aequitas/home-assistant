@@ -5,14 +5,14 @@ For more details about this component, please refer to the documentation at
 https://home-assistant.io/components/qwikswitch/
 """
 import logging
-import voluptuous as vol
 
-from homeassistant.const import (EVENT_HOMEASSISTANT_START,
-                                 EVENT_HOMEASSISTANT_STOP)
-from homeassistant.helpers.discovery import load_platform
-from homeassistant.components.light import (ATTR_BRIGHTNESS,
-                                            SUPPORT_BRIGHTNESS, Light)
+from homeassistant.components.light import (
+    ATTR_BRIGHTNESS, SUPPORT_BRIGHTNESS, Light)
 from homeassistant.components.switch import SwitchDevice
+from homeassistant.const import (
+    EVENT_HOMEASSISTANT_START, EVENT_HOMEASSISTANT_STOP)
+from homeassistant.helpers.discovery import load_platform
+import voluptuous as vol
 
 DOMAIN = 'qwikswitch'
 REQUIREMENTS = ['https://github.com/kellerza/pyqwikswitch/archive/v0.4.zip'

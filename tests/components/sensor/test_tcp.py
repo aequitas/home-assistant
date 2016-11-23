@@ -1,14 +1,14 @@
 """The tests for the TCP sensor platform."""
+from copy import copy
 import socket
 import unittest
-from copy import copy
+from unittest.mock import Mock, patch
 from uuid import uuid4
-from unittest.mock import patch, Mock
 
-from tests.common import (get_test_home_assistant, assert_setup_component)
 from homeassistant.bootstrap import setup_component
 from homeassistant.components.sensor import tcp
 from homeassistant.helpers.entity import Entity
+from tests.common import assert_setup_component, get_test_home_assistant
 
 TEST_CONFIG = {
     'sensor': {

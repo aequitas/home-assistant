@@ -8,11 +8,11 @@ import asyncio
 from functools import partial
 import logging
 
-from homeassistant.const import HTTP_UNPROCESSABLE_ENTITY
-from homeassistant.components.http import HomeAssistantView
 # pylint: disable=unused-import
 from homeassistant.components.device_tracker import (  # NOQA
     DOMAIN, PLATFORM_SCHEMA)
+from homeassistant.components.http import HomeAssistantView
+from homeassistant.const import HTTP_UNPROCESSABLE_ENTITY
 
 _LOGGER = logging.getLogger(__name__)
 

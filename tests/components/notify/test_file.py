@@ -5,11 +5,9 @@ from unittest.mock import call, mock_open, patch
 
 from homeassistant.bootstrap import setup_component
 import homeassistant.components.notify as notify
-from homeassistant.components.notify import (
-    ATTR_TITLE_DEFAULT)
+from homeassistant.components.notify import ATTR_TITLE_DEFAULT
 import homeassistant.util.dt as dt_util
-
-from tests.common import get_test_home_assistant, assert_setup_component
+from tests.common import assert_setup_component, get_test_home_assistant
 
 
 class TestNotifyFile(unittest.TestCase):

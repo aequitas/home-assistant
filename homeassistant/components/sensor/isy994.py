@@ -5,11 +5,12 @@ For more details about this platform, please refer to the documentation at
 https://home-assistant.io/components/binary_sensor.isy994/
 """
 import logging
+
 from typing import Callable  # noqa
 
 import homeassistant.components.isy994 as isy
-from homeassistant.const import (TEMP_CELSIUS, TEMP_FAHRENHEIT, STATE_OFF,
-                                 STATE_ON)
+from homeassistant.const import (
+    STATE_OFF, STATE_ON, TEMP_CELSIUS, TEMP_FAHRENHEIT)
 from homeassistant.helpers.typing import ConfigType
 
 _LOGGER = logging.getLogger(__name__)

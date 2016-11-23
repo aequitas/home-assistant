@@ -8,7 +8,6 @@ from homeassistant.bootstrap import setup_component
 import homeassistant.components.sensor as sensor
 import homeassistant.components.sensor.mfi as mfi
 from homeassistant.const import TEMP_CELSIUS
-
 from tests.common import get_test_home_assistant
 
 

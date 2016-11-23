@@ -3,12 +3,11 @@ from datetime import datetime
 import unittest
 from unittest.mock import patch
 
-from homeassistant.core import callback
 from homeassistant.bootstrap import setup_component
 from homeassistant.components import sun
 import homeassistant.components.automation as automation
+from homeassistant.core import callback
 import homeassistant.util.dt as dt_util
-
 from tests.common import fire_time_changed, get_test_home_assistant
 
 

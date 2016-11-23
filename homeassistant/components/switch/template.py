@@ -7,19 +7,18 @@ https://home-assistant.io/components/switch.template/
 import asyncio
 import logging
 
-import voluptuous as vol
-
-from homeassistant.core import callback
 from homeassistant.components.switch import (
-    ENTITY_ID_FORMAT, SwitchDevice, PLATFORM_SCHEMA)
+    ENTITY_ID_FORMAT, PLATFORM_SCHEMA, SwitchDevice)
 from homeassistant.const import (
-    ATTR_FRIENDLY_NAME, CONF_VALUE_TEMPLATE, STATE_OFF, STATE_ON,
-    ATTR_ENTITY_ID, CONF_SWITCHES)
+    ATTR_ENTITY_ID, ATTR_FRIENDLY_NAME, CONF_SWITCHES, CONF_VALUE_TEMPLATE,
+    STATE_OFF, STATE_ON)
+from homeassistant.core import callback
 from homeassistant.exceptions import TemplateError
+import homeassistant.helpers.config_validation as cv
 from homeassistant.helpers.entity import async_generate_entity_id
 from homeassistant.helpers.event import async_track_state_change
 from homeassistant.helpers.script import Script
-import homeassistant.helpers.config_validation as cv
+import voluptuous as vol
 
 _LOGGER = logging.getLogger(__name__)
 _VALID_STATES = [STATE_ON, STATE_OFF, 'true', 'false']

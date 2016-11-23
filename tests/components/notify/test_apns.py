@@ -1,14 +1,14 @@
 """The tests for the APNS component."""
-import unittest
 import os
-
-import homeassistant.components.notify as notify
-from homeassistant.core import State
-from homeassistant.components.notify.apns import ApnsNotificationService
-from tests.common import get_test_home_assistant
-from homeassistant.config import load_yaml_config_file
+import unittest
 from unittest.mock import patch
+
 from apns2.errors import Unregistered
+import homeassistant.components.notify as notify
+from homeassistant.components.notify.apns import ApnsNotificationService
+from homeassistant.config import load_yaml_config_file
+from homeassistant.core import State
+from tests.common import get_test_home_assistant
 
 
 class TestApns(unittest.TestCase):

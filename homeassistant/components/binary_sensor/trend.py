@@ -6,23 +6,17 @@ https://home-assistant.io/components/sensor.trend/
 """
 import asyncio
 import logging
-import voluptuous as vol
-
-from homeassistant.core import callback
-import homeassistant.helpers.config_validation as cv
 
 from homeassistant.components.binary_sensor import (
-    BinarySensorDevice,
-    ENTITY_ID_FORMAT,
-    PLATFORM_SCHEMA,
-    SENSOR_CLASSES_SCHEMA)
+    ENTITY_ID_FORMAT, PLATFORM_SCHEMA, SENSOR_CLASSES_SCHEMA,
+    BinarySensorDevice)
 from homeassistant.const import (
-    ATTR_FRIENDLY_NAME,
-    ATTR_ENTITY_ID,
-    CONF_SENSOR_CLASS,
-    STATE_UNKNOWN,)
+    ATTR_ENTITY_ID, ATTR_FRIENDLY_NAME, CONF_SENSOR_CLASS, STATE_UNKNOWN)
+from homeassistant.core import callback
+import homeassistant.helpers.config_validation as cv
 from homeassistant.helpers.entity import generate_entity_id
 from homeassistant.helpers.event import track_state_change
+import voluptuous as vol
 
 _LOGGER = logging.getLogger(__name__)
 CONF_SENSORS = 'sensors'

@@ -4,23 +4,22 @@ Support for interface with an LG WebOS TV.
 For more details about this platform, please refer to the documentation at
 https://home-assistant.io/components/media_player.webostv/
 """
-import logging
 from datetime import timedelta
+import logging
 from urllib.parse import urlparse
 
-import voluptuous as vol
-
-import homeassistant.util as util
 from homeassistant.components.media_player import (
-    SUPPORT_NEXT_TRACK, SUPPORT_PAUSE, SUPPORT_PREVIOUS_TRACK,
+    MEDIA_TYPE_CHANNEL, PLATFORM_SCHEMA, SUPPORT_NEXT_TRACK, SUPPORT_PAUSE,
+    SUPPORT_PLAY_MEDIA, SUPPORT_PREVIOUS_TRACK, SUPPORT_SELECT_SOURCE,
     SUPPORT_TURN_OFF, SUPPORT_VOLUME_MUTE, SUPPORT_VOLUME_STEP,
-    SUPPORT_SELECT_SOURCE, SUPPORT_PLAY_MEDIA, MEDIA_TYPE_CHANNEL,
-    MediaPlayerDevice, PLATFORM_SCHEMA)
+    MediaPlayerDevice)
 from homeassistant.const import (
-    CONF_HOST, CONF_CUSTOMIZE, STATE_OFF, STATE_PLAYING, STATE_PAUSED,
-    STATE_UNKNOWN, CONF_NAME)
-from homeassistant.loader import get_component
+    CONF_CUSTOMIZE, CONF_HOST, CONF_NAME, STATE_OFF, STATE_PAUSED,
+    STATE_PLAYING, STATE_UNKNOWN)
 import homeassistant.helpers.config_validation as cv
+from homeassistant.loader import get_component
+import homeassistant.util as util
+import voluptuous as vol
 
 REQUIREMENTS = ['https://github.com/TheRealLink/pylgtv'
                 '/archive/v0.1.2.zip'

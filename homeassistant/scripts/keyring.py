@@ -1,7 +1,7 @@
 """Script to get, set and delete secrets stored in the keyring."""
-import os
 import argparse
 import getpass
+import os
 
 from homeassistant.util.yaml import _SECRET_NAMESPACE
 

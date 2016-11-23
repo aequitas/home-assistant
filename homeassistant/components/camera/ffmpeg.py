@@ -7,15 +7,14 @@ https://home-assistant.io/components/camera.ffmpeg/
 import asyncio
 import logging
 
-import voluptuous as vol
 from aiohttp import web
-
-from homeassistant.components.camera import Camera, PLATFORM_SCHEMA
+from homeassistant.components.camera import PLATFORM_SCHEMA, Camera
 from homeassistant.components.ffmpeg import (
-    async_run_test, get_binary, CONF_INPUT, CONF_EXTRA_ARGUMENTS)
-import homeassistant.helpers.config_validation as cv
+    CONF_EXTRA_ARGUMENTS, CONF_INPUT, async_run_test, get_binary)
 from homeassistant.const import CONF_NAME
+import homeassistant.helpers.config_validation as cv
 from homeassistant.util.async import run_coroutine_threadsafe
+import voluptuous as vol
 
 DEPENDENCIES = ['ffmpeg']
 

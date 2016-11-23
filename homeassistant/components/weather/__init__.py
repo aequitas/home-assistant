@@ -8,10 +8,10 @@ import logging
 from numbers import Number
 
 from homeassistant.const import TEMP_CELSIUS
-from homeassistant.helpers.entity_component import EntityComponent
-from homeassistant.util.temperature import convert as convert_temperature
 from homeassistant.helpers.config_validation import PLATFORM_SCHEMA  # noqa
 from homeassistant.helpers.entity import Entity
+from homeassistant.helpers.entity_component import EntityComponent
+from homeassistant.util.temperature import convert as convert_temperature
 
 _LOGGER = logging.getLogger(__name__)
 

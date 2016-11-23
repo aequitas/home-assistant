@@ -1,9 +1,9 @@
 """The tests for the Command line sensor platform."""
 import unittest
 
-from homeassistant.helpers.template import Template
-from homeassistant.components.sensor import command_line
 from homeassistant import bootstrap
+from homeassistant.components.sensor import command_line
+from homeassistant.helpers.template import Template
 from tests.common import get_test_home_assistant
 
 

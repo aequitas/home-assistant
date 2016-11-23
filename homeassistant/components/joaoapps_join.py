@@ -5,9 +5,10 @@ For more details about this platform, please refer to the documentation at
 https://home-assistant.io/components/join/
 """
 import logging
-import voluptuous as vol
-from homeassistant.const import CONF_NAME, CONF_API_KEY
+
+from homeassistant.const import CONF_API_KEY, CONF_NAME
 import homeassistant.helpers.config_validation as cv
+import voluptuous as vol
 
 REQUIREMENTS = [
     'https://github.com/nkgilley/python-join-api/archive/'

@@ -4,15 +4,14 @@ Support for Tellstick sensors.
 For more details about this platform, please refer to the documentation at
 https://home-assistant.io/components/sensor.tellstick/
 """
-import logging
 from collections import namedtuple
-
-import voluptuous as vol
+import logging
 
 from homeassistant.components.sensor import PLATFORM_SCHEMA
 from homeassistant.const import TEMP_CELSIUS
-from homeassistant.helpers.entity import Entity
 import homeassistant.helpers.config_validation as cv
+from homeassistant.helpers.entity import Entity
+import voluptuous as vol
 
 REQUIREMENTS = ['tellcore-py==1.1.2']
 

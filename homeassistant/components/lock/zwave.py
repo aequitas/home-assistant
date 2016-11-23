@@ -6,8 +6,8 @@ https://home-assistant.io/components/lock.zwave/
 """
 # Because we do not compile openzwave on CI
 # pylint: disable=import-error
-from homeassistant.components.lock import DOMAIN, LockDevice
 from homeassistant.components import zwave
+from homeassistant.components.lock import DOMAIN, LockDevice
 
 
 # pylint: disable=unused-argument

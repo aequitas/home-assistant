@@ -4,23 +4,23 @@ Support to check for available updates.
 For more details about this component, please refer to the documentation at
 https://home-assistant.io/components/updater/
 """
+# pylint: disable=no-name-in-module,import-error
 from datetime import datetime, timedelta
-import logging
+from distutils.version import StrictVersion
 import json
+import logging
+import os
 import platform
 import uuid
-import os
-# pylint: disable=no-name-in-module,import-error
-from distutils.version import StrictVersion
 
 import requests
-import voluptuous as vol
 
-from homeassistant.const import __version__ as CURRENT_VERSION
 from homeassistant.const import ATTR_FRIENDLY_NAME
-import homeassistant.util.dt as dt_util
+from homeassistant.const import __version__ as CURRENT_VERSION
 from homeassistant.helpers import event
 import homeassistant.helpers.config_validation as cv
+import homeassistant.util.dt as dt_util
+import voluptuous as vol
 
 _LOGGER = logging.getLogger(__name__)
 UPDATER_URL = 'https://updater.home-assistant.io/'

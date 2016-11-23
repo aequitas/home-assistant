@@ -6,9 +6,9 @@ https://home-assistant.io/components/sensor.verisure/
 """
 import logging
 
-from homeassistant.components.verisure import HUB as hub
 from homeassistant.components.verisure import (
-    CONF_THERMOMETERS, CONF_HYDROMETERS, CONF_MOUSE)
+    CONF_HYDROMETERS, CONF_MOUSE, CONF_THERMOMETERS)
+from homeassistant.components.verisure import HUB as hub
 from homeassistant.const import TEMP_CELSIUS
 from homeassistant.helpers.entity import Entity
 

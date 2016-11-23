@@ -6,13 +6,12 @@ https://home-assistant.io/components/binary_sensor.bloomsky/
 """
 import logging
 
-import voluptuous as vol
-
 from homeassistant.components.binary_sensor import (
-    BinarySensorDevice, PLATFORM_SCHEMA)
+    PLATFORM_SCHEMA, BinarySensorDevice)
 from homeassistant.const import CONF_MONITORED_CONDITIONS
-from homeassistant.loader import get_component
 import homeassistant.helpers.config_validation as cv
+from homeassistant.loader import get_component
+import voluptuous as vol
 
 _LOGGER = logging.getLogger(__name__)
 

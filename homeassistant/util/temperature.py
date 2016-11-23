@@ -1,10 +1,6 @@
 """Temperature util functions."""
 from homeassistant.const import (
-    TEMP_CELSIUS,
-    TEMP_FAHRENHEIT,
-    UNIT_NOT_RECOGNIZED_TEMPLATE,
-    TEMPERATURE
-)
+    TEMP_CELSIUS, TEMP_FAHRENHEIT, TEMPERATURE, UNIT_NOT_RECOGNIZED_TEMPLATE)
 
 
 def fahrenheit_to_celsius(fahrenheit: float) -> float:

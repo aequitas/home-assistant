@@ -5,13 +5,14 @@ For more details about this platform, please refer to the documentation at
 https://home-assistant.io/components/notify.llamalab_automate/
 """
 import logging
-import requests
-import voluptuous as vol
 
-from homeassistant.components.notify import (BaseNotificationService,
-                                             PLATFORM_SCHEMA)
+import requests
+
+from homeassistant.components.notify import (
+    PLATFORM_SCHEMA, BaseNotificationService)
 from homeassistant.const import CONF_API_KEY
 from homeassistant.helpers import config_validation as cv
+import voluptuous as vol
 
 _LOGGER = logging.getLogger(__name__)
 

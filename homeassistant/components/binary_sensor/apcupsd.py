@@ -4,13 +4,12 @@ Support for tracking the online status of a UPS.
 For more details about this platform, please refer to the documentation at
 https://home-assistant.io/components/binary_sensor.apcupsd/
 """
-import voluptuous as vol
-
+from homeassistant.components import apcupsd
 from homeassistant.components.binary_sensor import (
-    BinarySensorDevice, PLATFORM_SCHEMA)
+    PLATFORM_SCHEMA, BinarySensorDevice)
 from homeassistant.const import CONF_NAME
 import homeassistant.helpers.config_validation as cv
-from homeassistant.components import apcupsd
+import voluptuous as vol
 
 DEFAULT_NAME = 'UPS Online Status'
 DEPENDENCIES = [apcupsd.DOMAIN]

@@ -4,14 +4,13 @@ Support for Telldus Live.
 For more details about this component, please refer to the documentation at
 https://home-assistant.io/components/tellduslive/
 """
-import logging
 from datetime import timedelta
-
-import voluptuous as vol
+import logging
 
 from homeassistant.helpers import discovery
-from homeassistant.util import Throttle
 import homeassistant.helpers.config_validation as cv
+from homeassistant.util import Throttle
+import voluptuous as vol
 
 DOMAIN = 'tellduslive'
 

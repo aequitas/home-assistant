@@ -7,12 +7,12 @@ https://home-assistant.io/components/sensor.neurio_energy/
 import logging
 
 import requests.exceptions
-import voluptuous as vol
 
 from homeassistant.components.sensor import PLATFORM_SCHEMA
-from homeassistant.const import (CONF_API_KEY, CONF_NAME)
-from homeassistant.helpers.entity import Entity
+from homeassistant.const import CONF_API_KEY, CONF_NAME
 import homeassistant.helpers.config_validation as cv
+from homeassistant.helpers.entity import Entity
+import voluptuous as vol
 
 REQUIREMENTS = ['neurio==0.2.10']
 

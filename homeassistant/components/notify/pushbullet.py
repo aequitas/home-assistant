@@ -6,13 +6,12 @@ https://home-assistant.io/components/notify.pushbullet/
 """
 import logging
 
-import voluptuous as vol
-
 from homeassistant.components.notify import (
-    ATTR_DATA, ATTR_TARGET, ATTR_TITLE, ATTR_TITLE_DEFAULT,
-    PLATFORM_SCHEMA, BaseNotificationService)
+    ATTR_DATA, ATTR_TARGET, ATTR_TITLE, ATTR_TITLE_DEFAULT, PLATFORM_SCHEMA,
+    BaseNotificationService)
 from homeassistant.const import CONF_API_KEY
 import homeassistant.helpers.config_validation as cv
+import voluptuous as vol
 
 _LOGGER = logging.getLogger(__name__)
 REQUIREMENTS = ['pushbullet.py==0.10.0']

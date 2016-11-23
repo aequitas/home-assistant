@@ -1,13 +1,13 @@
 """The tests for the Recorder component."""
 # pylint: disable=protected-access
-import json
 from datetime import datetime, timedelta
+import json
 import unittest
 
-from homeassistant.core import callback
-from homeassistant.const import MATCH_ALL
-from homeassistant.components import recorder
 from homeassistant.bootstrap import setup_component
+from homeassistant.components import recorder
+from homeassistant.const import MATCH_ALL
+from homeassistant.core import callback
 from tests.common import get_test_home_assistant
 
 

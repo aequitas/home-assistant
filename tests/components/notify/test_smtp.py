@@ -2,7 +2,6 @@
 import unittest
 
 from homeassistant.components.notify import smtp
-
 from tests.common import get_test_home_assistant
 
 

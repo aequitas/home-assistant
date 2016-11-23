@@ -7,9 +7,9 @@ https://home-assistant.io/components/demo/
 import time
 
 import homeassistant.bootstrap as bootstrap
+from homeassistant.const import ATTR_ENTITY_ID, CONF_PLATFORM
 import homeassistant.core as ha
 import homeassistant.loader as loader
-from homeassistant.const import ATTR_ENTITY_ID, CONF_PLATFORM
 
 DEPENDENCIES = ['conversation', 'introduction', 'zone']
 DOMAIN = 'demo'

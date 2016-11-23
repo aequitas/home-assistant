@@ -4,21 +4,19 @@ Support for Google travel time sensors.
 For more details about this platform, please refer to the documentation at
 https://home-assistant.io/components/sensor.google_travel_time/
 """
-from datetime import datetime
-from datetime import timedelta
+from datetime import datetime, timedelta
 import logging
 
-import voluptuous as vol
-
 from homeassistant.components.sensor import PLATFORM_SCHEMA
-from homeassistant.helpers.entity import Entity
 from homeassistant.const import (
-    CONF_API_KEY, CONF_NAME, EVENT_HOMEASSISTANT_START, ATTR_LATITUDE,
-    ATTR_LONGITUDE)
-from homeassistant.util import Throttle
+    ATTR_LATITUDE, ATTR_LONGITUDE, CONF_API_KEY, CONF_NAME,
+    EVENT_HOMEASSISTANT_START)
 import homeassistant.helpers.config_validation as cv
+from homeassistant.helpers.entity import Entity
 import homeassistant.helpers.location as location
+from homeassistant.util import Throttle
 import homeassistant.util.dt as dt_util
+import voluptuous as vol
 
 REQUIREMENTS = ['googlemaps==2.4.4']
 

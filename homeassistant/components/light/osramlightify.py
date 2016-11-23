@@ -4,20 +4,20 @@ Support for Osram Lightify.
 For more details about this platform, please refer to the documentation at
 https://home-assistant.io/components/light.osramlightify/
 """
-import logging
-import socket
-import random
 from datetime import timedelta
-
-import voluptuous as vol
+import logging
+import random
+import socket
 
 from homeassistant import util
-from homeassistant.const import CONF_HOST
 from homeassistant.components.light import (
-    Light, ATTR_BRIGHTNESS, ATTR_COLOR_TEMP, ATTR_EFFECT, ATTR_RGB_COLOR,
-    ATTR_TRANSITION, EFFECT_RANDOM, SUPPORT_BRIGHTNESS, SUPPORT_EFFECT,
-    SUPPORT_COLOR_TEMP, SUPPORT_RGB_COLOR, SUPPORT_TRANSITION, PLATFORM_SCHEMA)
+    ATTR_BRIGHTNESS, ATTR_COLOR_TEMP, ATTR_EFFECT, ATTR_RGB_COLOR,
+    ATTR_TRANSITION, EFFECT_RANDOM, PLATFORM_SCHEMA, SUPPORT_BRIGHTNESS,
+    SUPPORT_COLOR_TEMP, SUPPORT_EFFECT, SUPPORT_RGB_COLOR, SUPPORT_TRANSITION,
+    Light)
+from homeassistant.const import CONF_HOST
 import homeassistant.helpers.config_validation as cv
+import voluptuous as vol
 
 REQUIREMENTS = ['https://github.com/tfriedel/python-lightify/archive/'
                 'd6eadcf311e6e21746182d1480e97b350dda2b3e.zip#lightify==1.0.4']

@@ -6,12 +6,11 @@ https://home-assistant.io/components/sensor.xbox_live/
 """
 import logging
 
-import voluptuous as vol
-
 from homeassistant.components.sensor import PLATFORM_SCHEMA
-from homeassistant.const import (CONF_API_KEY, STATE_UNKNOWN)
+from homeassistant.const import CONF_API_KEY, STATE_UNKNOWN
 import homeassistant.helpers.config_validation as cv
 from homeassistant.helpers.entity import Entity
+import voluptuous as vol
 
 REQUIREMENTS = ['xboxapi==0.1.1']
 

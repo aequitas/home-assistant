@@ -8,9 +8,8 @@ https://home-assistant.io/components/calendar/
 import logging
 import re
 
-from homeassistant.components.google import (CONF_OFFSET,
-                                             CONF_DEVICE_ID,
-                                             CONF_NAME)
+from homeassistant.components.google import (
+    CONF_DEVICE_ID, CONF_NAME, CONF_OFFSET)
 from homeassistant.const import STATE_OFF, STATE_ON
 from homeassistant.helpers.config_validation import time_period_str
 from homeassistant.helpers.entity import Entity, generate_entity_id

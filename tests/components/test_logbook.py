@@ -4,16 +4,14 @@ from datetime import timedelta
 import unittest
 from unittest.mock import patch
 
-from homeassistant.components import sun
-import homeassistant.core as ha
-from homeassistant.const import (
-    EVENT_STATE_CHANGED, EVENT_HOMEASSISTANT_START, EVENT_HOMEASSISTANT_STOP,
-    ATTR_HIDDEN, STATE_NOT_HOME, STATE_ON, STATE_OFF)
-import homeassistant.util.dt as dt_util
-from homeassistant.components import logbook
 from homeassistant.bootstrap import setup_component
-
-from tests.common import mock_http_component, get_test_home_assistant
+from homeassistant.components import logbook, sun
+from homeassistant.const import (
+    ATTR_HIDDEN, EVENT_HOMEASSISTANT_START, EVENT_HOMEASSISTANT_STOP,
+    EVENT_STATE_CHANGED, STATE_NOT_HOME, STATE_OFF, STATE_ON)
+import homeassistant.core as ha
+import homeassistant.util.dt as dt_util
+from tests.common import get_test_home_assistant, mock_http_component
 
 
 class TestComponentLogbook(unittest.TestCase):

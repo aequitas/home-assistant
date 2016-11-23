@@ -10,16 +10,16 @@ import os
 import socket
 import time
 
-import voluptuous as vol
-
 from homeassistant.bootstrap import prepare_setup_platform
 from homeassistant.config import load_yaml_config_file
-from homeassistant.exceptions import HomeAssistantError
-from homeassistant.helpers import template, config_validation as cv
-from homeassistant.helpers.event import threaded_listener_factory
 from homeassistant.const import (
-    EVENT_HOMEASSISTANT_START, EVENT_HOMEASSISTANT_STOP, CONF_VALUE_TEMPLATE,
-    CONF_USERNAME, CONF_PASSWORD, CONF_PORT, CONF_PROTOCOL, CONF_PAYLOAD)
+    CONF_PASSWORD, CONF_PAYLOAD, CONF_PORT, CONF_PROTOCOL, CONF_USERNAME,
+    CONF_VALUE_TEMPLATE, EVENT_HOMEASSISTANT_START, EVENT_HOMEASSISTANT_STOP)
+from homeassistant.exceptions import HomeAssistantError
+from homeassistant.helpers import config_validation as cv
+from homeassistant.helpers import template
+from homeassistant.helpers.event import threaded_listener_factory
+import voluptuous as vol
 
 _LOGGER = logging.getLogger(__name__)
 

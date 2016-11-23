@@ -4,12 +4,11 @@ Offer MQTT listening automation rules.
 For more details about this automation rule, please refer to the documentation
 at https://home-assistant.io/components/automation/#mqtt-trigger
 """
-import voluptuous as vol
-
-from homeassistant.core import callback
 import homeassistant.components.mqtt as mqtt
-from homeassistant.const import (CONF_PLATFORM, CONF_PAYLOAD)
+from homeassistant.const import CONF_PAYLOAD, CONF_PLATFORM
+from homeassistant.core import callback
 import homeassistant.helpers.config_validation as cv
+import voluptuous as vol
 
 DEPENDENCIES = ['mqtt']
 

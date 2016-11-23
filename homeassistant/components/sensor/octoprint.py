@@ -7,15 +7,14 @@ https://home-assistant.io/components/sensor.octoprint/
 import logging
 
 import requests
-import voluptuous as vol
 
 from homeassistant.components.sensor import PLATFORM_SCHEMA
 from homeassistant.const import (
-    TEMP_CELSIUS, CONF_NAME, CONF_MONITORED_CONDITIONS)
+    CONF_MONITORED_CONDITIONS, CONF_NAME, TEMP_CELSIUS)
+import homeassistant.helpers.config_validation as cv
 from homeassistant.helpers.entity import Entity
 from homeassistant.loader import get_component
-import homeassistant.helpers.config_validation as cv
-
+import voluptuous as vol
 
 _LOGGER = logging.getLogger(__name__)
 

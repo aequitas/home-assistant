@@ -6,17 +6,17 @@ https://home-assistant.io/components/sensor.speedtest/
 """
 import logging
 import re
+from subprocess import CalledProcessError, check_output
 import sys
-from subprocess import check_output, CalledProcessError
-import voluptuous as vol
 
-import homeassistant.util.dt as dt_util
-import homeassistant.helpers.config_validation as cv
 from homeassistant.components import recorder
-from homeassistant.components.sensor import (DOMAIN, PLATFORM_SCHEMA)
+from homeassistant.components.sensor import DOMAIN, PLATFORM_SCHEMA
 from homeassistant.const import CONF_MONITORED_CONDITIONS
+import homeassistant.helpers.config_validation as cv
 from homeassistant.helpers.entity import Entity
 from homeassistant.helpers.event import track_time_change
+import homeassistant.util.dt as dt_util
+import voluptuous as vol
 
 REQUIREMENTS = ['speedtest-cli==0.3.4']
 _LOGGER = logging.getLogger(__name__)

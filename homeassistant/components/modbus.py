@@ -7,12 +7,11 @@ https://home-assistant.io/components/modbus/
 import logging
 import threading
 
-import voluptuous as vol
-
 from homeassistant.const import (
-    EVENT_HOMEASSISTANT_START, EVENT_HOMEASSISTANT_STOP,
-    CONF_HOST, CONF_METHOD, CONF_PORT)
+    CONF_HOST, CONF_METHOD, CONF_PORT, EVENT_HOMEASSISTANT_START,
+    EVENT_HOMEASSISTANT_STOP)
 import homeassistant.helpers.config_validation as cv
+import voluptuous as vol
 
 DOMAIN = "modbus"
 

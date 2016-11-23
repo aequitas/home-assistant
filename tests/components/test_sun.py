@@ -1,14 +1,13 @@
 """The tests for the Sun component."""
 # pylint: disable=protected-access
+from datetime import datetime, timedelta
 import unittest
 from unittest.mock import patch
-from datetime import timedelta, datetime
 
 from homeassistant.bootstrap import setup_component
+import homeassistant.components.sun as sun
 import homeassistant.core as ha
 import homeassistant.util.dt as dt_util
-import homeassistant.components.sun as sun
-
 from tests.common import get_test_home_assistant
 
 

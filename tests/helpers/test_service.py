@@ -4,12 +4,12 @@ import unittest
 from unittest.mock import patch
 
 # To prevent circular import when running just this file
+from homeassistant import core as ha
+from homeassistant import loader
 import homeassistant.components  # noqa
-from homeassistant import core as ha, loader
-from homeassistant.const import STATE_ON, STATE_OFF, ATTR_ENTITY_ID
+from homeassistant.const import ATTR_ENTITY_ID, STATE_OFF, STATE_ON
 from homeassistant.helpers import service, template
 import homeassistant.helpers.config_validation as cv
-
 from tests.common import get_test_home_assistant, mock_service
 
 

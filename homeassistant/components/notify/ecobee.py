@@ -6,12 +6,11 @@ https://home-assistant.io/components/notify.ecobee/
 """
 import logging
 
-import voluptuous as vol
-
 from homeassistant.components import ecobee
-from homeassistant.components.notify import (
-    BaseNotificationService, PLATFORM_SCHEMA)  # NOQA
+from homeassistant.components.notify import (  # NOQA
+    PLATFORM_SCHEMA, BaseNotificationService)
 import homeassistant.helpers.config_validation as cv
+import voluptuous as vol
 
 DEPENDENCIES = ['ecobee']
 _LOGGER = logging.getLogger(__name__)

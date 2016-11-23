@@ -9,11 +9,10 @@ import asyncio
 import logging
 
 from aiohttp import web
-
+from homeassistant.components.http import HomeAssistantView
+from homeassistant.helpers.config_validation import PLATFORM_SCHEMA  # noqa
 from homeassistant.helpers.entity import Entity
 from homeassistant.helpers.entity_component import EntityComponent
-from homeassistant.helpers.config_validation import PLATFORM_SCHEMA  # noqa
-from homeassistant.components.http import HomeAssistantView
 
 DOMAIN = 'camera'
 DEPENDENCIES = ['http']

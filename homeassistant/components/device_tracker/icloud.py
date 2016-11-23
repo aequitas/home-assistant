@@ -5,21 +5,20 @@ For more details about this platform, please refer to the documentation at
 https://home-assistant.io/components/device_tracker.icloud/
 """
 import logging
-import random
 import os
+import random
 
-import voluptuous as vol
-
-from homeassistant.const import CONF_USERNAME, CONF_PASSWORD
 from homeassistant.components.device_tracker import (
-    PLATFORM_SCHEMA, DOMAIN, ATTR_ATTRIBUTES, ENTITY_ID_FORMAT)
+    ATTR_ATTRIBUTES, DOMAIN, ENTITY_ID_FORMAT, PLATFORM_SCHEMA)
 from homeassistant.components.zone import active_zone
-from homeassistant.helpers.event import track_utc_time_change
+from homeassistant.const import CONF_PASSWORD, CONF_USERNAME
 import homeassistant.helpers.config_validation as cv
+from homeassistant.helpers.event import track_utc_time_change
+from homeassistant.loader import get_component
 from homeassistant.util import slugify
 import homeassistant.util.dt as dt_util
 from homeassistant.util.location import distance
-from homeassistant.loader import get_component
+import voluptuous as vol
 
 _LOGGER = logging.getLogger(__name__)
 

@@ -3,12 +3,11 @@ import socket
 import unittest
 from unittest import mock
 
-import voluptuous as vol
-import somecomfort
-
-from homeassistant.const import (
-    CONF_USERNAME, CONF_PASSWORD, TEMP_CELSIUS, TEMP_FAHRENHEIT)
 import homeassistant.components.climate.honeywell as honeywell
+from homeassistant.const import (
+    CONF_PASSWORD, CONF_USERNAME, TEMP_CELSIUS, TEMP_FAHRENHEIT)
+import somecomfort
+import voluptuous as vol
 
 
 class TestHoneywell(unittest.TestCase):

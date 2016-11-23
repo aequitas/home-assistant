@@ -6,9 +6,9 @@ https://home-assistant.io/components/sensor.neato/
 """
 import logging
 
-from homeassistant.helpers.entity import Entity
 from homeassistant.components.neato import (
-    NEATO_ROBOTS, NEATO_LOGIN, ACTION, ERRORS, MODE, ALERTS)
+    ACTION, ALERTS, ERRORS, MODE, NEATO_LOGIN, NEATO_ROBOTS)
+from homeassistant.helpers.entity import Entity
 
 _LOGGER = logging.getLogger(__name__)
 SENSOR_TYPE_STATUS = 'status'

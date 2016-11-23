@@ -1,14 +1,15 @@
 """Home Assistant command line scripts."""
 import argparse
 import importlib
+import logging
 import os
 import sys
-import logging
+
 from typing import List
 
+from homeassistant.bootstrap import mount_local_lib_path
 from homeassistant.config import get_default_config_dir
 from homeassistant.util.package import install_package
-from homeassistant.bootstrap import mount_local_lib_path
 
 
 def run(args: List) -> int:

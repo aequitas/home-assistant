@@ -1,18 +1,17 @@
 """The tests for the emulated Hue component."""
 import json
-
 import unittest
+
 import requests
 
 from homeassistant import bootstrap, const, core
 import homeassistant.components as core_components
 from homeassistant.components import emulated_hue, http, light, script
-from homeassistant.const import STATE_ON, STATE_OFF
 from homeassistant.components.emulated_hue import (
-    HUE_API_STATE_ON, HUE_API_STATE_BRI)
+    HUE_API_STATE_BRI, HUE_API_STATE_ON)
+from homeassistant.const import STATE_OFF, STATE_ON
 from homeassistant.util.async import run_coroutine_threadsafe
-
-from tests.common import get_test_instance_port, get_test_home_assistant
+from tests.common import get_test_home_assistant, get_test_instance_port
 
 HTTP_SERVER_PORT = get_test_instance_port()
 BRIDGE_SERVER_PORT = get_test_instance_port()

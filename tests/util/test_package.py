@@ -1,11 +1,11 @@
 """Test Home Assistant package util methods."""
+from distutils.sysconfig import get_python_lib
 import os
-import pkg_resources
 import subprocess
 import unittest
-
-from distutils.sysconfig import get_python_lib
 from unittest.mock import call, patch
+
+import pkg_resources
 
 import homeassistant.util.package as package
 

@@ -4,18 +4,17 @@ Provides functionality to turn on lights based on the states.
 For more details about this component, please refer to the documentation at
 https://home-assistant.io/components/device_sun_light_trigger/
 """
-import logging
 from datetime import timedelta
+import logging
 
-import voluptuous as vol
-
-from homeassistant.core import callback
-import homeassistant.util.dt as dt_util
 from homeassistant.const import STATE_HOME, STATE_NOT_HOME
+from homeassistant.core import callback
+import homeassistant.helpers.config_validation as cv
 from homeassistant.helpers.event import track_point_in_time
 from homeassistant.helpers.event_decorators import track_state_change
 from homeassistant.loader import get_component
-import homeassistant.helpers.config_validation as cv
+import homeassistant.util.dt as dt_util
+import voluptuous as vol
 
 DOMAIN = 'device_sun_light_trigger'
 DEPENDENCIES = ['light', 'device_tracker', 'group', 'sun']

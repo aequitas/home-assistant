@@ -6,12 +6,11 @@ https://home-assistant.io/components/notify.xmpp/
 """
 import logging
 
-import voluptuous as vol
-
-import homeassistant.helpers.config_validation as cv
 from homeassistant.components.notify import (
     ATTR_TITLE, ATTR_TITLE_DEFAULT, PLATFORM_SCHEMA, BaseNotificationService)
-from homeassistant.const import CONF_PASSWORD, CONF_SENDER, CONF_RECIPIENT
+from homeassistant.const import CONF_PASSWORD, CONF_RECIPIENT, CONF_SENDER
+import homeassistant.helpers.config_validation as cv
+import voluptuous as vol
 
 REQUIREMENTS = ['sleekxmpp==1.3.1',
                 'dnspython3==1.15.0',

@@ -4,13 +4,12 @@ Support for Proliphix NT10e Thermostats.
 For more details about this platform, please refer to the documentation at
 https://home-assistant.io/components/climate.proliphix/
 """
-import voluptuous as vol
-
 from homeassistant.components.climate import (
-    STATE_COOL, STATE_HEAT, STATE_IDLE, ClimateDevice, PLATFORM_SCHEMA)
+    PLATFORM_SCHEMA, STATE_COOL, STATE_HEAT, STATE_IDLE, ClimateDevice)
 from homeassistant.const import (
-    CONF_HOST, CONF_PASSWORD, CONF_USERNAME, TEMP_FAHRENHEIT, ATTR_TEMPERATURE)
+    ATTR_TEMPERATURE, CONF_HOST, CONF_PASSWORD, CONF_USERNAME, TEMP_FAHRENHEIT)
 import homeassistant.helpers.config_validation as cv
+import voluptuous as vol
 
 REQUIREMENTS = ['proliphix==0.4.1']
 

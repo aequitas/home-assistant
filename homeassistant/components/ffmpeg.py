@@ -7,10 +7,9 @@ https://home-assistant.io/components/ffmpeg/
 import asyncio
 import logging
 
-import voluptuous as vol
-
 import homeassistant.helpers.config_validation as cv
 from homeassistant.util.async import run_coroutine_threadsafe
+import voluptuous as vol
 
 DOMAIN = 'ffmpeg'
 REQUIREMENTS = ["ha-ffmpeg==0.15"]

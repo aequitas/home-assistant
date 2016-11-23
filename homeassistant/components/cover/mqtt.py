@@ -6,17 +6,15 @@ https://home-assistant.io/components/cover.mqtt/
 """
 import logging
 
-import voluptuous as vol
-
-from homeassistant.core import callback
-import homeassistant.components.mqtt as mqtt
 from homeassistant.components.cover import CoverDevice
-from homeassistant.const import (
-    CONF_NAME, CONF_VALUE_TEMPLATE, CONF_OPTIMISTIC, STATE_OPEN,
-    STATE_CLOSED)
+import homeassistant.components.mqtt as mqtt
 from homeassistant.components.mqtt import (
-    CONF_STATE_TOPIC, CONF_COMMAND_TOPIC, CONF_QOS, CONF_RETAIN)
+    CONF_COMMAND_TOPIC, CONF_QOS, CONF_RETAIN, CONF_STATE_TOPIC)
+from homeassistant.const import (
+    CONF_NAME, CONF_OPTIMISTIC, CONF_VALUE_TEMPLATE, STATE_CLOSED, STATE_OPEN)
+from homeassistant.core import callback
 import homeassistant.helpers.config_validation as cv
+import voluptuous as vol
 
 _LOGGER = logging.getLogger(__name__)
 

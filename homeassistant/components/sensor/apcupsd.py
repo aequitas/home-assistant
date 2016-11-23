@@ -6,13 +6,12 @@ https://home-assistant.io/components/sensor.apcupsd/
 """
 import logging
 
-import voluptuous as vol
-
-from homeassistant.components.sensor import PLATFORM_SCHEMA
-import homeassistant.helpers.config_validation as cv
 from homeassistant.components import apcupsd
-from homeassistant.const import (TEMP_CELSIUS, CONF_RESOURCES)
+from homeassistant.components.sensor import PLATFORM_SCHEMA
+from homeassistant.const import CONF_RESOURCES, TEMP_CELSIUS
+import homeassistant.helpers.config_validation as cv
 from homeassistant.helpers.entity import Entity
+import voluptuous as vol
 
 _LOGGER = logging.getLogger(__name__)
 

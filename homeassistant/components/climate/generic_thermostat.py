@@ -6,16 +6,15 @@ https://home-assistant.io/components/climate.generic_thermostat/
 """
 import logging
 
-import voluptuous as vol
-
 from homeassistant.components import switch
 from homeassistant.components.climate import (
-    STATE_HEAT, STATE_COOL, STATE_IDLE, ClimateDevice, PLATFORM_SCHEMA)
+    PLATFORM_SCHEMA, STATE_COOL, STATE_HEAT, STATE_IDLE, ClimateDevice)
 from homeassistant.const import (
-    ATTR_UNIT_OF_MEASUREMENT, STATE_ON, STATE_OFF, ATTR_TEMPERATURE)
+    ATTR_TEMPERATURE, ATTR_UNIT_OF_MEASUREMENT, STATE_OFF, STATE_ON)
 from homeassistant.helpers import condition
-from homeassistant.helpers.event import track_state_change
 import homeassistant.helpers.config_validation as cv
+from homeassistant.helpers.event import track_state_change
+import voluptuous as vol
 
 _LOGGER = logging.getLogger(__name__)
 

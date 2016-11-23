@@ -5,11 +5,10 @@ For more details about this platform, please refer to the documentation
 https://home-assistant.io/components/demo/
 """
 
-from homeassistant.components.fan import (SPEED_LOW, SPEED_MED, SPEED_HIGH,
-                                          FanEntity, SUPPORT_SET_SPEED,
-                                          SUPPORT_OSCILLATE)
+from homeassistant.components.fan import (
+    SPEED_HIGH, SPEED_LOW, SPEED_MED, SUPPORT_OSCILLATE, SUPPORT_SET_SPEED,
+    FanEntity)
 from homeassistant.const import STATE_OFF
-
 
 FAN_NAME = 'Living Room Fan'
 FAN_ENTITY_ID = 'fan.living_room_fan'

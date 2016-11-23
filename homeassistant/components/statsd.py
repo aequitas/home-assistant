@@ -6,12 +6,11 @@ https://home-assistant.io/components/statsd/
 """
 import logging
 
-import voluptuous as vol
-
 from homeassistant.const import (
     CONF_HOST, CONF_PORT, CONF_PREFIX, EVENT_STATE_CHANGED)
-import homeassistant.helpers.config_validation as cv
 from homeassistant.helpers import state as state_helper
+import homeassistant.helpers.config_validation as cv
+import voluptuous as vol
 
 REQUIREMENTS = ['statsd==3.2.1']
 

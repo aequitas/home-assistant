@@ -4,12 +4,11 @@ import unittest
 from unittest import mock
 
 import requests
-from uvcclient import camera
-from uvcclient import nvr
 
 from homeassistant.bootstrap import setup_component
 from homeassistant.components.camera import uvc
 from tests.common import get_test_home_assistant
+from uvcclient import camera, nvr
 
 
 class TestUVCSetup(unittest.TestCase):

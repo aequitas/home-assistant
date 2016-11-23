@@ -7,23 +7,23 @@ to query this database.
 For more details about this component, please refer to the documentation at
 https://home-assistant.io/components/recorder/
 """
+from datetime import datetime, timedelta
 import logging
 import queue
 import threading
 import time
-from datetime import timedelta, datetime
-from typing import Any, Union, Optional, List
 
-import voluptuous as vol
+from typing import Any, List, Optional, Union
 
+from homeassistant.const import (
+    EVENT_HOMEASSISTANT_START, EVENT_HOMEASSISTANT_STOP, EVENT_STATE_CHANGED,
+    EVENT_TIME_CHANGED, MATCH_ALL)
 from homeassistant.core import HomeAssistant, callback
-from homeassistant.const import (EVENT_HOMEASSISTANT_START,
-                                 EVENT_HOMEASSISTANT_STOP, EVENT_STATE_CHANGED,
-                                 EVENT_TIME_CHANGED, MATCH_ALL)
 import homeassistant.helpers.config_validation as cv
 from homeassistant.helpers.event import track_point_in_utc_time
 from homeassistant.helpers.typing import ConfigType, QueryType
 import homeassistant.util.dt as dt_util
+import voluptuous as vol
 
 DOMAIN = 'recorder'
 

@@ -8,7 +8,6 @@ import datetime
 import logging
 
 import requests
-import voluptuous as vol
 
 import homeassistant.components.alarm_control_panel as alarm
 from homeassistant.components.alarm_control_panel import PLATFORM_SCHEMA
@@ -16,6 +15,7 @@ from homeassistant.const import (
     CONF_HOST, CONF_NAME, CONF_PORT, STATE_ALARM_ARMED_AWAY,
     STATE_ALARM_ARMED_HOME, STATE_ALARM_DISARMED, STATE_UNKNOWN)
 import homeassistant.helpers.config_validation as cv
+import voluptuous as vol
 
 REQUIREMENTS = ['concord232==0.14']
 

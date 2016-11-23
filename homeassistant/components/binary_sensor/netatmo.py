@@ -7,14 +7,14 @@ For more details about this platform, please refer to the documentation at
 https://home-assistant.io/components/binary_sensor.netatmo/
 """
 import logging
-import voluptuous as vol
 
 from homeassistant.components.binary_sensor import (
-    BinarySensorDevice, PLATFORM_SCHEMA)
+    PLATFORM_SCHEMA, BinarySensorDevice)
 from homeassistant.components.netatmo import WelcomeData
-from homeassistant.loader import get_component
 from homeassistant.const import CONF_MONITORED_CONDITIONS, CONF_TIMEOUT
 from homeassistant.helpers import config_validation as cv
+from homeassistant.loader import get_component
+import voluptuous as vol
 
 DEPENDENCIES = ["netatmo"]
 

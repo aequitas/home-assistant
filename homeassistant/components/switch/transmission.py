@@ -6,14 +6,13 @@ https://home-assistant.io/components/switch.transmission/
 """
 import logging
 
-import voluptuous as vol
-
 from homeassistant.components.switch import PLATFORM_SCHEMA
 from homeassistant.const import (
-    CONF_HOST, CONF_NAME, CONF_PORT, CONF_PASSWORD, CONF_USERNAME, STATE_OFF,
+    CONF_HOST, CONF_NAME, CONF_PASSWORD, CONF_PORT, CONF_USERNAME, STATE_OFF,
     STATE_ON)
-from homeassistant.helpers.entity import ToggleEntity
 import homeassistant.helpers.config_validation as cv
+from homeassistant.helpers.entity import ToggleEntity
+import voluptuous as vol
 
 REQUIREMENTS = ['transmissionrpc==0.11']
 

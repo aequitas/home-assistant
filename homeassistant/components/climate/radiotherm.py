@@ -7,13 +7,12 @@ https://home-assistant.io/components/climate.radiotherm/
 import datetime
 import logging
 
-import voluptuous as vol
-
 from homeassistant.components.climate import (
-    STATE_AUTO, STATE_COOL, STATE_HEAT, STATE_IDLE, STATE_OFF,
-    ClimateDevice, PLATFORM_SCHEMA)
-from homeassistant.const import CONF_HOST, TEMP_FAHRENHEIT, ATTR_TEMPERATURE
+    PLATFORM_SCHEMA, STATE_AUTO, STATE_COOL, STATE_HEAT, STATE_IDLE, STATE_OFF,
+    ClimateDevice)
+from homeassistant.const import ATTR_TEMPERATURE, CONF_HOST, TEMP_FAHRENHEIT
 import homeassistant.helpers.config_validation as cv
+import voluptuous as vol
 
 REQUIREMENTS = ['radiotherm==1.2']
 

@@ -4,9 +4,9 @@ Demo platform that has two fake binary sensors.
 For more details about this platform, please refer to the documentation
 https://home-assistant.io/components/demo/
 """
-import homeassistant.util.dt as dt_util
 from homeassistant.components.calendar import CalendarEventDevice
 from homeassistant.components.google import CONF_DEVICE_ID, CONF_NAME
+import homeassistant.util.dt as dt_util
 
 
 def setup_platform(hass, config, add_devices, discovery_info=None):

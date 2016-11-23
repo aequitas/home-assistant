@@ -4,17 +4,15 @@ Support for getting statistical data from a Pi-Hole system.
 For more details about this platform, please refer to the documentation at
 https://home-assistant.io/components/sensor.pi_hole/
 """
-import logging
 import json
+import logging
 
-import voluptuous as vol
-
-from homeassistant.helpers.entity import Entity
 from homeassistant.components.sensor import PLATFORM_SCHEMA
 from homeassistant.components.sensor.rest import RestData
-from homeassistant.const import (
-    CONF_NAME, CONF_HOST, CONF_SSL, CONF_VERIFY_SSL)
+from homeassistant.const import CONF_HOST, CONF_NAME, CONF_SSL, CONF_VERIFY_SSL
 import homeassistant.helpers.config_validation as cv
+from homeassistant.helpers.entity import Entity
+import voluptuous as vol
 
 _LOGGER = logging.getLogger(__name__)
 _ENDPOINT = '/admin/api.php'

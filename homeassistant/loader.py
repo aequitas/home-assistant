@@ -15,10 +15,10 @@ import logging
 import os
 import pkgutil
 import sys
-
 from types import ModuleType
+
 # pylint: disable=unused-import
-from typing import Optional, Sequence, Set, Dict  # NOQA
+from typing import Dict, Optional, Sequence, Set  # NOQA
 
 from homeassistant.const import PLATFORM_FORMAT
 from homeassistant.util import OrderedSet

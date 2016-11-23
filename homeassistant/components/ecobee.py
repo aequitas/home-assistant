@@ -4,17 +4,16 @@ Support for Ecobee.
 For more details about this component, please refer to the documentation at
 https://home-assistant.io/components/ecobee/
 """
+from datetime import timedelta
 import logging
 import os
-from datetime import timedelta
 
-import voluptuous as vol
-
-import homeassistant.helpers.config_validation as cv
-from homeassistant.helpers import discovery
 from homeassistant.const import CONF_API_KEY
+from homeassistant.helpers import discovery
+import homeassistant.helpers.config_validation as cv
 from homeassistant.loader import get_component
 from homeassistant.util import Throttle
+import voluptuous as vol
 
 REQUIREMENTS = [
     'https://github.com/nkgilley/python-ecobee-api/archive/'

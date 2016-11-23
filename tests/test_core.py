@@ -1,21 +1,20 @@
 """Test to verify that Home Assistant core works."""
 # pylint: disable=protected-access
 import asyncio
-import unittest
-from unittest.mock import patch, MagicMock
 from datetime import datetime, timedelta
+import unittest
+from unittest.mock import MagicMock, patch
 
 import pytz
 
+from homeassistant.const import (
+    ATTR_FRIENDLY_NAME, CONF_UNIT_SYSTEM, EVENT_STATE_CHANGED, __version__)
 import homeassistant.core as ha
 from homeassistant.exceptions import InvalidEntityFormatError
 from homeassistant.util.async import (
     run_callback_threadsafe, run_coroutine_threadsafe)
 import homeassistant.util.dt as dt_util
-from homeassistant.util.unit_system import (METRIC_SYSTEM)
-from homeassistant.const import (
-    __version__, EVENT_STATE_CHANGED, ATTR_FRIENDLY_NAME, CONF_UNIT_SYSTEM)
-
+from homeassistant.util.unit_system import METRIC_SYSTEM
 from tests.common import get_test_home_assistant
 
 PST = pytz.timezone('America/Los_Angeles')

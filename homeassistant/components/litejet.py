@@ -5,11 +5,10 @@ https://home-assistant.io/components/litejet/
 """
 import logging
 
-import voluptuous as vol
-
-from homeassistant.helpers import discovery
 from homeassistant.const import CONF_PORT
+from homeassistant.helpers import discovery
 import homeassistant.helpers.config_validation as cv
+import voluptuous as vol
 
 REQUIREMENTS = ['pylitejet==0.1']
 

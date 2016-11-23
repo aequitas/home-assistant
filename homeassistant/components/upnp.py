@@ -6,9 +6,8 @@ https://home-assistant.io/components/upnp/
 """
 import logging
 
+from homeassistant.const import EVENT_HOMEASSISTANT_STOP
 import voluptuous as vol
-
-from homeassistant.const import (EVENT_HOMEASSISTANT_STOP)
 
 _LOGGER = logging.getLogger(__name__)
 

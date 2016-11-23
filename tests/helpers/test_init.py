@@ -4,7 +4,6 @@ from collections import OrderedDict
 import unittest
 
 from homeassistant import helpers
-
 from tests.common import get_test_home_assistant
 
 

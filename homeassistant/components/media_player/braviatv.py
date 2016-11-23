@@ -4,21 +4,19 @@ Support for interface with a Sony Bravia TV.
 For more details about this platform, please refer to the documentation at
 https://home-assistant.io/components/media_player.braviatv/
 """
+import json
 import logging
 import os
-import json
 import re
 
-import voluptuous as vol
-
-from homeassistant.loader import get_component
 from homeassistant.components.media_player import (
-    SUPPORT_NEXT_TRACK, SUPPORT_PAUSE, SUPPORT_PREVIOUS_TRACK,
-    SUPPORT_TURN_OFF, SUPPORT_VOLUME_MUTE, SUPPORT_VOLUME_STEP,
-    SUPPORT_VOLUME_SET, SUPPORT_SELECT_SOURCE, MediaPlayerDevice,
-    PLATFORM_SCHEMA)
-from homeassistant.const import (CONF_HOST, CONF_NAME, STATE_OFF, STATE_ON)
+    PLATFORM_SCHEMA, SUPPORT_NEXT_TRACK, SUPPORT_PAUSE, SUPPORT_PREVIOUS_TRACK,
+    SUPPORT_SELECT_SOURCE, SUPPORT_TURN_OFF, SUPPORT_VOLUME_MUTE,
+    SUPPORT_VOLUME_SET, SUPPORT_VOLUME_STEP, MediaPlayerDevice)
+from homeassistant.const import CONF_HOST, CONF_NAME, STATE_OFF, STATE_ON
 import homeassistant.helpers.config_validation as cv
+from homeassistant.loader import get_component
+import voluptuous as vol
 
 REQUIREMENTS = [
     'https://github.com/aparraga/braviarc/archive/0.3.6.zip'

@@ -7,8 +7,8 @@ https://home-assistant.io/components/cover.mysensors/
 import logging
 
 from homeassistant.components import mysensors
-from homeassistant.components.cover import CoverDevice, ATTR_POSITION
-from homeassistant.const import STATE_ON, STATE_OFF
+from homeassistant.components.cover import ATTR_POSITION, CoverDevice
+from homeassistant.const import STATE_OFF, STATE_ON
 
 _LOGGER = logging.getLogger(__name__)
 DEPENDENCIES = []

@@ -1,15 +1,14 @@
 """The tests for the Demo Media player platform."""
+import asyncio
 import unittest
 from unittest.mock import patch
-import asyncio
-
-from homeassistant.bootstrap import setup_component
-from homeassistant.const import HTTP_HEADER_HA_AUTH
-import homeassistant.components.media_player as mp
-import homeassistant.components.http as http
 
 import requests
 
+from homeassistant.bootstrap import setup_component
+import homeassistant.components.http as http
+import homeassistant.components.media_player as mp
+from homeassistant.const import HTTP_HEADER_HA_AUTH
 from tests.common import get_test_home_assistant, get_test_instance_port
 
 SERVER_PORT = get_test_instance_port()

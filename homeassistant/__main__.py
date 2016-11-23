@@ -8,15 +8,11 @@ import subprocess
 import sys
 import threading
 
-from typing import Optional, List
+from typing import List, Optional
 
 from homeassistant.const import (
-    __version__,
-    EVENT_HOMEASSISTANT_START,
-    REQUIRED_PYTHON_VER,
-    REQUIRED_PYTHON_VER_WIN,
-    RESTART_EXIT_CODE,
-)
+    EVENT_HOMEASSISTANT_START, REQUIRED_PYTHON_VER, REQUIRED_PYTHON_VER_WIN,
+    RESTART_EXIT_CODE, __version__)
 from homeassistant.util.async import run_callback_threadsafe
 
 

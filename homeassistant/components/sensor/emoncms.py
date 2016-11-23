@@ -7,17 +7,17 @@ at https://home-assistant.io/components/sensor.emoncms/
 from datetime import timedelta
 import logging
 
-import voluptuous as vol
 import requests
 
-import homeassistant.helpers.config_validation as cv
 from homeassistant.components.sensor import PLATFORM_SCHEMA
 from homeassistant.const import (
-    CONF_API_KEY, CONF_URL, CONF_VALUE_TEMPLATE, CONF_UNIT_OF_MEASUREMENT,
-    CONF_ID, CONF_SCAN_INTERVAL, STATE_UNKNOWN)
-from homeassistant.helpers.entity import Entity
+    CONF_API_KEY, CONF_ID, CONF_SCAN_INTERVAL, CONF_UNIT_OF_MEASUREMENT,
+    CONF_URL, CONF_VALUE_TEMPLATE, STATE_UNKNOWN)
 from homeassistant.helpers import template
+import homeassistant.helpers.config_validation as cv
+from homeassistant.helpers.entity import Entity
 from homeassistant.util import Throttle
+import voluptuous as vol
 
 _LOGGER = logging.getLogger(__name__)
 

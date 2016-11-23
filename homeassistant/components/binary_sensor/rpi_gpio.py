@@ -6,13 +6,12 @@ https://home-assistant.io/components/binary_sensor.rpi_gpio/
 """
 import logging
 
-import voluptuous as vol
-
-import homeassistant.components.rpi_gpio as rpi_gpio
 from homeassistant.components.binary_sensor import (
-    BinarySensorDevice, PLATFORM_SCHEMA)
+    PLATFORM_SCHEMA, BinarySensorDevice)
+import homeassistant.components.rpi_gpio as rpi_gpio
 from homeassistant.const import DEVICE_DEFAULT_NAME
 import homeassistant.helpers.config_validation as cv
+import voluptuous as vol
 
 _LOGGER = logging.getLogger(__name__)
 

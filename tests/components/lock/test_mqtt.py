@@ -2,11 +2,11 @@
 import unittest
 
 from homeassistant.bootstrap import setup_component
-from homeassistant.const import (STATE_LOCKED, STATE_UNLOCKED,
-                                 ATTR_ASSUMED_STATE)
 import homeassistant.components.lock as lock
+from homeassistant.const import (
+    ATTR_ASSUMED_STATE, STATE_LOCKED, STATE_UNLOCKED)
 from tests.common import (
-    mock_mqtt_component, fire_mqtt_message, get_test_home_assistant)
+    fire_mqtt_message, get_test_home_assistant, mock_mqtt_component)
 
 
 class TestLockMQTT(unittest.TestCase):

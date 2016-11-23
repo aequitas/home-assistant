@@ -4,28 +4,27 @@ Support for Hue lights.
 For more details about this platform, please refer to the documentation at
 https://home-assistant.io/components/light.hue/
 """
+from datetime import timedelta
 import json
 import logging
 import os
 import random
 import socket
-from datetime import timedelta
 from urllib.parse import urlparse
 
-import voluptuous as vol
-
-import homeassistant.util as util
-import homeassistant.util.color as color_util
 from homeassistant.components.light import (
     ATTR_BRIGHTNESS, ATTR_COLOR_TEMP, ATTR_EFFECT, ATTR_FLASH, ATTR_RGB_COLOR,
     ATTR_TRANSITION, ATTR_XY_COLOR, EFFECT_COLORLOOP, EFFECT_RANDOM,
-    FLASH_LONG, FLASH_SHORT, SUPPORT_BRIGHTNESS, SUPPORT_COLOR_TEMP,
-    SUPPORT_EFFECT, SUPPORT_FLASH, SUPPORT_RGB_COLOR, SUPPORT_TRANSITION,
-    SUPPORT_XY_COLOR, Light, PLATFORM_SCHEMA)
+    FLASH_LONG, FLASH_SHORT, PLATFORM_SCHEMA, SUPPORT_BRIGHTNESS,
+    SUPPORT_COLOR_TEMP, SUPPORT_EFFECT, SUPPORT_FLASH, SUPPORT_RGB_COLOR,
+    SUPPORT_TRANSITION, SUPPORT_XY_COLOR, Light)
 from homeassistant.config import load_yaml_config_file
-from homeassistant.const import (CONF_FILENAME, CONF_HOST, DEVICE_DEFAULT_NAME)
-from homeassistant.loader import get_component
+from homeassistant.const import CONF_FILENAME, CONF_HOST, DEVICE_DEFAULT_NAME
 import homeassistant.helpers.config_validation as cv
+from homeassistant.loader import get_component
+import homeassistant.util as util
+import homeassistant.util.color as color_util
+import voluptuous as vol
 
 REQUIREMENTS = ['phue==0.9']
 

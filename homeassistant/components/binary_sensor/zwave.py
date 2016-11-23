@@ -4,15 +4,14 @@ Interfaces with Z-Wave sensors.
 For more details about this platform, please refer to the documentation
 https://home-assistant.io/components/binary_sensor.zwave/
 """
-import logging
 import datetime
-import homeassistant.util.dt as dt_util
-from homeassistant.helpers.event import track_point_in_time
-from homeassistant.helpers.entity import Entity
+import logging
+
 from homeassistant.components import zwave
-from homeassistant.components.binary_sensor import (
-    DOMAIN,
-    BinarySensorDevice)
+from homeassistant.components.binary_sensor import DOMAIN, BinarySensorDevice
+from homeassistant.helpers.entity import Entity
+from homeassistant.helpers.event import track_point_in_time
+import homeassistant.util.dt as dt_util
 
 _LOGGER = logging.getLogger(__name__)
 DEPENDENCIES = []

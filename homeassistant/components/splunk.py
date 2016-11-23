@@ -8,12 +8,12 @@ import json
 import logging
 
 import requests
-import voluptuous as vol
 
 from homeassistant.const import (
     CONF_HOST, CONF_PORT, CONF_SSL, CONF_TOKEN, EVENT_STATE_CHANGED)
 from homeassistant.helpers import state as state_helper
 import homeassistant.helpers.config_validation as cv
+import voluptuous as vol
 
 _LOGGER = logging.getLogger(__name__)
 

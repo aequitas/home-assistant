@@ -6,11 +6,10 @@ at https://home-assistant.io/components/automation/#event-trigger
 """
 import logging
 
-import voluptuous as vol
-
-from homeassistant.core import callback
 from homeassistant.const import CONF_PLATFORM
+from homeassistant.core import callback
 from homeassistant.helpers import config_validation as cv
+import voluptuous as vol
 
 CONF_EVENT_TYPE = "event_type"
 CONF_EVENT_DATA = "event_data"

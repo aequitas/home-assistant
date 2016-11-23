@@ -1,7 +1,7 @@
 """Test Home Assistant util methods."""
+from datetime import datetime, timedelta
 import unittest
 from unittest.mock import patch
-from datetime import datetime, timedelta
 
 from homeassistant import util
 import homeassistant.util.dt as dt_util

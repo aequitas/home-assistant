@@ -7,12 +7,11 @@ https://home-assistant.io/components/notify.command_line/
 import logging
 import subprocess
 
-import voluptuous as vol
-
-from homeassistant.const import (CONF_COMMAND, CONF_NAME)
 from homeassistant.components.notify import (
-    BaseNotificationService, PLATFORM_SCHEMA)
+    PLATFORM_SCHEMA, BaseNotificationService)
+from homeassistant.const import CONF_COMMAND, CONF_NAME
 import homeassistant.helpers.config_validation as cv
+import voluptuous as vol
 
 _LOGGER = logging.getLogger(__name__)
 

@@ -6,11 +6,10 @@ https://home-assistant.io/components/automation.litejet/
 """
 import logging
 
-import voluptuous as vol
-
-from homeassistant.core import callback
 from homeassistant.const import CONF_PLATFORM
+from homeassistant.core import callback
 import homeassistant.helpers.config_validation as cv
+import voluptuous as vol
 
 DEPENDENCIES = ['litejet']
 

@@ -2,13 +2,11 @@
 # pylint: disable=protected-access
 import unittest
 
-from tests.common import get_test_home_assistant
-
 from homeassistant.bootstrap import setup_component
 from homeassistant.components.input_select import (
-    ATTR_OPTIONS, DOMAIN, select_option, select_next, select_previous)
-from homeassistant.const import (
-    ATTR_ICON, ATTR_FRIENDLY_NAME)
+    ATTR_OPTIONS, DOMAIN, select_next, select_option, select_previous)
+from homeassistant.const import ATTR_FRIENDLY_NAME, ATTR_ICON
+from tests.common import get_test_home_assistant
 
 
 class TestInputSelect(unittest.TestCase):

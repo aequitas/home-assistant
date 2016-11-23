@@ -5,11 +5,12 @@ For more details about this platform, please refer to the documentation at
 https://home-assistant.io/components/lock.isy994/
 """
 import logging
+
 from typing import Callable  # noqa
 
-from homeassistant.components.lock import LockDevice, DOMAIN
 import homeassistant.components.isy994 as isy
-from homeassistant.const import STATE_LOCKED, STATE_UNLOCKED, STATE_UNKNOWN
+from homeassistant.components.lock import DOMAIN, LockDevice
+from homeassistant.const import STATE_LOCKED, STATE_UNKNOWN, STATE_UNLOCKED
 from homeassistant.helpers.typing import ConfigType
 
 _LOGGER = logging.getLogger(__name__)

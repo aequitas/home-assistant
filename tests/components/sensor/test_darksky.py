@@ -1,17 +1,16 @@
 """The tests for the Dark Sky platform."""
+from datetime import timedelta
 import re
 import unittest
 from unittest.mock import MagicMock, patch
 
-import forecastio
 from requests.exceptions import HTTPError
-import requests_mock
-from datetime import timedelta
 
-from homeassistant.components.sensor import darksky
+import forecastio
 from homeassistant.bootstrap import setup_component
-
-from tests.common import load_fixture, get_test_home_assistant
+from homeassistant.components.sensor import darksky
+import requests_mock
+from tests.common import get_test_home_assistant, load_fixture
 
 
 class TestDarkSkySetup(unittest.TestCase):

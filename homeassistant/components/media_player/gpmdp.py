@@ -4,22 +4,21 @@ Support for Google Play Music Desktop Player.
 For more details about this platform, please refer to the documentation at
 https://home-assistant.io/components/media_player.gpmdp/
 """
-import logging
 import json
+import logging
 import os
 import socket
 import time
 
-import voluptuous as vol
-
 from homeassistant.components.media_player import (
-    MEDIA_TYPE_MUSIC, SUPPORT_NEXT_TRACK, SUPPORT_PREVIOUS_TRACK,
-    SUPPORT_PAUSE, SUPPORT_VOLUME_SET, SUPPORT_SEEK, MediaPlayerDevice,
-    PLATFORM_SCHEMA)
+    MEDIA_TYPE_MUSIC, PLATFORM_SCHEMA, SUPPORT_NEXT_TRACK, SUPPORT_PAUSE,
+    SUPPORT_PREVIOUS_TRACK, SUPPORT_SEEK, SUPPORT_VOLUME_SET,
+    MediaPlayerDevice)
 from homeassistant.const import (
-    STATE_PLAYING, STATE_PAUSED, STATE_OFF, CONF_HOST, CONF_PORT, CONF_NAME)
-from homeassistant.loader import get_component
+    CONF_HOST, CONF_NAME, CONF_PORT, STATE_OFF, STATE_PAUSED, STATE_PLAYING)
 import homeassistant.helpers.config_validation as cv
+from homeassistant.loader import get_component
+import voluptuous as vol
 
 REQUIREMENTS = ['websocket-client==0.37.0']
 

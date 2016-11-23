@@ -4,12 +4,11 @@ Support KNX switching actuators.
 For more details about this platform, please refer to the documentation at
 https://home-assistant.io/components/switch.knx/
 """
-import voluptuous as vol
-
-from homeassistant.components.knx import (KNXConfig, KNXGroupAddress)
-from homeassistant.components.switch import (SwitchDevice, PLATFORM_SCHEMA)
+from homeassistant.components.knx import KNXConfig, KNXGroupAddress
+from homeassistant.components.switch import PLATFORM_SCHEMA, SwitchDevice
 from homeassistant.const import CONF_NAME
 import homeassistant.helpers.config_validation as cv
+import voluptuous as vol
 
 CONF_ADDRESS = 'address'
 CONF_STATE_ADDRESS = 'state_address'

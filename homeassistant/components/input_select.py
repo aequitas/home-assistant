@@ -7,13 +7,11 @@ at https://home-assistant.io/components/input_select/
 import asyncio
 import logging
 
-import voluptuous as vol
-
 from homeassistant.const import ATTR_ENTITY_ID, CONF_ICON, CONF_NAME
 import homeassistant.helpers.config_validation as cv
 from homeassistant.helpers.entity import Entity
 from homeassistant.helpers.entity_component import EntityComponent
-
+import voluptuous as vol
 
 DOMAIN = 'input_select'
 ENTITY_ID_FORMAT = DOMAIN + '.{}'

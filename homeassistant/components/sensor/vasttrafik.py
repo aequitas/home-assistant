@@ -4,15 +4,14 @@ Support for Västtrafik public transport.
 For more details about this platform, please refer to the documentation at
 https://home-assistant.io/components/sensor.vasttrafik/
 """
-from datetime import datetime
-from datetime import timedelta
+from datetime import datetime, timedelta
 import logging
-import voluptuous as vol
 
 from homeassistant.components.sensor import PLATFORM_SCHEMA
 import homeassistant.helpers.config_validation as cv
 from homeassistant.helpers.entity import Entity
 from homeassistant.util import Throttle
+import voluptuous as vol
 
 REQUIREMENTS = ['vtjp==0.1.11']
 

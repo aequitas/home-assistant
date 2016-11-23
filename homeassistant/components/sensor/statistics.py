@@ -5,19 +5,18 @@ For more details about this platform, please refer to the documentation at
 https://home-assistant.io/components/sensor.statistics/
 """
 import asyncio
+from collections import deque
 import logging
 import statistics
-from collections import deque
 
-import voluptuous as vol
-
-import homeassistant.helpers.config_validation as cv
 from homeassistant.components.sensor import PLATFORM_SCHEMA
 from homeassistant.const import (
-    CONF_NAME, CONF_ENTITY_ID, STATE_UNKNOWN, ATTR_UNIT_OF_MEASUREMENT)
+    ATTR_UNIT_OF_MEASUREMENT, CONF_ENTITY_ID, CONF_NAME, STATE_UNKNOWN)
 from homeassistant.core import callback
+import homeassistant.helpers.config_validation as cv
 from homeassistant.helpers.entity import Entity
 from homeassistant.helpers.event import async_track_state_change
+import voluptuous as vol
 
 _LOGGER = logging.getLogger(__name__)
 

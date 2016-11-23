@@ -7,16 +7,16 @@ https://home-assistant.io/components/alarm_control_panel.manual/
 import datetime
 import logging
 
-import voluptuous as vol
-
 import homeassistant.components.alarm_control_panel as alarm
-import homeassistant.util.dt as dt_util
 from homeassistant.const import (
-    STATE_ALARM_ARMED_AWAY, STATE_ALARM_ARMED_HOME, STATE_ALARM_DISARMED,
-    STATE_ALARM_PENDING, STATE_ALARM_TRIGGERED, CONF_PLATFORM, CONF_NAME,
-    CONF_CODE, CONF_PENDING_TIME, CONF_TRIGGER_TIME, CONF_DISARM_AFTER_TRIGGER)
+    CONF_CODE, CONF_DISARM_AFTER_TRIGGER, CONF_NAME, CONF_PENDING_TIME,
+    CONF_PLATFORM, CONF_TRIGGER_TIME, STATE_ALARM_ARMED_AWAY,
+    STATE_ALARM_ARMED_HOME, STATE_ALARM_DISARMED, STATE_ALARM_PENDING,
+    STATE_ALARM_TRIGGERED)
 import homeassistant.helpers.config_validation as cv
 from homeassistant.helpers.event import track_point_in_time
+import homeassistant.util.dt as dt_util
+import voluptuous as vol
 
 DEFAULT_ALARM_NAME = 'HA Alarm'
 DEFAULT_PENDING_TIME = 60

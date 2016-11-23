@@ -6,13 +6,12 @@ https://home-assistant.io/components/binary_sensor.enocean/
 """
 import logging
 
-import voluptuous as vol
-
-from homeassistant.components.binary_sensor import (
-    BinarySensorDevice, PLATFORM_SCHEMA, SENSOR_CLASSES_SCHEMA)
 from homeassistant.components import enocean
-from homeassistant.const import (CONF_NAME, CONF_ID, CONF_SENSOR_CLASS)
+from homeassistant.components.binary_sensor import (
+    PLATFORM_SCHEMA, SENSOR_CLASSES_SCHEMA, BinarySensorDevice)
+from homeassistant.const import CONF_ID, CONF_NAME, CONF_SENSOR_CLASS
 import homeassistant.helpers.config_validation as cv
+import voluptuous as vol
 
 _LOGGER = logging.getLogger(__name__)
 

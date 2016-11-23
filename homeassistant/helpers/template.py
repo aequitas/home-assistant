@@ -4,17 +4,18 @@ import json
 import logging
 import re
 
-import jinja2
-from jinja2.sandbox import ImmutableSandboxedEnvironment
-
 from homeassistant.const import (
-    STATE_UNKNOWN, ATTR_LATITUDE, ATTR_LONGITUDE, MATCH_ALL)
+    ATTR_LATITUDE, ATTR_LONGITUDE, MATCH_ALL, STATE_UNKNOWN)
 from homeassistant.core import State
 from homeassistant.exceptions import TemplateError
 from homeassistant.helpers import location as loc_helper
 from homeassistant.loader import get_component
-from homeassistant.util import convert, dt as dt_util, location as loc_util
+from homeassistant.util import convert
+from homeassistant.util import dt as dt_util
+from homeassistant.util import location as loc_util
 from homeassistant.util.async import run_callback_threadsafe
+import jinja2
+from jinja2.sandbox import ImmutableSandboxedEnvironment
 
 _LOGGER = logging.getLogger(__name__)
 _SENTINEL = object()

@@ -4,21 +4,19 @@ import os
 import unittest
 import unittest.mock as mock
 
-import pytest
-from voluptuous import MultipleInvalid
-
-from homeassistant.core import DOMAIN, HomeAssistantError, Config
 import homeassistant.config as config_util
 from homeassistant.const import (
-    CONF_LATITUDE, CONF_LONGITUDE, CONF_UNIT_SYSTEM, CONF_NAME,
-    CONF_TIME_ZONE, CONF_ELEVATION, CONF_CUSTOMIZE, __version__,
-    CONF_UNIT_SYSTEM_METRIC, CONF_UNIT_SYSTEM_IMPERIAL, CONF_TEMPERATURE_UNIT)
-from homeassistant.util import location as location_util, dt as dt_util
-from homeassistant.util.async import run_coroutine_threadsafe
+    CONF_CUSTOMIZE, CONF_ELEVATION, CONF_LATITUDE, CONF_LONGITUDE, CONF_NAME,
+    CONF_TEMPERATURE_UNIT, CONF_TIME_ZONE, CONF_UNIT_SYSTEM,
+    CONF_UNIT_SYSTEM_IMPERIAL, CONF_UNIT_SYSTEM_METRIC, __version__)
+from homeassistant.core import DOMAIN, Config, HomeAssistantError
 from homeassistant.helpers.entity import Entity
-
-from tests.common import (
-    get_test_config_dir, get_test_home_assistant)
+from homeassistant.util import dt as dt_util
+from homeassistant.util import location as location_util
+from homeassistant.util.async import run_coroutine_threadsafe
+import pytest
+from tests.common import get_test_config_dir, get_test_home_assistant
+from voluptuous import MultipleInvalid
 
 CONFIG_DIR = get_test_config_dir()
 YAML_PATH = os.path.join(CONFIG_DIR, config_util.YAML_CONFIG_FILE)

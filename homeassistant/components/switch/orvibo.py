@@ -6,12 +6,11 @@ https://home-assistant.io/components/switch.orvibo/
 """
 import logging
 
-import voluptuous as vol
-
-from homeassistant.components.switch import (SwitchDevice, PLATFORM_SCHEMA)
+from homeassistant.components.switch import PLATFORM_SCHEMA, SwitchDevice
 from homeassistant.const import (
-    CONF_HOST, CONF_NAME, CONF_SWITCHES, CONF_MAC, CONF_DISCOVERY)
+    CONF_DISCOVERY, CONF_HOST, CONF_MAC, CONF_NAME, CONF_SWITCHES)
 import homeassistant.helpers.config_validation as cv
+import voluptuous as vol
 
 REQUIREMENTS = ['orvibo==1.1.1']
 

@@ -11,18 +11,17 @@ IT'S BEST TO JUST HAVE SEPARATE OAUTH FOR DIFFERENT PIECES OF GOOGLE
 """
 import logging
 import os
-import yaml
 
-import voluptuous as vol
-from voluptuous.error import Error as VoluptuousError
-
-import homeassistant.helpers.config_validation as cv
-import homeassistant.loader as loader
 from homeassistant import bootstrap
 from homeassistant.helpers import discovery
+import homeassistant.helpers.config_validation as cv
 from homeassistant.helpers.entity import generate_entity_id
 from homeassistant.helpers.event import track_time_change
+import homeassistant.loader as loader
 from homeassistant.util import convert, dt
+import voluptuous as vol
+from voluptuous.error import Error as VoluptuousError
+import yaml
 
 REQUIREMENTS = [
     'google-api-python-client==1.5.5',

@@ -4,20 +4,18 @@ InfluxDB component which allows you to get data from an Influx database.
 For more details about this component, please refer to the documentation at
 https://home-assistant.io/components/sensor.influxdb/
 """
-import logging
 from datetime import timedelta
+import logging
 
-import voluptuous as vol
 from homeassistant.components.sensor import PLATFORM_SCHEMA
-from homeassistant.const import (CONF_HOST, CONF_PORT, CONF_USERNAME,
-                                 CONF_PASSWORD, CONF_SSL, CONF_VERIFY_SSL,
-                                 CONF_NAME, CONF_UNIT_OF_MEASUREMENT,
-                                 CONF_VALUE_TEMPLATE)
-from homeassistant.const import STATE_UNKNOWN
-from homeassistant.util import Throttle
-
-from homeassistant.helpers.entity import Entity
+from homeassistant.const import (
+    CONF_HOST, CONF_NAME, CONF_PASSWORD, CONF_PORT, CONF_SSL,
+    CONF_UNIT_OF_MEASUREMENT, CONF_USERNAME, CONF_VALUE_TEMPLATE,
+    CONF_VERIFY_SSL, STATE_UNKNOWN)
 import homeassistant.helpers.config_validation as cv
+from homeassistant.helpers.entity import Entity
+from homeassistant.util import Throttle
+import voluptuous as vol
 
 _LOGGER = logging.getLogger(__name__)
 

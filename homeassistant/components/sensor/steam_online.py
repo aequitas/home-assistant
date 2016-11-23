@@ -4,12 +4,11 @@ Sensor for Steam account status.
 For more details about this platform, please refer to the documentation at
 https://home-assistant.io/components/sensor.steam_online/
 """
-import voluptuous as vol
-
 from homeassistant.components.sensor import PLATFORM_SCHEMA
-from homeassistant.helpers.entity import Entity
 from homeassistant.const import CONF_API_KEY
 import homeassistant.helpers.config_validation as cv
+from homeassistant.helpers.entity import Entity
+import voluptuous as vol
 
 REQUIREMENTS = ['steamodd==4.21']
 

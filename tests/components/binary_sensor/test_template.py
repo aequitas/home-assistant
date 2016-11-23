@@ -2,14 +2,13 @@
 import unittest
 from unittest import mock
 
-from homeassistant.const import EVENT_STATE_CHANGED, MATCH_ALL
 import homeassistant.bootstrap as bootstrap
 from homeassistant.components.binary_sensor import template
+from homeassistant.const import EVENT_STATE_CHANGED, MATCH_ALL
 from homeassistant.exceptions import TemplateError
 from homeassistant.helpers import template as template_hlpr
 from homeassistant.util.async import run_callback_threadsafe
-
-from tests.common import get_test_home_assistant, assert_setup_component
+from tests.common import assert_setup_component, get_test_home_assistant
 
 
 class TestBinarySensorTemplate(unittest.TestCase):

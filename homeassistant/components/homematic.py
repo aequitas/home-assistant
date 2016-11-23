@@ -4,23 +4,22 @@ Support for Homematic devices.
 For more details about this component, please refer to the documentation at
 https://home-assistant.io/components/homematic/
 """
-import os
-import time
-import logging
 from datetime import timedelta
 from functools import partial
+import logging
+import os
+import time
 
-import voluptuous as vol
-
+from homeassistant.config import load_yaml_config_file
+from homeassistant.const import (
+    ATTR_ENTITY_ID, CONF_PASSWORD, CONF_PLATFORM, CONF_USERNAME,
+    EVENT_HOMEASSISTANT_STOP, STATE_UNKNOWN)
+from homeassistant.helpers import discovery
 import homeassistant.helpers.config_validation as cv
-from homeassistant.const import (EVENT_HOMEASSISTANT_STOP, STATE_UNKNOWN,
-                                 CONF_USERNAME, CONF_PASSWORD, CONF_PLATFORM,
-                                 ATTR_ENTITY_ID)
 from homeassistant.helpers.entity import Entity
 from homeassistant.helpers.entity_component import EntityComponent
-from homeassistant.helpers import discovery
-from homeassistant.config import load_yaml_config_file
 from homeassistant.util import Throttle
+import voluptuous as vol
 
 DOMAIN = 'homematic'
 REQUIREMENTS = ["pyhomematic==0.1.16"]

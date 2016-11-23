@@ -6,12 +6,11 @@ https://home-assistant.io/components/climate.heatmiser/
 """
 import logging
 
-import voluptuous as vol
-
-from homeassistant.components.climate import ClimateDevice, PLATFORM_SCHEMA
+from homeassistant.components.climate import PLATFORM_SCHEMA, ClimateDevice
 from homeassistant.const import (
-    TEMP_CELSIUS, ATTR_TEMPERATURE, CONF_PORT, CONF_NAME, CONF_ID)
+    ATTR_TEMPERATURE, CONF_ID, CONF_NAME, CONF_PORT, TEMP_CELSIUS)
 import homeassistant.helpers.config_validation as cv
+import voluptuous as vol
 
 REQUIREMENTS = ['heatmiserV3==0.9.1']
 

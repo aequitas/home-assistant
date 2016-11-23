@@ -4,18 +4,17 @@ Support for custom shell commands to retrieve values.
 For more details about this platform, please refer to the documentation at
 https://home-assistant.io/components/binary_sensor.command_line/
 """
-import logging
 from datetime import timedelta
-
-import voluptuous as vol
+import logging
 
 from homeassistant.components.binary_sensor import (
-    BinarySensorDevice, SENSOR_CLASSES_SCHEMA, PLATFORM_SCHEMA)
+    PLATFORM_SCHEMA, SENSOR_CLASSES_SCHEMA, BinarySensorDevice)
 from homeassistant.components.sensor.command_line import CommandSensorData
 from homeassistant.const import (
-    CONF_PAYLOAD_OFF, CONF_PAYLOAD_ON, CONF_NAME, CONF_VALUE_TEMPLATE,
-    CONF_SENSOR_CLASS, CONF_COMMAND)
+    CONF_COMMAND, CONF_NAME, CONF_PAYLOAD_OFF, CONF_PAYLOAD_ON,
+    CONF_SENSOR_CLASS, CONF_VALUE_TEMPLATE)
 import homeassistant.helpers.config_validation as cv
+import voluptuous as vol
 
 _LOGGER = logging.getLogger(__name__)
 

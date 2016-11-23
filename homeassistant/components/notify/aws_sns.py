@@ -4,17 +4,15 @@ AWS SNS platform for notify component.
 For more details about this platform, please refer to the documentation at
 https://home-assistant.io/components/notify.aws_sns/
 """
-import logging
 import json
+import logging
 
-import voluptuous as vol
-
-from homeassistant.const import (
-    CONF_PLATFORM, CONF_NAME)
 from homeassistant.components.notify import (
-    ATTR_TITLE, ATTR_TITLE_DEFAULT, ATTR_TARGET, PLATFORM_SCHEMA,
+    ATTR_TARGET, ATTR_TITLE, ATTR_TITLE_DEFAULT, PLATFORM_SCHEMA,
     BaseNotificationService)
+from homeassistant.const import CONF_NAME, CONF_PLATFORM
 import homeassistant.helpers.config_validation as cv
+import voluptuous as vol
 
 _LOGGER = logging.getLogger(__name__)
 REQUIREMENTS = ["boto3==1.3.1"]

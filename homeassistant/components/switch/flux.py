@@ -8,19 +8,19 @@ https://home-assistant.io/components/switch.flux/
 """
 from datetime import time
 import logging
-import voluptuous as vol
 
 from homeassistant.components.light import is_on, turn_on
-from homeassistant.components.sun import next_setting, next_rising
+from homeassistant.components.sun import next_rising, next_setting
 from homeassistant.components.switch import DOMAIN, SwitchDevice
 from homeassistant.const import CONF_NAME, CONF_PLATFORM
+import homeassistant.helpers.config_validation as cv
 from homeassistant.helpers.event import track_utc_time_change
 from homeassistant.util.color import (
-    color_temperature_to_rgb, color_RGB_to_xy,
-    color_temperature_kelvin_to_mired, HASS_COLOR_MIN, HASS_COLOR_MAX)
-from homeassistant.util.dt import now as dt_now
+    HASS_COLOR_MAX, HASS_COLOR_MIN, color_RGB_to_xy,
+    color_temperature_kelvin_to_mired, color_temperature_to_rgb)
 from homeassistant.util.dt import as_local
-import homeassistant.helpers.config_validation as cv
+from homeassistant.util.dt import now as dt_now
+import voluptuous as vol
 
 DEPENDENCIES = ['sun', 'light']
 SUN = "sun.sun"

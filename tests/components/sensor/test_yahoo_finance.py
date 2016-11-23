@@ -1,13 +1,12 @@
 """The tests for the Yahoo Finance platform."""
 import json
-
 import unittest
 from unittest.mock import patch
 
-import homeassistant.components.sensor as sensor
 from homeassistant.bootstrap import setup_component
+import homeassistant.components.sensor as sensor
 from tests.common import (
-    get_test_home_assistant, load_fixture, assert_setup_component)
+    assert_setup_component, get_test_home_assistant, load_fixture)
 
 VALID_CONFIG = {
     'platform': 'yahoo_finance',

@@ -4,20 +4,19 @@ Support the OwnTracks platform.
 For more details about this platform, please refer to the documentation at
 https://home-assistant.io/components/device_tracker.owntracks/
 """
+import base64
+from collections import defaultdict
 import json
 import logging
 import threading
-import base64
-from collections import defaultdict
 
-import voluptuous as vol
-
-import homeassistant.helpers.config_validation as cv
-import homeassistant.components.mqtt as mqtt
-from homeassistant.const import STATE_HOME
-from homeassistant.util import convert, slugify
 from homeassistant.components import zone as zone_comp
 from homeassistant.components.device_tracker import PLATFORM_SCHEMA
+import homeassistant.components.mqtt as mqtt
+from homeassistant.const import STATE_HOME
+import homeassistant.helpers.config_validation as cv
+from homeassistant.util import convert, slugify
+import voluptuous as vol
 
 REQUIREMENTS = ['libnacl==1.5.0']
 

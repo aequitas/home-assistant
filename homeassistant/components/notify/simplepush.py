@@ -7,11 +7,11 @@ https://home-assistant.io/components/notify.simplepush/
 import logging
 
 import requests
-import voluptuous as vol
 
 from homeassistant.components.notify import (
     ATTR_TITLE, ATTR_TITLE_DEFAULT, PLATFORM_SCHEMA, BaseNotificationService)
 import homeassistant.helpers.config_validation as cv
+import voluptuous as vol
 
 _LOGGER = logging.getLogger(__name__)
 _RESOURCE = 'https://api.simplepush.io/send'

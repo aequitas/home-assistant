@@ -3,14 +3,13 @@
 import unittest
 from unittest.mock import patch
 
-from homeassistant.core import callback
 from homeassistant.bootstrap import setup_component
 import homeassistant.components as core_components
 from homeassistant.components import conversation
 from homeassistant.const import ATTR_ENTITY_ID
+from homeassistant.core import callback
 from homeassistant.util.async import run_coroutine_threadsafe
-
-from tests.common import get_test_home_assistant, assert_setup_component
+from tests.common import assert_setup_component, get_test_home_assistant
 
 
 class TestConversation(unittest.TestCase):

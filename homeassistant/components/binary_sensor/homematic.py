@@ -5,9 +5,10 @@ For more details about this platform, please refer to the documentation at
 https://home-assistant.io/components/binary_sensor.homematic/
 """
 import logging
-from homeassistant.const import STATE_UNKNOWN
+
 from homeassistant.components.binary_sensor import BinarySensorDevice
 import homeassistant.components.homematic as homematic
+from homeassistant.const import STATE_UNKNOWN
 
 _LOGGER = logging.getLogger(__name__)
 

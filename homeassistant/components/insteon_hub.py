@@ -6,11 +6,10 @@ https://home-assistant.io/components/insteon_hub/
 """
 import logging
 
-import voluptuous as vol
-
-from homeassistant.const import (CONF_API_KEY, CONF_PASSWORD, CONF_USERNAME)
+from homeassistant.const import CONF_API_KEY, CONF_PASSWORD, CONF_USERNAME
 from homeassistant.helpers import discovery
 import homeassistant.helpers.config_validation as cv
+import voluptuous as vol
 
 REQUIREMENTS = ['insteon_hub==0.4.5']
 

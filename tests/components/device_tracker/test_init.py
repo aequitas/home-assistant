@@ -1,27 +1,26 @@
 """The tests for the device tracker component."""
 # pylint: disable=protected-access
+from datetime import datetime, timedelta
 import json
 import logging
+import os
 import unittest
 from unittest.mock import call, patch
-from datetime import datetime, timedelta
-import os
 
-from homeassistant.core import callback
 from homeassistant.bootstrap import setup_component
-from homeassistant.loader import get_component
-from homeassistant.util.async import run_coroutine_threadsafe
-import homeassistant.util.dt as dt_util
+import homeassistant.components.device_tracker as device_tracker
 from homeassistant.const import (
     ATTR_ENTITY_ID, ATTR_ENTITY_PICTURE, ATTR_FRIENDLY_NAME, ATTR_HIDDEN,
-    STATE_HOME, STATE_NOT_HOME, CONF_PLATFORM)
-import homeassistant.components.device_tracker as device_tracker
+    CONF_PLATFORM, STATE_HOME, STATE_NOT_HOME)
+from homeassistant.core import callback
 from homeassistant.exceptions import HomeAssistantError
+from homeassistant.loader import get_component
 from homeassistant.remote import JSONEncoder
-
+from homeassistant.util.async import run_coroutine_threadsafe
+import homeassistant.util.dt as dt_util
 from tests.common import (
-    get_test_home_assistant, fire_time_changed, fire_service_discovered,
-    patch_yaml_files, assert_setup_component)
+    assert_setup_component, fire_service_discovered, fire_time_changed,
+    get_test_home_assistant, patch_yaml_files)
 
 TEST_PLATFORM = {device_tracker.DOMAIN: {CONF_PLATFORM: 'test'}}
 

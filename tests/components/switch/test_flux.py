@@ -4,13 +4,12 @@ import unittest
 from unittest.mock import patch
 
 from homeassistant.bootstrap import setup_component
-from homeassistant.components import switch, light
-from homeassistant.const import CONF_PLATFORM, STATE_ON, SERVICE_TURN_ON
+from homeassistant.components import light, switch
+from homeassistant.const import CONF_PLATFORM, SERVICE_TURN_ON, STATE_ON
 import homeassistant.loader as loader
 import homeassistant.util.dt as dt_util
-
 from tests.common import (
-    assert_setup_component, get_test_home_assistant, fire_time_changed,
+    assert_setup_component, fire_time_changed, get_test_home_assistant,
     mock_service)
 
 

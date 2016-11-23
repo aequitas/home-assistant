@@ -8,20 +8,20 @@ from types import MappingProxyType
 # pylint: disable=unused-import
 from typing import Any, Tuple  # NOQA
 
-import voluptuous as vol
-
 from homeassistant.const import (
-    CONF_LATITUDE, CONF_LONGITUDE, CONF_NAME, CONF_UNIT_SYSTEM,
-    CONF_TIME_ZONE, CONF_CUSTOMIZE, CONF_ELEVATION, CONF_UNIT_SYSTEM_METRIC,
-    CONF_UNIT_SYSTEM_IMPERIAL, CONF_TEMPERATURE_UNIT, TEMP_CELSIUS,
+    CONF_CUSTOMIZE, CONF_ELEVATION, CONF_LATITUDE, CONF_LONGITUDE, CONF_NAME,
+    CONF_TEMPERATURE_UNIT, CONF_TIME_ZONE, CONF_UNIT_SYSTEM,
+    CONF_UNIT_SYSTEM_IMPERIAL, CONF_UNIT_SYSTEM_METRIC, TEMP_CELSIUS,
     __version__)
 from homeassistant.core import valid_entity_id
 from homeassistant.exceptions import HomeAssistantError
-from homeassistant.util.yaml import load_yaml
 import homeassistant.helpers.config_validation as cv
 from homeassistant.helpers.entity import set_customize
-from homeassistant.util import dt as date_util, location as loc_util
+from homeassistant.util import dt as date_util
+from homeassistant.util import location as loc_util
 from homeassistant.util.unit_system import IMPERIAL_SYSTEM, METRIC_SYSTEM
+from homeassistant.util.yaml import load_yaml
+import voluptuous as vol
 
 _LOGGER = logging.getLogger(__name__)
 

@@ -7,14 +7,12 @@ https://home-assistant.io/components/light.yeelight/
 import logging
 import socket
 
-import voluptuous as vol
-
+from homeassistant.components.light import (
+    ATTR_BRIGHTNESS, ATTR_RGB_COLOR, PLATFORM_SCHEMA, SUPPORT_BRIGHTNESS,
+    SUPPORT_RGB_COLOR, Light)
 from homeassistant.const import CONF_DEVICES, CONF_NAME
-from homeassistant.components.light import (ATTR_BRIGHTNESS, ATTR_RGB_COLOR,
-                                            SUPPORT_BRIGHTNESS,
-                                            SUPPORT_RGB_COLOR, Light,
-                                            PLATFORM_SCHEMA)
 import homeassistant.helpers.config_validation as cv
+import voluptuous as vol
 
 REQUIREMENTS = ['pyyeelight==1.0-beta']
 

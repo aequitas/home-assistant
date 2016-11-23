@@ -9,21 +9,20 @@ from functools import partial
 import logging
 import os
 
-import voluptuous as vol
-
-from homeassistant.bootstrap import async_prepare_setup_platform
 from homeassistant import config as conf_util
-from homeassistant.const import (
-    ATTR_ENTITY_ID, CONF_PLATFORM, STATE_ON, SERVICE_TURN_ON, SERVICE_TURN_OFF,
-    SERVICE_TOGGLE)
+from homeassistant.bootstrap import async_prepare_setup_platform
 from homeassistant.components import logbook
+from homeassistant.const import (
+    ATTR_ENTITY_ID, CONF_PLATFORM, SERVICE_TOGGLE, SERVICE_TURN_OFF,
+    SERVICE_TURN_ON, STATE_ON)
 from homeassistant.exceptions import HomeAssistantError
-from homeassistant.helpers import extract_domain_configs, script, condition
+from homeassistant.helpers import condition, extract_domain_configs, script
+import homeassistant.helpers.config_validation as cv
 from homeassistant.helpers.entity import ToggleEntity
 from homeassistant.helpers.entity_component import EntityComponent
 from homeassistant.loader import get_platform
 from homeassistant.util.dt import utcnow
-import homeassistant.helpers.config_validation as cv
+import voluptuous as vol
 
 DOMAIN = 'automation'
 ENTITY_ID_FORMAT = DOMAIN + '.{}'

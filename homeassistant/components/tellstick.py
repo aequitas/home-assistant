@@ -7,11 +7,10 @@ https://home-assistant.io/components/tellstick/
 import logging
 import threading
 
-import voluptuous as vol
-
-from homeassistant.helpers import discovery
 from homeassistant.const import EVENT_HOMEASSISTANT_STOP
+from homeassistant.helpers import discovery
 from homeassistant.helpers.entity import Entity
+import voluptuous as vol
 
 DOMAIN = 'tellstick'
 

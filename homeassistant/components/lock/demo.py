@@ -5,7 +5,7 @@ For more details about this platform, please refer to the documentation
 https://home-assistant.io/components/demo/
 """
 from homeassistant.components.lock import LockDevice
-from homeassistant.const import (STATE_LOCKED, STATE_UNLOCKED)
+from homeassistant.const import STATE_LOCKED, STATE_UNLOCKED
 
 
 # pylint: disable=unused-argument

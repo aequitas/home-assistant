@@ -1,12 +1,10 @@
 """The tests for the sonarr platform."""
-import unittest
-import time
 from datetime import datetime
-
-import pytest
+import time
+import unittest
 
 from homeassistant.components.sensor import sonarr
-
+import pytest
 from tests.common import get_test_home_assistant
 
 

@@ -4,14 +4,13 @@ Support for Digital Ocean.
 For more details about this component, please refer to the documentation at
 https://home-assistant.io/components/digital_ocean/
 """
-import logging
 from datetime import timedelta
-
-import voluptuous as vol
+import logging
 
 from homeassistant.const import CONF_ACCESS_TOKEN
-from homeassistant.util import Throttle
 import homeassistant.helpers.config_validation as cv
+from homeassistant.util import Throttle
+import voluptuous as vol
 
 REQUIREMENTS = ['python-digitalocean==1.10.1']
 

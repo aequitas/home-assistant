@@ -7,21 +7,18 @@ https://home-assistant.io/components/camera.synology/
 import asyncio
 import logging
 
-import voluptuous as vol
-
 import aiohttp
 from aiohttp import web
 from aiohttp.web_exceptions import HTTPGatewayTimeout
 import async_timeout
-
-from homeassistant.core import callback
+from homeassistant.components.camera import PLATFORM_SCHEMA, Camera
 from homeassistant.const import (
-    CONF_NAME, CONF_USERNAME, CONF_PASSWORD,
-    CONF_URL, CONF_WHITELIST, CONF_VERIFY_SSL, EVENT_HOMEASSISTANT_STOP)
-from homeassistant.components.camera import (
-    Camera, PLATFORM_SCHEMA)
+    CONF_NAME, CONF_PASSWORD, CONF_URL, CONF_USERNAME, CONF_VERIFY_SSL,
+    CONF_WHITELIST, EVENT_HOMEASSISTANT_STOP)
+from homeassistant.core import callback
 import homeassistant.helpers.config_validation as cv
 from homeassistant.util.async import run_coroutine_threadsafe
+import voluptuous as vol
 
 _LOGGER = logging.getLogger(__name__)
 

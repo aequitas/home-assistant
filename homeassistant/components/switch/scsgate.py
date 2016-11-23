@@ -6,13 +6,12 @@ https://home-assistant.io/components/switch.scsgate/
 """
 import logging
 
-import voluptuous as vol
-
 import homeassistant.components.scsgate as scsgate
-from homeassistant.components.switch import (SwitchDevice, PLATFORM_SCHEMA)
+from homeassistant.components.switch import PLATFORM_SCHEMA, SwitchDevice
 from homeassistant.const import (
-    ATTR_ENTITY_ID, ATTR_STATE, CONF_NAME, CONF_DEVICES)
+    ATTR_ENTITY_ID, ATTR_STATE, CONF_DEVICES, CONF_NAME)
 import homeassistant.helpers.config_validation as cv
+import voluptuous as vol
 
 ATTR_SCENARIO_ID = 'scenario_id'
 

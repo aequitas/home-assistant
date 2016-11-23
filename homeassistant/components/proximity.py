@@ -9,15 +9,14 @@ https://home-assistant.io/components/proximity/
 """
 import logging
 
-import voluptuous as vol
-
 from homeassistant.const import (
-    CONF_ZONE, CONF_DEVICES, CONF_UNIT_OF_MEASUREMENT)
+    CONF_DEVICES, CONF_UNIT_OF_MEASUREMENT, CONF_ZONE)
+import homeassistant.helpers.config_validation as cv
 from homeassistant.helpers.entity import Entity
 from homeassistant.helpers.event import track_state_change
 from homeassistant.util.distance import convert
 from homeassistant.util.location import distance
-import homeassistant.helpers.config_validation as cv
+import voluptuous as vol
 
 _LOGGER = logging.getLogger(__name__)
 

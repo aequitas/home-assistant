@@ -8,14 +8,13 @@ from functools import partial
 import logging
 import os
 
-import voluptuous as vol
-
 import homeassistant.bootstrap as bootstrap
 from homeassistant.config import load_yaml_config_file
+from homeassistant.const import CONF_NAME, CONF_PLATFORM
 from homeassistant.helpers import config_per_platform
 import homeassistant.helpers.config_validation as cv
-from homeassistant.const import CONF_NAME, CONF_PLATFORM
 from homeassistant.util import slugify
+import voluptuous as vol
 
 DOMAIN = "notify"
 

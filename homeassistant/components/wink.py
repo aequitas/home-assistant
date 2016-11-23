@@ -4,16 +4,15 @@ Support for Wink hubs.
 For more details about this component, please refer to the documentation at
 https://home-assistant.io/components/wink/
 """
-import logging
 import json
+import logging
 
-import voluptuous as vol
-
+from homeassistant.const import (
+    ATTR_BATTERY_LEVEL, CONF_ACCESS_TOKEN, CONF_EMAIL, CONF_PASSWORD)
 from homeassistant.helpers import discovery
-from homeassistant.const import CONF_ACCESS_TOKEN, ATTR_BATTERY_LEVEL, \
-                                CONF_EMAIL, CONF_PASSWORD
-from homeassistant.helpers.entity import Entity
 import homeassistant.helpers.config_validation as cv
+from homeassistant.helpers.entity import Entity
+import voluptuous as vol
 
 REQUIREMENTS = ['python-wink==0.10.0', 'pubnub==3.8.2']
 

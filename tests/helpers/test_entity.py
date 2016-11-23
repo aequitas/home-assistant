@@ -3,11 +3,9 @@
 import asyncio
 from unittest.mock import MagicMock
 
-import pytest
-
-import homeassistant.helpers.entity as entity
 from homeassistant.const import ATTR_HIDDEN
-
+import homeassistant.helpers.entity as entity
+import pytest
 from tests.common import get_test_home_assistant
 
 

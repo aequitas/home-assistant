@@ -4,16 +4,14 @@ import os
 import unittest
 
 from homeassistant.bootstrap import setup_component
-import homeassistant.loader as loader
-from homeassistant.const import CONF_PLATFORM, STATE_HOME, STATE_NOT_HOME
 from homeassistant.components import (
-    device_tracker, light, sun, device_sun_light_trigger)
+    device_sun_light_trigger, device_tracker, light, sun)
+from homeassistant.const import CONF_PLATFORM, STATE_HOME, STATE_NOT_HOME
 from homeassistant.helpers import event_decorators
-
+import homeassistant.loader as loader
 from tests.common import (
-    get_test_config_dir, get_test_home_assistant, ensure_sun_risen,
-    ensure_sun_set)
-
+    ensure_sun_risen, ensure_sun_set, get_test_config_dir,
+    get_test_home_assistant)
 
 KNOWN_DEV_YAML_PATH = os.path.join(get_test_config_dir(),
                                    device_tracker.YAML_DEVICES)

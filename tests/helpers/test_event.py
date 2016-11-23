@@ -1,26 +1,18 @@
 """Test event helpers."""
 # pylint: disable=protected-access
 import asyncio
-import unittest
 from datetime import datetime, timedelta
+import unittest
 
 from astral import Astral
-
 from homeassistant.bootstrap import setup_component
-import homeassistant.core as ha
-from homeassistant.const import MATCH_ALL
-from homeassistant.helpers.event import (
-    track_point_in_utc_time,
-    track_point_in_time,
-    track_utc_time_change,
-    track_time_change,
-    track_state_change,
-    track_sunrise,
-    track_sunset,
-)
 from homeassistant.components import sun
+from homeassistant.const import MATCH_ALL
+import homeassistant.core as ha
+from homeassistant.helpers.event import (
+    track_point_in_time, track_point_in_utc_time, track_state_change,
+    track_sunrise, track_sunset, track_time_change, track_utc_time_change)
 import homeassistant.util.dt as dt_util
-
 from tests.common import get_test_home_assistant
 
 

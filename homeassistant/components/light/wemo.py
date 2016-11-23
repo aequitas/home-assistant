@@ -4,15 +4,15 @@ Support for Belkin WeMo lights.
 For more details about this component, please refer to the documentation at
 https://home-assistant.io/components/light.wemo/
 """
-import logging
 from datetime import timedelta
+import logging
 
+from homeassistant.components.light import (
+    ATTR_BRIGHTNESS, ATTR_COLOR_TEMP, ATTR_RGB_COLOR, ATTR_TRANSITION,
+    ATTR_XY_COLOR, SUPPORT_BRIGHTNESS, SUPPORT_COLOR_TEMP, SUPPORT_RGB_COLOR,
+    SUPPORT_TRANSITION, SUPPORT_XY_COLOR, Light)
 import homeassistant.util as util
 import homeassistant.util.color as color_util
-from homeassistant.components.light import (
-    Light, ATTR_BRIGHTNESS, ATTR_COLOR_TEMP, ATTR_RGB_COLOR, ATTR_TRANSITION,
-    ATTR_XY_COLOR, SUPPORT_BRIGHTNESS, SUPPORT_COLOR_TEMP, SUPPORT_RGB_COLOR,
-    SUPPORT_TRANSITION, SUPPORT_XY_COLOR)
 
 DEPENDENCIES = ['wemo']
 

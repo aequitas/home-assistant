@@ -6,13 +6,12 @@ https://home-assistant.io/components/sensor.enocean/
 """
 import logging
 
-import voluptuous as vol
-
-from homeassistant.components.sensor import PLATFORM_SCHEMA
-from homeassistant.const import (CONF_NAME, CONF_ID)
-from homeassistant.helpers.entity import Entity
-import homeassistant.helpers.config_validation as cv
 from homeassistant.components import enocean
+from homeassistant.components.sensor import PLATFORM_SCHEMA
+from homeassistant.const import CONF_ID, CONF_NAME
+import homeassistant.helpers.config_validation as cv
+from homeassistant.helpers.entity import Entity
+import voluptuous as vol
 
 _LOGGER = logging.getLogger(__name__)
 

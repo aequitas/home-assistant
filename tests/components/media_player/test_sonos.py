@@ -1,12 +1,11 @@
 """The tests for the Demo Media player platform."""
 import socket
 import unittest
-import soco.snapshot
 from unittest import mock
-import soco
 
 from homeassistant.components.media_player import sonos
-
+import soco
+import soco.snapshot
 from tests.common import get_test_home_assistant
 
 ENTITY_ID = 'media_player.kitchen'

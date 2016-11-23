@@ -10,17 +10,17 @@ import os
 from time import time
 
 import requests
-import voluptuous as vol
 
+from homeassistant.components.ffmpeg import (
+    CONF_EXTRA_ARGUMENTS, CONF_INPUT, get_binary, run_test)
 from homeassistant.config import load_yaml_config_file
 from homeassistant.const import (
-    CONF_API_KEY, CONF_NAME, CONF_USERNAME, CONF_PASSWORD, ATTR_ENTITY_ID,
+    ATTR_ENTITY_ID, CONF_API_KEY, CONF_NAME, CONF_PASSWORD, CONF_USERNAME,
     EVENT_HOMEASSISTANT_STOP, STATE_UNKNOWN)
-from homeassistant.components.ffmpeg import (
-    get_binary, run_test, CONF_INPUT, CONF_EXTRA_ARGUMENTS)
 import homeassistant.helpers.config_validation as cv
 from homeassistant.helpers.entity import Entity
 from homeassistant.helpers.entity_component import EntityComponent
+import voluptuous as vol
 
 DOMAIN = 'openalpr'
 DEPENDENCIES = ['ffmpeg']

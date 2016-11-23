@@ -7,16 +7,15 @@ https://home-assistant.io/components/zone/
 import asyncio
 import logging
 
-import voluptuous as vol
-
 from homeassistant.const import (
-    ATTR_HIDDEN, ATTR_LATITUDE, ATTR_LONGITUDE, CONF_NAME, CONF_LATITUDE,
-    CONF_LONGITUDE, CONF_ICON)
+    ATTR_HIDDEN, ATTR_LATITUDE, ATTR_LONGITUDE, CONF_ICON, CONF_LATITUDE,
+    CONF_LONGITUDE, CONF_NAME)
 from homeassistant.helpers import config_per_platform
+import homeassistant.helpers.config_validation as cv
 from homeassistant.helpers.entity import Entity, async_generate_entity_id
 from homeassistant.util.async import run_callback_threadsafe
 from homeassistant.util.location import distance
-import homeassistant.helpers.config_validation as cv
+import voluptuous as vol
 
 _LOGGER = logging.getLogger(__name__)
 

@@ -6,15 +6,14 @@ https://home-assistant.io/components/sensor.mqtt/
 """
 import logging
 
-import voluptuous as vol
-
-from homeassistant.core import callback
-from homeassistant.components.mqtt import CONF_STATE_TOPIC, CONF_QOS
-from homeassistant.const import (
-    CONF_NAME, CONF_VALUE_TEMPLATE, STATE_UNKNOWN, CONF_UNIT_OF_MEASUREMENT)
-from homeassistant.helpers.entity import Entity
 import homeassistant.components.mqtt as mqtt
+from homeassistant.components.mqtt import CONF_QOS, CONF_STATE_TOPIC
+from homeassistant.const import (
+    CONF_NAME, CONF_UNIT_OF_MEASUREMENT, CONF_VALUE_TEMPLATE, STATE_UNKNOWN)
+from homeassistant.core import callback
 import homeassistant.helpers.config_validation as cv
+from homeassistant.helpers.entity import Entity
+import voluptuous as vol
 
 _LOGGER = logging.getLogger(__name__)
 

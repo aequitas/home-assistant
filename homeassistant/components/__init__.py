@@ -11,11 +11,11 @@ import asyncio
 import itertools as it
 import logging
 
+from homeassistant.const import (
+    ATTR_ENTITY_ID, SERVICE_TOGGLE, SERVICE_TURN_OFF, SERVICE_TURN_ON)
 import homeassistant.core as ha
 from homeassistant.helpers.service import extract_entity_ids
 from homeassistant.loader import get_component
-from homeassistant.const import (
-    ATTR_ENTITY_ID, SERVICE_TURN_ON, SERVICE_TURN_OFF, SERVICE_TOGGLE)
 
 _LOGGER = logging.getLogger(__name__)
 

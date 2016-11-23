@@ -4,14 +4,13 @@ Support for status output of APCUPSd via its Network Information Server (NIS).
 For more details about this component, please refer to the documentation at
 https://home-assistant.io/components/apcupsd/
 """
-import logging
 from datetime import timedelta
+import logging
 
-import voluptuous as vol
-
-from homeassistant.const import (CONF_HOST, CONF_PORT)
+from homeassistant.const import CONF_HOST, CONF_PORT
 import homeassistant.helpers.config_validation as cv
 from homeassistant.util import Throttle
+import voluptuous as vol
 
 REQUIREMENTS = ['apcaccess==0.0.4']
 

@@ -4,17 +4,16 @@ Switch logic for loading/unloading pulseaudio loopback modules.
 For more details about this platform, please refer to the documentation at
 https://home-assistant.io/components/switch.pulseaudio_loopback/
 """
+from datetime import timedelta
 import logging
 import re
 import socket
-from datetime import timedelta
 
-import voluptuous as vol
-
-import homeassistant.util as util
-from homeassistant.components.switch import (SwitchDevice, PLATFORM_SCHEMA)
-from homeassistant.const import (CONF_NAME, CONF_HOST, CONF_PORT)
+from homeassistant.components.switch import PLATFORM_SCHEMA, SwitchDevice
+from homeassistant.const import CONF_HOST, CONF_NAME, CONF_PORT
 import homeassistant.helpers.config_validation as cv
+import homeassistant.util as util
+import voluptuous as vol
 
 _LOGGER = logging.getLogger(__name__)
 _PULSEAUDIO_SERVERS = {}

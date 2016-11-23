@@ -3,12 +3,12 @@ import unittest
 from unittest import mock
 import urllib
 
+from homeassistant.components.device_tracker import DOMAIN
+from homeassistant.components.device_tracker import unifi as unifi
+from homeassistant.const import (
+    CONF_HOST, CONF_PASSWORD, CONF_PLATFORM, CONF_USERNAME)
 from unifi import controller
 import voluptuous as vol
-
-from homeassistant.components.device_tracker import DOMAIN, unifi as unifi
-from homeassistant.const import (CONF_HOST, CONF_USERNAME, CONF_PASSWORD,
-                                 CONF_PLATFORM)
 
 
 class TestUnifiScanner(unittest.TestCase):

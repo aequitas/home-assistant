@@ -4,25 +4,23 @@ Provides functionality to interact with lights.
 For more details about this component, please refer to the documentation at
 https://home-assistant.io/components/light/
 """
+import csv
 import logging
 import os
-import csv
 
-import voluptuous as vol
-
-from homeassistant.core import callback
 from homeassistant.components import group
 from homeassistant.config import load_yaml_config_file
 from homeassistant.const import (
-    STATE_ON, SERVICE_TURN_ON, SERVICE_TURN_OFF, SERVICE_TOGGLE,
-    ATTR_ENTITY_ID)
+    ATTR_ENTITY_ID, SERVICE_TOGGLE, SERVICE_TURN_OFF, SERVICE_TURN_ON,
+    STATE_ON)
+from homeassistant.core import callback
+import homeassistant.helpers.config_validation as cv
+from homeassistant.helpers.config_validation import PLATFORM_SCHEMA  # noqa
 from homeassistant.helpers.entity import ToggleEntity
 from homeassistant.helpers.entity_component import EntityComponent
-from homeassistant.helpers.config_validation import PLATFORM_SCHEMA  # noqa
-import homeassistant.helpers.config_validation as cv
-import homeassistant.util.color as color_util
 from homeassistant.util.async import run_callback_threadsafe
-
+import homeassistant.util.color as color_util
+import voluptuous as vol
 
 DOMAIN = "light"
 SCAN_INTERVAL = 30

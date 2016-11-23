@@ -4,20 +4,19 @@ The Netio switch component.
 For more details about this platform, please refer to the documentation at
 https://home-assistant.io/components/switch.netio/
 """
-import logging
 from collections import namedtuple
 from datetime import timedelta
+import logging
 
-import voluptuous as vol
-
-from homeassistant.core import callback
 from homeassistant import util
 from homeassistant.components.http import HomeAssistantView
+from homeassistant.components.switch import PLATFORM_SCHEMA, SwitchDevice
 from homeassistant.const import (
-    CONF_HOST, CONF_PORT, CONF_USERNAME, CONF_PASSWORD,
+    CONF_HOST, CONF_PASSWORD, CONF_PORT, CONF_USERNAME,
     EVENT_HOMEASSISTANT_STOP, STATE_ON)
-from homeassistant.components.switch import (SwitchDevice, PLATFORM_SCHEMA)
+from homeassistant.core import callback
 import homeassistant.helpers.config_validation as cv
+import voluptuous as vol
 
 REQUIREMENTS = ['pynetio==0.1.6']
 

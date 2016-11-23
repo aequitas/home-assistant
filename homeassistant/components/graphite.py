@@ -10,13 +10,12 @@ import socket
 import threading
 import time
 
-import voluptuous as vol
-
 from homeassistant.const import (
     CONF_HOST, CONF_PORT, CONF_PREFIX, EVENT_HOMEASSISTANT_START,
     EVENT_HOMEASSISTANT_STOP, EVENT_STATE_CHANGED)
 from homeassistant.helpers import state
 import homeassistant.helpers.config_validation as cv
+import voluptuous as vol
 
 _LOGGER = logging.getLogger(__name__)
 

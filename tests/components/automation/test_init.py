@@ -2,14 +2,13 @@
 import unittest
 from unittest.mock import patch
 
-from homeassistant.core import callback
 from homeassistant.bootstrap import setup_component
 import homeassistant.components.automation as automation
 from homeassistant.const import ATTR_ENTITY_ID
+from homeassistant.core import callback
 from homeassistant.exceptions import HomeAssistantError
 import homeassistant.util.dt as dt_util
-
-from tests.common import get_test_home_assistant, assert_setup_component
+from tests.common import assert_setup_component, get_test_home_assistant
 
 
 class TestAutomation(unittest.TestCase):

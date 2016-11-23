@@ -4,21 +4,19 @@ import functools as ft
 import logging
 import sys
 
-from homeassistant.helpers.typing import ConfigType
-
-from homeassistant.core import HomeAssistant
-from homeassistant.components import (
-    zone as zone_cmp, sun as sun_cmp)
+from homeassistant.components import sun as sun_cmp
+from homeassistant.components import zone as zone_cmp
 from homeassistant.const import (
-    ATTR_GPS_ACCURACY, ATTR_LATITUDE, ATTR_LONGITUDE,
-    CONF_ENTITY_ID, CONF_VALUE_TEMPLATE, CONF_CONDITION,
-    WEEKDAYS, CONF_STATE, CONF_ZONE, CONF_BEFORE,
-    CONF_AFTER, CONF_WEEKDAY, SUN_EVENT_SUNRISE, SUN_EVENT_SUNSET,
-    CONF_BELOW, CONF_ABOVE)
-from homeassistant.exceptions import TemplateError, HomeAssistantError
+    ATTR_GPS_ACCURACY, ATTR_LATITUDE, ATTR_LONGITUDE, CONF_ABOVE, CONF_AFTER,
+    CONF_BEFORE, CONF_BELOW, CONF_CONDITION, CONF_ENTITY_ID, CONF_STATE,
+    CONF_VALUE_TEMPLATE, CONF_WEEKDAY, CONF_ZONE, SUN_EVENT_SUNRISE,
+    SUN_EVENT_SUNSET, WEEKDAYS)
+from homeassistant.core import HomeAssistant
+from homeassistant.exceptions import HomeAssistantError, TemplateError
 import homeassistant.helpers.config_validation as cv
-import homeassistant.util.dt as dt_util
+from homeassistant.helpers.typing import ConfigType
 from homeassistant.util.async import run_callback_threadsafe
+import homeassistant.util.dt as dt_util
 
 FROM_CONFIG_FORMAT = '{}_from_config'
 ASYNC_FROM_CONFIG_FORMAT = 'async_{}_from_config'

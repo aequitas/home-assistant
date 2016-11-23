@@ -1,18 +1,17 @@
 """Support for interface with a Bose Soundtouch."""
 import logging
-
 from os import path
-import voluptuous as vol
 
-import homeassistant.helpers.config_validation as cv
 from homeassistant.components.media_player import (
-    SUPPORT_NEXT_TRACK, SUPPORT_PAUSE, SUPPORT_PREVIOUS_TRACK,
-    SUPPORT_TURN_OFF, SUPPORT_VOLUME_MUTE, SUPPORT_VOLUME_STEP,
-    SUPPORT_VOLUME_SET, SUPPORT_TURN_ON, MediaPlayerDevice, PLATFORM_SCHEMA)
+    PLATFORM_SCHEMA, SUPPORT_NEXT_TRACK, SUPPORT_PAUSE, SUPPORT_PREVIOUS_TRACK,
+    SUPPORT_TURN_OFF, SUPPORT_TURN_ON, SUPPORT_VOLUME_MUTE, SUPPORT_VOLUME_SET,
+    SUPPORT_VOLUME_STEP, MediaPlayerDevice)
 from homeassistant.config import load_yaml_config_file
-from homeassistant.const import (CONF_HOST, CONF_NAME, STATE_OFF, CONF_PORT,
-                                 STATE_PAUSED, STATE_PLAYING,
-                                 STATE_UNAVAILABLE)
+from homeassistant.const import (
+    CONF_HOST, CONF_NAME, CONF_PORT, STATE_OFF, STATE_PAUSED, STATE_PLAYING,
+    STATE_UNAVAILABLE)
+import homeassistant.helpers.config_validation as cv
+import voluptuous as vol
 
 REQUIREMENTS = ['libsoundtouch==0.1.0']
 

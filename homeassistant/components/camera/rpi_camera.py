@@ -4,17 +4,16 @@ Camera platform that has a Raspberry Pi camera.
 For more details about this platform, please refer to the documentation at
 https://home-assistant.io/components/camera.rpi_camera/
 """
-import os
-import subprocess
 import logging
+import os
 import shutil
+import subprocess
 
-import voluptuous as vol
-
-from homeassistant.components.camera import (Camera, PLATFORM_SCHEMA)
-from homeassistant.const import (CONF_NAME, CONF_FILE_PATH,
-                                 EVENT_HOMEASSISTANT_STOP)
+from homeassistant.components.camera import PLATFORM_SCHEMA, Camera
+from homeassistant.const import (
+    CONF_FILE_PATH, CONF_NAME, EVENT_HOMEASSISTANT_STOP)
 from homeassistant.helpers import config_validation as cv
+import voluptuous as vol
 
 _LOGGER = logging.getLogger(__name__)
 

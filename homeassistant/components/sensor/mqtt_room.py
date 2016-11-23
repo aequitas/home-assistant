@@ -4,20 +4,18 @@ Support for MQTT room presence detection.
 For more details about this platform, please refer to the documentation at
 https://home-assistant.io/components/sensor.mqtt_room/
 """
-import logging
-import json
 from datetime import timedelta
-
-import voluptuous as vol
+import json
+import logging
 
 import homeassistant.components.mqtt as mqtt
-from homeassistant.components.sensor import PLATFORM_SCHEMA
-from homeassistant.const import (
-    CONF_NAME, CONF_TIMEOUT)
 from homeassistant.components.mqtt import CONF_STATE_TOPIC
+from homeassistant.components.sensor import PLATFORM_SCHEMA
+from homeassistant.const import CONF_NAME, CONF_TIMEOUT
 import homeassistant.helpers.config_validation as cv
 from homeassistant.helpers.entity import Entity
 from homeassistant.util import dt, slugify
+import voluptuous as vol
 
 _LOGGER = logging.getLogger(__name__)
 

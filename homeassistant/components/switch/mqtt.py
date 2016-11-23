@@ -6,17 +6,16 @@ https://home-assistant.io/components/switch.mqtt/
 """
 import logging
 
-import voluptuous as vol
-
-from homeassistant.core import callback
+import homeassistant.components.mqtt as mqtt
 from homeassistant.components.mqtt import (
-    CONF_STATE_TOPIC, CONF_COMMAND_TOPIC, CONF_QOS, CONF_RETAIN)
+    CONF_COMMAND_TOPIC, CONF_QOS, CONF_RETAIN, CONF_STATE_TOPIC)
 from homeassistant.components.switch import SwitchDevice
 from homeassistant.const import (
-    CONF_NAME, CONF_OPTIMISTIC, CONF_VALUE_TEMPLATE, CONF_PAYLOAD_OFF,
-    CONF_PAYLOAD_ON)
-import homeassistant.components.mqtt as mqtt
+    CONF_NAME, CONF_OPTIMISTIC, CONF_PAYLOAD_OFF, CONF_PAYLOAD_ON,
+    CONF_VALUE_TEMPLATE)
+from homeassistant.core import callback
 import homeassistant.helpers.config_validation as cv
+import voluptuous as vol
 
 _LOGGER = logging.getLogger(__name__)
 

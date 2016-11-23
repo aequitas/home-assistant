@@ -7,15 +7,14 @@ https://home-assistant.io/components/sensor.mold_indicator/
 import logging
 import math
 
-import voluptuous as vol
-
 from homeassistant.components.sensor import PLATFORM_SCHEMA
-import homeassistant.util as util
+from homeassistant.const import (
+    ATTR_UNIT_OF_MEASUREMENT, CONF_NAME, TEMP_CELSIUS, TEMP_FAHRENHEIT)
+import homeassistant.helpers.config_validation as cv
 from homeassistant.helpers.entity import Entity
 from homeassistant.helpers.event import track_state_change
-from homeassistant.const import (
-    ATTR_UNIT_OF_MEASUREMENT, TEMP_CELSIUS, TEMP_FAHRENHEIT, CONF_NAME)
-import homeassistant.helpers.config_validation as cv
+import homeassistant.util as util
+import voluptuous as vol
 
 _LOGGER = logging.getLogger(__name__)
 

@@ -7,18 +7,16 @@ https://home-assistant.io/components/fan/
 import logging
 import os
 
-import voluptuous as vol
-
 from homeassistant.components import group
 from homeassistant.config import load_yaml_config_file
-from homeassistant.const import (SERVICE_TURN_ON, SERVICE_TOGGLE,
-                                 SERVICE_TURN_OFF, ATTR_ENTITY_ID,
-                                 STATE_UNKNOWN)
+from homeassistant.const import (
+    ATTR_ENTITY_ID, SERVICE_TOGGLE, SERVICE_TURN_OFF, SERVICE_TURN_ON,
+    STATE_UNKNOWN)
+import homeassistant.helpers.config_validation as cv
+from homeassistant.helpers.config_validation import PLATFORM_SCHEMA  # noqa
 from homeassistant.helpers.entity import ToggleEntity
 from homeassistant.helpers.entity_component import EntityComponent
-from homeassistant.helpers.config_validation import PLATFORM_SCHEMA  # noqa
-import homeassistant.helpers.config_validation as cv
-
+import voluptuous as vol
 
 DOMAIN = 'fan'
 SCAN_INTERVAL = 30

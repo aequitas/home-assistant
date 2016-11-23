@@ -1,16 +1,16 @@
 """The tests for the REST switch platform."""
 import unittest
-from unittest.mock import patch, Mock
+from unittest.mock import Mock, patch
 
 import requests
-from requests.exceptions import Timeout, MissingSchema, RequestException
-import requests_mock
+from requests.exceptions import MissingSchema, RequestException, Timeout
 
 from homeassistant.bootstrap import setup_component
 import homeassistant.components.sensor.rest as rest
 from homeassistant.const import STATE_UNKNOWN
 from homeassistant.helpers.config_validation import template
-from tests.common import get_test_home_assistant, assert_setup_component
+import requests_mock
+from tests.common import assert_setup_component, get_test_home_assistant
 
 
 class TestRestSwitchSetup(unittest.TestCase):

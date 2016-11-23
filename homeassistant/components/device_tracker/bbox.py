@@ -5,12 +5,12 @@ For more details about this platform, please refer to the documentation at
 https://home-assistant.io/components/device_tracker.bbox/
 """
 from collections import namedtuple
-import logging
 from datetime import timedelta
+import logging
 
-import homeassistant.util.dt as dt_util
 from homeassistant.components.device_tracker import DOMAIN
 from homeassistant.util import Throttle
+import homeassistant.util.dt as dt_util
 
 REQUIREMENTS = ['pybbox==0.0.5-alpha']
 

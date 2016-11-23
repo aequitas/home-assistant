@@ -3,10 +3,9 @@ from unittest import TestCase
 from unittest.mock import patch
 
 import requests
-import requests_mock
 
 import homeassistant.util.location as location_util
-
+import requests_mock
 from tests.common import load_fixture
 
 # Paris

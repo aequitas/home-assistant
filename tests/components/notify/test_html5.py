@@ -1,10 +1,9 @@
 """Test HTML5 notify platform."""
 import asyncio
 import json
-from unittest.mock import patch, MagicMock, mock_open
+from unittest.mock import MagicMock, mock_open, patch
 
 from aiohttp import web
-
 from homeassistant.components.notify import html5
 
 SUBSCRIPTION_1 = {

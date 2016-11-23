@@ -4,18 +4,18 @@ Support for hydrological data from the Federal Office for the Environment FOEN.
 For more details about this platform, please refer to the documentation at
 https://home-assistant.io/components/sensor.swiss_hydrological_data/
 """
-import logging
 from datetime import timedelta
+import logging
 
-import voluptuous as vol
 import requests
 
 from homeassistant.components.sensor import PLATFORM_SCHEMA
 from homeassistant.const import (
-    TEMP_CELSIUS, CONF_NAME, STATE_UNKNOWN, ATTR_ATTRIBUTION)
+    ATTR_ATTRIBUTION, CONF_NAME, STATE_UNKNOWN, TEMP_CELSIUS)
 import homeassistant.helpers.config_validation as cv
 from homeassistant.helpers.entity import Entity
 from homeassistant.util import Throttle
+import voluptuous as vol
 
 REQUIREMENTS = ['xmltodict==0.10.2']
 

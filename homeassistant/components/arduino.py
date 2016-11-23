@@ -6,12 +6,10 @@ https://home-assistant.io/components/arduino/
 """
 import logging
 
-import voluptuous as vol
-
 from homeassistant.const import (
-    EVENT_HOMEASSISTANT_START, EVENT_HOMEASSISTANT_STOP)
-from homeassistant.const import CONF_PORT
+    CONF_PORT, EVENT_HOMEASSISTANT_START, EVENT_HOMEASSISTANT_STOP)
 import homeassistant.helpers.config_validation as cv
+import voluptuous as vol
 
 REQUIREMENTS = ['PyMata==2.13']
 
