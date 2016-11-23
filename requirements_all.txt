@@ -538,6 +538,9 @@ pyyeelight==1.0-beta
 # homeassistant.components.climate.radiotherm
 radiotherm==1.2
 
+# homeassistant.components.rflink
+rflink==0.0.4
+
 # homeassistant.components.switch.rpi_rf
 # rpi-rf==0.9.5
 
