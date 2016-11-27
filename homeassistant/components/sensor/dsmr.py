@@ -117,6 +117,28 @@ def async_setup_platform(hass, config, async_add_devices, discovery_info=None):
     hass.bus.async_listen_once(EVENT_HOMEASSISTANT_STOP, transport.close)
 
 
+def get_last_state_from_db(entity_id):
+    """Get the most recent state for this entity from database."""
+
+    states = recorder.get_model('States')
+    try:
+        last_state = recorder.execute(
+            recorder.query('States').filter(
+                (states.entity_id == entity_id) &
+                (states.last_changed == states.last_updated) &
+                (states.state != 'unknown')
+            ).order_by(states.state_id.desc()).limit(1))
+    except TypeError:
+        return
+    except RuntimeError:
+        return
+
+    if not last_state:
+        return
+
+    return last_state[0].state
+
+
 class DSMREntity(Entity):
     """Entity reading values from DSMR telegram."""
 
@@ -125,6 +147,7 @@ class DSMREntity(Entity):
         self._name = name
         self._obis = obis
         self.telegram = {}
+        self._state = 10
 
     def get_dsmr_object_attr(self, attribute):
         """Read attribute from last received telegram for this DSMR object."""
@@ -197,6 +220,7 @@ class DerivativeDSMREntity(DSMREntity):
     @property
     def state(self):
         """Return current hourly rate, recalculate if needed."""
+        # entity_id = 'sensor.' + slugify(self._name)
 
         # check if the timestamp for the object differs from the previous one
         timestamp = self.get_dsmr_object_attr('datetime')
