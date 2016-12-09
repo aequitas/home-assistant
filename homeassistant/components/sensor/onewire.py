@@ -127,6 +127,6 @@ class OneWire(Entity):
                 _LOGGER.warning('Cannot read from sensor: ' +
                                 self._device_file)
 
-        if temp < -55 or temp > 125:
+        if temp < -55 or temp > 125 or temp == 85:
             return
         self._state = temp
