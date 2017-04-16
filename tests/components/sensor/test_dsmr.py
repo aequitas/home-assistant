@@ -12,9 +12,16 @@ from unittest.mock import Mock
 import asynctest
 from homeassistant.bootstrap import async_setup_component
 from homeassistant.components.sensor.dsmr import DerivativeDSMREntity
-from homeassistant.const import STATE_UNKNOWN
+from homeassistant.const import EVENT_STATE_CHANGED, STATE_UNKNOWN
+import homeassistant.core as ha
 import pytest
 from tests.common import assert_setup_component
+
+# Number of devices created from a standard V2.2 telegram that have
+# a numeric state and should emit a state changed event for every update.
+NR_NUMERIC_STATES = 8
+# Number of devices created with a stateful state (eg: power tariff).
+NR_STATEFUL_STATES = 1
 
 
 @pytest.fixture
@@ -67,6 +74,14 @@ def test_default_setup(hass, mock_connection_factory):
         yield from async_setup_component(hass, 'sensor',
                                          {'sensor': config})
 
+    # observe events
+    events = []
+
+    @ha.callback
+    def callback(event):
+        events.append(event)
+    hass.bus.async_listen(EVENT_STATE_CHANGED, callback)
+
     telegram_callback = connection_factory.call_args_list[0][0][2]
 
     # make sure entities have been created and return 'unknown' state
@@ -84,11 +99,22 @@ def test_default_setup(hass, mock_connection_factory):
     power_consumption = hass.states.get('sensor.power_consumption')
     assert power_consumption.state == '0.1'
     assert power_consumption.attributes.get('unit_of_measurement') is 'kWh'
+    assert power_consumption.attributes.get('timestamp')
 
     # tariff should be translated in human readable and have no unit
     power_tariff = hass.states.get('sensor.power_tariff')
     assert power_tariff.state == 'low'
     assert power_tariff.attributes.get('unit_of_measurement') is None
+
+    # send same telegram again to simulate a update with no changed values
+    telegram_callback(telegram)
+
+    # after receiving telegram entities need to have the chance to update
+    yield from hass.async_block_till_done()
+
+    # expect 2 state updates for every numeric device and only 1 for the
+    # stateful
+    assert len(events) == NR_NUMERIC_STATES * 2 + NR_STATEFUL_STATES
 
 
 @asyncio.coroutine

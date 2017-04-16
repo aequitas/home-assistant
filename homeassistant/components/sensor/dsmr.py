@@ -26,7 +26,7 @@ has been updated.
 
 """
 import asyncio
-from datetime import timedelta
+from datetime import datetime, timedelta
 from functools import partial
 import logging
 
@@ -211,6 +211,35 @@ class DSMREntity(Entity):
                 return value
             else:
                 return STATE_UNKNOWN
+
+    @property
+    def device_state_attributes(self):
+        """Return the state attributes.
+
+        Return timestamp of last received telegram as attribute.
+        This will ensure every received metric is recorded and values
+        are not shown as 'unknown' or stale if the same value is received
+        consecutively.
+        This applies only to numeric metrics like power consumption and
+        not to actual states like tariff.
+
+        """
+        from dsmr_parser import obis_references as obis
+
+        stateful_obis = [obis.ELECTRICITY_ACTIVE_TARIFF]
+
+        if self._obis in stateful_obis:
+            return
+
+        # Get actual timestamp from telegram.
+        timestamp = self.telegram.get(obis.P1_MESSAGE_TIMESTAMP)
+        # Fallback for V2 telegrams that don't contain a timestamp.
+        if not timestamp:
+            timestamp = datetime.now()
+
+        return {
+            'timestamp': timestamp.isoformat()
+        }
 
     @property
     def unit_of_measurement(self):
