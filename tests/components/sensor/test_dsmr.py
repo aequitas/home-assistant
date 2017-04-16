@@ -63,7 +63,7 @@ def test_default_setup(hass, mock_connection_factory):
 
     telegram = {
         CURRENT_ELECTRICITY_USAGE: CosemObject([
-            {'value': Decimal('0.1'), 'unit': 'kWh'}
+            {'value': Decimal('0.0'), 'unit': 'kWh'}
         ]),
         ELECTRICITY_ACTIVE_TARIFF: CosemObject([
             {'value': '0001', 'unit': ''}
@@ -97,7 +97,7 @@ def test_default_setup(hass, mock_connection_factory):
 
     # ensure entities have new state value after incoming telegram
     power_consumption = hass.states.get('sensor.power_consumption')
-    assert power_consumption.state == '0.1'
+    assert power_consumption.state == '0.0'
     assert power_consumption.attributes.get('unit_of_measurement') is 'kWh'
     assert power_consumption.attributes.get('timestamp')
 
