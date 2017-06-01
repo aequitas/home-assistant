@@ -4,16 +4,17 @@ A component which allows you to send data to an Influx database.
 For more details about this component, please refer to the documentation at
 https://home-assistant.io/components/influxdb/
 """
+import datetime
 import logging
 
-import voluptuous as vol
-
 from homeassistant.const import (
-    EVENT_STATE_CHANGED, STATE_UNAVAILABLE, STATE_UNKNOWN, CONF_HOST,
-    CONF_PORT, CONF_SSL, CONF_VERIFY_SSL, CONF_USERNAME, CONF_PASSWORD,
-    CONF_EXCLUDE, CONF_INCLUDE, CONF_DOMAINS, CONF_ENTITIES)
+    CONF_DOMAINS, CONF_ENTITIES, CONF_EXCLUDE, CONF_HOST, CONF_INCLUDE,
+    CONF_PASSWORD, CONF_PORT, CONF_SSL, CONF_USERNAME, CONF_VERIFY_SSL,
+    EVENT_STATE_CHANGED, STATE_UNAVAILABLE, STATE_UNKNOWN)
+from homeassistant.core import CoreState, callback
 from homeassistant.helpers import state as state_helper
 import homeassistant.helpers.config_validation as cv
+import voluptuous as vol
 
 REQUIREMENTS = ['influxdb==3.0.0']
 
@@ -24,9 +25,13 @@ CONF_TAGS = 'tags'
 CONF_DEFAULT_MEASUREMENT = 'default_measurement'
 CONF_OVERRIDE_MEASUREMENT = 'override_measurement'
 CONF_BLACKLIST_DOMAINS = "blacklist_domains"
+CONF_MAXIMUM_EMIT_INTERVAL = "maximum_emit_interval"
+
+INFLUX_REEMIT_POINTS = 'influx_reemit_points'
 
 DEFAULT_DATABASE = 'home_assistant'
 DEFAULT_VERIFY_SSL = True
+DEFAULT_MAXIMUM_EMIT_INTERVAL = 0
 DOMAIN = 'influxdb'
 TIMEOUT = 5
 
@@ -53,6 +58,8 @@ CONFIG_SCHEMA = vol.Schema({
         vol.Optional(CONF_TAGS, default={}):
             vol.Schema({cv.string: cv.string}),
         vol.Optional(CONF_VERIFY_SSL, default=DEFAULT_VERIFY_SSL): cv.boolean,
+        vol.Optional(CONF_MAXIMUM_EMIT_INTERVAL,
+                     default=DEFAULT_MAXIMUM_EMIT_INTERVAL): int,
     }),
 }, extra=vol.ALLOW_EXTRA)
 
@@ -93,6 +100,7 @@ def setup(hass, config):
     tags = conf.get(CONF_TAGS)
     default_measurement = conf.get(CONF_DEFAULT_MEASUREMENT)
     override_measurement = conf.get(CONF_OVERRIDE_MEASUREMENT)
+    max_emit_interval = conf.get(CONF_MAXIMUM_EMIT_INTERVAL)
 
     try:
         influx = InfluxDBClient(**kwargs)
@@ -103,6 +111,21 @@ def setup(hass, config):
                       "the database exists and is READ/WRITE.", exc)
         return False
 
+    def write_influxdb_points(json_body):
+        """Write datapoint to InfluxDB and optionally record for re-emit."""
+
+        influx.write_points(json_body)
+
+        # record last update time and payload to allow retransmit if state
+        # has not changed since 'max_emit_interval' has elapsed.
+        if max_emit_interval:
+            state_reference = json_body[0]['tags'][
+                'domain'] + json_body[0]['tags']['entity_id']
+            hass.data[INFLUX_REEMIT_POINTS][state_reference] = [
+                json_body[0]['time'],
+                json_body,
+            ]
+
     def influx_event_listener(event):
         """Listen for new messages on the bus and sends them to Influx."""
         state = event.data.get('new_state')
@@ -110,6 +133,13 @@ def setup(hass, config):
                 STATE_UNKNOWN, '', STATE_UNAVAILABLE) or \
                 state.entity_id in blacklist_e or \
                 state.domain in blacklist_d:
+
+            # remove state from reemitting if changed to unknown
+            if state and max_emit_interval:
+                state_reference = state.domain + state.entity_id
+                if state_reference in hass.data[INFLUX_REEMIT_POINTS]:
+                    del hass.data[INFLUX_REEMIT_POINTS][state_reference]
+
             return
 
         try:
@@ -165,10 +195,38 @@ def setup(hass, config):
         json_body[0]['tags'].update(tags)
 
         try:
-            influx.write_points(json_body)
+            write_influxdb_points(json_body)
         except exceptions.InfluxDBClientError:
             _LOGGER.exception("Error saving event %s to InfluxDB", json_body)
 
     hass.bus.listen(EVENT_STATE_CHANGED, influx_event_listener)
+
+    @callback
+    def emit_unchanged_states():
+        """Find all emitted metrics that have not be updated and reemit."""
+
+        # Determine treshold after which not-updated metrics should re-emit.
+        delta = datetime.timedelta(seconds=max_emit_interval)
+        now = datetime.datetime.now(hass.config.time_zone)
+        emit_treshold = now - delta
+
+        # Metrics that where last emmited longer than max_emit_interval
+        # ago and thus have not changed will be re-emitted.
+        for state_reference, data in hass.data[INFLUX_REEMIT_POINTS].items():
+            time, json_body = data
+
+            if time < emit_treshold:
+                _LOGGER.debug('re-emitting metric %s', state_reference)
+                json_body[0]['time'] = now
+                # Use same mechanism as a normal metric emit but with updated
+                # timestamp. This will automatically register it for a reemit.
+                write_influxdb_points(json_body)
+
+        if hass.state != CoreState.stopping:
+            hass.loop.call_later(max_emit_interval, emit_unchanged_states)
+
+    if max_emit_interval:
+        hass.data[INFLUX_REEMIT_POINTS] = {}
+        hass.loop.call_later(max_emit_interval, emit_unchanged_states)
 
     return True
